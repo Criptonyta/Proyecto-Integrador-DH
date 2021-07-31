@@ -8,5 +8,9 @@ server.get('/',(req,res)=>{
 });
 
 server.get('/Equipo1',(req,res)=>{
-    res.send('<h1>Este es el mejor equipo de la clase. Por eso somos el equipo numero 1 ;-)</h1>')
+    res.send('Este es el mejor equipo de la clase. Por eso somos el equipo numero 1 ;-)')
+});
+
+server.get('/home',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/home.html'))
 });
