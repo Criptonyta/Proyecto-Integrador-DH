@@ -1,0 +1,25 @@
+{
+  "name": "Proyecto-Integrador-DH",
+  "version": "1.0.0",
+  "description": "Aca encontraremos una plantilla basica con todo lo que necesitas para desplegar un servidor con Node Js.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Criptonyta/Proyecto-Integrador-DH.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Criptonyta/Proyecto-Integrador-DH/issues"
+  },
+  "homepage": "https://github.com/Criptonyta/Proyecto-Integrador-DH#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
