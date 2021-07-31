@@ -1,5 +1,6 @@
 const express = require('express');
 const server = express(); 
+const path = require ('path');
 server.listen (3001, () => {
     console.log ("Servidor rodando en puerto 3001")
 });
