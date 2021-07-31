@@ -1,3 +1,12 @@
 const express = require('express');
 const server = express(); 
-server.listen (3001)
+server.listen (3001, () => {
+    console.log ("Servidor rodando en puerto 3001")
+});
+server.get('/',(req,res)=>{
+    res.send('Hola Mundo')
+});
+
+server.get('/Equipo1',(req,res)=>{
+    res.send('<h1>Este es el mejor equipo de la clase. Por eso somos el equipo numero 1 ;-)</h1>')
+});
