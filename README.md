@@ -18,6 +18,7 @@ npm start
 * [Express] - El framework de NodeJs
 
 
-## Autor ✒️
+## Autores ✒️
 
 Este proyecto esta siendo desarrollado por Agostina, Alex y Daniel
+Nuestro espacio en Trello es: https://trello.com/b/yeKcaCBh
