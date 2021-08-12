@@ -4,14 +4,31 @@ const path = require ('path');
 server.listen (3001, () => {
     console.log ("Servidor rodando en puerto 3001")
 });
+
 server.get('/',(req,res)=>{
-    res.send('Hola Mundo')
-});
-
-server.get('/Equipo1',(req,res)=>{
-    res.send('Este es el mejor equipo de la clase. Por eso somos el equipo numero 1 ;-)')
-});
-
-server.get('/home',(req,res)=>{
     res.sendFile(path.join(__dirname,'./view/home.html'))
+});
+
+server.get('/cart',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/cart.html'))
+});
+
+server.get('/login',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/login.html'))
+});
+
+server.get('/navbar',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/navbar.html'))
+});
+
+server.get('/product',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/product.html'))
+});
+
+server.get('/register',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/register.html'))
+});
+
+server.get('/tienda',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/tienda.html'))
 });
