@@ -12,3 +12,96 @@ font-family: 'Palette Mosaic', cursive;
 Font parrafos:
 font-family: 'Roboto', sans-serif;
  */
+
+
+
+
+/* NavBar */
+
+*{
+    box-sizing: border-box;
+    font: size 18px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: white;
+}
+
+.main-header{
+    display: flex;
+    background-color: #004d61;
+    margin: 0px;
+}
+
+.hamburguer-button{
+    display: block;
+    align-items: flex-start;
+    color:white;
+}
+
+.main-header-der-text{
+    display:flex;
+    color:white;
+
+}
+
+
+/* Configurando el Logo (Mobile-First) */
+
+.logoMobile{
+    width: 40px;
+}
+
+.logo{
+    display: none;
+}
+
+/* Configurando el menu lateral Izquierdo (Mobile-First) */
+.main-header-der-text{
+    display: none;
+    list-style: none;
+    color:white;
+
+}
+
+ /* Footer */
+
+ footer{
+    background-color: #008198;
+    color:white;
+}
+
+.redessociales-footer{
+   display: block;
+   margin: auto;
+}
+
+.main-footer-der-text li, .main-footer-izq-text li{
+   list-style: none;
+
+}
+
+
+/* Convirtiendo el logo en responsivo */
+@media(min-width:361px){
+    .logo{
+        display: flex;
+        width: 40px;
+    }
+    .hamburguer-button{
+        display: none;
+    }
+    .main-header-der-text{
+        display: flex;
+    }
+ }
+
+ @media(min-width:768px){
+
+ }
+
+
