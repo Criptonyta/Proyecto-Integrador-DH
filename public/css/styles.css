@@ -1,9 +1,29 @@
+/* 
+Paleta de colores:
+#001f2c  ==> Azul oscuro
+#004d61  ==> Verde oscuro
+#008198  ==> Verde intermedio
+#00bacd  ==> Verde claro
+#00f6ff  ==> Aguamarina (para CallToAction buttons)
+
+Font Titulos:
+font-family: 'Palette Mosaic', cursive;
+
+Font parrafos:
+font-family: 'Roboto', sans-serif;
+ */
+
+
+
 *{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    border:dotted 5px red;
 }
 
-body{
-    border:dotted 5px red;
+h2{
+    font-family: 'Palette Mosaic', cursive;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
 }
