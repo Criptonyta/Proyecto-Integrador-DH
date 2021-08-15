@@ -19,6 +19,35 @@
 
 </head>
 <body>
-    ESTA ES LA PAGINA DEL LOGIN
+    <main>
+        <!--NAVBAR-->
+        <section id="navbar">
+            <img src="/images/Images/Logo.JPG" alt="logo">
+            <ul>
+                <li class="navbarOption"><a href="#">Ayuda</a></li>
+            </ul>
+        </section>
+        <!--LOGIN-->
+        <section id="login">
+            <img src="/images/Icons/pngfind.com-black-png-1823885.png" alt="loginIcon">
+            <p>Welcome</p>
+            <form action="" id="loginForm">
+                <div class="information">
+                    <i class="fas fa-envelope"><input type="email" required placeholder="example@hotmail.com"></i>
+                    <i class="fas fa-key"><input type="password" required placeholder="Password"></i>
+                </div>
+                <div class="options">
+                    <div class="loggedIn">
+                        <input type="checkbox" name="options" value="yes" id="loggedInOption">
+                        <label for="loggedInOption">Keep Log-In</label>
+                    </div>
+                    <p id="forgotPassword"><a href="#">Forgot my password</a></p>
+                </div>
+                <button type="submit" id="loginButton">Login</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="../server.js"></script>
 </body>
 </html>
