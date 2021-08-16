@@ -16,91 +16,170 @@ font-family: 'Roboto', sans-serif;
 
 
 
-/* NavBar */
-
 *{
     box-sizing: border-box;
     font: size 18px;
+    color: white;
+    list-style: none;                    /* le quito el estilo a los links de las listas*/
 }
 
 body{
     font-family: 'Roboto', sans-serif;
 }
 
-a {
-    color: white;
+main{
+    background-color: gray;
 }
 
-.main-header{
+
+/* ========= NavBar  =========  */
+
+.main-header{                            /* Convierto el contenedor en Flex */
     display: flex;
     background-color: #004d61;
     margin: 0px;
+    height: 60px;
+    width: auto;
 }
 
-.hamburguer-button{
+.main-header-der, .main-header-izq{    /* Parto el contenedor main en dos */
+    width:50%;
+}
+
+.main-header-der ul{                 /* Responsivo (oculto el texto) */
+    display:none;
+}
+
+.hamburguer-button i{                 /* Convierto el menu en block */
     display: block;
-    align-items: flex-start;
-    color:white;
+    margin: 15px;
+    text-align: right;
+    font-size: 25px;
 }
 
-.main-header-der-text{
-    display:flex;
-    color:white;
-
-}
-
-.HiperlinksHome a{
+.HiperlinksHome a{                  /* Eliminar cuando se coloque contenido en la home */
     color:black
 }
 
-/* Configurando el Logo (Mobile-First) */
-
 .logoMobile{
     width: 40px;
+    margin:10px;
 }
 
-.logo{
+.logo{                              /* Responsivo (oculto el logo)*/
     display: none;
 }
 
-/* Configurando el menu lateral Izquierdo (Mobile-First) */
-.main-header-der-text{
-    display: none;
-    list-style: none;
-    color:white;
 
-}
+/* ========= Footer  =========  */
 
- /* Footer */
-
- footer{
+footer{
     background-color: #008198;
-    color:white;
 }
 
-.redessociales-footer{
-   display: block;
-   margin: auto;
+.redessociales-footer{                  /* Convierto el contenedor en flex*/
+   display: flex;
+   align-content: center;
+   justify-content: center;
+   padding: 20px;
 }
 
-.main-footer-der-text li, .main-footer-izq-text li{
-   list-style: none;
+.redessociales-footer i{
+    padding: 15px;
+    font-size: 30px;
+}
 
+.main-footer-der-text ul, .main-footer-izq-text ul{  
+   line-height:50px;                    /* le doy interlineado*/
+   padding: 10px;
+}
+
+.main-footer-der-text ul{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-left: 20px;
+}
+
+.main-footer-izq-text ul{
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-left: 20px;
+    padding-bottom: 30px;
 }
 
 
-/* Convirtiendo el logo en responsivo */
+
+/* ========= Responsividad  =========  */
+
+
 @media(min-width:361px){
-    .logo{
-        display: flex;
-        width: 40px;
-    }
-    .hamburguer-button{
-        display: none;
-    }
-    .main-header-der-text{
-        display: flex;
-    }
+/* ========= NavBar  =========  */
+.main-header-der{
+    display: flex;
+    justify-content: space-around;
+    border: dotted 2px red;
+}
+
+/* .main-header-der ul{                 /* Muestro el texto 
+    display:flex;
+    justify-content: space-around;
+} */
+
+.button {                             /* Estilizo el boton de ingreso */
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #004d61;
+    background-color: #00f6ff;
+    margin: 5px;
+    border: solid #00bacd;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.hamburguer-button i{                 /* Oculto el menu */
+    display: none;
+}
+
+.logoMobile{                           /* Oculto el logo pequeno */
+    display: none;
+}
+
+.logo{                              /* Muestro el logo completo*/
+    display:flex;
+    height: 40px;
+    margin:10px;
+}
+
+
+/* ========= Footer  =========  */
+
+.redessociales-footer i{         /* Amplio el tamano de los logos de redes*/
+    padding: 15px;
+    font-size: 40px;
+ }
+
+.main-footer-der-text ul, .main-footer-izq-text ul{  
+   list-style: none;                    /* le quito el estilo a los links*/
+   line-height:50px;                    /* le doy interlineado*/
+   padding: 10px;
+}
+
+.main-footer-der-text ul{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-left: 20px;
+}
+
+.main-footer-izq-text ul{
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-left: 20px;
+    padding-bottom: 30px;
+}
+
  }
 
  @media(min-width:768px){
