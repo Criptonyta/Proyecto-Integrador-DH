@@ -49,6 +49,9 @@ a {
 
 }
 
+.HiperlinksHome a{
+    color:black
+}
 
 /* Configurando el Logo (Mobile-First) */
 
@@ -103,5 +106,6 @@ a {
  @media(min-width:768px){
 
  }
+
 
 
