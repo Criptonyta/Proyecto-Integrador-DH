@@ -27,9 +27,36 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+/* ========= Home Mobile =========  */
+
 main{
-    background-color: gray;
+    background-color: #001f2c;
 }
+
+.i-home-inicial, .i-home-teclado{                        
+    max-width: 100%;                      /* Ajusto el tamano de las imagenes de la home al ancho de pantalla mobile */
+    height: auto;
+}
+
+h1{
+    font-family: 'Palette Mosaic', 'sans-serif';
+}
+
+.access-button-home {                             /* Estilizo el boton de ingreso */
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #004d61;
+    background-color: #00f6ff;
+    margin: 10px;
+    border: solid #00bacd;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+
 
 
 /* ========= NavBar Mobile =========  */
@@ -60,7 +87,6 @@ main{
     padding: 5px;
     text-align: right;
     font-size: 20px;
-    border: dotted 2px red;
 }
 
 .HiperlinksHome a{                  /* Eliminar cuando se coloque contenido en la home */
@@ -115,7 +141,7 @@ footer{
 
 
 
-/* ========= Responsividad  =========  */
+/* ========= RESPONSIVIDAD  =========  */
 
 @media(min-width:361px){
 
@@ -202,3 +228,6 @@ footer{
     text-align: right;
 }
 }
+
+
+
