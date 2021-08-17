@@ -32,7 +32,7 @@ main{
 }
 
 
-/* ========= NavBar  =========  */
+/* ========= NavBar Mobile =========  */
 
 .main-header{                            /* Convierto el contenedor en Flex */
     display: flex;
@@ -50,11 +50,17 @@ main{
     display:none;
 }
 
+.button{
+    display:none;
+}
+
 .hamburguer-button i{                 /* Convierto el menu en block */
     display: block;
-    margin: 15px;
+    margin: 10px;
+    padding: 5px;
     text-align: right;
-    font-size: 25px;
+    font-size: 20px;
+    border: dotted 2px red;
 }
 
 .HiperlinksHome a{                  /* Eliminar cuando se coloque contenido en la home */
@@ -71,7 +77,7 @@ main{
 }
 
 
-/* ========= Footer  =========  */
+/* ========= Footer Mobile =========  */
 
 footer{
     background-color: #008198;
@@ -111,28 +117,47 @@ footer{
 
 /* ========= Responsividad  =========  */
 
-
 @media(min-width:361px){
-/* ========= NavBar  =========  */
-.main-header-der{
-    display: flex;
-    justify-content: space-around;
-    border: dotted 2px red;
+
+/* ========= NavBar  min-width:361px =========  */
+.logoMobile{                           /* Oculto el logo pequeno */
+    display: none;
+}
+.logo{                              /* Muestro el logo completo*/
+    display:flex;
+    height: 40px;
+    margin:10px;
 }
 
-/* .main-header-der ul{                 /* Muestro el texto 
+/* ========= Footer  min-width:361px =========  */
+.redessociales-footer i{         /* Amplio el tamano de los logos de redes*/
+    font-size: 40px;
+}
+}
+
+@media(min-width:768px){
+
+ /* ========= NavBar min-width:768px =========  */
+
+.main-header-der{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-header-der ul{                 /* Muestro el texto */
     display:flex;
-    justify-content: space-around;
-} */
+    justify-content: space-between;
+    max-width: 280px;
+}
 
 .button {                             /* Estilizo el boton de ingreso */
     display: inline-block;
     border-radius: 5px;
-    padding: 10px 7px;
+    padding: 10px 20px;
     text-decoration: none;
     color: #004d61;
     background-color: #00f6ff;
-    margin: 5px;
+    margin: 10px;
     border: solid #00bacd;
     text-align: center;
     transition: all 0.5s;
@@ -154,37 +179,26 @@ footer{
 }
 
 
-/* ========= Footer  =========  */
+/* ========= Footer min-width:768px =========  */
 
 .redessociales-footer i{         /* Amplio el tamano de los logos de redes*/
-    padding: 15px;
-    font-size: 40px;
- }
-
-.main-footer-der-text ul, .main-footer-izq-text ul{  
-   list-style: none;                    /* le quito el estilo a los links*/
-   line-height:50px;                    /* le doy interlineado*/
-   padding: 10px;
+    font-size: 50px;
 }
+.main-footer{
+    display: flex;
+    justify-content: center;
 
-.main-footer-der-text ul{
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    margin-left: 20px;
 }
-
-.main-footer-izq-text ul{
-    margin-top: 0px;
-    padding-top: 0px;
-    margin-left: 20px;
-    padding-bottom: 30px;
+.main-footer-der-text, .main-footer-izq-text{  
+    display: inline-block;
+    width: auto;
+    margin: auto;
+    padding: 20px;
 }
-
- }
-
- @media(min-width:768px){
-
- }
-
-
-
+.main-footer-der-text{
+    text-align: left;
+}
+.main-footer-izq-text{
+    text-align: right;
+}
+}
