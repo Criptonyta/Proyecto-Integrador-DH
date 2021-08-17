@@ -33,7 +33,7 @@ main{
     background-color: #001f2c;
 }
 
-.i-home-inicial, .i-home-teclado{                        
+.i-home-inicial, .i-home-teclado, .artista1-home, .artista2-home, .artista3-home{                        
     max-width: 100%;                      /* Ajusto el tamano de las imagenes de la home al ancho de pantalla mobile */
     height: auto;
 }
@@ -56,6 +56,19 @@ h1{
     cursor: pointer;
 }
 
+.SaleMusic-button-home, .SaleInstruments-button-home{     /* Estilizo los dos call tu action enterate como */
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #004d61;
+    background-color: #00f6ff;
+    margin: 10px;
+    border: solid #00bacd;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+}
 
 
 
