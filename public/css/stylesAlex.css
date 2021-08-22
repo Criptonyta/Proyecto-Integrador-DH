@@ -16,7 +16,7 @@ body {
 }
 
 /* LOGIN PAGE START */
-main {
+.mainContainer {
     width:60%;
     max-width:450px;
     height:60vh;
@@ -197,3 +197,91 @@ main {
 
 
 /* LOGIN PAGE END */
+
+/* PRODUCT PAGE START */
+
+.principal {
+    background-color: var(--azulOscuro);
+}
+
+.product-container {
+    border:5px solid white;
+    width:100%;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+}
+
+.productImages {
+    height: 50%;
+}
+
+.productImages img {
+    width: 100%;
+    max-width:350px;
+    height:80%;
+}
+
+.productImagesButtons button {
+    color:white;
+    border:none;
+    overflow:none;
+    outline:none;
+    border-radius: 5px;
+    margin:5px;
+    background-color: var(--verdeClaro);
+    font-size:10px;
+    padding:5px;
+    width:100px;
+    transition: width .35s ease-in-out
+}
+
+.productImagesButtons button:hover {
+    width:120px;
+}
+
+
+.productInformation-container {
+    height: 50%;
+}
+
+.productInformation {
+    padding:5px;
+    margin:5px;
+}
+
+.editar button {
+    color:white;
+    border:none;
+    overflow:none;
+    outline:none;
+    border-radius: 5px;
+    margin:5px;
+    background-color: var(--verdeOscuro);
+    font-size:10px;
+    padding:5px;
+    width:100px;
+    transition: width .35s ease-in-out
+
+}
+
+.editar button:hover {
+    width:120px;
+}
+
+@media (min-width:480px){
+    .product-container {
+        flex-direction: row;
+        height:60vh;
+        justify-content:center;
+        align-items:center;
+    }
+    .productImages {
+        height:100%
+    }
+    .productInformation-container {
+        height:100%;
+    }
+}
+/* PRODUCT PAGE END */
