@@ -347,18 +347,11 @@ body {
 .related-carrousel-container {
     background-color: var(--verdeOscuro);
     width:100%;
-    height:150px;
     display:flex;
+    flex-direction: column;
     justify-content:center;
     align-items:center;
-}
 
-.flecha {
-    cursor:pointer;
-}
-
-.flecha:hover {
-    color:rgba(255,255,255,0.5)
 }
 
 .carrouselCard {
@@ -370,10 +363,9 @@ body {
     border-radius:20px;
     border:1px solid var(--verdeIntermedio);
     width:80%;
-    max-width: 300px;
+    max-width: 350px;
     height: 80%;
     margin:10px;
-    position: relative;
 }
 
 .carrouselCard img {
@@ -392,7 +384,7 @@ body {
 
 .carrouselCardInfo h4 {
     font-size:12px;
-    margin: 0;
+    margin: 5px 0;
 }
 
 .carrouselCard a {
@@ -450,6 +442,13 @@ body {
     .productDescription {
         font-size: 15px;
         line-height: 21px;
+    }
+    .carrouselCard {
+        max-width:250px;
+    }
+    .related-carrousel-container {
+        justify-content: space-around;
+        flex-direction:row;
     }
 }
 /* PRODUCT PAGE END */
