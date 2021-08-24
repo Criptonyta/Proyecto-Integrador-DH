@@ -12,3 +12,56 @@ font-family: 'Palette Mosaic', cursive;
 Font parrafos:
 font-family: 'Roboto', sans-serif;
  */
+
+ /* REGISTER PAGE START */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-register {
+    width: 400px;
+    background: #001f2c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    font-family: 'Roboto';
+    color: white;
+    border-radius: 4px;
+    box-shadow: 7px 13px 37px #000;
+}
+.datos {
+    font-family: 'Roboto';
+    background: #00f6ff;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid white;
+    font-size: 18px;
+}
+
+.form-register h4 {
+    font-size: 24px;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.form-register .button {
+width: 100%;
+border: none;
+padding: 12px;
+font-family: 'Roboto';
+font-size: 16px;
+background: #00f6ff;
+color: white;
+opacity: 0.7;
+margin: 16px 0;
+}
+
+.fondo {
+    background-color: gray;
+}
+/* REGISTER PAGE END */
