@@ -465,3 +465,257 @@ body {
     }
 }
 /* PRODUCT PAGE END */
+
+/* STORE PAGE START */
+
+section {
+    margin:0;
+}
+.inputBuscador {
+    width:80%;
+    height:30px;
+    max-width: 400px;
+    border:none;
+    outline:none;
+    padding:5px;
+    margin:15px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    color:black;
+    font-family: var(--letraParrafos);
+}
+
+.inputBuscador:hover {
+    background-color: rgb(128, 128, 128,0.2);
+    color:white;
+}
+
+.inputBuscador:focus {
+    background-color:white;
+    color:black;
+}
+
+.inputBuscador::placeholder {
+    font-size:12px;
+}
+
+i {
+    cursor:pointer;
+}
+
+.cancionesMasEscuchadas,.instrumentosEnVenta,.ultimosAdicionados {
+    display:flex;
+    flex-direction: column;
+}
+.cancionesMasEscuchadas .cabecera,.instrumentosEnVenta .cabecera,.ultimosAdicionados .cabecera {
+    margin:15px 0 15px 10px;
+    font-size: 13px;
+    text-align: left;
+    border-bottom: 1px solid white;
+    width:70%;
+}
+
+.cancionesMasEscuchadasContenedor,.instrumentosEnVentaContenedor {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.fa-chevron-left {
+    margin: 0 5px;
+    position:absolute;
+    top:calc(30%);
+    left:calc(20%);
+}
+.fa-chevron-right {
+    margin: 0 5px;
+    position:absolute;
+    top:calc(30%);
+    right:calc(20%);
+}
+.canciones,.instrumentos {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+}
+.cancion,.instrumento {}
+.cancion img,.instrumento img {
+    width:100px;
+    height:100px;
+}
+.cancion p,.instrumento p {
+    margin:2px 0 5px 0;
+    text-align:center;
+    font-size: 11px;
+}
+
+.artistaCancion,.artistaInstrumento {
+    font-style: italic;
+}
+
+.ultimosAdicionados {
+    position:relative;
+}
+.ultimosAdicionadosContainer {
+    background-color: var(--verdeOscuro);
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width:90%;
+    margin:0 auto 20px;
+}
+
+.flechaIzq {
+    margin:0 5px;
+    left:calc(5%);
+    top:calc(50%)
+
+}
+.flechaDer {
+    margin:0 5px;
+    right:calc(5%);
+    top:calc(50%)
+}
+
+.ultimosAdicionadosCard {
+    background-color:var(--azulOscuro);
+    width:250px;
+    height:130px;
+    margin:10px auto;
+    padding:10px;
+    border-radius: 10%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.ultimosAdicionadosCard  img {
+    width:60px;
+    height: 60px;
+    border-radius:50%;
+}
+.recomendadoInfo {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items:center;
+}
+.ultimosAdicionadosCard .recomendadoInfo p {
+    margin:0;
+    font-size:10px;
+}
+.ultimosAdicionadosCard .recomendadoInfo h6 {
+    font-size:13px;
+    margin:5px 0;
+}
+
+@media (min-width:480px){
+    .canciones,.instrumentos {
+        grid-template-columns: auto auto;
+    }
+    .fa-chevron-left {
+        left:calc(20%);
+        top:calc(40%);
+    }
+    .fa-chevron-right {
+        right:calc(20%);
+        top:calc(40%);
+    }
+    .flechaIzq {
+        left:0;
+        top:calc(50%)
+    
+    }
+    .flechaDer {
+        right:0;
+        top:calc(50%)
+    }
+    .ultimosAdicionadosContainer {
+        max-width:400px;
+    }
+    
+}
+@media (min-width:600px){
+    .canciones,.instrumentos {
+        grid-template-columns: auto auto auto;
+    }
+    .fa-chevron-left {
+        left:calc(2%);
+        top:calc(30%);
+    }
+    .fa-chevron-right {
+        right:calc(2%);
+        top:calc(30%);
+    }
+    .ultimosAdicionadosContainer {
+        grid-template-columns: auto auto;
+    }
+    .ultimosAdicionadosCard {
+        width:230px;
+    }
+    .flechaIzq {
+        margin:0 5px;
+        left:calc(2%);
+        top:calc(50%)
+    
+    }
+    .flechaDer {
+        margin:0 5px;
+        right:calc(2%);
+        top:calc(50%)
+    }
+    .ultimosAdicionadosContainer {
+        max-width:550px;
+    }
+}
+@media (min-width:768px){
+    .canciones,.instrumentos {
+        grid-template-columns: auto auto auto auto auto auto;
+    }
+    .ultimosAdicionadosCard {
+        width:230px;
+    }
+    .flechaIzq {
+        margin:0 5px;
+        left:calc(2%);
+        top:calc(50%)
+    
+    }
+    .flechaDer {
+        margin:0 5px;
+        right:calc(2%);
+        top:calc(50%)
+    }
+    .ultimosAdicionadosContainer {
+        max-width:650px;
+    }
+    
+}
+@media (min-width:900px){
+    .canciones,.instrumentos {
+        grid-column-gap: 40px;
+    }
+    .ultimosAdicionadosContainer {
+        grid-template-columns: auto auto auto auto;
+    }
+    .ultimosAdicionadosCard {
+        width:180px;
+    }
+    .flechaIzq {
+        margin:0 5px;
+        left:calc(2%);
+        top:calc(50%)
+    
+    }
+    .flechaDer {
+        margin:0 5px;
+        right:calc(2%);
+        top:calc(50%)
+    }
+    .ultimosAdicionadosContainer {
+        max-width:1000px;
+    }
+}
+
+/* STORE PAGE END */

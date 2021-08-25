@@ -13,6 +13,7 @@
     <script src="https://kit.fontawesome.com/17d45040ef.js" crossorigin="anonymous"></script> <!-- Implementando Font-Awesome -->
     
     <link rel="stylesheet" href="/css/normalize.css"> <!-- Implementando Libreria Normalize.css (https://necolas.github.io/normalize.css/) para que el sitio web sea homogeneo en los diferentes navegadores. Desde el sitio, descargo, guardo como la css en la misma carpeta del proyecto y luego la linkeo -->
+    <link rel="stylesheet" href="/css/stylesDan.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
     <link rel="stylesheet" href="/css/stylesAlex.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
     
     <!--<link rel="stylesheet" href="/css/styles.css">  Descomentar esta linea cuando el CSS este compilado -->
@@ -20,6 +21,181 @@
 </head>
 
 <body>
-    ESTA ES LA PAGINA DE LA TIENDA
+    <header class="main-header">
+
+        <nav class="main-header-izq">
+            <!-- Creando la parte izquierda de la NavBar -->
+            <img src="/images/Images/Logo redondo.JPG" class="logoMobile" alt="Logo Musiqueiros Mobile">
+            <img src="/images/Images/Logo horizontal.JPG" class="logo" alt="Logo Musiqueiros">
+        </nav>
+
+        <nav class="main-header-der">
+            <!-- Creando la parte derecha de la NavBar -->
+            <a href="#" class="hamburguer-button">
+                <!-- Boton responsivo -->
+                <i class="fas fa-bars"></i>
+            </a>
+            <ul>
+                <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
+                <li><a href="#" style="text-decoration:none">Comprar Musica</a></li>
+                <li><a href="#" style="text-decoration:none">Comprar Instrumentos</a></li>
+            </ul>
+
+            <!-- Boton Ingreso responsivo | Exibido en NavBar en > 700px -->
+            <a href="#" class="button" target="_blank">Ingresa </a>
+
+        </nav>
+    </header>
+
+    <main class="principal">
+        <div class="buscador">
+            <input class="inputBuscador" type="text" placeholder="Buscar cancion, artista o instrumento">
+            <i class="fas fa-search"></i>
+        </div>
+        <section class="cancionesMasEscuchadas">
+            <p class="cabecera">Canciones mas escuchadas</p>
+            <div class="cancionesMasEscuchadasContenedor">
+                <i class="fas fa-chevron-left"></i>
+                <div class="canciones">
+                    <div class="cancion">
+                        <img src="/images/images/tapadisco5.jpg" alt="fotoCancion">
+                        <p class="tituloCancion">Titulo de la cancion</p>
+                        <p class="artistaCancion">Nombre de artista</p>
+                    </div>
+                    <div class="cancion">
+                        <img src="/images/images/tapadisco5.jpg" alt="fotoCancion">
+                        <p class="tituloCancion">Titulo de la cancion</p>
+                        <p class="artistaCancion">Nombre de artista</p>
+                    </div>
+                    <div class="cancion">
+                        <img src="/images/images/tapadisco5.jpg" alt="fotoCancion">
+                        <p class="tituloCancion">Titulo de la cancion</p>
+                        <p class="artistaCancion">Nombre de artista</p>
+                    </div>
+                    <div class="cancion">
+                        <img src="/images/images/tapadisco5.jpg" alt="fotoCancion">
+                        <p class="tituloCancion">Titulo de la cancion</p>
+                        <p class="artistaCancion">Nombre de artista</p>
+                    </div>
+                    <div class="cancion">
+                        <img src="/images/images/tapadisco5.jpg" alt="fotoCancion">
+                        <p class="tituloCancion">Titulo de la cancion</p>
+                        <p class="artistaCancion">Nombre de artista</p>
+                    </div>
+                    <div class="cancion">
+                        <img src="/images/images/tapadisco5.jpg" alt="fotoCancion">
+                        <p class="tituloCancion">Titulo de la cancion</p>
+                        <p class="artistaCancion">Nombre de artista</p>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </section>
+        <section class="instrumentosEnVenta">
+            <p class="cabecera">Instrumentos en venta</p>
+            <div class="instrumentosEnVentaContenedor">
+                <i class="fas fa-chevron-left"></i>
+                <div class="instrumentos">
+                    <div class="instrumento">
+                        <img src="/images/images/instrum_guitarra_fondoblanco.jpg" alt="fotoinstrumento">
+                        <p class="tituloInstrumento">Nombre Instrumento</p>
+                        <p class="artistaInstrumento">Nombre de Marca</p>
+                    </div>
+                    <div class="instrumento">
+                        <img src="/images/images/instrum_guitarra_fondoblanco.jpg" alt="fotoinstrumento">
+                        <p class="tituloCancion">Nombre Instrumento</p>
+                        <p class="artistaCancion">Nombre de Marca</p>
+                    </div>
+                    <div class="instrumento">
+                        <img src="/images/images/instrum_guitarra_fondoblanco.jpg" alt="fotoinstrumento">
+                        <p class="tituloCancion">Nombre Instrumento</p>
+                        <p class="artistaCancion">Nombre de Marca</p>
+                    </div>
+                    <div class="instrumento">
+                        <img src="/images/images/instrum_guitarra_fondoblanco.jpg" alt="fotoinstrumento">
+                        <p class="tituloCancion">Nombre Instrumento</p>
+                        <p class="artistaCancion">Nombre de Marca</p>
+                    </div>
+                    <div class="instrumento">
+                        <img src="/images/images/instrum_guitarra_fondoblanco.jpg" alt="fotoinstrumento">
+                        <p class="tituloCancion">Nombre Instrumento</p>
+                        <p class="artistaCancion">Nombre de Marca</p>
+                    </div>
+                    <div class="instrumento">
+                        <img src="/images/images/instrum_guitarra_fondoblanco.jpg" alt="fotoinstrumento">
+                        <p class="tituloCancion">Nombre Instrumento</p>
+                        <p class="artistaCancion">Nombre de Marca</p>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </section>
+        <section class="ultimosAdicionados">
+            <p class="cabecera">Instrumentos en venta</p>
+            <i class="fas fa-chevron-left flechaIzq"></i>
+            <div class="ultimosAdicionadosContainer">
+                <div class="ultimosAdicionadosCard">
+                    <img src="/images/images/instrum_bateria_fondoblanco.jpg" alt="FotoRecomendado">
+                    <div class="recomendadoInfo">
+                        <h6 class="recomendadoTitulo">Nombre de recomendado</h5>
+                        <p class="recomendoTexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, magnam eum molestiae ipsum corporis ex itaque id ratione nesciunt tenetur!<p>
+                    </div>
+                </div>
+                <div class="ultimosAdicionadosCard">
+                    <img src="/images/images/instrum_bateria_fondoblanco.jpg" alt="FotoRecomendado">
+                    <div class="recomendadoInfo">
+                        <h6 class="recomendadoTitulo">Nombre de recomendado</h5>
+                        <p class="recomendoTexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, magnam eum molestiae ipsum corporis ex itaque id ratione nesciunt tenetur!<p>
+                    </div>
+                </div>
+                <div class="ultimosAdicionadosCard">
+                    <img src="/images/images/instrum_bateria_fondoblanco.jpg" alt="FotoRecomendado">
+                    <div class="recomendadoInfo">
+                        <h6 class="recomendadoTitulo">Nombre de recomendado</h5>
+                        <p class="recomendoTexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, magnam eum molestiae ipsum corporis ex itaque id ratione nesciunt tenetur!<p>
+                    </div>
+                </div>
+                <div class="ultimosAdicionadosCard">
+                    <img src="/images/images/instrum_bateria_fondoblanco.jpg" alt="FotoRecomendado">
+                    <div class="recomendadoInfo">
+                        <h6 class="recomendadoTitulo">Nombre de recomendado</h5>
+                        <p class="recomendoTexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, magnam eum molestiae ipsum corporis ex itaque id ratione nesciunt tenetur!<p>
+                    </div>
+                </div>  
+            </div>
+            <i class="fas fa-chevron-right flechaDer"></i>  
+        </section>
+    </main>
+
+
+
+    <footer>
+        <!-- Adicionando iconos font-awesome de redes sociales -->
+        <div class="redessociales-footer">
+            <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fas fa-share-alt-square"></i></a>
+        </div>
+
+        <div class="main-footer">
+            <div class="main-footer-der-text">
+                <ul>
+                    <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
+                    <li><a href="#" style="text-decoration:none">Contactanos</a></li>
+                    <li><a href="#" style="text-decoration:none">Acerca de</a></li>
+                    <li><a href="#" style="text-decoration:none">Terminos y condiciones</a></li>
+                </ul>
+            </div>
+
+            <div class="main-footer-izq-text">
+                <ul>
+                    <li><a href="#" style="text-decoration:none">Trabaja con nosotros</a></li>
+                    <li><a href="#" style="text-decoration:none">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
 </body>
 </html>
