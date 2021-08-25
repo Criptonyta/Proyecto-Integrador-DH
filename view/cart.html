@@ -21,6 +21,87 @@
 
 
 <body>
-    ESTA ES LA PAGINA DEL CART
+    <main>
+        <section class="menu-opciones">
+            <div class="opcion1">
+                <p class="menu-options-one">Tu carrito</p>
+            </div>
+            <div class="opcion2">
+                <p class="menu-options-two">Detalles de envío</p>
+            </div>
+            <div class="opcion3">
+                <p class="menu-options-three">Opciones de pago</p>
+            </div>
+        </section>
+        <section class="compra">
+        <h3>Tu carrito</h3>
+        <div class="product-list">
+            <p class="producto">Producto</p>
+        </div>
+        <div class="imagen">
+            <p class="product-imagen">Imagen del producto</p>
+        </div>
+        <div class="description">
+            <p class="description-product">Descripción del producto</p>
+        </div>
+        <div class="description-empty"></div>
+        <div class="edit-empty"></div>
+        
+        <div class="space">
+            <a class="edit" href="#Edit">Editar</a>
+        </div>
+        <div class="price">
+            <p class="price-unit">Precio unitario</p>
+        </div>
+        <div class="price-simbol">
+            <p class="price-simbol-unit">$ unitario</p>
+        </div>
+        <div class="amount">
+            <p class="amount-total">Cantidad</p>
+        </div>
+        <div class="amount-empty"></div>
+        <div class="total">
+            <p class="total-sale">Total</p>
+        </div>
+        <div class="total-simbol">
+            <p class="simbol-total">$ total</p>
+        </div>
+        <div class="save">
+            <input class="boton-save" type="submit" value="Seguir comprando">
+        </div>
+        <div class="clean">
+            <input class="boton-clean" type="reset" value="Limpiar pedido">
+        </div>
+        <div class="reset-date">
+            <input class="boton-reset" type="reset" value="Actualizar datos">
+        </div>
+        </section>
+        <section class="form-cost">
+       
+            <p class="cost-shipping">Calcular costo de envío</p>
+            <label class="country" for="pais">País:</label>
+            <input class="controls" type="text" name="País" id="pais" placeholder="País">
+            <label class="estado" for="estado">Estado/Provincia:</label>
+            <input class="controls" type="text" name="Provincia" id="estado" placeholder="Provincia">
+            <label class="county" for="localidad">Localidad:</label>
+            <input class="controls" type="text" name="Localidad" id="localidad" placeholder="Localidad">
+            <label class="postal" for="codigo postal">Código postal:</label>
+            <input class="controls" type="text" name="codigo postal" id="codigo postal" placeholder="Código postal">
+             <input class="botton-ship" type="submit" value="Calcular envío">    
+        </section>
+        
+        <section class="total-shipping">
+           
+            <p class="total-check">Totales</p>
+            <p class="subtotal">Subtotal $</p>
+            <p class="total-compra">TOTAL $</p>
+            <input class="botton-next" type="submit" value="Realizar pedido">
+            
+            </section>
+    
+
+
+    </main>
+
 </body>
 </html>
