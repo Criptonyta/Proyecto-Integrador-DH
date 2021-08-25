@@ -26,6 +26,7 @@ font-family: 'Roboto', sans-serif;
     padding: 30px;
     margin: auto;
     margin-top: 100px;
+    margin-bottom: 100px;
     font-family: 'Roboto';
     color: white;
     border-radius: 4px;
@@ -34,7 +35,7 @@ font-family: 'Roboto', sans-serif;
 .datos {
     font-family: 'Roboto';
     background: #00f6ff;
-    color: white;
+    color: #004d61;
     width: 100%;
     padding: 10px;
     border-radius: 4px;
@@ -60,13 +61,18 @@ padding: 12px;
 font-family: 'Roboto';
 font-size: 16px;
 background: #00f6ff;
-color: white;
+color: #004d61;
 opacity: 0.7;
 margin: 16px 0;
 }
 
 .fondo {
     background-color: gray;
+    background-image: url("/images/Images/Instrumentos_Musicales.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
 }
 
 
