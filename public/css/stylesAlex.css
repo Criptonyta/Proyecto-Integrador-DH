@@ -26,6 +26,8 @@ body {
     justify-content: center;
     align-content: center;
     color:white;
+    box-shadow: 6px 10px 21px 0px rgba(0,0,0,0.6);
+    
 }
 
 /* NAVBAR */
@@ -42,8 +44,9 @@ body {
 #navbar img {
     width:20vw;
     height:15vh;
-    max-width:100px;
-    max-height:100px;
+    min-width: 100px;
+    max-width:120px;
+    max-height:130px;
 }
 
 #navbar ul {
@@ -288,7 +291,7 @@ body {
     margin:0;
     margin-bottom: 15px;
     font-style: italic;
-    font-size:12px;
+    font-size:10px;
 }
 
 .agregar {
@@ -311,7 +314,12 @@ body {
 .agregarTexto {
     font-family: var(--letraParrafos);
     font-weight: normal;
-    margin-left: 2px;
+    margin-left: 0px; /* Era 2px */
+    font-size:9px; /* No estaba */
+}
+
+.special {
+    margin-left:2px;
 }
 
 .agregar:hover {
@@ -341,7 +349,8 @@ body {
 
 .related-container p {
     font-size: 12px;
-    margin:0 0 5px 0;
+    margin:0 0 5px 10px;
+    text-align: left;
 }
 
 .related-carrousel-container {
@@ -369,10 +378,10 @@ body {
 }
 
 .carrouselCard img {
-    width:100px;
-    height:100px;
+    width:90px;
+    height:90px;
     border-radius: 50%;
-    margin:0 5px;
+    margin:5px 5px;
 }
 
 .carrouselCardInfo {
@@ -384,8 +393,9 @@ body {
 
 .carrouselCardInfo h4 {
     font-size:12px;
-    margin: 5px 0;
+    margin: 5px 5px 5px 0;
 }
+
 
 .carrouselCard a {
     text-decoration: none;
@@ -440,8 +450,8 @@ body {
         width:160px;
     }
     .productDescription {
-        font-size: 15px;
-        line-height: 21px;
+        font-size: 12px;
+        line-height: 18px;
     }
     .carrouselCard {
         max-width:250px;
@@ -449,6 +459,9 @@ body {
     .related-carrousel-container {
         justify-content: space-around;
         flex-direction:row;
+    }
+    .agregarTexto {
+        font-size:12px;
     }
 }
 /* PRODUCT PAGE END */
