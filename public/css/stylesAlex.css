@@ -64,7 +64,8 @@
     width: 60px;
     height: 60px;
     padding:5px;
-    vertical-align: baseline;
+    /* vertical-align: baseline; */
+
 }
 
 #navbar ul {
