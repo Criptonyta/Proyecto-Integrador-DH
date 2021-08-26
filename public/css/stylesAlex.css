@@ -8,14 +8,24 @@
     --letraParrafos:'Roboto', sans-serif;
 }
 
-body {
+
+
+
+
+/* LOGIN PAGE START */
+
+.login-body {
     margin:0;
     padding:0;
     box-sizing:border-box;
-    background-color:rgb(128, 128, 128,0.5)
+    background-color: gray;
+    background-image: url("/images/Images/Instrumentos_Musicales.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-width: 305px;
 }
 
-/* LOGIN PAGE START */
 .mainContainer {
     width:60%;
     max-width:450px;
@@ -41,12 +51,20 @@ body {
     
 }
 
-#navbar img {
+/* #navbar img {
     width:20vw;
     height:15vh;
     min-width: 100px;
     max-width:120px;
     max-height:130px;
+} */
+
+.login-logo{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    padding:5px;
+    vertical-align: baseline;
 }
 
 #navbar ul {
@@ -181,6 +199,8 @@ body {
     background-color: white;
     color:black;
 }
+
+
 
 @media (min-width:450px){
 
@@ -539,7 +559,7 @@ i {
     grid-column-gap: 20px;
     grid-row-gap: 10px;
 }
-.cancion,.instrumento {}
+/* .cancion,.instrumento {} */
 .cancion img,.instrumento img {
     width:100px;
     height:100px;
