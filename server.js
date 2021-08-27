@@ -9,7 +9,7 @@ const path = require ('path');
 const port = process.env.PORT || '5000';
 app.listen(port,()=>{
 console.log(`Server is runnig in the Port : ${port}`);
-})
+});
 
 server.use(express.static(path.resolve(__dirname,'./public')));
 
