@@ -72,3 +72,9 @@ TITULOS
     font-family: font-family: 'Palette Mosaic', 'sans-serif';
     font-size: 28px;
 
+
+///////////////////////////////////
+ADD FAVICON
+///////////////////////////////////
+
+<link rel="shortcut icon" href="caminhodoarquivo/favicon.ico" />
