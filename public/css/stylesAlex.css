@@ -36,18 +36,21 @@
     justify-content: center;
     align-content: center;
     color:white;
-    box-shadow: 6px 10px 21px 0px rgba(0,0,0,0.6);
+    /* box-shadow: 6px 10px 21px 0px rgba(0,0,0,0.6); */
     
 }
 
 /* NAVBAR */
 #navbar {
-    height:15vh;
+    /* height:15vh; */
     background:var(--verdeOscuro);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    min-width: 200px;
     font-family: var(--letraParrafos);
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
     
 }
 
@@ -59,33 +62,39 @@
     max-height:130px;
 } */
 
-.login-logo{
+.login-logo-redondo{
     display: inline-block;
-    width: 60px;
-    height: 60px;
-    padding:5px;
-    /* vertical-align: baseline; */
-
+    width: 50px;
+    height: 50px;
+    margin: 0 0 0 1px;
 }
 
-#navbar ul {
+.login-logo{
+    display: none;
+}
+
+/* #navbar ul {
     display:flex;
-    padding:0 1vw;
-}
+    margin: 0 0 0 1vw;
+} */
 
 #navbar li:hover {
     text-decoration:underline;
 }
 
 .navbarOption {
-    margin:auto 1vw;
+    display: inline-block;
+    margin: 0 1vw 0 0;
     list-style-type:none;
-}
-
-.navbarOption a {
     color:white;
     text-decoration: none;
+    position:relative;
+    left: 45%;
 }
+
+/* .navbarOption a {
+
+} */
 
 /* LOGIN */
 #login {
@@ -96,13 +105,12 @@
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    min-width: 180px;
 }
 
 #login img {
-    width:7vw;
-    height:7vh;
+    width:30px;
     max-width:30px;
-    max-height: 30px;
 }
 
 #login form {
@@ -185,7 +193,7 @@
 }
 
 #loginButton {
-    background-color:var(--verdeOscuro);
+    /* background-color:var(--verdeOscuro);
     color:white;
     outline: none;
     padding:5px;
@@ -193,12 +201,28 @@
     cursor:pointer;
     border:none;
     margin: 15px 0;
-    transition-duration: 0.4s;
+    transition-duration: 0.4s; */
+
+    display: block;
+    width: 150px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #004d61;
+    background-color: #00f6ff;
+    margin: auto;
+    border: solid #00bacd;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 
 #loginButton:hover {
-    background-color: white;
-    color:black;
+    /* background-color: white;
+    color:black; */
+
+    color: #00f6ff;
+    background-color: #004d61;
 }
 
 
@@ -216,6 +240,11 @@
 
     #login form .information input:focus {
         width:200px;
+    }
+
+    .navbarOption {
+        position:relative;
+        left: 60%;
     }
 }
 
@@ -484,6 +513,18 @@
     .agregarTexto {
         font-size:12px;
     }
+
+    .login-logo{
+        display:inline-block;
+        height: 50px;
+        /* width: 280px; */
+        margin: 0 0 0 1vw;
+    }
+
+    .login-logo-redondo{
+        display: none;
+    }
+
 }
 /* PRODUCT PAGE END */
 
@@ -711,7 +752,10 @@ i {
     .ultimosAdicionadosContainer {
         max-width:650px;
     }
-    
+    .navbarOption {
+        position:relative;
+        left: 100px;
+    }
 }
 @media (min-width:900px){
     .canciones,.instrumentos {
