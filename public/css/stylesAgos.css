@@ -14,48 +14,140 @@ font-family: 'Roboto', sans-serif;
  */
 
  /* REGISTER PAGE START */
- * {
+
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.fondo {
+    background-color: gray;
+    background: url("/images/Images/Instrumentos_Musicales2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* NAVBAR */
+
+
+.fondo #navbar {
+    /* height:15vh; */
+    background-color: #004d61;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    min-width: 200px;
+    width: 450px;
+    font-family: var(--letraParrafos);
+    font-size: 0.9rem;
+    position: relative;
+    bottom: auto;
+    left: center;
+
+    
+}
+
+
+.navbarOption {
+    display: inline-block;
+    margin: 0 1vw 0 0;
+    list-style-type:none;
+    color:white;
+    text-decoration: none;
+    position:relative;
+    left: 45%;
+}
+
+.login-logo-redondo{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 0 0 1px;
+}
+
+.login-logo{
+    display: none;
+}
+
+
+/* FORMULARIO */
+
+
+.form-register h4 {
+    font-size: 28px;
+    font-family: 'Palette Mosaic', 'sans-serif';
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.Registro-Texto-Descriptivo{
+    text-align: center;
+    margin: 30px;
+    font-size: 12px;
+    padding: 15px;
+    border-bottom: solid 0.05px #00f6ff;
 }
 
 .form-register {
-    width: 400px;
+    display:flex;
+    width: 450px;
     background: #001f2c;
     padding: 30px;
     margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
-    font-family: 'Roboto';
+    /* font-family: 'Roboto'; */
     color: white;
     border-radius: 4px;
     box-shadow: 7px 13px 37px #000;
 }
 .datos {
-    font-family: 'Roboto';
-    background: #00f6ff;
+    /* font-family: 'Roboto'; */
+    /* background: #00f6ff;
     color: #004d61;
     width: 100%;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
     border: 1px solid white;
+    font-size: 18px; */
+
+    background-color:Var(--azulOscuro);
+    padding: 5px;
+    margin:15px;
+    margin-bottom: 25px;
+    font-family: var(--letraParrafos);
+    color:white;
+    font-family: var(--letraParrafos);
     font-size: 18px;
+    width:350px;
+    border:none;
+
 }
 
 .datos:hover{
-    border: #008198 10px;
+    border-bottom:1px solid white;
 }
 
-.form-register h4 {
-    font-size: 24px;
-    margin-bottom: 22px;
+.datos::placeholder{
+    font-size: 12px;
+    color:rgba(255,255,255,0.7);
+    font-style: italic;
     text-align: center;
 }
 
+
 .form-register .button {
-width: 100%;
+/* width: 100%;
 border: none;
 padding: 12px;
 font-family: 'Roboto';
@@ -63,26 +155,65 @@ font-size: 16px;
 background: #00f6ff;
 color: #004d61;
 opacity: 0.7;
-margin: 16px 0;
+margin: 16px 0; */
+
+display: block;
+width: 150px;
+border-radius: 5px;
+padding: 10px 20px;
+font-size: 18px;
+text-decoration: none;
+color: #004d61;
+background-color: #00f6ff;
+margin: auto;
+border: solid #00bacd;
+text-align: center;
+transition: all 0.5s;
+cursor: pointer;
 }
 
-.fondo {
-    background-color: gray;
-    background-image: url("/images/Images/Instrumentos_Musicales.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    
+.form-register .button:hover{
+color: #00f6ff;
+background-color: #004d61;
 }
 
+
+@media (min-width:450px){
+    .navbarOption {
+        position:relative;
+        left: 60%;
+    }
+}
+
+
+   @media (min-width:768px){
+    .navbarOption {
+        position:relative;
+        left: 100px;
+    }
+    .login-logo{
+        display:inline-block;
+        height: 50px;
+        /* width: 280px; */
+        margin: 0 0 0 1vw;
+    }
+
+    .login-logo-redondo{
+        display: none;
+    }
+}
 
 
 /* REGISTER PAGE END */
 
+
+
+
 /* CART1 PAGE START */
-* {
-    box-sizing: border-box;
-       
+
+
+*{
+    box-sizing: border-box;  
 }
 
 .menu-opciones {

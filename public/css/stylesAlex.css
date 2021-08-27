@@ -19,11 +19,11 @@
     padding:0;
     box-sizing:border-box;
     background-color: gray;
-    background-image: url("/images/Images/Instrumentos_Musicales.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
+
+    background: url("/images/Images/Instrumentos_Musicales2.jpg") no-repeat center center fixed;
     background-size: cover;
-    min-width: 305px;
+    height: 100%;
+    overflow: hidden;
 }
 
 .mainContainer {
@@ -100,12 +100,18 @@
 #login {
     background-color:Var(--azulOscuro);
     font-family: var(--letraParrafos);
+    font-size: 24px;
     padding:10px;
     display: flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     min-width: 180px;
+}
+
+#login p{
+    font-family: var(--letraTitulos);
+    font-size: 28px;
 }
 
 #login img {
@@ -177,9 +183,11 @@
     margin-left: 5px;
 }
 
-#forgotPassword {
+.options #forgotPassword {
     font-size: 12px;
     text-align: center;
+    font-family: var(--letraParrafos);
+    padding-bottom: 40px;
 }
 
 #forgotPassword:hover {
@@ -207,6 +215,7 @@
     width: 150px;
     border-radius: 5px;
     padding: 10px 20px;
+    font-size: 18px;
     text-decoration: none;
     color: #004d61;
     background-color: #00f6ff;
@@ -215,6 +224,7 @@
     text-align: center;
     transition: all 0.5s;
     cursor: pointer;
+    margin-bottom: 30px;
 }
 
 #loginButton:hover {
