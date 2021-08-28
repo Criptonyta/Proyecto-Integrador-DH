@@ -15,15 +15,6 @@ font-family: 'Roboto', sans-serif;
 
 
 
-*{
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-h2{
-    font-family: 'Palette Mosaic', cursive;
-}
-
-p{
-    font-family: 'Roboto', sans-serif;
-}
+@import url(/css/stylesAgos.css);
+@import url(/css/stylesAlex.css);
+@import url(/css/stylesDan.css);

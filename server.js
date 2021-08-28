@@ -2,8 +2,13 @@ const express = require('express');
 const server = express(); 
 const path = require ('path');
 
-server.listen (3001, () => {
-    console.log ("Servidor rodando en puerto 3001")
+// server.listen (3001, () => {
+//     console.log ("Servidor rodando en puerto 3001")
+// });
+
+const port = process.env.PORT || '5000';
+server.listen(port,()=>{
+console.log(`Server is runnig in the Port : ${port}`);
 });
 
 server.use(express.static(path.resolve(__dirname,'./public')));

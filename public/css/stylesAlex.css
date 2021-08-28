@@ -8,14 +8,24 @@
     --letraParrafos:'Roboto', sans-serif;
 }
 
-body {
+
+
+
+
+/* LOGIN PAGE START */
+
+.login-body {
     margin:0;
     padding:0;
     box-sizing:border-box;
-    background-color:rgb(128, 128, 128,0.5)
+    background-color: gray;
+
+    background: url("/images/Images/Instrumentos_Musicales2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
 }
 
-/* LOGIN PAGE START */
 .mainContainer {
     width:60%;
     max-width:450px;
@@ -26,64 +36,87 @@ body {
     justify-content: center;
     align-content: center;
     color:white;
-    box-shadow: 6px 10px 21px 0px rgba(0,0,0,0.6);
+    /* box-shadow: 6px 10px 21px 0px rgba(0,0,0,0.6); */
     
 }
 
 /* NAVBAR */
 #navbar {
-    height:15vh;
+    /* height:15vh; */
     background:var(--verdeOscuro);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    min-width: 200px;
     font-family: var(--letraParrafos);
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
     
 }
 
-#navbar img {
+/* #navbar img {
     width:20vw;
     height:15vh;
     min-width: 100px;
     max-width:120px;
     max-height:130px;
+} */
+
+.login-logo-redondo{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 0 0 1px;
 }
 
-#navbar ul {
-    display:flex;
-    padding:0 1vw;
+.login-logo{
+    display: none;
 }
+
+/* #navbar ul {
+    display:flex;
+    margin: 0 0 0 1vw;
+} */
 
 #navbar li:hover {
     text-decoration:underline;
 }
 
 .navbarOption {
-    margin:auto 1vw;
+    display: inline-block;
+    margin: 0 1vw 0 0;
     list-style-type:none;
-}
-
-.navbarOption a {
     color:white;
     text-decoration: none;
+    position:relative;
+    left: 45%;
 }
+
+/* .navbarOption a {
+
+} */
 
 /* LOGIN */
 #login {
     background-color:Var(--azulOscuro);
     font-family: var(--letraParrafos);
+    font-size: 24px;
     padding:10px;
     display: flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    min-width: 180px;
+}
+
+#login p{
+    font-family: var(--letraTitulos);
+    font-size: 28px;
 }
 
 #login img {
-    width:7vw;
-    height:7vh;
+    width:30px;
     max-width:30px;
-    max-height: 30px;
 }
 
 #login form {
@@ -105,6 +138,7 @@ body {
 #login form .information input  {
     background-color:Var(--azulOscuro);
     margin:5px;
+    padding:15px;
     font-family: var(--letraParrafos);
     color:white;
     font-family: var(--letraParrafos);
@@ -150,9 +184,11 @@ body {
     margin-left: 5px;
 }
 
-#forgotPassword {
+.options #forgotPassword {
     font-size: 12px;
     text-align: center;
+    font-family: var(--letraParrafos);
+    padding-bottom: 40px;
 }
 
 #forgotPassword:hover {
@@ -166,7 +202,7 @@ body {
 }
 
 #loginButton {
-    background-color:var(--verdeOscuro);
+    /* background-color:var(--verdeOscuro);
     color:white;
     outline: none;
     padding:5px;
@@ -174,13 +210,33 @@ body {
     cursor:pointer;
     border:none;
     margin: 15px 0;
-    transition-duration: 0.4s;
+    transition-duration: 0.4s; */
+
+    display: block;
+    width: 150px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #004d61;
+    background-color: #00f6ff;
+    margin: auto;
+    border: solid #00bacd;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-bottom: 30px;
 }
 
 #loginButton:hover {
-    background-color: white;
-    color:black;
+    /* background-color: white;
+    color:black; */
+
+    color: #00f6ff;
+    background-color: #004d61;
 }
+
+
 
 @media (min-width:450px){
 
@@ -195,6 +251,11 @@ body {
 
     #login form .information input:focus {
         width:200px;
+    }
+
+    .navbarOption {
+        position:relative;
+        left: 60%;
     }
 }
 
@@ -463,6 +524,18 @@ body {
     .agregarTexto {
         font-size:12px;
     }
+
+    .login-logo{
+        display:inline-block;
+        height: 50px;
+        /* width: 280px; */
+        margin: 0 0 0 1vw;
+    }
+
+    .login-logo-redondo{
+        display: none;
+    }
+
 }
 /* PRODUCT PAGE END */
 
@@ -539,7 +612,7 @@ i {
     grid-column-gap: 20px;
     grid-row-gap: 10px;
 }
-.cancion,.instrumento {}
+/* .cancion,.instrumento {} */
 .cancion img,.instrumento img {
     width:100px;
     height:100px;
@@ -690,7 +763,10 @@ i {
     .ultimosAdicionadosContainer {
         max-width:650px;
     }
-    
+    .navbarOption {
+        position:relative;
+        left: 100px;
+    }
 }
 @media (min-width:900px){
     .canciones,.instrumentos {

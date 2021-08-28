@@ -21,48 +21,60 @@
 
 
     <body class="fondo">
-        
+                
+        <!--NAVBAR-->
+        <section id="navbar">
+                <a href="/"><img src="/images/Images/Logo Horizontal.jpg" class="login-logo" alt="logo"></a>
+                <a href="/"><img src="/images/Images/Logo redondo.jpg" class="login-logo-redondo" alt="logo"></a>
+                <a href="#" class="navbarOption" style="text-decoration:none">Ayuda</a>
+        </section>
+
+        <!--FORMULARIO-->
+
         <section class="form-register">
                 <form action="/registro" method="POST">
-                <h4>¡Registrate ahora!</h4>
+                <h4>¡Registrate!</h4>
+                    <div>
+                        <p class="Registro-Texto-Descriptivo">
+                            Para poder publicar y vender tus canciones o instrumentos, debes realizar tu registro en nuestra plataforma. <br><br>
+                            <strong><em>HACELO AHORA!</em></strong><br><br>
+                            Una vez que tu registro sea validado, podras cargar tus anuncios desde tu perfil de usuario.
+                        </p>
+                    </div>
+
                 <div class="items">
                 <p>
-                <label>Nombre:</label>
-                <input class="datos" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+                <i class="fas fa-id-badge"><label>     Como te llamas?</label></i><br>
+                <input class="datos" type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
                 </p>
                 
                 <p>
-                <label>Apellido:</label>
-                <input class="datos" type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" required>
+                <i class="fas fa-id-badge"><label>     Y tu apellido es...</label></i><br>
+                <input class="datos" type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido" required>
                 </p>
         
                 <p>
-                <label>Email:</label>
-                <input class="datos" type="email" name="email" id="email" placeholder="Ingrese su email" required>
+                <i class="fas fa-at"><label>     Cual es tu Email?</label></i><br>
+                <input class="datos" type="email" name="email" id="email" placeholder="Te enviaremos un email para confirmarlo ;-)" required>
                 </label>
                 </p>
         
                 <p>
-                <label>Contraseña:</label>
-                <input class="datos" type="password" name="password" id="password" placeholder="Ingrese su contraseña" required>
+                <i class="fas fa-key"><label>      Contraseña:</label></i><br>
+                <input class="datos" type="password" name="password" id="password" placeholder="Elegí e ingresá tu contraseña" required>
                 </p>
         
                 <p>
-                <label>Dejanos tu comentario</label>
-                <textarea class="datos" name="Comentario" placeholder="¿Cómo nos conociste?"></textarea>
+                <i class="fas fa-music"><label>     Si sos músico, escribí tu minibio aquí para destacar entre la multitud</label></i><br>
+                <textarea class="datos" name="minibio" rows="3" maxlength="120" placeholder="Por Ejemplo: Soy guitarrista profesional hace 15 años. Tengo 4 trabajos publicados y estoy disponible para trabajar en conjunto con otros y crear una banda"></textarea>
                 </p>
                 
-                <input class="button" button type="submit" value="Registrarse"></button>
+                <input class="button" button type="submit" value="Registrar"></button>
                 </div>
                 </form>
         </section>
             
       
+     </body>   
         
-        
-        
-        
-        
-        
-</body>
 </html>
