@@ -1420,3 +1420,311 @@ footer {
       
     }
 /* CART2 PAGE END */
+
+/* CART3 PAGE START */
+.menu-opciones {
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    padding: 10px;
+    background-color: #001f2c;
+    opacity: 0.8;
+    border: solid 1px #00bacd;
+    
+}
+
+.menu-options-one {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+   
+  
+}
+
+.menu-options-two {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+     
+}
+
+.menu-options-three {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    text-decoration: underline;
+    
+}
+
+.dates-payment {
+    width: 90%;
+    background-color: #001f2c;
+    padding: 30px;
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    box-shadow: 7px 12px 35px #000;
+    margin-left: 3%;
+    font-size: 18px;
+    
+    }
+    .dates-payment h4 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-family: 'Palette Mosaic', cursive;
+    }
+    
+    .button-radio-pay{
+        background-color: #00bacd;  
+        font-size: 18px;
+        font-family: "Roboto", sans-serif;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 4px;
+        text-align: start;
+        
+        
+        
+    }
+    .radios-buttons {
+        background-color: #00bacd;  
+        font-size: 18px;
+        font-family: "Roboto", sans-serif;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 4px;
+        display: flex;
+       justify-content: space-around;
+    }
+   
+    .button-radio-pay2 {
+        background-color: #008198;
+        font-size: 18px;
+        font-family: "Roboto", sans-serif;
+        border-radius:4px;
+        width: 45%;
+
+        
+    
+    }
+
+    .button-radio-pay3 {
+        background-color: #008198;  
+        font-size: 18px;
+        font-family: "Roboto", sans-serif;
+        border-radius:4px;
+        width: 45%;
+    
+    }
+    
+    .control-2{
+        width:90%;
+        padding: 10px;
+        margin-bottom: 16px;
+        margin-top: 10px;
+        border: 1px solid #001f2c;
+        opacity: 0.7;
+        border-radius: 4px;
+        background-color: #008198;
+        margin-right: 10px;
+    }
+    .control-3 {
+        width:90%;
+        padding: 10px;
+        margin-bottom: 16px;
+        margin-top: 10px;
+        border: 1px solid #001f2c;
+        opacity: 0.7;
+        border-radius: 4px;
+        background-color: #008198;
+        margin-right: 10px;  
+    }
+    .control-tarjeta {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 16px;
+        margin-top: 10px;
+        border: 1px solid #001f2c;
+        opacity: 0.7;
+        border-radius: 4px;
+        background-color: #008198;
+        margin-right: 10px; 
+    }
+
+    .carrito-pay {
+        width:90%;
+        background-color: #001f2c;
+        padding: 30px;
+        margin-top: 50px;
+        border-radius: 4px;
+        font-family: "Palette Mosaic", cursive;
+        color: white;
+        box-shadow: 7px 12px 35px #000;
+        margin-left: 3%;
+        font-size: 20px;
+        
+    }
+
+    .button-envy {
+        width: 40%;
+        padding: 12px;
+        background-color: #008198;
+        border-radius: 4px;
+        font-size: 18px;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        border: solid 1px white;
+        margin-top: 15px;
+
+    }
+    
+    .button-cancel {
+        width: 40%;
+        padding: 12px;
+        background-color: #008198;
+        border-radius: 4px;
+        font-size: 18px;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        border: solid 1px white;
+        margin-top: 15px;
+  
+    }
+    .ship-pay1 {
+        text-align: initial;
+        margin-bottom: 20px;
+      
+    }
+
+    .img-pay {
+        width: 70px;
+        height: 70px;
+        background-color: #001f2c;
+        border: solid 1px white;
+        padding: 10px;
+
+    }
+
+    .img-pay2 {
+        width: 70px;
+        height: 70px;
+        background-color: #001f2c;
+        border: solid 1px white;
+        padding: 10px;
+
+    }
+
+    .product-pay1 {
+        font-size: 18px;
+        font-family: "Roboto", sans-serif;
+        position: relative;
+        bottom: 80px;
+       
+ 
+    }
+
+    .product-pay2 {
+        font-size: 18px;
+        font-family: "Roboto", sans-serif;
+        position: relative;
+        bottom: 80px;
+       
+ 
+    }
+
+    .total-pay {
+        width:90%;
+        background-color: #001f2c;
+        padding: 30px;
+        margin-top: 50px;
+        border-radius: 4px;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        box-shadow: 7px 12px 35px #000;
+        margin-left: 3%;
+        text-align: start;
+    }
+
+.pay-total {
+    text-align: initial;
+    font-family: "Palette Mosaic", cursive;
+}
+.pay-subtotal {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 3px;
+    text-align: initial;
+    }
+
+
+.pay {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 3px;
+    text-align: initial;
+    }
+
+
+.total-pay2 {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 3px;
+    text-align: initial;
+    }
+
+    @media (min-width: 768px) {
+           
+       .total-pay {
+            width:30%;
+        }
+        .control-tarjeta {
+            width: 70%;
+            margin-left: 2px;
+     
+        }
+        .venc {
+            margin-right: 10px;
+        }
+
+           
+         
+        .control-2 {
+            width:70%;
+            margin-left: 10px;
+            
+        }
+        .control-3 {
+            width: 40%;
+
+        }
+        .dates-payment{
+            width: 50%;
+            
+        }
+        .carrito-pay {
+            width: 30%;          
+            position: absolute;
+            right: 80px;
+            bottom: 10px;
+        }
+        .total-pay {
+            width: 25%;
+            position: absolute;
+            right: 100px;
+            top:620px;
+            margin-bottom: 20px;
+
+        }
+      .dates-payment {
+        width: 680px;  
+        height: 680px;
+      }
+
+      .botones {
+       margin-top: 29px;
+      }
+    
+    }
+/* CARRITO3 PAGE END */
