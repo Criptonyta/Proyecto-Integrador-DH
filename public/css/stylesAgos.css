@@ -206,6 +206,315 @@ background-color: #004d61;
 
 /* REGISTER PAGE END */
 
+/* CARRITO1 PAGE START */
+
+.menu-opciones {
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    padding: 10px;
+    background-color: #001f2c;
+    opacity: 0.8;
+    border: solid 1px #00bacd;
+    
+}
+
+.menu-options-one {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    text-decoration: underline;
+   
+  
+}
+
+.menu-options-two {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+     
+}
+
+.menu-options-three {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+
+.container1-products {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+       
+}
+.container1-products div {
+   
+    background-color: #00f6ff;
+    border: solid 1px white;
+    width: 30%;
+    height: 100px;
+
+}
+.descrip {
+    display: none;
+}
+.alone {
+    display: none;
+
+}
+.unit {
+    display: none;
+}
+
+.container1-products2 {
+    display: flex;    
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+.container1-products2 div {
+    background-color: #00f6ff;
+    border: solid 1px white;
+    width: 30%;
+    display: none;
+}
+
+h3.cart-titule  {
+    font-size: 20px;
+    font-family: "Palette Mosaic", cursive;
+    margin: 10px; 
+    border-radius: 15px;
+    text-align: center;
+}
+.save1 {
+    text-align: right;
+    margin-right: 20px;
+}
+.boton-save1 {
+    background-color: #00f6ff;
+    width: 50%;
+    font-size: 20px;
+    color: black;
+    border-color: white;
+    border-radius:  4px;
+    padding: 5px;
+   
+}
+.clean1 {
+    text-align: start;
+    position: relative;
+    bottom: 36px;
+    margin-left: 5px;
+}
+
+.boton-clean1 {
+    background-color: #00f6ff;
+    font-size: 22px;
+    color: black;
+    border-color: white;
+    border-radius:  4px;
+
+}
+.reset-date1 {
+    text-align: start;
+    margin-left: 5px;
+    position: relative;
+    bottom: 32px;
+}
+.boton-reset1 {
+    background-color: #00f6ff;
+    font-size: 20px;
+    color: black;
+    border-color: white;
+    border-radius:  4px;
+}
+
+.form-cost1 {
+    background-color: #001f2c;
+    width:100%;
+    padding: 10px;
+    box-shadow: 7px 12px 35px #000;
+     
+}
+.form-cost1, .cost-shipping1 {
+    font-size: 20px;
+    color: white;
+    font-family:'Palette Mosaic', cursive;
+    text-decoration: none;
+   
+}
+
+.controls1 {
+    width:100%;
+    padding: 10px;
+    color: black;
+    border: 1px solid #001f2c;
+    opacity: 0.7;
+    border-radius: 4px;
+}
+
+.botton-ship1 {
+    width: 50%;
+    background:rgb(9, 131, 121);
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 14px 0;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.pay-total1 {
+    font-family: "Palette Mosaic", cursive;
+    font-size: 22px;
+
+}
+
+.total-shipping1 {
+    background-color: #001f2c;
+    width: 100%;
+    box-shadow: 7px 12px 35px #000;
+    text-align: start;
+    padding: 20px;
+     
+
+}
+
+.total-check1 {
+    font-family: 'Palette Mosaic', cursive;
+    font-size: 20px;
+    color: white;
+    text-decoration: none; 
+   
+
+}
+.subtotal1 {
+    font-size: 20px;
+    color: white;
+    font-family: "Roboto";
+   
+}
+.total-compra1 {
+    font-size: 20px;
+    color: white;
+    font-family: "Roboto";
+    text-decoration: dashed;
+   
+}
+.botton-next1 {
+    width: 50%;
+    background:rgb(9, 131, 121);
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 14px 0;
+    font-size: 16px;
+    border-radius: 4px;
+   
+}
+.country1 {
+font-family: "Roboto", sans-serif;
+text-align: start;
+}
+.estado1 {
+font-family:"Roboto", sans-serif;
+
+}
+.county1 {
+font-family:"Roboto", sans-serif;
+}
+.postal1 {
+font-family:"Roboto", sans-serif;
+}
+
+@media (min-width: 768px) {
+    .container1-products {
+        display: flex;
+        justify-content: center;
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        width: 99%;
+        justify-content: center;
+        
+           
+    }
+    .container1-products div {
+        display: flex;;
+        background-color: #00f6ff;
+        border: solid 1px white;
+        width: 90%;
+        height: 50px;
+       justify-content: center;
+    }
+
+    .container1-products2 {
+        display: flex;    
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        width: 99%;
+        justify-content: center;
+    }
+    .container1-products2 div {
+        background-color: #00f6ff;
+        border: solid 1px white;
+        width: 90%;
+        display: flex;
+        height: 100px;
+        justify-content: center;
+        
+    }
+    .boton-clean1 {
+    background-color: #00f6ff;
+    width: 25%;
+    font-size: 20px;
+    color: black;
+    border-color: white;
+    border-radius:  4px;
+    padding: 5px;
+        
+    }
+    .boton-reset1 {
+        background-color: #00f6ff;
+    width: 25%;
+    font-size: 20px;
+    color: black;
+    border-color: white;
+    border-radius:  4px;
+    padding: 5px;
+
+    }
+    .boton-save1 {
+    background-color: #00f6ff;
+    width: 35%;
+    font-size: 20px;
+    color: black;
+    border-color: white;
+    border-radius:  4px;
+    padding: 5px;
+
+    }
+
+    .form-cost1 {
+        background-color: #001f2c;
+        width:60%;
+        padding: 10px;
+         
+    }
+
+    .total-shipping1 {
+    background-color: #001f2c;
+    width: 30%;
+    position: absolute;
+   top: 650px;
+    right: 50px;
+
+    
+   
+   
+    }
+}
 
 
 
