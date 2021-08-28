@@ -94,7 +94,7 @@ font-family: 'Roboto', sans-serif;
     margin: 30px;
     font-size: 12px;
     padding: 15px;
-    border-bottom: solid 0.05px #00f6ff;
+    border-bottom: solid 0.05px white;
 }
 
 .form-register {
