@@ -1,3 +1,12 @@
+falta ver los del cart, 
+
+revisar las navbars individuales (para que cuadren con lo hecho en el mockup) y 
+
+hacer la pagina de perfil
+
+
+
+
 ///////////////////////////////////
 ESTANDARIZACION BOTONES
 ///////////////////////////////////

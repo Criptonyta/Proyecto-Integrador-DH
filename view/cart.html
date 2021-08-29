@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/Images/favicon.ico" />
-    <title>Carrito de compras - Tu carrito</title>
+    <title>Musiqueiros</title>
     <link rel="stylesheet" href="/css/stylesAgos.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="fuente" href="https://fonts.googleapis.com">
@@ -46,7 +46,7 @@
     
         <section class="menu-opciones">
             <div class="opcion1">
-                <p class="menu-options-one">Tu carrito</p>
+                <p class="menu-options-one"><u>Tu carrito</u></p>
             </div>
             <div class="opcion2">
                 <p class="menu-options-two">Detalles de envío</p>
@@ -57,7 +57,7 @@
         </section>
 
         <h3 class="cart-titule">Tu carrito</h3>
-        <div class="container1-products">
+        <!-- <div class="container1-products">
            
             <div>Producto</div>
             <div class="descrip">Descripción del producto</div> 
@@ -75,6 +75,35 @@
                 <div class="empty-count"></div>
                 <div class="total-price">$ Total</table></div>
             </div>
+         -->
+        
+         <table class="cart-products-table">
+            <tr>
+              <th>Producto</th>
+              <th>Descripcion del Producto</th>
+              <th> </th>
+              <th>Precio unitario</th>
+              <th>Cantidad</th>
+              <th>Total</th>
+            </tr>
+            <tr>
+              <td>Imagen del producto</td>
+              <td> </td>
+              <td>Editar</td>
+              <td>$ unitario</td>
+              <td> </td>
+              <td>$ total</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+              </tr>
+          </table>
+
             <br>
             <div class="container-button">
             <div class="save1">
@@ -87,7 +116,7 @@
                 <input class="boton-reset1" type="reset" value="Actualizar datos">
             </div>
             </div>
-    
+
         
             <section class="form-cost1">
        
@@ -148,335 +177,3 @@
 
 
 <!--CARRITO1 END-->
-
-<!--CARRITO 2 START-->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
-    <title>Musiqueiros</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- Implementando Google fonts (https://fonts.google.com/) -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- GoogleFonts => Copio y pego en el head los links que me da la GFonts, luego de haberlos elegido -->
-    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Roboto&display=swap" rel="stylesheet">
-    <!-- GoogleFonts => Implementando Roboto + Palette Mosaic -->
-
-    <script src="https://kit.fontawesome.com/17d45040ef.js" crossorigin="anonymous"></script>
-    <!-- Implementando Font-Awesome -->
-
-    <link rel="stylesheet" href="./css/normalize.css">
-    <!-- Implementando Libreria Normalize.css (https://necolas.github.io/normalize.css/) para que el sitio web sea homogeneo en los diferentes navegadores. Desde el sitio, descargo, guardo como la css en la misma carpeta del proyecto y luego la linkeo -->
-    <link rel="stylesheet" href="./css/stylesAgos.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
-
-    <!--<link rel="stylesheet" href="/css/styles.css">  Descomentar esta linea cuando el CSS este compilado -->
-
-</head>
-
-<body class="color fondo">
-
-    <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
-
-    <header class="main-header">
-
-        <nav class="main-header-izq">
-            <!-- Creando la parte izquierda de la NavBar -->
-            <img src="./css/Images/Logo redondo.jpg" class="logoMobile" alt="Logo Musiqueiros Mobile">
-            <img src="./css/Images/Logo horizontal.jpg" class="logo" alt="Logo Musiqueiros">
-        </nav>
-
-        <nav class="main-header-der">
-            <!-- Creando la parte derecha de la NavBar -->
-            <a href="#" class="hamburguer-button">
-                <!-- Boton responsivo -->
-                <i class="fas fa-bars"></i>
-            </a>
-            <ul>
-                <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                <li><a href="#" style="text-decoration:none">Comprar Musica</a></li>
-                <li><a href="#" style="text-decoration:none">Comprar Instrumentos</a></li>
-            </ul>
-
-            <!-- Boton Ingreso responsivo | Exibido en NavBar en > 700px -->
-            <a href="#" class="button" target="_blank">Ingresa </a>
-
-        </nav>
-    </header>
-
-
-        <main>
-            
-            <!-- ESPACIO RESERVADO PARA EL CONTENIDO -->
-            <section class="menu-opciones">
-                <div class="opcion1">
-                    <p class="menu-options-one">Tu carrito</p>
-                </div>
-                <div class="opcion2">
-                    <p class="menu-options-two">Detalles de envío</p>
-                </div>
-                <div class="opcion3">
-                    <p class="menu-options-three">Opciones de pago</p>
-                </div>
-            </section>
-            <section class="box-one">
-            
-            <section class="dates-envy">
-                
-                <h4>Detalles de envío</h4>
-               
-    
-                <div class="form-envy">
-               
-                <input class="envy-controls-name" type="text" name="nombre" id="name-envy" placeholder="Nombre">
-                
-                <input class="envy-controls-apellido" type="text" name="apellido" id="apellido-envy" placeholder="Apellido">
-                
-                <input class="envy-controls-direction" type="text" name="direccion" id="direction-envy" placeholder="Dirección">
-                
-                <input class="envy-controls-ciudad" type="text" name="ciudad" id="ciudad-envy" placeholder="Ciudad">
-               
-                <input class="envy-controls-pais" type="text" name="pais" id="pais-envy" placeholder="País">
-                
-                <input class="envy-controls-postal" type="number" name="postal" id="postal-code" placeholder="Código postal">
-               
-                <input class="envy-controls-tel" type="tel" name="tel" id="tel-envy" placeholder="Teléfono">
-                
-               
-                <div class="radios">
-                <div class="button-radio">
-                <input type="radio" class="options-of-ship" name="medio-de-pago" value="Envío gratis, en domicilio dentro de los 5 días hábiles">
-                <label for="Envío gratis, en domicilio dentro de los 5 días hábiles">Envío gratis, en domicilio dentro de los 5 días hábiles"</label>
-                </div>
-               
-                <br>
-    
-                <div class="button-radio-2">
-                <input type="radio" class="options-of-ship" name="medio-de-pago" value="$500, llega dentro de las 24hs">
-                 <label for="$500, llega dentro de las 24hs">$500, llega dentro de las 24hs</label>         
-                </div>
-                </div>
-                 <div class="buttons">
-                <input class="botton-envy" type="submit" value="Siguiente">
-                <input class="botton-cancel" type="reset" value="Cancelar">    
-                </div>
-                </div>
-            </section>
-        
-         <div class="ship-list">
-             <div class="cuadro2">
-             <h3 class="carritoTotal">Carrito</h3>
-             <div class="img-cart"></div>
-             <p class="product-1">Producto $</p>        
-            <div class="img-cart-2"></div>
-            <p class="product-2">Producto $</p>
-             </div>
-         
-         <div class="total-with-ship">
-             <h3 class="ship-total">Total compra</h3>
-             <p class="ship-subtotal">Subtotal $</p>
-             <p class="envy">Envío $</p>
-             <p class="total-cart">Total $</p>
-         </div>
-    </section>
-    
-    
-    
-    
-    
-                
-
-          
-        </main>
-
-        <!-- ======= FOOTER | PIE DE PAGINA ========= -->
-
-        <footer>
-            <!-- Adicionando iconos font-awesome de redes sociales -->
-            <div class="redessociales-footer">
-                <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
-                <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fas fa-share-alt-square"></i></a>
-            </div>
-
-            <div class="main-footer">
-                <div class="main-footer-der-text">
-                    <ul>
-                        <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                        <li><a href="#" style="text-decoration:none">Contactanos</a></li>
-                        <li><a href="#" style="text-decoration:none">Acerca de</a></li>
-                        <li><a href="#" style="text-decoration:none">Terminos y condiciones</a></li>
-                    </ul>
-                </div>
-
-                <div class="main-footer-izq-text">
-                    <ul>
-                        <li><a href="#" style="text-decoration:none">Trabaja con nosotros</a></li>
-                        <li><a href="#" style="text-decoration:none">FAQs</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-</body>
-</html>
-
-<!--CART 2 PAGE END-->
-
-<!--CART 3 PAGE START-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de compras - Detalles de envío</title>
-    <link rel="stylesheet" href="/css/stylesAgos.css">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="fuente" href="https://fonts.googleapis.com">
-    <link rel="fuente2" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Roboto&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/17d45040ef.js" crossorigin="anonymous"></script> <!-- Implementando Font-Awesome -->
-
-</head>
-<body class="color-fondo">
-    <header class="main-header">
-
-        <nav class="main-header-izq">
-            <!-- Creando la parte izquierda de la NavBar -->
-            <img src="css/Images/Logo redondo.jpg" class="logoMobile" alt="Logo Musiqueiros Mobile">
-            <img src="css/Images/Logo Horizontal.jpg" class="logo" alt="Logo Musiqueiros">
-        </nav>
-
-        <nav class="main-header-der">
-            <!-- Creando la parte derecha de la NavBar -->
-            <a href="#" class="hamburguer-button">
-                <!-- Boton responsivo -->
-                <i class="fas fa-bars"></i>
-            </a>
-            <ul>
-                <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                <li><a href="#" style="text-decoration:none">Comprar Musica</a></li>
-                <li><a href="#" style="text-decoration:none">Comprar Instrumentos</a></li>
-            </ul>
-
-            <!-- Boton Ingreso responsivo | Exibido en NavBar en > 700px -->
-            <a href="#" class="button" target="_blank">Ingresa </a>
-
-        </nav>
-
-    </header>
-
-<main>
-    
-        <section class="menu-opciones">
-            <div class="opcion1">
-                <p class="menu-options-one">Tu carrito</p>
-            </div>
-            <div class="opcion2">
-                <p class="menu-options-two">Detalles de envío</p>
-            </div>
-            <div class="opcion3">
-                <p class="menu-options-three">Opciones de pago</p>
-            </div>
-        </section>
-        
-        <section class="dates-payment">
-            <div class="dates-payment-options">
-            <h4>Opciones de pago</h4>
-            </div>
-
-            <div class="form-payment">
-            
-            <div class="button-radio-pay">
-            <input type="radio"  name="forma-de-pago" value="Tarjeta de crédito">
-            
-            <label for="Tarjeta de credito">Tarjeta de crédito</label>
-            <br>
-            
-            <label for="Numero de tarjeta">Número de la tarjeta</label>
-            <input type="number" class="control-tarjeta" name="numero de tarjeta" value="Numero de tarjeta">
-           
-            <label class="venc" for="Vencimiento">Fecha vencimiento</label>
-             <input type="month" class="control-tarjeta" name="fecha">
-             
-             <label for="titular">Titular de la tarjeta</label>
-             <input type="text" class="control-2" name="titular de la tarjeta" id="Titular de la tarjeta" placeholder="Nombre que figura en la tarjeta">
-             
-             <label for="Codigo">Código de seguridad</label>
-            <input class="control-3" type="number" name="codigo" id="codigo" placeholder="CS">
-            <br>
-           </div>
-            
-            <br>
-            <div class="radios-buttons">
-            <div class="button-radio-pay2">
-            <input type="radio" class="options-of-pay" name="forma-de-pago" value="Mercado Pago">
-             <label for="Mercado Pago">Mercado Pago</label>         
-            </div>
-
-            <div class="button-radio-pay3">
-            <input type="radio" class="options-of-pay" name="forma-de-pago" value="PayPal">
-            <label for="PayPal">PayPal</label>
-            </div>
-            </div>
-           
-             <div class="botones">
-            <input class="button-envy" type="submit" value="Pagar">
-            <input class="button-cancel" type="reset" value="Cancelar">    
-            </div>
-        </section>
-    
-     <section class="ship-pay">
-         <div class=carrito-pay>
-         <h3 class="ship-pay1">Carrito</h3>
-         <div class="img-pay"></div>
-        <p class="product-pay1">Producto $</p>
-        <div class="img-pay2"></div>
-        <p class="product-pay2">Producto $</p>
-      </div>
-     
-     <div class="total-pay">
-         <h3 class="pay-total">Total compra</h3>
-         <p class="pay-subtotal">Subtotal $</p>
-         <p class="pay">Envío $</p>
-         <p class="total-pay2">Total $</p>
-     </section>
-<br>
-<br>
-<br>
-</main>
-
-    <footer>
-        <!-- Adicionando iconos font-awesome de redes sociales -->
-        <div class="redessociales-footer">
-            <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
-            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fas fa-share-alt-square"></i></a>
-        </div>
-
-        <div class="main-footer">
-            <div class="main-footer-der-text">
-                <ul>
-                    <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                    <li><a href="#" style="text-decoration:none">Contactanos</a></li>
-                    <li><a href="#" style="text-decoration:none">Acerca de</a></li>
-                    <li><a href="#" style="text-decoration:none">Terminos y condiciones</a></li>
-                </ul>
-            </div>
-
-            <div class="main-footer-izq-text">
-                <ul>
-                    <li><a href="#" style="text-decoration:none">Trabaja con nosotros</a></li>
-                    <li><a href="#" style="text-decoration:none">FAQs</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
-
-<!-- CARRITO 3 PAGE END-->

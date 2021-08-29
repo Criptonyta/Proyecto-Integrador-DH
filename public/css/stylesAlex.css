@@ -553,7 +553,7 @@ section {
     border:none;
     outline:none;
     padding:5px;
-    margin:15px 5px 5px 5px;
+    margin:30px 5px 30px 5px;
     border-radius: 5px;
     font-size: 14px;
     color:black;
@@ -581,6 +581,7 @@ i {
 .cancionesMasEscuchadas,.instrumentosEnVenta,.ultimosAdicionados {
     display:flex;
     flex-direction: column;
+    margin-bottom: 40px;
 }
 .cancionesMasEscuchadas .cabecera,.instrumentosEnVenta .cabecera,.ultimosAdicionados .cabecera {
     margin:15px 0 15px 10px;

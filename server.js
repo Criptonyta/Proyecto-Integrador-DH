@@ -21,6 +21,14 @@ server.get('/cart',(req,res)=>{
     res.sendFile(path.join(__dirname,'./view/cart.html'))
 });
 
+server.get('/cart2',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/cart2.html'))
+});
+
+server.get('/cart3',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/cart3.html'))
+});
+
 server.get('/login',(req,res)=>{
     res.sendFile(path.join(__dirname,'./view/login.html'))
 });
@@ -33,8 +41,16 @@ server.get('/product',(req,res)=>{
     res.sendFile(path.join(__dirname,'./view/product.html'))
 });
 
+server.get('/productempty',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/productempty.html'))
+});
+
 server.get('/register',(req,res)=>{
     res.sendFile(path.join(__dirname,'./view/register.html'))
+});
+
+server.get('/userprofile',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/userprofile.html'))
 });
 
 server.get('/tienda',(req,res)=>{

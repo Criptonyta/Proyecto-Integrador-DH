@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="./images/Images/favicon.ico" />
+    <title>Musiqueiros</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Implementando Google fonts (https://fonts.google.com/) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- GoogleFonts => Copio y pego en el head los links que me da la GFonts, luego de haberlos elegido -->
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Roboto&display=swap" rel="stylesheet"> <!-- GoogleFonts => Implementando Roboto + Palette Mosaic -->
+
+    <script src="https://kit.fontawesome.com/17d45040ef.js" crossorigin="anonymous"></script> <!-- Implementando Font-Awesome -->
+    
+    <link rel="stylesheet" href="/css/normalize.css"> <!-- Implementando Libreria Normalize.css (https://necolas.github.io/normalize.css/) para que el sitio web sea homogeneo en los diferentes navegadores. Desde el sitio, descargo, guardo como la css en la misma carpeta del proyecto y luego la linkeo -->
+    <link rel="stylesheet" href="/css/stylesAgos.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
+    
+    <!--<link rel="stylesheet" href="/css/styles.css">  Descomentar esta linea cuando el CSS este compilado -->
+
+</head>
+
+
+    <body class="fondo">
+                
+
+
+
+
+        <section class="form-register">
+
+        <!--NAVBAR-->
+        <section id="navbar">
+            <a href="/"><img src="/images/Images/Logo Horizontal.jpg" class="login-logo" alt="logo"></a>
+            <a href="/"><img src="/images/Images/Logo redondo.jpg" class="login-logo-redondo" alt="logo"></a>
+                <a href="#" class="navbarOption" style="text-decoration:none">Ayuda</a>
+        </section>
+
+        <!--FORMULARIO-->
+
+                <form action="/registro" method="POST" class="formulario">
+                <h4>Perfil de Usuario</h4>
+                    <div>
+                        <p class="Registro-Texto-Descriptivo">
+                            Puedes editar tu perfil de usuario y publicar tus anuncios desde aqui.<br>
+                        </p>
+                    </div>
+
+                <div class="items">
+                <p>
+                <i class="fas fa-id-badge"><label>     Como te llamas?</label></i><br>
+                <input class="datos" type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
+                </p>
+                
+                <p>
+                <i class="fas fa-id-badge"><label>     Y tu apellido es...</label></i><br>
+                <input class="datos" type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido" required>
+                </p>
+        
+                <p>
+                <i class="fas fa-at"><label>     Cual es tu Email?</label></i><br>
+                <input class="datos" type="email" name="email" id="email" placeholder="Te enviaremos un email para confirmarlo ;-)" required>
+                </label>
+                </p>
+        
+                <p>
+                <i class="fas fa-key"><label>      Contraseña:</label></i><br>
+                <input class="datos" type="password" name="password" id="password" placeholder="Elegí e ingresá tu contraseña" required>
+                </p>
+        
+                <p>
+                <i class="fas fa-music"><label>     Si sos músico, escribí tu minibio aquí para destacar entre la multitud</label></i><br>
+                <textarea class="datos" name="minibio" rows="3" maxlength="120" placeholder="Por Ejemplo: Soy guitarrista profesional hace 15 años. Tengo 4 trabajos publicados y estoy disponible para trabajar en conjunto con otros y crear una banda"></textarea>
+                </p>
+                
+                <input class="button" button type="submit" value="Registrar"></button>
+                </div>
+                </form>
+        </section>
+            
+      
+     </body>   
+        
+</html>
