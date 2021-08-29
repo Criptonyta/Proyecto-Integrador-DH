@@ -31,7 +31,7 @@ body {
     background-color: #001f2c;
 }
 
-/* ========= Home Mobile =========  */
+/* ========= HOME Mobile =========  */
 
 main {
     text-align: center;
@@ -175,7 +175,7 @@ h5{
 
 
 
-/* ========= NavBar Mobile =========  */
+/* ========= NAVBAR Mobile =========  */
 
 .main-header {
     /* Convierto el contenedor en Flex */
@@ -221,7 +221,7 @@ h5{
 }
 
 
-/* ========= Footer Mobile =========  */
+/* ========= FOOTER Mobile =========  */
 
 footer {
     background-color: #008198;
@@ -266,7 +266,7 @@ footer {
 
 @media(min-width:361px) {
 
-    /* ========= NavBar  min-width:361px =========  */
+    /* ========= NAVBAR  min-width:361px =========  */
     .logoMobile {                                      /* Oculto el logo pequeno */
         display: none;
     }
@@ -277,7 +277,7 @@ footer {
         margin: 10px;
     }
 
-    /* ========= Footer  min-width:361px =========  */
+    /* ========= FOOTER  min-width:361px =========  */
     .redessociales-footer i {                       /* Amplio el tamano de los logos de redes*/
         font-size: 40px;
     }
@@ -303,7 +303,7 @@ footer {
         text-align: right;
     }
 
-    /* ========= Body  min-width:361px =========  */
+    /* ========= HOME BODY  min-width:361px =========  */
 
     h1 {
         font-size: 36px;
@@ -385,7 +385,7 @@ footer {
 
 @media(min-width:768px) {
 
-    /* ========= NavBar min-width:768px =========  */
+    /* ========= NAVBAR min-width:768px =========  */
 
     .main-header-der {
         display: flex;
@@ -439,14 +439,14 @@ footer {
     }
 
 
-    /* ========= Footer min-width:768px =========  */
+    /* ========= FOOTER min-width:768px =========  */
 
     .redessociales-footer i {
         font-size: 50px;
     }
 
 
-    /* ========= Body min-width:768px =========  */
+    /* ========= HOME BODY min-width:768px =========  */
 
     .home-bodysection-head{
         display: block;
@@ -559,3 +559,78 @@ footer {
     }
 
 }
+
+
+/* ========= USER PROFILE  min-width:361px =========  */
+
+.userprofile-formulario h4{
+    text-align: left;
+    font-size: 28px;
+    font-family: 'Palette Mosaic', cursive;
+    margin: 20px;
+    padding-bottom: 40px;
+    border-bottom: solid 2px white;
+}
+
+.userprofile-formulario{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: initial;
+    margin: 30px;
+}
+
+
+.userprofile-datos{
+    background-color:Var(--azulOscuro);
+    margin:10px;
+    font-family: var(--letraParrafos);
+    color:white;
+    font-family: var(--letraParrafos);
+    font-size: 13px;
+    width:auto;
+    border:none;
+}
+
+.userprofile-datos:hover {
+    border-bottom:1px solid white;
+}
+
+.userprofile-datos input::placeholder {
+    font-size: 12px;
+    color:rgba(255,255,255,0.7);
+    font-style: italic;
+    text-align: center;
+}
+
+.userprofile-datos textarea{
+    width: 300px;
+    height: 150px;
+}
+
+
+.userprofile-button {
+    display: block;
+    width: 150px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #004d61;
+    background-color: #00f6ff;
+    margin: auto;
+    border: solid #00bacd;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.userprofile-button:hover {
+    color: #00f6ff;
+    background-color: #004d61;
+}
+
+
+
+/* ========= USER PROFILE  min-width:768px =========  */

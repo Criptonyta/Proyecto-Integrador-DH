@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width">
     <title>Musiqueiros</title>
 
+    <link rel="shortcut icon" href="./images/Images/favicon.ico" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- Implementando Google fonts (https://fonts.google.com/) -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +21,7 @@
 
     <link rel="stylesheet" href="/css/normalize.css">
     <!-- Implementando Libreria Normalize.css (https://necolas.github.io/normalize.css/) para que el sitio web sea homogeneo en los diferentes navegadores. Desde el sitio, descargo, guardo como la css en la misma carpeta del proyecto y luego la linkeo -->
-    <link rel="stylesheet" href="/css/stylesDan.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
-
-    <!--<link rel="stylesheet" href="/css/styles.css">  Descomentar esta linea cuando el CSS este compilado -->
+    <link rel="stylesheet" href="/css/styles.css"> 
 
 </head>
 
@@ -33,8 +33,8 @@
 
         <nav class="main-header-izq">
             <!-- Creando la parte izquierda de la NavBar -->
-            <a href="/"><img src="/images/Images/Logo Horizontal.jpg" class="login-logo" alt="logo"></a>
-            <a href="/"><img src="/images/Images/Logo redondo.jpg" class="login-logo-redondo" alt="logo"></a>
+            <a href="/"><img src="/images/Images/Logo redondo.jpg" class="logoMobile" alt="Logo Musiqueiros Mobile" /></a>
+            <a href="/"><img src="/images/Images/Logo Horizontal.jpg" class="logo" alt="Logo Musiqueiros" /></a>
         </nav>
 
         <nav class="main-header-der">
@@ -45,62 +45,53 @@
             </a>
             <ul>
                 <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                <li><a href="#" style="text-decoration:none">Comprar Musica</a></li>
-                <li><a href="#" style="text-decoration:none">Comprar Instrumentos</a></li>
+                <li><a href="/tienda" style="text-decoration:none">Comprar Musica</a></li>
+                <li><a href="/tienda" style="text-decoration:none">Comprar Instrumentos</a></li>
             </ul>
 
             <!-- Boton Ingreso responsivo | Exibido en NavBar en > 700px -->
-            <a href="#" class="button" target="_blank">Ingresa </a>
+            <a href="/login" class="button" target="_blank">Ingresa </a>
 
         </nav>
     </header>
 
 
 
+    <!-- ======= BODY | CUERPO DE LA HOME ========= -->
 
-        <main>
-
-            <!-- ESPACIO RESERVADO PARA EL CONTENIDO -->
-            <h2>
-    
-    
-    
-    
-                ESPACIO RESERVADO PARA EL CONTENIDO 
+    <main>
 
 
-
-            </h2>
-        </main>
-
+    </main>
 
         <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
         <footer>
             <!-- Adicionando iconos font-awesome de redes sociales -->
             <div class="redessociales-footer">
-                <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
-                <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fas fa-share-alt-square"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" target="_blank"><i class="fas fa-share-alt-square"></i></a>
             </div>
 
             <div class="main-footer">
                 <div class="main-footer-der-text">
                     <ul>
                         <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                        <li><a href="#" style="text-decoration:none">Contactanos</a></li>
-                        <li><a href="#" style="text-decoration:none">Acerca de</a></li>
-                        <li><a href="#" style="text-decoration:none">Terminos y condiciones</a></li>
+                        <li><a href="#" style="text-decoration:none" target="_blank">Contactanos</a></li>
+                        <li><a href="#" style="text-decoration:none" target="_blank">Acerca de</a></li>
+                        <li><a href="#" style="text-decoration:none" target="_blank">Terminos y condiciones</a></li>
                     </ul>
                 </div>
 
                 <div class="main-footer-izq-text">
                     <ul>
-                        <li><a href="#" style="text-decoration:none">Trabaja con nosotros</a></li>
-                        <li><a href="#" style="text-decoration:none">FAQs</a></li>
+                        <li><a href="#" style="text-decoration:none" target="_blank">Trabaja con nosotros</a></li>
+                        <li><a href="#" style="text-decoration:none" target="_blank">FAQs</a></li>
                     </ul>
                 </div>
             </div>
         </footer>
 </body>
+
 </html>
