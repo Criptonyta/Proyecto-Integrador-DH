@@ -270,7 +270,7 @@
 
 .product-container {
     width:100%;
-    padding:10px;
+    padding:30px;
     display:flex;
     flex-direction:column;
     text-align: center;
@@ -421,6 +421,7 @@
     flex-direction: column;
     justify-content:center;
     align-items:center;
+    /* margin: 40px; No se porque al habilitar el margen y poner el width a 90% se rompe el responsivo VER*/
 
 }
 
@@ -520,6 +521,7 @@
     .related-carrousel-container {
         justify-content: space-around;
         flex-direction:row;
+
     }
     .agregarTexto {
         font-size:12px;
@@ -612,6 +614,7 @@ i {
     grid-column-gap: 20px;
     grid-row-gap: 10px;
 }
+
 /* .cancion,.instrumento {} */
 .cancion img,.instrumento img {
     width:100px;
@@ -621,10 +624,12 @@ i {
     margin:2px 0 5px 0;
     text-align:center;
     font-size: 11px;
+    text-decoration: none;
 }
 
 .artistaCancion,.artistaInstrumento {
     font-style: italic;
+    text-decoration: none;
 }
 
 .ultimosAdicionados {

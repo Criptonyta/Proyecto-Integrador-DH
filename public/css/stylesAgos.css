@@ -27,24 +27,35 @@ font-family: 'Roboto', sans-serif;
     background-color: gray;
     background: url("/images/Images/Instrumentos_Musicales2.jpg") no-repeat center center fixed;
     background-size: cover;
-    height: 100%;
+    width: auto;
+    /* height: 100%; */
     /* overflow: hidden; */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+.form-register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:30px;
+}
+
 /* NAVBAR */
 
 
 .fondo #navbar {
-    /* height:15vh; */
     background-color: #004d61;
+    min-width: 450px;
     display: flex;
-    justify-content: center;
+
     align-items: center;
+
+    /* height:15vh;
+    justify-content: center;
+
     height: 60px;
-    min-width: 200px;
     width: 450px;
     font-family: var(--letraParrafos);
     font-size: 0.9rem;
@@ -52,8 +63,8 @@ font-family: 'Roboto', sans-serif;
     bottom: auto;
     left: center;
 
-    
-}
+    */
+} 
 
 
 .navbarOption {
@@ -63,7 +74,8 @@ font-family: 'Roboto', sans-serif;
     color:white;
     text-decoration: none;
     position:relative;
-    left: 45%;
+    left: 65%;
+
 }
 
 .login-logo-redondo{
@@ -101,7 +113,7 @@ font-family: 'Roboto', sans-serif;
     display:flex;
     width: 450px;
     background: #001f2c;
-    padding: 30px;
+
     margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -110,6 +122,11 @@ font-family: 'Roboto', sans-serif;
     border-radius: 4px;
     box-shadow: 7px 13px 37px #000;
 }
+
+.formulario{
+    padding: 30px;
+}
+
 .datos {
     /* font-family: 'Roboto'; */
     /* background: #00f6ff;
@@ -181,10 +198,9 @@ background-color: #004d61;
 @media (min-width:450px){
     .navbarOption {
         position:relative;
-        left: 60%;
+        left: 70%;
     }
 }
-
 
    @media (min-width:768px){
     .navbarOption {
