@@ -1,0 +1,260 @@
+:root {
+    --azulOscuro:#001f2c;
+    --verdeOscuro:#004d61;
+    --verdeIntermedio:#008198;
+    --verdeClaro:#00bacd;
+    --aguamarina:#00f6ff;
+    --letraTitulos:'Palette Mosaic', cursive;
+    --letraParrafos:'Roboto', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* Menu que muestra en que parte del pago te encontras */
+.cart1Alex-menu {
+    border-top:1px solid white;
+    border-bottom: 1px solid white;
+    margin-bottom: 15px;
+}
+
+.cart1Alex-menu {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart1Alex-menuContainer {
+    width:100%;
+    height:15vh;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items:center;
+    max-width:700px;
+}
+
+.cart1Alex-menuOption {
+    margin: 0 5px;
+}
+
+.cart1Alex-menuOption a {
+    text-decoration: none;
+    font-size:15px;
+    font-family: sans-serif;
+}
+/* Subrayo la pagina en la que estoy */
+#cart1Alex-menuOption-1 {
+    border-bottom: 1px solid white;
+}
+
+/* Tabla con los datos */
+.cart1Alex-tabla {
+    width:90%;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+}
+
+#cart1Alex-tablaHeader {
+    margin:5px auto;
+    font-size:15px;
+    font-weight: bold;
+}
+
+#cart1Alex-tablaDatosContainer {
+    overflow-x:auto;
+    margin:5px;
+
+}
+
+#cart1Alex-tablaDatos {
+    border-collapse: collapse;
+}
+
+#cart1Alex-tablaDatos td, #cart1Alex-tablaDatos th {
+    border: none;
+    padding: 8px;
+    font-size: 12px;
+}
+
+#cart1Alex-tablaDatos th {
+    background-color:var(--verdeIntermedio)
+}
+
+#cart1Alex-tablaDatos tr {
+    background-color:var(--verdeClaro)
+}
+
+/* Botones */
+.cart1Alex-botones {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:80%;
+    margin:20px auto;
+    max-width: 600px;
+}
+
+#cart1Alex-botonesOpcionSeguir {
+    margin:0;
+}
+
+.cart1Alex-botonesContainer {
+    display:flex;
+
+}
+
+.cart1Alex-botonesContainer button {
+    margin:0 5px;
+}
+
+.cart1Alex-botonesOpcion {
+    width: 100px;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--verdeClaro);
+    margin: auto;
+    border: solid #00bacd;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.cart1Alex-botonesOpcion:hover {
+    color: #00f6ff;
+    background-color: #004d61;
+}
+
+.cart1Alex-botonesOpcion i {
+    font-size: 12px;
+    font-weight: bold;
+    margin:3px 0;
+}
+
+.cart1Alex-botonesOpcion i span {
+    margin:0 3px;
+    font-size: 10px;
+    font-family: sans-serif;
+    font-weight: none;
+    font-style:normal;
+}
+
+/* Datos de envio */
+.cart1Alex-datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:60%;
+    margin:10px auto;
+}
+
+.cart1Alex-datosCalcular {
+    margin-top: 15px;
+    padding:5px;
+}
+
+.cart1Alex-datosCalcular p {
+    border-bottom:1px solid white;
+}
+
+.cart1Alex-datosCalcular p {
+    margin:5px;
+    font-size:14px;
+}
+
+.cart1Alex-datosFormulario {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.cart1Alex-datosFormularioEntrada {
+    display:flex;
+    flex-direction: column;
+    margin:5px 0;
+}
+.cart1Alex-datosFormulario label {
+    font-size:12px;
+}
+
+.cart1Alex-datosFormularioEntradaInput {
+    background-color: var(--verdeClaro);
+    font-size: 13px;
+    width:200px;
+}
+
+#cart1Alex-botonesOpcionCalcular {
+    margin-top: 10px;
+}
+
+.cart1Alex-datosTotales {
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top: 10px;
+    padding:5px;
+}
+
+.cart1Alex-datosTotales p {
+    margin:2px;
+    font-size: 12px;
+}
+.cart1Alex-datosTotales span {
+    font-size: 12px;
+    margin:0 5px;
+}
+
+.cart1Alex-datosCalcular button span {
+    margin:0 5px;
+}
+
+.cart1Alex-datosTotales button {
+    margin:10px 0;
+}
+
+.cart1Alex-datosTotales button i {
+    margin:0 1px 0 5px;
+}
+
+#cart1Alex-botonesOpcionContinuar {
+    width:110px;
+}
+
+
+@media (min-width:480px){}
+@media (min-width:650px){
+    .cart1Alex-menuOption a{
+        font-size:18px;
+    }
+    #cart1Alex-tablaDatos td, #cart1Alex-tablaDatos th {
+        font-size: 16px;
+    }
+    #cart1Alex-tablaDatosContainer {
+        margin:5px auto;
+    }
+    .cart1Alex-botonesOpcion {
+        font-size:13px;
+    }
+    .cart1Alex-datos {
+        flex-direction: row;
+    }
+    .cart1Alex-datos article {
+        margin:0 30px;
+    }
+    
+}
+@media (min-width:800px){
+}

@@ -21,6 +21,10 @@ server.get('/cart',(req,res)=>{
     res.sendFile(path.join(__dirname,'./view/cart.html'))
 });
 
+server.get('/cart1Alex',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/cart1Alex.html'))
+});
+
 server.get('/cart2',(req,res)=>{
     res.sendFile(path.join(__dirname,'./view/cart2.html'))
 });
