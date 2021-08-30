@@ -172,7 +172,7 @@
     font-size:14px;
 }
 
-.cart1Alex-datosFormulario {
+.cart1Alex-datosFormulario form{
     text-align: left;
     display: flex;
     flex-direction: column;
