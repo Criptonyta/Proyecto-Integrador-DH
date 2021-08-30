@@ -52,3 +52,123 @@
     border-bottom: 1px solid white;
 }
 
+/* Detalles de envio */
+.cart2Alex-mainContainer {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    max-width: 500px;
+    margin:0 auto;
+}
+.cart2Alex-detallesEnvio {
+    width:90%;
+    max-width: 400px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart2Alex-detallesEnvio p,.cart2Alex-detallesEnvio form {
+    margin:5px 0 5px 5px;
+}
+
+.cart2Alex-detallesEnvio form {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.cart2Alex-detallesEnvioEntradaInput {
+    background:rgba(128, 128, 128,0.5);
+    margin:5px;
+    width:150px;
+    padding:5px;
+    font-size: 12px;
+    color:white;
+    border:none;
+}
+
+.cart2Alex-detallesEnvioEntradaInput::placeholder {
+    color:rgba(255,255,255,1)
+}
+
+.cart2Alex-detallesEnvioBotones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart2Alex-detallesEnvioBotones i {
+    margin:0 5px;
+    font-size:12px;
+}
+
+.cart2Alex-botonesOpcion {
+    width: 130px;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--verdeClaro);
+    margin: 5px;
+    border: solid #00bacd;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.cart2Alex-botonesOpcion:hover {
+    color: #00f6ff;
+    background-color: #004d61;
+}
+
+.cart2Alex-resumenCarrito {
+    margin:10px;
+}
+
+.cart2Alex-datosTotales {
+    width:90%;
+    margin:10px;
+}
+
+.cart2Alex-datosTotalesSubrayado {
+    border-bottom: 1px solid white;
+}
+
+.cart2Alex-resumenCarrito p {
+    margin:5px 0;
+    font-size:12px;
+    text-align:left;
+}
+
+.cart2Alex-resumenCarrito p span {
+    font-size:12px;
+    margin:0 5px;
+}
+
+
+
+@media (min-width:369px){
+    #cart2Alex-cart2Alex-detallesEnvioDireccion {
+        width:98%;
+    }
+    .cart2Alex-detallesEnvioBotones {
+        flex-direction: row;
+    }
+}
+
+@media (min-width:650px){
+    .cart2Alex-mainContainer {
+        flex-direction:row;
+    }
+    .cart2Alex-resumenCarrito {
+        margin-left: 25px;
+    }
+}
