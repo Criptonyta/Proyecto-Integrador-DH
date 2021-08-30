@@ -201,6 +201,11 @@ h5{
     display: none;
 }
 
+.button-profileuser{
+    font-size: 20px;
+    margin-right: 30px;
+}
+
 .hamburguer-button i {
     /* Convierto el menu en block */
     display: block;
@@ -208,7 +213,16 @@ h5{
     padding: 5px;
     text-align: right;
     font-size: 20px;
-}
+} 
+
+.button-profileuser {
+    /* Convierto el menu en block */
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    text-align: right;
+    font-size: 20px;
+} 
 
 .logoMobile {
     width: 40px;
@@ -406,6 +420,7 @@ footer {
     
     }
 
+
     .button {
         /* Estilizo el boton de ingreso */
         display: inline-block;
@@ -591,32 +606,56 @@ footer {
     margin: 10px 10px 10px 30px;
 }
 
-
-.userprofile-datos{
+/* Animacion de campos input del formulario */
+.userprofile-form input{
     background-color:Var(--azulOscuro);
-    margin:10px;
+    margin:5px;
+    padding:15px;
     font-family: var(--letraParrafos);
     color:white;
     font-family: var(--letraParrafos);
     font-size: 13px;
-    width:auto;
+    width:180px;
     border:none;
 }
 
-.userprofile-datos input:hover {
+.userprofile-form input:hover{
     border-bottom:1px solid white;
 }
 
-.userprofile-datos input::placeholder {
+.userprofile-form input::placeholder,
+.userprofile-form textarea,
+.userprofile-form option{
     font-size: 12px;
     color:rgba(255,255,255,0.7);
     font-style: italic;
     text-align: center;
 }
 
-.userprofile-datos textarea{
+.userprofile-form input{
+        transition: width .35s ease-in-out;
+}
+
+.userprofile-form input:focus{
+        width:200px;
+}
+
+.userprofile-form textarea,
+.userprofile-form option{
     height: 6em;
-    width: 400px;
+    width: auto;
+    background-color:Var(--azulOscuro);
+    margin:5px;
+    padding:15px;
+    font-family: var(--letraParrafos);
+    color:white;
+    font-family: var(--letraParrafos);
+    font-size: 13px;
+    border:none;
+}
+
+.userprofile-form textarea{
+    margin: 10px, 10px, 10px, 10px
 }
 
 .userprofile-button,
@@ -667,4 +706,32 @@ footer {
 }
 
 
-/* ========= USER PROFILE  min-width:768px =========  */
+/* ========= USER PROFILE  min-width:570px =========  */
+
+@media(min-width:570px){
+
+    .userprofile-form textarea,
+    .userprofile-form option{
+        height: 6em;
+        width: 350px;
+    }
+
+    .userprofile-form input{
+        width:300px;
+
+    }
+}
+
+@media(min-width:995px){
+
+    .userprofile-form textarea,
+    .userprofile-form option{
+        height: 6em;
+        width: 800px;
+    }
+
+    .userprofile-form input{
+        width:500px;
+
+    }
+}

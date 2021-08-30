@@ -4,6 +4,8 @@ revisar las navbars individuales (para que cuadren con lo hecho en el mockup) y
 
 hacer la pagina de perfil
 
+producto blanc y cancion blanc
+
 
 
 
@@ -49,11 +51,19 @@ LINK HOME EN EL LOGO NAVBAR
 ESTANDARIZACION CAMPOS FORMULARIO
 ///////////////////////////////////
 
-<i class="fas fa-envelope"><input type="email" required placeholder="Email"></i>
+x <section id="login">
+            <img src="/images/Icons/pngfind.com-black-png-1823885.png" alt="loginIcon">
+            <p>Bienvenido</p>
+            <form action="" id="loginForm">
+x                <div class="information">
+x                    <i class="fas fa-envelope"><input type="email" required placeholder="Email"></i>
+                    <i class="fas fa-key"><input type="password" required placeholder="Password"></i>
+                </div>
 
- {
+#login form .information input  {
     background-color:Var(--azulOscuro);
     margin:5px;
+    padding:15px;
     font-family: var(--letraParrafos);
     color:white;
     font-family: var(--letraParrafos);
@@ -73,6 +83,13 @@ ESTANDARIZACION CAMPOS FORMULARIO
     text-align: center;
 }
 
+#login form .information input {
+        transition: width .35s ease-in-out;
+}
+
+#login form .information input:focus {
+        width:200px;
+}
 
 ///////////////////////////////////
 TITULOS
@@ -87,3 +104,8 @@ ADD FAVICON
 ///////////////////////////////////
 
 <link rel="shortcut icon" href="caminhodoarquivo/favicon.ico" />
+
+
+
+///////////////////////////////////
+

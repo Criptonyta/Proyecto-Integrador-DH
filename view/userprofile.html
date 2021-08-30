@@ -38,19 +38,18 @@
         </nav>
 
         <nav class="main-header-der">
-            <!-- Creando la parte derecha de la NavBar -->
+            <!-- Creando la parte derecha de la NavBar
             <a href="#" class="hamburguer-button">
-                <!-- Boton responsivo -->
                 <i class="fas fa-bars"></i>
-            </a>
+            </a> -->
             <ul>
                 <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
                 <li><a href="/tienda" style="text-decoration:none">Comprar Musica</a></li>
                 <li><a href="/tienda" style="text-decoration:none">Comprar Instrumentos</a></li>
             </ul>
 
-            <!-- Boton Ingreso responsivo | Exibido en NavBar en > 700px -->
-            <a href="/login" class="button" target="_blank">Ingresa </a>
+            <!-- Boton perfil | Exibido en NavBar en > 700px -->
+            <a href="/userprofile" class="button-profileuser"><i class="far fa-user-circle large"></i> </a>
 
         </nav>
     </header>
@@ -72,11 +71,11 @@
     
                     <p>
                         <i class="fas fa-at"><label>     Email (no editable):</label></i>
-                        <input class="userprofile-datos" type="email" name="email" id="email" placeholder="Tu email">
+                        <input type="email" name="email" id="email" placeholder="Tu email">
                         </label>
                     </p>
     
-                    <div class="items">
+                <div class="userprofile-items">
                     <p>
                     <i class="fas fa-id-badge"></i><label>     Nombre:</label></i>
                     <input class="userprofile-datos" type="text" name="nombre" id="nombre" placeholder="Edita tu nombre"><i class="fas fa-user-edit"></i>
@@ -110,9 +109,12 @@
                         </select>          
                     <i class="fas fa-user-edit"></i>
                     </p>
-                    
-                    <input class="userprofile-button" button type="submit" value="Salvar"></button>
-                    </div>
+
+                </div>
+
+                <section>
+                    <a href="#" class="userprofile-button">Salvar </a>
+                </section>
 
 
             <h4>Mis anuncios</h4>
