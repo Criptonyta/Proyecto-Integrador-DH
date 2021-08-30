@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/Images/favicon.ico" />
-
     <title>Musiqueiros</title>
-    <link rel="stylesheet" href="/css/stylesAgos.css">
-    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css"> <!-- Implementando Libreria Normalize.css (https://necolas.github.io/normalize.css/) para que el sitio web sea homogeneo en los diferentes navegadores. Desde el sitio, descargo, guardo como la css en la misma carpeta del proyecto y luego la linkeo -->
+    <link rel="stylesheet" href="/css/stylesAgos.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
     <link rel="fuente" href="https://fonts.googleapis.com">
     <link rel="fuente2" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Roboto&display=swap" rel="stylesheet">
@@ -22,8 +22,8 @@
 
         <nav class="main-header-izq">
             <!-- Creando la parte izquierda de la NavBar -->
-            <img src="images/Images/Logo redondo.jpg" class="logoMobile" alt="Logo Musiqueiros Mobile">
-            <img src="images/Images/Logo Horizontal.jpg" class="logo" alt="Logo Musiqueiros">
+            <img src="css/Images/Logo redondo.jpg" class="logoMobile" alt="Logo Musiqueiros Mobile">
+            <img src="css/Images/Logo Horizontal.jpg" class="logo" alt="Logo Musiqueiros">
         </nav>
 
         <nav class="main-header-der">
@@ -55,75 +55,79 @@
                 <p class="menu-options-two">Detalles de envío</p>
             </div>
             <div class="opcion3">
-                <p class="menu-options-three"><u>Opciones de pago</u></p>
+                <p class="menu-options-three">Opciones de pago</p>
             </div>
         </section>
         
-        <section class="dates-payment">
-            <div class="dates-payment-options">
-            <h4>Opciones de pago</h4>
-            </div>
-
-            <div class="form-payment">
+        <section class="cart3-dates-payment">
             
-            <div class="button-radio-pay">
+            <h4>Opciones de pago</h4>
+           
+
+            <div class="cart3-form-payment">
+            
+            <div class="cart3-button-radio-pay">
             <input type="radio"  name="forma-de-pago" value="Tarjeta de crédito">
             
             <label for="Tarjeta de credito">Tarjeta de crédito</label>
-            <br>
+           <br>
+           <br>
             
             <label for="Numero de tarjeta">Número de la tarjeta</label>
-            <input type="number" class="control-tarjeta" name="numero de tarjeta" value="Numero de tarjeta">
-           
-            <label class="venc" for="Vencimiento">Fecha vencimiento</label>
-             <input type="month" class="control-tarjeta" name="fecha">
-             
+            <input type="number" class="cart3-control-tarjeta" name="numero de tarjeta" value="Numero de tarjeta">
+          
+            <label for="Vencimiento">Fecha vencimiento</label>
+             <input type="month" class="cart3-control-tarjeta" name="fecha">
+             <br>
              <label for="titular">Titular de la tarjeta</label>
-             <input type="text" class="control-2" name="titular de la tarjeta" id="Titular de la tarjeta" placeholder="Nombre que figura en la tarjeta">
-             
+             <input type="text" class="cart3-control-2" name="titular de la tarjeta" id="Titular de la tarjeta" placeholder="Titular">
+          
              <label for="Codigo">Código de seguridad</label>
-            <input class="control-3" type="number" name="codigo" id="codigo" placeholder="CS">
+            <input class="cart3-control-3" type="number" name="codigo" id="codigo" placeholder="CS">
             <br>
            </div>
             
             <br>
-            <div class="radios-buttons">
-            <div class="button-radio-pay2">
-            <input type="radio" class="options-of-pay" name="forma-de-pago" value="Mercado Pago">
+            <div class="cart3-radios-buttons">
+            <div class="cart3-button-radio-pay2">
+            <input type="radio" class="cart3-options-of-pay" name="forma-de-pago" value="Mercado Pago">
              <label for="Mercado Pago">Mercado Pago</label>         
             </div>
 
-            <div class="button-radio-pay3">
+            <div class="cart3-button-radio-pay3">
             <input type="radio" class="options-of-pay" name="forma-de-pago" value="PayPal">
             <label for="PayPal">PayPal</label>
             </div>
             </div>
-           
-             <div class="botones">
-            <input class="button-envy" type="submit" value="Pagar">
-            <input class="button-cancel" type="reset" value="Cancelar">    
+           <br>
+           <br>
+             <div class="cart3-botones">
+            <input class="cart3-button-envy"type="submit" value="Pagar">            
+            <input class="cart3-button-cancel" type="reset" value="Cancelar">    
             </div>
         </section>
     
-     <section class="ship-pay">
-         <div class=carrito-pay>
-         <h3 class="ship-pay1">Carrito</h3>
-         <div class="img-pay"></div>
-        <p class="product-pay1">Producto $</p>
-        <div class="img-pay2"></div>
-        <p class="product-pay2">Producto $</p>
+     <section class="cart3-ship-pay">
+         <div class="cart3-carrito-pay">
+         <h3 class="cart3-ship-pay1">Carrito</h3>
+         <div class="cart3-img-pay"></div>
+        <p class="cart3-product-pay1">Producto $</p>
+        <div class="cart3-img-pay2"></div>
+        <p class="cart3-product-pay2">Producto $</p>
       </div>
      
-     <div class="total-pay">
-         <h3 class="pay-total">Total compra</h3>
-         <p class="pay-subtotal">Subtotal $</p>
-         <p class="pay">Envío $</p>
-         <p class="total-pay2">Total $</p>
+     <div class="cart3-total-pay">
+         <h3 class="cart3-pay-total">Total compra</h3>
+         <p class="cart3-pay-subtotal">Subtotal $</p>
+         <p class="cart3-pay">Envío $</p>
+         <p class="cart3-total-pay2">Total $</p>
+      </div>
      </section>
 <br>
 <br>
 <br>
 </main>
+
 
     <footer>
         <!-- Adicionando iconos font-awesome de redes sociales -->
@@ -154,5 +158,9 @@
 
 </body>
 </html>
+
+
+
+
 
 <!-- CARRITO 3 PAGE END-->

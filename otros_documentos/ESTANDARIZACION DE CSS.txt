@@ -6,6 +6,34 @@ hacer la pagina de perfil
 
 producto blanc y cancion blanc
 
+///////////////////////////////////
+NAVBAR
+///////////////////////////////////
+
+CAMBIAR EL INGRESO X MUNECO
+
+SACAR (COMENTAR)
+<!-- Boton Ingreso responsivo | Exibido en NavBar en > 700px -->
+<a href="/login" class="button" target="_blank">Ingresa </a>
+
+<!-- Creando la parte derecha de la NavBar -->
+<a href="#" class="hamburguer-button">
+<!-- Boton responsivo -->
+<i class="fas fa-bars"></i>
+</a>
+
+
+
+PONER
+<!-- Boton perfil | Exibido en NavBar en > 700px -->
+<a href="/userprofile" class="button-profileuser"><i class="far fa-user-circle large"></i> </a>
+
+.button-profileuser{
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+.
 
 
 
