@@ -56,7 +56,48 @@
                 <li class="cart2Alex-menuOption" id="cart2Alex-menuOption-3"><a href="#">Opciones de pago</a></li>
             </ul>
         </section>
-
+        <section class="cart2Alex-detallesEnvio">
+            <p>Detalles de envio</p>
+            <form>
+                <div class="cart2Alex-detallesEnvioNombre">
+                    <input type="text" name="nombre" placeholder="Nombre" class="cart2Alex-detallesEnvioEntradaInput">
+                    <input type="text" name="apellido" placeholder="Apellido" class="cart2Alex-detallesEnvioEntradaInput">
+                </div>
+                <div class="cart2Alex-detallesEnvioLocacion">
+                    <select name="pais" required class="cart2Alex-detallesEnvioEntradaInput">
+                        <option selected></option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Mexico">Mexico</option>
+                    </select>
+                    <select name="provincia" required class="cart2Alex-detallesEnvioEntradaInput">
+                        <option selected></option>
+                        <option value="Cordoba">Argentina</option>
+                        <option value="Mendoza">Brasil</option>
+                        <option value="Caba">Mexico</option>
+                    </select>
+                </div>
+                <div class="cart2Alex-detallesEnvioLocalidad">
+                    <input type="text" name="ciudad" placeholder="Ciudad">
+                    <input type="text" name="codigoPostal" placeholder="Codigo postal">
+                </div>
+                <input type="text" name="direccion" placeholder="Direccion">
+                <input type="text" name="telefono" placeholder="Numero de telefono">
+                <div class="cart2Alex-detallesEnvioBotones">
+                    <button type="submit">Cancelar</button>
+                    <button type="submit">Siguiente</button>
+                </div>
+            </form>
+        </section>
+        <section class="cart2Alex-resumenCarrito">
+            <article class="cart1Alex-datosTotales">
+                <p>Totales con envio<p>
+                <p>Subtotal:<span>15000$</span></p>
+                <p>Envio:<span>1000$</span></p>
+                <p>Total<span>16000$</span></p>
+                <button type="submit" class="cart2Alex-botonesOpcion" id="cart2Alex-botonesOpcionContinuar"><span>Continuar<i class="fas fa-arrow-right"></i></span></button>
+            </article>
+        </section>
 
     </main>
 
