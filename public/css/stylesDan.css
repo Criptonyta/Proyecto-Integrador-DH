@@ -563,15 +563,6 @@ footer {
 
 /* ========= USER PROFILE  min-width:361px =========  */
 
-.userprofile-formulario h4{
-    text-align: left;
-    font-size: 28px;
-    font-family: 'Palette Mosaic', cursive;
-    margin: 20px;
-    padding-bottom: 40px;
-    border-bottom: solid 2px white;
-}
-
 .userprofile-formulario{
     text-align: left;
     display: flex;
@@ -579,6 +570,25 @@ footer {
     justify-content: flex-start;
     align-items: initial;
     margin: 30px;
+}
+
+.userprofile-formulario h4{
+    text-align: left;
+    font-size: 28px;
+    font-family: 'Palette Mosaic', cursive;
+    margin: 5px;
+    padding-bottom: 20px;
+    border-bottom: solid 2px white;
+}
+
+.userprofile-Texto-Descriptivo{
+    text-align: left;
+    margin: 0px 0px 0px 15px;
+    padding-bottom: 40px;
+}
+
+.userprofile-form p{
+    margin: 10px 10px 10px 30px;
 }
 
 
@@ -593,7 +603,7 @@ footer {
     border:none;
 }
 
-.userprofile-datos:hover {
+.userprofile-datos input:hover {
     border-bottom:1px solid white;
 }
 
@@ -605,12 +615,13 @@ footer {
 }
 
 .userprofile-datos textarea{
-    width: 300px;
-    height: 150px;
+    height: 6em;
+    width: 400px;
 }
 
-
-.userprofile-button {
+.userprofile-button,
+.userprofile-vendercancion-button,
+.userprofile-venderproducto-button {
     display: block;
     width: 150px;
     border-radius: 5px;
@@ -620,17 +631,40 @@ footer {
     color: #004d61;
     background-color: #00f6ff;
     margin: auto;
+    margin-top: 50px;
+    margin-bottom:50px;
     border: solid #00bacd;
     text-align: center;
     transition: all 0.5s;
     cursor: pointer;
 }
 
-.userprofile-button:hover {
+.userprofile-button:hover,
+.userprofile-venderproducto-button:hover,
+.userprofile-vendercancion-button:hover{
     color: #00f6ff;
     background-color: #004d61;
 }
 
+.userprofile-tableanuncios, th, td {
+    border: 0.1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+.userprofile-crearanuncios{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.userprofile-vendercancion-button,
+.userprofile-venderproducto-button {
+    margin-right: 20px;
+    margin-left: 20px;
+}
 
 
 /* ========= USER PROFILE  min-width:768px =========  */

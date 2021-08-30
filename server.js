@@ -45,6 +45,10 @@ server.get('/productempty',(req,res)=>{
     res.sendFile(path.join(__dirname,'./view/productempty.html'))
 });
 
+server.get('/songempty',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/songempty.html'))
+});
+
 server.get('/register',(req,res)=>{
     res.sendFile(path.join(__dirname,'./view/register.html'))
 });

@@ -61,11 +61,11 @@
 
     <main>
                 <!--FORMULARIO-->
-                <section class="userprofile-form-register">        
+                <section class="userprofile-form">        
                     <form action="/registro" method="POST" class="userprofile-formulario">
-                    <h4>Edición de perfil de usuario</h4>
+                    <h4>Edita tu perfil de usuario</h4>
                         <div>
-                            <p class="userprofile-Registro-Texto-Descriptivo">
+                            <p class="userprofile-Texto-Descriptivo">
                                 Puedes editar tu perfil de usuario y publicar tus anuncios desde aqui.<br>
                             </p>
                         </div>
@@ -113,7 +113,48 @@
                     
                     <input class="userprofile-button" button type="submit" value="Salvar"></button>
                     </div>
-                    </form>
+
+
+            <h4>Mis anuncios</h4>
+                    <div>
+                        <p class="userprofile-Registro-Texto-Descriptivo">
+                            Podes ver, editar y crear tus anuncios desde aqui.<br>
+                        </p>
+
+                        <table class="userprofile-tableanuncios">
+                            <tr>
+                              <th>Anuncio</th>
+                              <th>Descripción</th>
+                              <th>Actualización</th>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>Vendo Bajo Fender</td>
+                              <td>Eliminar | Editar</td>    
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Rock para volarte la peluca</td>
+                              <td>Eliminar | Editar</td>   
+                            </tr>
+                          </table>
+                          
+                          <p class="userprofile-Registro-Texto-Descriptivo">
+                            Informa que tipo de anuncio quieres crear y completalo:<br>
+                          </p>
+
+                        <section class="userprofile-crearanuncios">
+                            <a href="/productempty" class="userprofile-venderproducto-button">Instrumento </a>
+
+                            <a href="/songempty" class="userprofile-vendercancion-button">Canción </a>
+                        </section>
+
+
+
+                    </div>
+
+    </form>
+
             </section>
 
     </main>

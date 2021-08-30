@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="./images/Images/favicon.ico" />
+    <title>Musiqueiros</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Implementando Google fonts (https://fonts.google.com/) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- GoogleFonts => Copio y pego en el head los links que me da la GFonts, luego de haberlos elegido -->
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Roboto&display=swap" rel="stylesheet"> <!-- GoogleFonts => Implementando Roboto + Palette Mosaic -->
+
+    <script src="https://kit.fontawesome.com/17d45040ef.js" crossorigin="anonymous"></script> <!-- Implementando Font-Awesome -->
+    
+    <link rel="stylesheet" href="/css/normalize.css"> <!-- Implementando Libreria Normalize.css (https://necolas.github.io/normalize.css/) para que el sitio web sea homogeneo en los diferentes navegadores. Desde el sitio, descargo, guardo como la css en la misma carpeta del proyecto y luego la linkeo -->
+    <link rel="stylesheet" href="/css/stylesDan.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
+    <link rel="stylesheet" href="/css/stylesAlex.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
+
+    
+    <!--<link rel="stylesheet" href="/css/styles.css">  Descomentar esta linea cuando el CSS este compilado -->
+
+</head>
+
+<body>
+    <header class="main-header">
+
+        <nav class="main-header-izq"> <!-- Creando la parte izquierda de la NavBar -->
+            <a href="/"><img src="/images/Images/Logo Horizontal.jpg" class="login-logo" alt="logo"></a>
+            <a href="/"><img src="/images/Images/Logo redondo.jpg" class="login-logo-redondo" alt="logo"></a>
+        </nav>
+    
+        <nav class="main-header-der"> <!-- Creando la parte derecha de la NavBar -->
+            <a href="#" class="hamburguer-button">  <!-- Boton responsivo -->
+                <i class="fas fa-bars"></i>
+            </a>
+            <ul>
+                <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
+                <li><a href="#" style="text-decoration:none">Comprar Musica</a></li>
+                <li><a href="#"style="text-decoration:none">Comprar Instrumentos</a></li>
+            </ul>
+    
+            <!-- Boton Ingreso responsivo | COLOCAR EL LINK AL LOGIN --> 
+            <a href="#" class="button" target="_blank">Ingresa </a>
+    
+        </nav>
+    </header>
+    <!--CONTENIDO-->
+    <main class="principal">
+        <!--productos-->
+        <div class="product-container">
+            <div class="productImages">
+                <img src="/images/Images/bass.jpg" alt="productPhoto">
+                <div class="productImagesButtons">
+                    <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button>
+                    <button><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button>
+                </div>
+            </div>
+            <div class="productInformation-container">
+                <div class="productInformation">
+                    <h2>Bajo Fender jazz</h2>
+                    <div class="priceStars">
+                        <p>2000 <span class="currency">U$D</span></p>
+                        <i class="fas fa-star"><span class="stars">4.5</span></i>
+                    </div>
+                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ut! Eos ipsum perspiciatis recusandae exercitationem fugiat ab quae quos similique voluptate tenetur labore, ex magnam unde. Quam dolorem perferendis perspiciatis.</p>
+                    <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button>
+                </div>
+                <div class="editar">
+                    <button><i class="fas fa-edit"><span class="agregarTexto">Editar producto</span></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!--productos relacionados-->
+        <div class="related-container">
+            <p>Talvez tambien te interese...</p>
+            <div class="related-carrousel-container">
+                <div class="carrouselCard">
+                    <img src="/images/Images/instrum_bateria_fondoblanco.jpg" alt="productPhoto">
+                    <div class="carrouselCardInfo">
+                        <a href="#"><h4>Bateria</h4></a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, magnam dolore cumque delectus consectetur earum</p>
+                    </div>
+                </div>
+                <div class="carrouselCard">
+                    <img src="/images/Images/instrum_guitarra_fondoblanco.jpg" alt="productPhoto">
+                    <div class="carrouselCardInfo">
+                        <a href="#"><h4>Guitarra</h4></a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, magnam dolore cumque delectus consectetur earum</p>
+                    </div>
+                </div>
+                <div class="carrouselCard">
+                    <img src="/images/Images/instrum_piano_fondoblanco.jpg" alt="productPhoto">
+                    <div class="carrouselCardInfo">
+                        <a href="#"><h4>Piano</h4></a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, magnam dolore cumque delectus consectetur earum</p>
+                    </div>
+                </div>
+                <div class="carrouselCard">
+                    <img src="/images/Images/instrum_teclado_fondoblanco.jpg" alt="productPhoto">
+                    <div class="carrouselCardInfo">
+                        <a href="#"><h4>Teclado</h4></a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, magnam dolore cumque delectus consectetur earum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+
+        <!-- Adicionando iconos font-awesome de redes sociales -->
+        
+        <div class="redessociales-footer">
+            <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fas fa-share-alt-square"></i></a>
+        </div>
+        
+        <div class="main-footer">
+            <div class="main-footer-der-text">
+            <ul>
+                <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
+                <li><a href="#" style="text-decoration:none">Contactanos</a></li> 
+                <li><a href="#" style="text-decoration:none">Acerca de</a></li>
+                <li><a href="#" style="text-decoration:none">Terminos y condiciones</a></li>
+            </ul>
+            </div>
+        
+            <div class="main-footer-izq-text">
+            <ul>
+                <li><a href="#" style="text-decoration:none">Trabaja con nosotros</a></li>
+                <li><a href="#" style="text-decoration:none">FAQs</a></li>
+            </ul>
+            </div>
+        </div>
+        </footer>
+        
+</body>
+</html>
