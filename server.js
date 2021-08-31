@@ -29,6 +29,10 @@ server.get('/cart2Alex',(req,res)=>{
     res.sendFile(path.join(__dirname,'./view/cart2Alex.html'))
 });
 
+server.get('/cart3Alex',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./view/cart3Alex.html'))
+});
+
 server.get('/cart2',(req,res)=>{
     res.sendFile(path.join(__dirname,'./view/cart2.html'))
 });

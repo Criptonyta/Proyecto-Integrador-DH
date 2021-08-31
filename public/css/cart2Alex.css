@@ -165,6 +165,9 @@
 }
 
 @media (min-width:650px){
+    .cart2Alex-menuOption a{
+        font-size:18px;
+    }
     .cart2Alex-mainContainer {
         flex-direction:row;
     }

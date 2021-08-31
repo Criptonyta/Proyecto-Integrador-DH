@@ -16,7 +16,7 @@
     
     <link rel="stylesheet" href="/css/normalize.css"> <!-- Implementando Libreria Normalize.css (https://necolas.github.io/normalize.css/) para que el sitio web sea homogeneo en los diferentes navegadores. Desde el sitio, descargo, guardo como la css en la misma carpeta del proyecto y luego la linkeo -->
     <link rel="stylesheet" href="/css/styles.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
-    <link rel="stylesheet" href="/css/cart2Alex.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
+    <link rel="stylesheet" href="/css/cart3Alex.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
 
     <title>Document</title>
 </head>
@@ -49,61 +49,52 @@
 
     <main>
         <!--Section para la barra que dice en que parte del pago estas-->
-        <section class="cart2Alex-menu">
-            <ul class="cart2Alex-menuContainer">
-                <li class="cart2Alex-menuOption" id="cart2Alex-menuOption-1"><a href="./cart1Alex">Tu carrito</a></li>
-                <li class="cart2Alex-menuOption" id="cart2Alex-menuOption-2"><a href="./cart2Alex">Detelles del envio</a></li>
-                <li class="cart2Alex-menuOption" id="cart2Alex-menuOption-3"><a href="./cart3Alex">Opciones de pago</a></li>
+        <section class="cart3Alex-menu">
+            <ul class="cart3Alex-menuContainer">
+                <li class="cart3Alex-menuOption" id="cart3Alex-menuOption-1"><a href="./cart1Alex">Tu carrito</a></li>
+                <li class="cart3Alex-menuOption" id="cart3Alex-menuOption-2"><a href="./cart2Alex">Detelles del envio</a></li>
+                <li class="cart3Alex-menuOption" id="cart3Alex-menuOption-3"><a href="./cart3Alex">Opciones de pago</a></li>
             </ul>
         </section>
-        <div class="cart2Alex-mainContainer">
-            <section class="cart2Alex-detallesEnvio">
-                <p>Detalles de envio</p>
+        <div class="cart3Alex-mainContainer">
+            <section class="cart3Alex-metodosDePago">
                 <form>
-                    <div class="cart2Alex-detallesEnvioNombre">
-                        <input type="text" name="nombre" placeholder="Nombre" class="cart2Alex-detallesEnvioEntradaInput">
-                        <input type="text" name="apellido" placeholder="Apellido" class="cart2Alex-detallesEnvioEntradaInput">
-                    </div>
-                    <div class="cart2Alex-detallesEnvioLocacion">
-                        <select name="pais" required class="cart2Alex-detallesEnvioEntradaInput">
-                            <option selected>Pais</option>
-                            <option value="Argentina">Argentina</option>
-                            <option value="Brasil">Brasil</option>
-                            <option value="Mexico">Mexico</option>
-                        </select>
-                        <select name="provincia" required class="cart2Alex-detallesEnvioEntradaInput">
-                            <option selected>Provincia</option>
-                            <option value="Cordoba">Cordoba</option>
-                            <option value="Mendoza">Mendoza</option>
-                            <option value="Caba">Caba</option>
-                        </select>
-                    </div>
-                    <div class="cart2Alex-detallesEnvioLocalidad">
-                        <input type="text" name="ciudad" placeholder="Ciudad" class="cart2Alex-detallesEnvioEntradaInput">
-                        <input type="text" name="codigoPostal" placeholder="Codigo postal" class="cart2Alex-detallesEnvioEntradaInput">
-                    </div>
-                    <input type="text" name="direccion" placeholder="Direccion" id="cart2Alex-cart2Alex-detallesEnvioDireccion" class="cart2Alex-detallesEnvioEntradaInput">
-                    <div class="cart2Alex-detallesEnvioPiso">
-                        <input type="text" name="piso" placeholder="Piso" class="cart2Alex-detallesEnvioEntradaInput">
-                        <input type="text" name="depto" placeholder="Departamento" class="cart2Alex-detallesEnvioEntradaInput">
-                    </div>
-    
-                    <input type="text" name="telefono" placeholder="Numero de telefono" class="cart2Alex-detallesEnvioEntradaInput">
-                    <div class="cart2Alex-detallesEnvioBotones">
-                        <button type="submit" class="cart2Alex-botonesOpcion">Cancelar</button>
-                        <button type="submit" class="cart2Alex-botonesOpcion">Siguiente<i class="fas fa-arrow-right"></i></button>
-                    </div>
+                    <article class="cart3Alex-tarjetaCredito">
+                        <p><i class="far fa-circle"><span>Tarjeta de credito</span></i></p>
+                        <div class="cart3Alex-tarjetaCreditoNumeros">
+                            <input class="cart3Alex-input" type="number" name="numeroTarjeta" placeholder="0000 0000 0000 0000" required>
+                            <input class="cart3Alex-input" type="date" name="fecha" placeholder="DD/MM/YYYY" required>
+                            <input class="cart3Alex-input" type="number" name="codigo" placeholder="Codigo" required>
+                        </div>
+                        <input class="cart3Alex-input" type="text" name="titular" placeholder="Nombre del titular" required>
+                    </article>
+                    <article class="cart3Alex-formaPago">
+                        <div class="cart3Alex-formaPagoMercado">
+                            <label class="cart3Alex-formaPagoMercadoLabel">Mercado Pago</label>
+                            <input class="cart3Alex-input" type="radio" name="formaPago" value="mercadoPago">
+                        </div>
+                        <div class="cart3Alex-formaPagoPaypal">
+                            <label lass="cart3Alex-formaPagoPaypalLabel">PayPal</label>
+                            <input class="cart3Alex-input" type="radio" name="formaPago" value="paypal">
+                        </div>
+                    </article>
+                    <article class="cart3Alex-botones">
+                        <button type="submit" class="cart3Alex-botonesOpcion"><i class="fas fa-id-card"><span>Pagar</span></i></button>
+                        <button type="delete" class="cart3Alex-botonesOpcion"><span>Cancelar</span></button>
+                    </article>
                 </form>
             </section>
-            <section class="cart2Alex-resumenCarrito">
-                <article class="cart2Alex-datosTotales">
-                    <p class="cart2Alex-datosTotalesSubrayado">Totales con envio<p>
-                    <p>Subtotal:<span>15000$</span></p>
-                    <p class="cart2Alex-datosTotalesSubrayado">Envio:<span>1000$</span></p>
-                    <p>Total<span>16000$</span></p>
-                </article>
-            </section>
-    
+
+            <div class="cart3Alex-mainContainer">
+                <section class="cart3Alex-resumenCarrito">
+                    <article class="cart3Alex-datosTotales">
+                        <p class="cart3Alex-datosTotalesSubrayado">Totales con envio<p>
+                        <p>Subtotal:<span>15000$</span></p>
+                        <p class="cart3Alex-datosTotalesSubrayado">Envio:<span>1000$</span></p>
+                        <p>Total<span>16000$</span></p>
+                    </article>
+                </section>
+            </div>
         </div>
     </main>
 
