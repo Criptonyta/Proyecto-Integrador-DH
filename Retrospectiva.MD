@@ -5,6 +5,43 @@ conclusiones de la retro del primer sprint.
 
 -------------------------------
 
+Comentarios de los integrantes - Post sprint 2:
+
+1. Comenzar a hacer:
+>Daniel: Estamos en un flujo de trabajo muy bueno y con muy buena actitud de parte de todos. Me cuesta encontrar que es lo que tendriamos que comenzar a hacer para mejorar.
+OJO con el caseSensitive al momento de nombrar archivos de img ya que Heroku no los reconoce
+>Agos: No volver locos a mis compañeros y preguntar más a los profes en la medida que se pueda 
+>Alex: usar mas funcionalidades de git para que el trabajo pueda ser mas dinamico
+
+2. Hacer más.
+>Daniel:
+>Agos: 
+>Alex: hacer mas commits y no subir cosas de una (para evitar problemas)
+
+3. Continuar haciendo.
+>Daniel: Trabajo de equipo excelente. Cero conflictos, excelente predisposición y colaboración de todos para lograr el objetivo perseguido.
+>Agos: Trabajar en equipo como lo venimos haciendo, mantener este ritmo hasta el fin del proyecto
+>Alex: seguir trabajando en equipo
+
+4. Hacer menos.
+>Daniel: Este sprint fue para mi una montaña rusa emocional. Cuando pense que habia perdido los avances de 5 dias de trabajo, mi moral se fue al piso. Puse empeño y consegui, con la ayuda de Jere, recuperar el trabajo que creia perdido y todo volvio a lo normal. Leccion aprendida: Mantener la calma, todo tiene solucion....
+>Agos: Coincidiendo con Dani, me pasó lo mismo, pero tuve que volver a empezar todas las tareas que me tocaron por un error que tuve. La pasé muy mal por momentos pero traté de mantener la calma para lograr el objetivo
+>Alex: 
+
+5. Dejar de hacer.
+>Daniel: 
+. Cometi un error al momento de pullear el proyecto, pisando la version local actualizada. HACER SIEMPRE BACKUP ANTES DE HACER PULL O BIEN UTILIZAR DIFF. Estamos aprendiendo y es posible que algo salga mal y se cometan errores involuntarios.
+. Como Equipo => al momento de asignar Clases, usar siempre el patron NombreDeLaPagina-Seccion-Elemento. De esa forma, no se generan conflictos entre clases al momento de compilar
+
+>Agos: dejar de usar la rama main y utilizar branch individual para evitar dolores de cabeza
+>Alex: algunas cosas quedaron un poco para el final. No dejar cosas para los ultimos dias asi se llega mas comodo a la entrega de los
+Sprints.
+
+
+
+
+-------------------------------
+
 Comentarios de los integrantes - Post sprint 1:
 
 1. Comenzar a hacer:

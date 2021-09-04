@@ -1,6 +1,14 @@
 const express = require('express');
+const { appendFile } = require('fs');
 const server = express(); 
+server.set('view engine', 'ejs');
+
 const path = require ('path');
+
+const mainRoutes = require('./routes/mainRoutes')
+const productRoutes = require('./routes/productRoutes')
+const cartRoutes = require('./routes/cartRoutes')
+const userRoutes = require('./routes/userRoutes')
 
 // server.listen (3001, () => {
 //     console.log ("Servidor rodando en puerto 3001")
@@ -13,62 +21,57 @@ console.log(`Server is runnig in the Port : ${port}`);
 
 server.use(express.static(path.resolve(__dirname,'./public')));
 
-server.get('/',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/home.html'))
-});
 
-server.get('/cart',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/cart.html'))
-});
+server.use('/', mainRoutes);
+server.use('/products', productRoutes);
+server.use('/cart', cartRoutes);
+server.use('/user', userRoutes);
 
-server.get('/cart1Alex',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/cart1Alex.html'))
-});
 
-server.get('/cart2Alex',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/cart2Alex.html'))
-});
+// server.get('/',(req,res)=>{
+//     res.render('home.ejs')
+// });
 
-server.get('/cart3Alex',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/cart3Alex.html'))
-});
+// server.get('/cart1',(req,res)=>{
+//     res.render('cart1.ejs')
+// });
 
-server.get('/cart2',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/cart2.html'))
-});
+// server.get('/cart2',(req,res)=>{
+//     res.render('cart2.ejs')
+// });
 
-server.get('/cart3',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/cart3.html'))
-});
+// server.get('/cart3',(req,res)=>{
+//     res.render('cart3.ejs')
+// });
 
-server.get('/login',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/login.html'))
-});
+// server.get('/login',(req,res)=>{
+//     res.render('login.ejs')
+// });
 
-server.get('/navbar',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/navbar.html'))
-});
+// server.get('/navbar',(req,res)=>{
+//     res.render('navbar.ejs')
+// });
 
-server.get('/product',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/product.html'))
-});
+// server.get('/product',(req,res)=>{
+//     res.render('product.ejs')
+// });
 
-server.get('/productempty',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/productempty.html'))
-});
+// server.get('/productempty',(req,res)=>{
+//     res.render('productempty.ejs')
+// });
 
-server.get('/songempty',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/songempty.html'))
-});
+// server.get('/songempty',(req,res)=>{
+//     res.render('songempty.ejs')
+// });
 
-server.get('/register',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/register.html'))
-});
+// server.get('/register',(req,res)=>{
+//     res.render('register.ejs')
+// });
 
-server.get('/userprofile',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/userprofile.html'))
-});
+// server.get('/userprofile',(req,res)=>{
+//     res.render('userprofile.ejs')
+// });
 
-server.get('/tienda',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./view/tienda.html'))
-});
+// server.get('/tienda',(req,res)=>{
+//     res.render('tienda.ejs')
+// });
