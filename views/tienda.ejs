@@ -22,31 +22,9 @@
 </head>
 
 <body>
-    <header class="main-header">
+    <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
 
-        <nav class="main-header-izq">
-            <!-- Creando la parte izquierda de la NavBar -->
-            <a href="/"><img src="/images/Images/Logo Horizontal.jpg" class="login-logo" alt="logo"></a>
-            <a href="/"><img src="/images/Images/Logo redondo.jpg" class="login-logo-redondo" alt="logo"></a>
-        </nav>
-
-        <nav class="main-header-der">
-            <!-- Creando la parte derecha de la NavBar -->
-            <a href="#" class="hamburguer-button">
-                <!-- Boton responsivo -->
-                <i class="fas fa-bars"></i>
-            </a>
-            <ul>
-                <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                <li><a href="#" style="text-decoration:none">Comprar Musica</a></li>
-                <li><a href="#" style="text-decoration:none">Comprar Instrumentos</a></li>
-            </ul>
-
-            <!-- Boton Ingreso responsivo | Exibido en NavBar en > 700px -->
-            <a href="/login" class="button" >Ingresa </a>
-
-        </nav>
-    </header>
+    <%- include ('partials/navbar.ejs', {}) %>
 
     <main class="principal">
         <div class="buscador">
@@ -136,34 +114,44 @@
             <p class="cabecera">Conoce a los artistas de nuestro catalogo</p>
             <i class="fas fa-chevron-left flechaIzq"></i>
             <div class="ultimosAdicionadosContainer">
-                <div class="ultimosAdicionadosCard">
-                    <a href="#"><img src="/images/Images/recomendado1Cropped.JPG" alt="FotoRecomendado"></a>
-                    <div class="recomendadoInfo">
-                        <h6 class="recomendadoTitulo">Clara Nunes  Guitarrista</h5>
-                        <p class="recomendoTexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, magnam<p>
-                    </div>
-                </div>
-                <div class="ultimosAdicionadosCard">
-                    <a href="#"></a><img src="/images/Images/recomendado2Cropped.JPG" alt="FotoRecomendado"></a>
-                    <div class="recomendadoInfo">
-                        <h6 class="recomendadoTitulo">Chizo <br> Cantante</h5>
-                        <p class="recomendoTexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, magnam<p>
-                    </div>
-                </div>
-                <div class="ultimosAdicionadosCard">
-                    <a href="#"></a><img src="/images/Images/recomendado3Cropped.JPG" alt="FotoRecomendado"></a>
-                    <div class="recomendadoInfo">
-                        <h6 class="recomendadoTitulo">Yezza Mesa Multinstrumentista</h5>
-                        <p class="recomendoTexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, magnam<p>
-                    </div>
-                </div>
-                <div class="ultimosAdicionadosCard">
-                    <a href="#"></a><img src="/images/Images/recomendado1Cropped.JPG" alt="FotoRecomendado"></a>
-                    <div class="recomendadoInfo">
-                        <h6 class="recomendadoTitulo">Clara Nunes Guitarrista</h5>
-                        <p class="recomendoTexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, magnam<p>
-                    </div>
-                </div>  
+
+                <%- include ('partials/cardhorizontaltienda.ejs', {
+                    'userid': 123,
+                    'artistName': 'adsafda',
+                    'img': 'fasdf',
+                    'skills': 'adadfa',
+                    'bio':'asdfad'
+
+                }) %>
+
+                <%- include ('partials/cardhorizontaltienda.ejs', {   <!--   Eliminar al hacer dinamico -->
+                    'userid': 123,
+                    'artistName': 'adsafda',
+                    'img': 'fasdf',
+                    'skills': 'adadfa',
+                    'bio':'asdfad'
+
+                }) %>
+
+                <%- include ('partials/cardhorizontaltienda.ejs', {   <!--   Eliminar al hacer dinamico -->
+                    'userid': 123,
+                    'artistName': 'adsafda',
+                    'img': 'fasdf',
+                    'skills': 'adadfa',
+                    'bio':'asdfad'
+
+                }) %>
+
+                <%- include ('partials/cardhorizontaltienda.ejs', {   <!--   Eliminar al hacer dinamico -->
+                    'userid': 123,
+                    'artistName': 'adsafda',
+                    'img': 'fasdf',
+                    'skills': 'adadfa',
+                    'bio':'asdfad'
+
+                }) %>
+
+
             </div>
             <i class="fas fa-chevron-right flechaDer"></i>  
         </section>
@@ -171,32 +159,9 @@
 
 
 
-    <footer>
-        <!-- Adicionando iconos font-awesome de redes sociales -->
-        <div class="redessociales-footer">
-            <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
-            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fas fa-share-alt-square"></i></a>
-        </div>
+        <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
-        <div class="main-footer">
-            <div class="main-footer-der-text">
-                <ul>
-                    <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                    <li><a href="#" style="text-decoration:none">Contactanos</a></li>
-                    <li><a href="#" style="text-decoration:none">Acerca de</a></li>
-                    <li><a href="#" style="text-decoration:none">Terminos y condiciones</a></li>
-                </ul>
-            </div>
-
-            <div class="main-footer-izq-text">
-                <ul>
-                    <li><a href="#" style="text-decoration:none">Trabaja con nosotros</a></li>
-                    <li><a href="#" style="text-decoration:none">FAQs</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+        <%- include ('partials/footer.ejs', {}) %>
 
 
 </body>

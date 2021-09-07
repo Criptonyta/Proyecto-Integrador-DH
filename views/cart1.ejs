@@ -21,31 +21,9 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="main-header">
+    <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
 
-        <nav class="main-header-izq">
-            <!-- Creando la parte izquierda de la NavBar -->
-            <a href="/"><img src="/images/Images/Logo redondo.jpg" class="logoMobile" alt="Logo Musiqueiros Mobile" /></a>
-            <a href="/"><img src="/images/Images/Logo Horizontal.jpg" class="logo" alt="Logo Musiqueiros" /></a>
-        </nav>
-
-        <nav class="main-header-der">
-            <!-- Creando la parte derecha de la NavBar -->
-            <a href="#" class="hamburguer-button">
-                <!-- Boton responsivo -->
-                <i class="fas fa-bars"></i>
-            </a>
-            <ul>
-                <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                <li><a href="/tienda" style="text-decoration:none">Comprar Musica</a></li>
-                <li><a href="/tienda" style="text-decoration:none">Comprar Instrumentos</a></li>
-            </ul>
-
-            <!-- Boton Ingreso responsivo | Exibido en NavBar en > 700px -->
-            <a href="/login" class="button" target="_blank">Ingresa </a>
-
-        </nav>
-    </header>
+    <%- include ('partials/navbar.ejs', {}) %>
 
     <main>
         <!--Section para la barra que dice en que parte del pago estas-->
@@ -146,32 +124,9 @@
 
 
 
-    <footer>
-        <!-- Adicionando iconos font-awesome de redes sociales -->
-        <div class="redessociales-footer">
-            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="#" target="_blank"><i class="fas fa-share-alt-square"></i></a>
-        </div>
+         <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
-        <div class="main-footer">
-            <div class="main-footer-der-text">
-                <ul>
-                    <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                    <li><a href="#" style="text-decoration:none" target="_blank">Contactanos</a></li>
-                    <li><a href="#" style="text-decoration:none" target="_blank">Acerca de</a></li>
-                    <li><a href="#" style="text-decoration:none" target="_blank">Terminos y condiciones</a></li>
-                </ul>
-            </div>
-
-            <div class="main-footer-izq-text">
-                <ul>
-                    <li><a href="#" style="text-decoration:none" target="_blank">Trabaja con nosotros</a></li>
-                    <li><a href="#" style="text-decoration:none" target="_blank">FAQs</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+         <%- include ('partials/footer.ejs', {}) %>
 
 
 </body>

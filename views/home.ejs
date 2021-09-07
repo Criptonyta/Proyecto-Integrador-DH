@@ -29,31 +29,7 @@
 
     <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
 
-    <header class="main-header">
-
-        <nav class="main-header-izq">
-            <!-- Creando la parte izquierda de la NavBar -->
-            <img src="/images/Images/Logo redondo.jpg" class="logoMobile" alt="Logo Musiqueiros Mobile" />
-            <img src="/images/Images/Logo Horizontal.jpg" class="logo" alt="Logo Musiqueiros" />
-        </nav>
-
-        <nav class="main-header-der">
-            <!-- Creando la parte derecha de la NavBar -->
-            <a href="#" class="hamburguer-button">
-                <!-- Boton responsivo -->
-                <i class="fas fa-bars"></i>
-            </a>
-            <ul>
-                <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                <li><a href="/products/tienda" style="text-decoration:none">Comprar Musica</a></li>
-                <li><a href="/products/tienda" style="text-decoration:none">Comprar Instrumentos</a></li>
-            </ul>
-
-            <!-- Boton Ingreso responsivo | Exibido en NavBar en > 700px -->
-            <a href="user/login" class="button" target="_blank">Ingresa </a>
-
-        </nav>
-    </header>
+<%- include ('partials/navbar.ejs', {}) %>
 
 
 
@@ -72,7 +48,7 @@
                 <h1>El marketplace de los amantes de la musica</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel excepturi deleniti debitis,perspiciatis tenetur repellat quis iste minus accusantium commodi expedita, consequuntur eligendi animi reprehenderit odio ab. Dicta, iste excepturi!</p>
                 <!-- Boton Ingreso responsivo | Exibido en mobile en NavBar y siempre en main -->
-                <a href="/login" class="access-button-home" target="_blank">Ingresa </a>
+                <a href="/user/login" class="access-button-home" target="_blank">Ingresa </a>
             </div>
 
         </section>
@@ -84,7 +60,7 @@
                 <h2>Vende tu música</h2>
                 <p>Rentabiliza tu talento, vendiendo tu música utilizando licencias NTF's sin intermediarios</p>
                 <!-- Boton Enterate Como Vender tu musica | Exibido en la Home | Linkea una pagina previa al formulario de registro -->
-                <a href="/register" class="SaleMusic-button-home" target="_blank">Enterate como </a>
+                <a href="/user/register" class="SaleMusic-button-home" target="_blank">Enterate como </a>
 
             </div>
 
@@ -96,7 +72,7 @@
                     perspiciatis tenetur repellat quis iste minus accusantium commodi expedita, consequuntur eligendi
                     animi reprehenderit odio ab. Dicta, iste excepturi!</p>
                 <!-- Boton Enterate Como Vender tus Instrumentos | Exibido en la Home | Linkea una pagina previa al formulario de registro -->
-                <a href="/register" class="SaleInstruments-button-home" target="_blank">Enterate como </a>
+                <a href="/user/register" class="SaleInstruments-button-home" target="_blank">Enterate como </a>
             </div>
         </section>
 
@@ -112,64 +88,59 @@
             </div>
         </section>
 
+        <!-- ======= CARDS VERTICAL HOME ========= -->
+
         <section class="home-bodysection-artists">
+          
+            <i class="fas fa-chevron-left"></i>
+
             <div>
                 <h2>Artistas que confian en nosotros</h2>
-                <i class="fas fa-chevron-left"></i>
-                <article class="home-card-artist">
-                    <img src="/images/Images/recomendado1Cropped.JPG" class="i-home-artist" alt="ClaraNunesUser" />
-                    <h5>Clara Nunes</h5>
-                    <h5>Guitarrista</h5>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel excepturi deleniti debitis </p>
-                </article>
-                <article class="home-card-artist">
-                    <img src="/images/Images/recomendado2Cropped.JPG" class="i-home-artist" alt="ChizoCantante" />
-                    <h5>Chizo</h5>
-                    <h5>Cantante</h5>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel excepturi deleniti debitis</p>
-                </article>
-                <article class="home-card-artist">
-                    <img src="/images/Images/recomendado3Cropped.JPG" class="i-home-artist"
-                        alt="YezzaMesaMultinstrumentista" />
-                    <h5>Yezza Mesa</h5>
-                    <h5>Multinstrumentista</h5>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel excepturi deleniti debitis </p>
-                </article>
-                <i class="fas fa-chevron-right"></i>
-            </div>
+        
 
-        </section>
+
+                <%- include ('partials/cardverticalhome.ejs', {
+                    'userid': 123,
+                    'artistName': 'adsafda',
+                    'img': 'fasdf',
+                    'skills': 'adadfa',
+                    'bio':'asdfad'
+
+                }) %>
+
+                <%- include ('partials/cardverticalhome.ejs', {            <!--  borrar cuando se convierta en dinamico -->
+                    'userid': 123,
+                    'artistName': 'adsafda',
+                    'img': 'fasdf',
+                    'skills': 'adadfa',
+                    'bio':'asdfad'
+
+                }) %>
+
+                <%- include ('partials/cardverticalhome.ejs', {             <!--  borrar cuando se convierta en dinamico -->
+                    'userid': 123,
+                    'artistName': 'adsafda',
+                    'img': 'fasdf',
+                    'skills': 'adadfa',
+                    'bio':'asdfad'
+
+                }) %>
+
+        
+
+    </div>
+
+    <i class="fas fa-chevron-right"></i> 
+
+    </section>
 
     </main>
 
         <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
-        <footer>
-            <!-- Adicionando iconos font-awesome de redes sociales -->
-            <div class="redessociales-footer">
-                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                <a href="#" target="_blank"><i class="fas fa-share-alt-square"></i></a>
-            </div>
+        <%- include ('partials/footer.ejs', {}) %>
 
-            <div class="main-footer">
-                <div class="main-footer-der-text">
-                    <ul>
-                        <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                        <li><a href="#" style="text-decoration:none" target="_blank">Contactanos</a></li>
-                        <li><a href="#" style="text-decoration:none" target="_blank">Acerca de</a></li>
-                        <li><a href="#" style="text-decoration:none" target="_blank">Terminos y condiciones</a></li>
-                    </ul>
-                </div>
 
-                <div class="main-footer-izq-text">
-                    <ul>
-                        <li><a href="#" style="text-decoration:none" target="_blank">Trabaja con nosotros</a></li>
-                        <li><a href="#" style="text-decoration:none" target="_blank">FAQs</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
 </body>
 
 </html>

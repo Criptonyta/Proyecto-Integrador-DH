@@ -23,28 +23,11 @@
 </head>
 
 <body>
-    <header class="main-header">
 
-        <nav class="main-header-izq"> <!-- Creando la parte izquierda de la NavBar -->
-            <a href="/"><img src="/images/Images/Logo Horizontal.jpg" class="login-logo" alt="logo"></a>
-            <a href="/"><img src="/images/Images/Logo redondo.jpg" class="login-logo-redondo" alt="logo"></a>
-        </nav>
-    
-        <nav class="main-header-der"> <!-- Creando la parte derecha de la NavBar -->
-            <a href="#" class="hamburguer-button">  <!-- Boton responsivo -->
-                <i class="fas fa-bars"></i>
-            </a>
-            <ul>
-                <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                <li><a href="/tienda" style="text-decoration:none">Comprar Musica</a></li>
-                <li><a href="/tienda"style="text-decoration:none">Comprar Instrumentos</a></li>
-            </ul>
-    
-            <!-- Boton Ingreso responsivo | COLOCAR EL LINK AL LOGIN --> 
-            <a href="#" class="button" target="_blank">Ingresa </a>
-    
-        </nav>
-    </header>
+    <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
+
+    <%- include ('partials/navbar.ejs', {}) %>
+
     <!--CONTENIDO-->
     <main class="principal">
         <!--productos-->
@@ -76,66 +59,50 @@
         <div class="related-container">
             <p>Talvez tambien te interese...</p>
             <div class="related-carrousel-container">
-                <div class="carrouselCard">
-                    <img src="/images/Images/instrum_bateria_fondoblanco.jpg" alt="productPhoto">
-                    <div class="carrouselCardInfo">
-                        <a href="#"><h4>Bateria</h4></a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, magnam dolore cumque delectus consectetur earum</p>
-                    </div>
-                </div>
-                <div class="carrouselCard">
-                    <img src="/images/Images/instrum_guitarra_fondoblanco.jpg" alt="productPhoto">
-                    <div class="carrouselCardInfo">
-                        <a href="#"><h4>Guitarra</h4></a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, magnam dolore cumque delectus consectetur earum</p>
-                    </div>
-                </div>
-                <div class="carrouselCard">
-                    <img src="/images/Images/instrum_piano_fondoblanco.jpg" alt="productPhoto">
-                    <div class="carrouselCardInfo">
-                        <a href="#"><h4>Piano</h4></a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, magnam dolore cumque delectus consectetur earum</p>
-                    </div>
-                </div>
-                <div class="carrouselCard">
-                    <img src="/images/Images/instrum_teclado_fondoblanco.jpg" alt="productPhoto">
-                    <div class="carrouselCardInfo">
-                        <a href="#"><h4>Teclado</h4></a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, magnam dolore cumque delectus consectetur earum</p>
-                    </div>
-                </div>
+
+                <%- include ('partials/cardhorizontalproduct.ejs', {
+                    'productid': 123,
+                    'Instrument': 'adsafda',
+                    'img': 'fasdf',
+                    'productann': 'adadfa',
+                    'precio': 123
+
+                }) %>
+
+                <%- include ('partials/cardhorizontalproduct.ejs', {
+                    'productid': 123,
+                    'Instrument': 'adsafda',
+                    'img': 'fasdf',
+                    'productann': 'adadfa',
+                    'precio': 123
+
+                }) %>
+
+                <%- include ('partials/cardhorizontalproduct.ejs', {
+                    'productid': 123,
+                    'Instrument': 'adsafda',
+                    'img': 'fasdf',
+                    'productann': 'adadfa',
+                    'precio': 123
+
+                }) %>
+
+                <%- include ('partials/cardhorizontalproduct.ejs', {
+                    'productid': 123,
+                    'Instrument': 'adsafda',
+                    'img': 'fasdf',
+                    'productann': 'adadfa',
+                    'precio': 123
+
+                }) %>
+        
             </div>
         </div>
     </main>
     
-    <footer>
+        <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
-        <!-- Adicionando iconos font-awesome de redes sociales -->
-        
-        <div class="redessociales-footer">
-            <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
-            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fas fa-share-alt-square"></i></a>
-        </div>
-        
-        <div class="main-footer">
-            <div class="main-footer-der-text">
-            <ul>
-                <!--style="text-decoration:none" le quita el subrayado a los enlaces -->
-                <li><a href="#" style="text-decoration:none">Contactanos</a></li> 
-                <li><a href="#" style="text-decoration:none">Acerca de</a></li>
-                <li><a href="#" style="text-decoration:none">Terminos y condiciones</a></li>
-            </ul>
-            </div>
-        
-            <div class="main-footer-izq-text">
-            <ul>
-                <li><a href="#" style="text-decoration:none">Trabaja con nosotros</a></li>
-                <li><a href="#" style="text-decoration:none">FAQs</a></li>
-            </ul>
-            </div>
-        </div>
-        </footer>
+        <%- include ('partials/footer.ejs', {}) %>
         
 </body>
 </html>
