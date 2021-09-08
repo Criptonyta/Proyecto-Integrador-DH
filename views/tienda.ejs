@@ -115,42 +115,9 @@
             <i class="fas fa-chevron-left flechaIzq"></i>
             <div class="ultimosAdicionadosContainer">
 
-                <%- include ('partials/cardhorizontaltienda.ejs', {
-                    'userid': 123,
-                    'artistName': 'adsafda',
-                    'img': 'fasdf',
-                    'skills': 'adadfa',
-                    'bio':'asdfad'
-
-                }) %>
-
-                <%- include ('partials/cardhorizontaltienda.ejs', {   <!--   Eliminar al hacer dinamico -->
-                    'userid': 123,
-                    'artistName': 'adsafda',
-                    'img': 'fasdf',
-                    'skills': 'adadfa',
-                    'bio':'asdfad'
-
-                }) %>
-
-                <%- include ('partials/cardhorizontaltienda.ejs', {   <!--   Eliminar al hacer dinamico -->
-                    'userid': 123,
-                    'artistName': 'adsafda',
-                    'img': 'fasdf',
-                    'skills': 'adadfa',
-                    'bio':'asdfad'
-
-                }) %>
-
-                <%- include ('partials/cardhorizontaltienda.ejs', {   <!--   Eliminar al hacer dinamico -->
-                    'userid': 123,
-                    'artistName': 'adsafda',
-                    'img': 'fasdf',
-                    'skills': 'adadfa',
-                    'bio':'asdfad'
-
-                }) %>
-
+                <% datos.forEach(function(dato) { %>
+                    <%- include ('partials/cardhorizontaltienda.ejs', {dato}) %>
+                <% }) %> 
 
             </div>
             <i class="fas fa-chevron-right flechaDer"></i>  
