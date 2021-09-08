@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="./images/Images/favicon.ico" />
     <title>Musiqueiros</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Implementando Google fonts (https://fonts.google.com/) -->
@@ -15,30 +14,24 @@
     
     <link rel="stylesheet" href="/css/normalize.css"> <!-- Implementando Libreria Normalize.css (https://necolas.github.io/normalize.css/) para que el sitio web sea homogeneo en los diferentes navegadores. Desde el sitio, descargo, guardo como la css en la misma carpeta del proyecto y luego la linkeo -->
     <link rel="stylesheet" href="/css/stylesAgos.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
-    
-    <!--<link rel="stylesheet" href="/css/styles.css">  Descomentar esta linea cuando el CSS este compilado -->
+    <!-- <link rel="stylesheet" href="/css/stylesDan.css"> -->
+    <link rel="stylesheet" href="/css/styles.css">
 
 </head>
 
 
     <body class="fondo">
-                
+        
+            <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
+
+            <%- include ('partials/navbarlogada.ejs', {}) %>
 
 
-
-
-        <section class="form-register">
-
-        <!--NAVBAR-->
-        <section id="navbar">
-            <a href="/"><img src="/images/Images/Logo Horizontal.jpg" class="login-logo" alt="logo"></a>
-            <a href="/"><img src="/images/Images/Logo redondo.jpg" class="login-logo-redondo" alt="logo"></a>
-                <a href="#" class="navbarOption" style="text-decoration:none">Ayuda</a>
-        </section>
 
         <!--FORMULARIO-->
 
-                <form action="/registro" method="POST" class="formulario">
+        <section class="form-register">
+                <form action="/registro" method="POST">
                 <h4>¡Registrate!</h4>
                     <div>
                         <p class="Registro-Texto-Descriptivo">
@@ -66,12 +59,12 @@
                 </p>
         
                 <p>
-                <i class="fas fa-key"><label>      ContraseÃ±a:</label></i><br>
-                <input class="datos" type="password" name="password" id="password" placeholder="ElegÃ­ e ingresÃ¡ tu contraseÃ±a" required>
+                <i class="fas fa-key"><label>      Contraseña:</label></i><br>
+                <input class="datos" type="password" name="password" id="password" placeholder="Elegí­ e ingresá tu contraseña" required>
                 </p>
         
                 <p>
-                <i class="fas fa-music"><label>     Si sos mÃºsico, escribÃ­ tu minibio aquÃ­ para destacar entre la multitud</label></i><br>
+                <i class="fas fa-music"><label>     Si sos musico, escribí­ tu minibio aquí para destacar entre la multitud</label></i><br>
                 <textarea class="datos" name="minibio" rows="3" maxlength="120" placeholder="Por Ejemplo: Soy guitarrista profesional hace 15 aÃ±os. Tengo 4 trabajos publicados y estoy disponible para trabajar en conjunto con otros y crear una banda"></textarea>
                 </p>
                 
@@ -79,7 +72,10 @@
                 </div>
                 </form>
         </section>
-            
+
+              <!-- ======= FOOTER | PIE DE PAGINA ========= -->
+
+              <%- include ('partials/footer.ejs', {}) %>      
       
      </body>   
         

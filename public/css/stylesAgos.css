@@ -30,6 +30,67 @@ body {
     background-color: #001f2c;
 }
 
+/* ========= FORM REGISTER Mobile =========  */
+
+.fondo{
+    background: url("/images/Images/Instrumentos_Musicales2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    /* overflow: hidden; */
+
+}
+.form-register{
+display: block;
+margin: auto;
+margin-top: 60px;
+margin-bottom: 60px;
+padding: 20px;
+font-size: 40px;
+text-align: center;
+background-color: #004d61;
+border-radius: 15px;
+border-color: #00bacd;
+max-width: 580px;
+
+}
+
+.form-register h4 {
+    font-family: 'Palette Mosaic', cursive;
+    font-size: 40px;
+    padding-bottom: 20px;
+    border-bottom: solid 2px white;
+}
+
+.Registro-Texto-Descriptivo{
+    padding-bottom: 20px;
+    border-bottom: solid 2px white;
+    margin: 30px;
+
+}
+
+.datos{
+    background-color:Var(--azulOscuro);
+    margin:5px;
+    padding:15px;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    font-size: 13px;
+    width:80%;
+    border:none;
+}
+
+.items label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: right;
+}
+
+.button:hover{
+    color: #00f6ff;
+    background-color: #004d61;
+}
+
+
 /* ========= Home Mobile =========  */
 
 main {
@@ -298,6 +359,14 @@ footer {
     .main-footer-izq-text {
         text-align: right;
     }
+
+    /* ========= REGISTER  min-width:361px =========  */
+
+    /* .datos{
+
+        width:420px;
+
+    } */
 
     /* ========= Body  min-width:361px =========  */
 
