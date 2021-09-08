@@ -36,15 +36,14 @@
             <div class="cancionesMasEscuchadasContenedor">
                 <i class="fas fa-chevron-left"></i>
                 <div class="canciones">
-
                     <% musicos.forEach(function(cancion) { %>
                         <%- include ('partials/cardCancionTienda.ejs', {cancion}) %>
                     <% }) %>
-
                 </div>
                 <i class="fas fa-chevron-right"></i>
             </div>
         </section>
+
         <section class="instrumentosEnVenta">
             <p class="cabecera">Instrumentos en venta</p>
             <div class="instrumentosEnVentaContenedor">
@@ -57,6 +56,7 @@
                 <i class="fas fa-chevron-right"></i>
             </div>
         </section>
+
         <section class="ultimosAdicionados">
             <p class="cabecera">Conoce a los artistas de nuestro catalogo</p>
             <i class="fas fa-chevron-left flechaIzq"></i>
@@ -70,13 +70,9 @@
             <i class="fas fa-chevron-right flechaDer"></i>  
         </section>
     </main>
+    <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
-
-
-        <!-- ======= FOOTER | PIE DE PAGINA ========= -->
-
-        <%- include ('partials/footer.ejs', {}) %>
-
+    <%- include ('partials/footer.ejs', {}) %>
 
 </body>
 </html>
