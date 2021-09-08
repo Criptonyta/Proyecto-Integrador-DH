@@ -36,36 +36,11 @@
             <div class="cancionesMasEscuchadasContenedor">
                 <i class="fas fa-chevron-left"></i>
                 <div class="canciones">
-                    <div class="cancion">
-                        <a href="#"><img src="/images/Images/tapadisco1.jpg" alt="fotoCancion"></a>
-                        <p class="tituloCancion">Titulo de la cancion</p>
-                        <p class="artistaCancion">Nombre de artista</p>
-                    </div>
-                    <div class="cancion">
-                        <a href="#"><img src="/images/Images/tapadisco2.jpg" alt="fotoCancion"></a>
-                        <p class="tituloCancion">Titulo de la cancion</p>
-                        <p class="artistaCancion">Nombre de artista</p>
-                    </div>
-                    <div class="cancion">
-                        <a href="#"><img src="/images/Images/tapadisco3.jpg" alt="fotoCancion"></a>
-                        <p class="tituloCancion">Titulo de la cancion</p>
-                        <p class="artistaCancion">Nombre de artista</p>
-                    </div>
-                    <div class="cancion">
-                        <a href="#"><img src="/images/Images/tapadisco4.jpg" alt="fotoCancion"></a>
-                        <p class="tituloCancion">Titulo de la cancion</p>
-                        <p class="artistaCancion">Nombre de artista</p>
-                    </div>
-                    <div class="cancion">
-                        <a href="#"><img src="/images/Images/tapadisco5.jpg" alt="fotoCancion"></a>
-                        <p class="tituloCancion">Titulo de la cancion</p>
-                        <p class="artistaCancion">Nombre de artista</p>
-                    </div>
-                    <div class="cancion">
-                        <a href="#"><img src="/images/Images/tapadisco6.jpg" alt="fotoCancion"></a>
-                        <p class="tituloCancion">Titulo de la cancion</p>
-                        <p class="artistaCancion">Nombre de artista</p>
-                    </div>
+
+                    <% musicos.forEach(function(cancion) { %>
+                        <%- include ('partials/cardCancionTienda.ejs', {cancion}) %>
+                    <% }) %>
+
                 </div>
                 <i class="fas fa-chevron-right"></i>
             </div>
@@ -75,37 +50,9 @@
             <div class="instrumentosEnVentaContenedor">
                 <i class="fas fa-chevron-left"></i>
                 <div class="instrumentos">
-                    <div class="instrumento">
-                        <a href="/products/product"><img src="/images/Images/bass.jpg" alt="fotoinstrumento">
-                        <p class="tituloInstrumento">Bajo Fender Jazz</p>
-                        <p class="artistaInstrumento">USS 2000</p></a>
-                    </div>
-                    <div class="instrumento">
-                        <a href="#"><img src="/images/Images/instrum_bateria_fondoblanco.jpg" alt="fotoinstrumento">
-                        <p class="tituloCancion">Bateria</p>
-                        <p class="artistaCancion">Precio</p></a>
-                    </div>
-                    <div class="instrumento">
-                        <a href="#"><img src="/images/Images/instrum_teclado_fondoblanco.jpg" alt="fotoinstrumento">
-                        <p class="tituloCancion">Teclado</p>
-                        <p class="artistaCancion">Precio</p></a>
-                    </div>
-                    <div class="instrumento">
-                        <a href="#"><img src="/images/Images/instrum_piano_fondoblanco.jpg" alt="fotoinstrumento">
-                        <p class="tituloCancion">Piano</p>
-                        <p class="artistaCancion">Precio</p></a>
-                    </div>
-                    <div class="instrumento">
-                        <a href="#"><img src="/images/Images/instrum_saxo_fondoblanco.jpg" alt="fotoinstrumento">
-                        <p class="tituloCancion">Saxo</p>
-                        <p class="artistaCancion">Precio</p></a>
-                    </div>
-                    <div class="instrumento">
-                        <a href="#"><img src="/images/Images/instrum_guitarra_fondoblanco.jpg" alt="fotoinstrumento">
-                        <p class="tituloCancion">Guitarra</p>
-                        <p class="artistaCancion">Precio</p></a>
-
-                    </div>
+                    <% instrumentos.forEach(function(instrumento) { %>
+                        <%- include ('partials/cardInstrumentoTienda.ejs', {instrumento}) %>
+                    <% }) %>
                 </div>
                 <i class="fas fa-chevron-right"></i>
             </div>
