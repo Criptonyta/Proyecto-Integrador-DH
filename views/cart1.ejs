@@ -44,18 +44,18 @@
             <div id="cart1Alex-tablaDatosContainer">
                 <table id="cart1Alex-tablaDatos">
                     <tr>
-                    <th>Producto</th>
-                    <th>Descripcion del producto</th>
-                    <th>Precio unitario</th>
-                    <th>Cantidad</th>
-                    <th>Total</th>
+                        <th>Producto</th>
+                        <th>Descripcion del producto</th>
+                        <th>Precio unitario</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
                     </tr>
                     <tr>
-                    <td>Producto 1</td>
-                    <td>Descripcion producto 1</td>
-                    <td>Precio producto 1</td>
-                    <td>Cantidad producto 1</td>
-                    <td>Total Producto 1</td>
+                        <td>Producto 1</td>
+                        <td>Descripcion producto 1</td>
+                        <td>Precio producto 1</td>
+                        <td>Cantidad producto 1</td>
+                        <td>Total Producto 1</td>
                     </tr>
                     <tr>
                         <td>Producto 2</td>
@@ -75,7 +75,7 @@
             </div>
         </section>
         <section class="cart1Alex-botones">
-            <button class="cart1Alex-botonesOpcion" id="cart1Alex-botonesOpcionSeguir"><i class="fas fa-store"><span>Seguir comprando</span></i></button>
+            <a href="/products/tienda"><button class="cart1Alex-botonesOpcion" id="cart1Alex-botonesOpcionSeguir"><i class="fas fa-store"><span>Seguir comprando</span></i></button></a>
             <div class="cart1Alex-botonesContainer">
                 <button class="cart1Alex-botonesOpcion"><i class="far fa-trash-alt"><span>Limpiar pedido</span></i></button>
                 <button class="cart1Alex-botonesOpcion"><i class="fas fa-pen"><span>Actualizar Datos</span></i></button>
@@ -89,19 +89,18 @@
                     <div class="cart1Alex-datosFormularioEntrada">
                         <label>Pais</label>
                         <select name="pais" required class="cart1Alex-datosFormularioEntradaInput">
-                            <option selected></option>
-                            <option value="Argentina">Argentina</option>
-                            <option value="Brasil">Brasil</option>
-                            <option value="Mexico">Mexico</option>
+                            <% for (const pais of paises) { %>
+                                <option value=<%= pais %>><%= pais %></option> 
+                            <% } %>
                         </select>
                     </div>
                     <div class="cart1Alex-datosFormularioEntrada">
                         <label>Estado/Provincia</label>
                         <select name="estado" required class="cart1Alex-datosFormularioEntradaInput">
-                            <option selected></option>
-                            <option value="Caba">Buenos Aires</option>
-                            <option value="Provincia de BsAs">Caba</option>
-                            <option value="Corodoba">Cordoba</option>
+                            <% for (const provincia of provincias) { %>
+                                <option value=<%= provincia %>><%= provincia %></option> 
+                            <% } %>
+
                         </select>
                     </div>
                     <div class="cart1Alex-datosFormularioEntrada">
@@ -120,7 +119,7 @@
                 <p>Totales<p>
                 <p>Subtotal:<span>10000$</span></p>
                 <p>Total:<span>15000$</span></p>
-                <button type="submit" class="cart1Alex-botonesOpcion" id="cart1Alex-botonesOpcionContinuar"><span>Continuar<i class="fas fa-arrow-right"></i></span></button>
+                <a href="/cart/cart2"><button type="submit" class="cart1Alex-botonesOpcion" id="cart1Alex-botonesOpcionContinuar"><span>Siguiente<i class="fas fa-arrow-right"></i></span></button></a>
             </article>
         </section>
     </main>

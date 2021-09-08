@@ -47,16 +47,14 @@
                     </div>
                     <div class="cart2Alex-detallesEnvioLocacion">
                         <select name="pais" required class="cart2Alex-detallesEnvioEntradaInput">
-                            <option selected>Pais</option>
-                            <option value="Argentina">Argentina</option>
-                            <option value="Brasil">Brasil</option>
-                            <option value="Mexico">Mexico</option>
+                            <% for (const pais of paises) { %>
+                                <option value=<%= pais %>><%= pais %></option> 
+                            <% } %>
                         </select>
                         <select name="provincia" required class="cart2Alex-detallesEnvioEntradaInput">
-                            <option selected>Provincia</option>
-                            <option value="Cordoba">Cordoba</option>
-                            <option value="Mendoza">Mendoza</option>
-                            <option value="Caba">Caba</option>
+                            <% for (const provincia of provincias) { %>
+                                <option value=<%= provincia %>><%= provincia %></option> 
+                            <% } %>
                         </select>
                     </div>
                     <div class="cart2Alex-detallesEnvioLocalidad">
