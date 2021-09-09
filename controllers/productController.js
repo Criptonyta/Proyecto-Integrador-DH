@@ -21,12 +21,12 @@ const controlador = {
             {img:"tapadisco6.jpg",tituloCancion:"Titulo de la cancion",artistaCancion:"Nombre de artista"},
         ]
         let instrumentos = [
-            {img:"bass.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000$"},
-            {img:"instrum_piano_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000$"},
-            {img:"instrum_saxo_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000$"},
-            {img:"instrum_bateria_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000$"},
-            {img:"instrum_guitarra_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000$"},
-            {img:"instrum_teclado_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000$"},
+            {img:"bass.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000"},
+            {img:"instrum_piano_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000"},
+            {img:"instrum_saxo_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000"},
+            {img:"instrum_bateria_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000"},
+            {img:"instrum_guitarra_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000"},
+            {img:"instrum_teclado_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000"},
         ]
         let datos = [
             {userid: 123, artistName: "Jose", img: 'recomendado1Cropped.JPG',skills: 'Guitarrista',bio:'soy un guitarrista'},
