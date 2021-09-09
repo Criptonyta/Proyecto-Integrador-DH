@@ -26,6 +26,9 @@ server.use('/', mainRoutes);
 server.use('/products', productRoutes);
 server.use('/cart', cartRoutes);
 server.use('/user', userRoutes);
+server.use((req,res,next)=>{res.status(404).render("error404")})
+
+
 
 
 // server.get('/',(req,res)=>{
