@@ -274,6 +274,35 @@ footer {
     padding-bottom: 30px;
 }
 
+/* ========= 404 page  =========  */
+
+.fondo404{
+    background: url("/images/Images/404page.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    background-color: #001f2c;
+    color: white ;
+    /* overflow: hidden; */
+
+}
+
+.titles404{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    text-align:  center;
+    margin-top: 5%;
+
+}
+
+.subtitle404{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    line-height: 40px;
+}
 
 
 /* ========= RESPONSIVIDAD  =========  */
