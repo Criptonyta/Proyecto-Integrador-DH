@@ -92,9 +92,10 @@
     left: 45%;
 }
 
-/* .navbarOption a {
-
-} */
+.navbarOption {
+    font-size: 10px;
+    margin-right: 10px;
+}
 
 /* LOGIN */
 #login {
@@ -184,16 +185,17 @@
     margin-left: 5px;
 }
 
-.options #forgotPassword {
+.options #forgotPassword{
     font-size: 12px;
     text-align: center;
     font-family: var(--letraParrafos);
-    padding-bottom: 40px;
+    margin:7px 0;
 }
 
 #forgotPassword:hover {
     text-decoration:underline;
 }
+
 
 .options a {
     color:white;
@@ -256,6 +258,8 @@
     .navbarOption {
         position:relative;
         left: 60%;
+        font-size: 11px;
+        font-family: var(--letraParrafos);
     }
 }
 
