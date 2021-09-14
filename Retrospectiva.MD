@@ -74,3 +74,25 @@ Comentarios de los integrantes - Post sprint 1:
 ------------------------
 Material complementar:
 https://proyectosagiles.org/2009/06/14/retrospectiva-estrella-mar-starfish-retrospective-scrum/
+
+
+------------------------
+Feedbacks:
+
+## FeedBack Sprint 01
+- Su Organizacion es la mejor del grupo , estan preparados para grandes cosas 
+### calificacion 
+     (10/10)
+
+## FeedBack Sprint 02
+- Primeramente nuevamente felicitarlos por su organizacion y trabajo duro , siguen manteniendo sin embargo debo realizar estas recomendaciones.
+
+- En la home la palabra Comprar la sacaria , dejaria solo Musica e Instrumentos ,
+y ya empezaria a ponerle textos a corde a la pagina ( quitar los lorem impsu).
+
+- La etiqueta meta con la codificacion UTF-8 es necesaria para que le tome todos los caracteres en nuestro idioma. (user/register)
+
+- Mejoremos los padding de los componentes .Í
+### calificacion 
+   sigue estando espectacular, sin embargo quisiera reunirme con ustedes para tocar unos temas con respecto a la continuidad de l proyecto.
+   GRAN TRABAJO CHICOS (8/10)
