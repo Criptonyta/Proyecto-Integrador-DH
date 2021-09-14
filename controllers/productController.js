@@ -20,8 +20,8 @@ const controlador = {
     },
 
     tienda: (req, res) => {
-        const instrumentos = instrumentsDB.slice(1,6);        
-        const musicos = songsDB.slice(1,6);
+        const instrumentos = instrumentsDB.slice(1,7);        
+        const musicos = songsDB.slice(1,7);
 
         // let instrumentos = [
         //     {img:"bass.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000"},
