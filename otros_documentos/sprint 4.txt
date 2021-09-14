@@ -1,0 +1,10 @@
+paso 1) require db
+
+paso 2) linkar los campos en el ejs
+
+<%= instrumento.tituloInstrumento %>
+
+
+paso 3) en los forms, cambiar a input todos los campos
+
+<input type='text' placeholder="Carga tu titulo aqui">

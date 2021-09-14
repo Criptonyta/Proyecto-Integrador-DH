@@ -17,29 +17,29 @@
     <!--CONTENIDO-->
     <main class="principal">
         <!--productos-->
-        <div class="product-container">
+        <form class="product-container" method='POST' action="#">
             <div class="productImages">
-                <img src="/images/Images/bass.jpg" alt="productPhoto">
+                <input type='file' placeholder="Carga tu foto aqui">
                 <div class="productImagesButtons">
                     <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button> -->
-                    <button><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button>
+                    <!-- <button><input type='file' placeholder="Carga tu foto aqui" style="display: none"><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
                 </div>
             </div>
             <div class="productInformation-container">
                 <div class="productInformation">
-                    <h2>Carga el titulo de tu anuncio</h2>
+                    <h2><input type='text' placeholder="Carga tu titulo aqui"></h2>
                     <div class="priceStars">
-                        <p>Precio <span class="currency">U$D</span></p>
+                        <p><input type='number' placeholder="Carga tu precio aqui"><span class="currency">U$D</span></p>
                         <i class="fas fa-star"><span class="stars">4.5</span></i>
                     </div>
-                    <p class="productDescription">Carga una breve descripción breve de tu producto</p>
+                    <p class="productDescription"><input type='textarea' placeholder="Carga una breve descripción breve de tu producto"></p>
                     <!-- <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button> -->
                 </div>
                 <div class="editar">
-                    <button><i class="fas fa-edit"><span class="agregarTexto">Editar anuncio</span></i></button>
+                    <button><i class="fas fa-edit"><span class="agregarTexto">Salvar anuncio</span></i></button>
                 </div>
             </div>
-        </div>
+        </form>
 
         <!--productos relacionados-->
         <!-- <div class="related-container">

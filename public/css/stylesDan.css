@@ -635,6 +635,55 @@ footer {
     margin: 10px 10px 10px 30px;
 }
 
+
+/* FORMULARIO DE CARGA DE PRODUCTOS */
+
+.product-container h2 input{
+    background-color:Var(--azulOscuro);
+    padding:15px;
+    font-family: var(--letraTitulos);
+    color:white;
+    font-family: var(--letraTitulos);
+    width:300px;
+    border:none;
+    text-align: center;
+}
+
+.product-container p input{
+    background-color:Var(--azulOscuro);
+    padding:15px;
+    font-family: var(--letraParrafos);
+    color:white;
+    font-family: var(--letraParrafos);
+    width: 150px;
+    border:none;
+    font-size: 15px;
+    text-align: center;
+}
+
+.product-container .productDescription input{
+    background-color:Var(--azulOscuro);
+    padding:15px;
+    font-family: var(--letraParrafos);
+    color:white;
+    font-family: var(--letraParrafos);
+    width: 350px;
+    border:none;
+    font-size: 12PX;
+    text-align: center;
+}
+
+
+.productImages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+
+
 /* Animacion de campos input del formulario */
 .userprofile-form input{
     background-color:Var(--azulOscuro);

@@ -20,7 +20,7 @@
         <!--productos-->
         <div class="product-container">
             <div class="productImages">
-                <img src="/images/Images/bass.jpg" alt="productPhoto">
+                <img src=<%= instrumento.img %> alt="productPhoto">
                 <div class="productImagesButtons">
                     <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button>
                     <button><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
@@ -28,12 +28,12 @@
             </div>
             <div class="productInformation-container">
                 <div class="productInformation">
-                    <h2>Bajo Fender jazz</h2>
+                    <h2><%= instrumento.tituloInstrumento %></h2>
                     <div class="priceStars">
-                        <p>2000 <span class="currency">U$D</span></p>
+                        <p><%= instrumento.precio %> <span class="currency">U$D</span></p>
                         <i class="fas fa-star"><span class="stars">4.5</span></i>
                     </div>
-                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ut! Eos ipsum perspiciatis recusandae exercitationem fugiat ab quae quos similique voluptate tenetur labore, ex magnam unde. Quam dolorem perferendis perspiciatis.</p>
+                    <p class="productDescription"><%= instrumento.descripcion %></p>
                     <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button>
                 </div>
                 <!-- <div class="editar">
