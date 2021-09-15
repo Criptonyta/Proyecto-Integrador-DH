@@ -37,8 +37,18 @@
             {userid: 123, artistName: "Carlos", img: 'recomendado3Cropped.JPG',skills: 'Baterista',bio:'soy un baterista'},
             {userid: 123, artistName: "Carlos", img: 'recomendado2Cropped.JPG',skills: 'Baterista',bio:'soy un baterista'},
             ]*/
-            
+
         res.render('tienda.ejs',{datos:datos,musicos:musicos,instrumentos:instrumentos});
+    },
+    songs: (req,res) => {
+        const songsDB = require('../database/songsDB.json');
+        const musicos = songsDB;
+        res.render("allSongs.ejs",{musicos:musicos})
+    },
+    instruments:(req,res) => {
+        const instrumentsDB = require('../database/instrumentsDB.json');
+        const instrumentos = instrumentsDB;
+        res.render("allInstruments.ejs",{instrumentos:instrumentos})
     }
 };
 

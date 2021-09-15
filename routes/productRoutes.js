@@ -13,6 +13,9 @@ router.get('/songempty', productController.songempty);
 
 router.get('/tienda', productController.tienda);
 
+router.get('/tienda/songs', productController.songs); //Te muestra todas las canciones PRUEBA
+router.get('/tienda/instruments', productController.instruments); //Te muestra todos las instrumentos PRUEBA
+
 
 module.exports = router
 
