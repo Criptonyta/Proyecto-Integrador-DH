@@ -593,8 +593,16 @@ i {
     text-align: left;
     border-bottom: 1px solid white;
     width:70%;
+    display: flex;
+    justify-content: space-between;
+    }
+.cabecera span {
+    font-size: 13px;
+    font-family: var(--letraParrafos);
 }
-
+.cabecera a {
+    text-decoration:none
+}    
 .cancionesMasEscuchadasContenedor,.instrumentosEnVentaContenedor {
     display:flex;
     justify-content: space-around;
