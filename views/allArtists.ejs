@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include("partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/stylesDan.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
+    <link rel="stylesheet" href="/css/stylesAlex.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
+    
+    <!--<link rel="stylesheet" href="/css/styles.css">  Descomentar esta linea cuando el CSS este compilado -->
+
+</head>
+
+<body>
+    <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
+
+    <%- include ('partials/navbar.ejs', {}) %>
+
+    <main class="principal">
+        <div class="buscador">
+            <input class="inputBuscador" type="text" placeholder="Buscar cancion, artista o instrumento">
+            <i class="fas fa-search"></i>
+        </div>
+
+        <section class="instrumentosEnVenta">
+            <p class="cabecera">Artistas</p>
+            <div class="instrumentosEnVentaContenedor">
+                <div class="instrumentos">
+                    <% artistas.forEach(function(artista) { %>
+                        <%- include ('partials/cardArtistaTienda.ejs', {artista}) %>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ======= FOOTER | PIE DE PAGINA ========= -->
+
+    <%- include ('partials/footer.ejs', {}) %>
+
+</body>
+</html>

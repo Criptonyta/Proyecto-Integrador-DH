@@ -46,12 +46,17 @@ const controlador = {
     songs: (req,res) => {
         const songsDB = JSON.parse(fs.readFileSync(pathSongs));
         const musicos = songsDB;
-        res.render("allSongs.ejs",{musicos:musicos})
+        res.render("allSongs.ejs",{musicos})
     },
     instruments:(req,res) => {
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
         const instrumentos = instrumentsDB;
-        res.render("allInstruments.ejs",{instrumentos:instrumentos})
+        res.render("allInstruments.ejs",{instrumentos})
+    },
+    artists:(req,res) => {
+        const artistsDB = JSON.parse(fs.readFileSync(pathUsers));
+        const artistas = artistsDB;
+        res.render("allArtists.ejs",{artistas})
     }
 };
 
