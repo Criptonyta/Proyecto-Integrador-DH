@@ -5,11 +5,13 @@ const router = express.Router();
 const productController = require('../controllers/productController');
 
 
-router.get('/product', productController.product);   // Para hacerlo dinamico, le falta agregar la ruta parametrizada /:id
+router.get('/detailInstrument/:id', productController.instrumentDetail);  
 
-router.get('/productempty', productController.productempty);
+router.get('/detailSong/:id', productController.songDetail); 
 
-router.get('/songempty', productController.songempty);
+router.get('/createproduct', productController.productempty);
+
+router.get('/createsong', productController.songempty);
 
 router.get('/tienda', productController.tienda);
 

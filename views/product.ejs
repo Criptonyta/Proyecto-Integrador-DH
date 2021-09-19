@@ -20,7 +20,7 @@
         <!--productos-->
         <div class="product-container">
             <div class="productImages">
-                <img src=<%= instrumento.img %> alt="productPhoto">
+                <img src=<%= producto.img %> alt="productPhoto">
                 <div class="productImagesButtons">
                     <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button>
                     <button><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
@@ -28,12 +28,12 @@
             </div>
             <div class="productInformation-container">
                 <div class="productInformation">
-                    <h2><%= instrumento.tituloInstrumento %></h2>
+                    <h2><%= producto.titulo %></h2>
                     <div class="priceStars">
-                        <p><%= instrumento.precio %> <span class="currency">U$D</span></p>
+                        <p><%= producto.precio %> <span class="currency">U$D</span></p>
                         <i class="fas fa-star"><span class="stars">4.5</span></i>
                     </div>
-                    <p class="productDescription"><%= instrumento.descripcion %></p>
+                    <p class="productDescription"><%= producto.descripcion %></p>
                     <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button>
                 </div>
                 <!-- <div class="editar">
@@ -42,12 +42,12 @@
             </div>
         </div>
 
-        <!--productos relacionados-->
+        <!--productos relacionados, reemplazar por el partial-->
         <div class="related-container">
             <p>Talvez tambien te interese...</p>
             <div class="related-carrousel-container">
 
-                <%- include ('partials/cardhorizontalproduct.ejs', {
+                <%- include ('partials/cardhorizontalproduct.ejs', { 
                     'productid': 123,
                     'Instrument': 'adsafda',
                     'img': 'fasdf',

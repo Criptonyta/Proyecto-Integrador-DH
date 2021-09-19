@@ -1,9 +1,26 @@
- const controlador = {
-    product: (req, res) => {
-        const instrumento = instrumentsDB[0];        
-        res.render('product.ejs', {instrumento:instrumento});
+const fs = require ('fs');
+const path = require ("path");
+const pathInstruments = path.join(__dirname, '../database/instrumentsDB.json');
+const pathSongs = path.join(__dirname, '../database/songsDB.json');
+const pathUsers= path.join(__dirname, '../database/usersDB.json');
+ 
+const controlador = {
+    instrumentDetail: (req, res) => {
+        const instrumentos = JSON.parse(fs.readFileSync(pathInstruments));
+        const instrumento = instrumentos.find(elemento => elemento.InstrumId.id == req.params.id);
+        res.render('product.ejs', {producto:instrumento});
 
+    },
+    songDetail: (req, res) => {
+        const songs = JSON.parse(fs.readFileSync(pathSongs));
+        const song = songs.find(elemento => elemento.songId.id == req.params.id);
+        res.render('product.ejs', {producto:song});
 
+    },
+    //falta hacer la vista de usuario
+    userDetail: (req, res) => {
+        const songs = JSON.parse(fsreadFileSync(pathUsers));
+        res.render('product.ejs', {user});
     },
 
     productempty: (req, res) => {
@@ -21,23 +38,9 @@
 
         const instrumentos = instrumentsDB.slice(1,7);        
         const musicos = songsDB.slice(1,7);
-        const datos = usersDB.slice(1,5)
+        const datos = usersDB.slice(1,5);
 
-        // let instrumentos = [
-        //     {img:"bass.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000"},
-        //     {img:"instrum_piano_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000"},
-        //     {img:"instrum_saxo_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000"},
-        //     {img:"instrum_bateria_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000"},
-        //     {img:"instrum_guitarra_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000"},
-        //     {img:"instrum_teclado_fondoblanco.jpg",tituloInstrumento:"Titulo de la instrumento",precio:"2000"},
-        // ]
-             /*let datos = [
-            {userid: 123, artistName: "Jose", img: 'recomendado1Cropped.JPG',skills: 'Guitarrista',bio:'soy un guitarrista'},
-            {userid: 123, artistName: "Alberto", img: 'recomendado2Cropped.JPG',skills: 'Cantante',bio:'soy un cantante'},
-            {userid: 123, artistName: "Carlos", img: 'recomendado3Cropped.JPG',skills: 'Baterista',bio:'soy un baterista'},
-            {userid: 123, artistName: "Carlos", img: 'recomendado2Cropped.JPG',skills: 'Baterista',bio:'soy un baterista'},
-            ]*/
-
+       
         res.render('tienda.ejs',{datos:datos,musicos:musicos,instrumentos:instrumentos});
     },
     songs: (req,res) => {
