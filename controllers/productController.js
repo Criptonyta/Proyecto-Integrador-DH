@@ -32,9 +32,9 @@ const controlador = {
     },
 
     tienda: (req, res) => {
-        const instrumentsDB = require('../database/instrumentsDB.json');
-        const songsDB = require('../database/songsDB.json');
-        const usersDB = require('../database/usersDB.json');  
+        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
+        const songsDB = JSON.parse(fs.readFileSync(pathSongs));
+        const usersDB =JSON.parse(fs.readFileSync(pathUsers));
 
         const instrumentos = instrumentsDB.slice(1,7);        
         const musicos = songsDB.slice(1,7);
@@ -44,12 +44,12 @@ const controlador = {
         res.render('tienda.ejs',{datos:datos,musicos:musicos,instrumentos:instrumentos});
     },
     songs: (req,res) => {
-        const songsDB = require('../database/songsDB.json');
+        const songsDB = JSON.parse(fs.readFileSync(pathSongs));
         const musicos = songsDB;
         res.render("allSongs.ejs",{musicos:musicos})
     },
     instruments:(req,res) => {
-        const instrumentsDB = require('../database/instrumentsDB.json');
+        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
         const instrumentos = instrumentsDB;
         res.render("allInstruments.ejs",{instrumentos:instrumentos})
     }
