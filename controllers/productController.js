@@ -39,7 +39,18 @@ const controlador = {
     },
     
     addSong: (req, res) => {
-        res.send(req.body);
+        const fs = require ('fs');
+        const songsDB = JSON.parse(fs.readFileSync(pathSongs, "UTF-8"));
+        instrumentocargar = {
+            id:25, /* Id usuario */
+            songId:1, /* Id canción */
+            img:"Aquí debe ir una imagen",
+            titulo:req.body.titulo,
+            precio:req.body.precio,
+            descripcion:req.body.descripcion,
+
+        }
+      
 
     },
 
