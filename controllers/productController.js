@@ -41,15 +41,28 @@ const controlador = {
     addSong: (req, res) => {
         const fs = require ('fs');
         const songsDB = JSON.parse(fs.readFileSync(pathSongs, "UTF-8"));
-        instrumentocargar = {
+        songcargar = {
             id:25, /* Id usuario */
             songId:1, /* Id canción */
-            img:"Aquí debe ir una imagen",
+            img:req.body.img,
+            audioFile:req.body.song,
             titulo:req.body.titulo,
             precio:req.body.precio,
             descripcion:req.body.descripcion,
+    }
+    songsDB.push(songcargar)
+    fs.writeFileSync(pathSongs, JSON.stringify(songsDB))
+    const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
+    const usersDB =JSON.parse(fs.readFileSync(pathUsers));
 
-        }
+    const instrumentos = instrumentsDB.slice(1,7);        
+    const musicos = songsDB.slice(1,7);
+
+    const artistsDB = usersDB.filter(item => item.bio != "")//Los artistas son los que tienen bio
+    const datos = artistsDB.slice(1,5);
+   
+    res.render('tienda.ejs',{datos:datos,musicos:musicos,instrumentos:instrumentos})
+
       
 
     },
