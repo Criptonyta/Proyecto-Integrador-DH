@@ -615,7 +615,10 @@ footer {
     align-items: initial;
     margin: 30px;
 }
-
+.skills-form  {
+    background-color: #001f2c;
+  
+}
 .userprofile-formulario h4{
     text-align: left;
     font-size: 28px;
