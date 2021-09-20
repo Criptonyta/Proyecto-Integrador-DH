@@ -21,6 +21,9 @@ const controlador = {
         res.render('product.ejs', {producto:song,relacionados});
 
     },
+    artistDetail:(req, res) => {//FALTA HACER
+
+    },
     //falta hacer la vista de usuario
     userDetail: (req, res) => {
         const songs = JSON.parse(fsreadFileSync(pathUsers));
@@ -72,7 +75,7 @@ const controlador = {
 
         const buscado = req.query.search
         const palabras = buscado.split(' ')
-        const resultadosSongs = auxiliares.checkAtribute(songsDB,["titulo","descripcion"],palabras)//Canciones que coinciden
+        const resultadosSongs = auxiliares.checkAtribute(songsDB,["titulo","descripcion","nombre","apellido"],palabras)//Canciones que coinciden
         const resultadosInstruments = auxiliares.checkAtribute(instrumentsDB,["titulo","descripcion"],palabras)//Instrumentos que coinciden
         const resultadosArtistas = auxiliares.checkAtribute(artistsDB,["nombre","apellido","skills","bio"],palabras)//Artistas que coinciden
 
