@@ -679,10 +679,17 @@ footer {
 
 .productImages{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+       
+}
 
+.productImages label {
+    margin: 5px;
+}
+.productImages input {
+    margin: 0 5px;
 }
 
 

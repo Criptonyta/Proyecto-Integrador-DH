@@ -8,7 +8,7 @@ const auxiliares = require("../public/funcionesAuxiliares/ProductControllerAux.j
 const controlador = {
     instrumentDetail: (req, res) => {
         const instrumentos = JSON.parse(fs.readFileSync(pathInstruments));
-        const instrumento = instrumentos.find(elemento => elemento.InstrumId.id == req.params.id);
+        const instrumento = instrumentos.find(elemento => elemento.InstrumId == req.params.id);
         const relacionados = instrumentos.slice(1,5)//Instrumentos relacionados
 
         res.render('product.ejs', {producto:instrumento,relacionados});
@@ -16,7 +16,7 @@ const controlador = {
     },
     songDetail: (req, res) => {
         const songs = JSON.parse(fs.readFileSync(pathSongs));
-        const song = songs.find(elemento => elemento.songId.id == req.params.id);
+        const song = songs.find(elemento => elemento.songId == req.params.id);
         const relacionados = songs.slice(1,5)//Instrumentos relacionados
         res.render('product.ejs', {producto:song,relacionados});
 
@@ -36,6 +36,11 @@ const controlador = {
 
     songempty: (req, res) => {
         res.render('songempty.ejs');
+    },
+    
+    addSong: (req, res) => {
+        res.send(req.body);
+
     },
 
     tienda: (req, res) => {

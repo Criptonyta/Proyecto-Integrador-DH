@@ -20,7 +20,8 @@ console.log(`Server is runnig in the Port : ${port}`);
 });
 
 server.use(express.static(path.resolve(__dirname,'./public')));
-
+server.use(express.urlencoded({extended:false}));
+server.use(express.json());
 
 server.use('/', mainRoutes);
 server.use('/products', productRoutes);

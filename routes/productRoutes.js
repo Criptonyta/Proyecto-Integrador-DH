@@ -14,6 +14,7 @@ router.get('/detailArtist/:id', productController.artistDetail); //Te muestra el
 router.get('/createproduct', productController.productempty);//Hoja para cargar los productos
 
 router.get('/createsong', productController.songempty);//Hoja para cargar la cancion
+router.post('/createsong', productController.addSong);//Hoja para crear canciones
 
 router.get('/tienda', productController.tienda);//Tienda
 
