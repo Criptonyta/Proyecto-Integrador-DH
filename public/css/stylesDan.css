@@ -16,7 +16,7 @@ font-family: 'Roboto', sans-serif;
 
 
 
- * {
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -37,7 +37,7 @@ main {
     text-align: center;
 }
 
-.i-home-inicial{
+.i-home-inicial {
     width: 100%;
     height: 100%;
 }
@@ -53,17 +53,18 @@ p {
     margin: 30px 10px 30px 10px;
 }
 
-section{
+section {
     margin-bottom: 70px;
 }
 
-.home-bodysection-head p{
+.home-bodysection-head p {
     text-align: center;
 }
 
 .button,
-.access-button-home,                            /* Estilizo los botones CTA */
-.access-button-home2,  
+.access-button-home,
+/* Estilizo los botones CTA */
+.access-button-home2,
 .SaleMusic-button-home,
 .SaleInstruments-button-home {
     display: block;
@@ -89,11 +90,12 @@ section{
     background-color: #004d61;
 }
 
-.i-home-inicial-gradient{
+.i-home-inicial-gradient {
     display: none;
 }
 
-.fa-play-circle,                            /*  Estilizando iconos Font-Awesome */
+.fa-play-circle,
+/*  Estilizando iconos Font-Awesome */
 .fa-headphones,
 .fa-guitar,
 .fa-drum {
@@ -104,20 +106,20 @@ section{
     text-align: center;
 }
 
-.i-home-teclado{
+.i-home-teclado {
     max-width: 85%;
     height: auto;
 }
 
-.i-home-teclado-gradient{
+.i-home-teclado-gradient {
     display: none;
 }
 
-.home-bodysection-products{
-    position:relative;
+.home-bodysection-products {
+    position: relative;
 }
 
-.home-bodysection-products2 h3, 
+.home-bodysection-products2 h3,
 .home-bodysection-products2 p {
     text-align: right;
 }
@@ -128,16 +130,16 @@ section{
     margin: 0px 30px 0px 0px;
 }
 
-.home-bodysection-products2 p{
+.home-bodysection-products2 p {
     display: block;
     margin: 5px 30px 90px 10px;
 }
 
-.access-button-home2{
+.access-button-home2 {
     display: none;
 }
 
-.home-card-artist{
+.home-card-artist {
     border: solid white 2px;
     border-radius: 15px;
     width: 180px;
@@ -147,27 +149,27 @@ section{
     text-align: center;
 }
 
-h5{
+h5 {
     font-size: 17px;
     font-style: bold;
 }
 
-.home-card-artist p{
+.home-card-artist p {
     font-size: 12px;
     margin: 30px 20px 30px 20px;
 }
 
-.i-home-artist{
+.i-home-artist {
     padding-top: 15px;
     max-width: 70%;
     height: auto;
 }
 
-.main-footer li{
+.main-footer li {
     text-align: left;
 }
 
-.home-bodysection-artists i{
+.home-bodysection-artists i {
     display: none;
 }
 
@@ -201,7 +203,7 @@ h5{
     display: none;
 }
 
-.button-profileuser{
+.button-profileuser {
     font-size: 20px;
     margin-right: 30px;
 }
@@ -213,7 +215,7 @@ h5{
     padding: 5px;
     text-align: right;
     font-size: 20px;
-} 
+}
 
 .button-profileuser {
     /* Convierto el menu en block */
@@ -222,7 +224,7 @@ h5{
     padding: 5px;
     text-align: right;
     font-size: 20px;
-} 
+}
 
 .logoMobile {
     width: 40px;
@@ -276,27 +278,27 @@ footer {
 
 /* ========= 404 page  =========  */
 
-.fondo404{
+.fondo404 {
     background: url("/images/Images/404page.png") no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     background-color: #001f2c;
-    color: white ;
+    color: white;
     /* overflow: hidden; */
 
 }
 
-.titles404{
-    display:flex;
+.titles404 {
+    display: flex;
     justify-content: center;
     align-content: center;
-    text-align:  center;
+    text-align: center;
     margin-top: 5%;
 
 }
 
-.subtitle404{
-    display:flex;
+.subtitle404 {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
@@ -310,24 +312,27 @@ footer {
 @media(min-width:361px) {
 
     /* ========= NAVBAR  min-width:361px =========  */
-    .logoMobile {                                      /* Oculto el logo pequeno */
+    .logoMobile {
+        /* Oculto el logo pequeno */
         display: none;
     }
 
-    .logo {                                             /* Muestro el logo completo*/
+    .logo {
+        /* Muestro el logo completo*/
         display: flex;
         height: 40px;
         margin: 10px;
     }
 
     /* ========= FOOTER  min-width:361px =========  */
-    .redessociales-footer i {                       /* Amplio el tamano de los logos de redes*/
+    .redessociales-footer i {
+        /* Amplio el tamano de los logos de redes*/
         font-size: 40px;
     }
 
     .main-footer {
-    display: flex;
-    justify-content: center;
+        display: flex;
+        justify-content: center;
     }
 
     .main-footer-der-text,
@@ -365,7 +370,7 @@ footer {
     }
 
     .home-bodysection-head-content h1,
-    .home-bodysection-head-content p{
+    .home-bodysection-head-content p {
         flex-direction: column;
         width: 60%;
         padding: 6px 0px 10px 12px;
@@ -377,18 +382,18 @@ footer {
         justify-content: center;
     }
 
-    .home-bodysection-products2{
+    .home-bodysection-products2 {
         display: block;
         position: relative;
     }
 
-    .i-home-teclado{
+    .i-home-teclado {
         width: 95%;
         height: 95%;
     }
 
     .home-bodysection-products2 h3,
-    .home-bodysection-products2 p{
+    .home-bodysection-products2 p {
         display: block;
         text-align: right;
         margin: 0px;
@@ -396,15 +401,15 @@ footer {
         left: 90%;
         transform: translate(-100%, 0);
         z-index: 1;
-        color: #004d61;        
+        color: #004d61;
     }
 
-    .home-bodysection-products2 h3{
+    .home-bodysection-products2 h3 {
         width: 270px;
         top: 5%;
     }
 
-    .home-bodysection-products2 p{
+    .home-bodysection-products2 p {
         width: 300px;
         bottom: 40%;
     }
@@ -439,14 +444,15 @@ footer {
 
     .main-header-der li {
         width: 100px;
-     }
+    }
 
     .main-header-der ul {
         /* Muestro el texto */
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         max-width: 280px;
-    
+        border: red 2px dotted;
+
     }
 
 
@@ -492,16 +498,16 @@ footer {
 
     /* ========= HOME BODY min-width:768px =========  */
 
-    .home-bodysection-head{
+    .home-bodysection-head {
         display: block;
         position: relative;
     }
 
-    .i-home-inicial{
+    .i-home-inicial {
         display: none;
     }
 
-    .i-home-inicial-gradient{
+    .i-home-inicial-gradient {
         display: block;
         margin-left: auto;
         padding: 50px 0 90px;
@@ -510,33 +516,33 @@ footer {
     }
 
     .home-bodysection-head-content h1,
-    .home-bodysection-head-content p{
+    .home-bodysection-head-content p {
         display: block;
         text-align: left;
         margin: 0px;
         position: absolute;
         left: 65%;
         transform: translate(-100%, 0);
-        transform: scale(1.2, 1.2); 
+        transform: scale(1.2, 1.2);
         z-index: 1;
     }
 
-    .home-bodysection-head-content h1{
+    .home-bodysection-head-content h1 {
         width: 500px;
         top: 15%;
         left: 8%;
-        padding:5px;
+        padding: 5px;
     }
 
-    .home-bodysection-head-content p{
+    .home-bodysection-head-content p {
         width: 400px;
         top: 35%;
         left: 10%;
-        padding:5px;
+        padding: 5px;
     }
 
-    .home-bodysection-products{
-        display: flex; 
+    .home-bodysection-products {
+        display: flex;
         justify-content: space-evenly;
     }
 
@@ -545,61 +551,61 @@ footer {
         width: 350px;
     }
 
-    .home-bodysection-products2{
-    display: block;
-    position: relative;
+    .home-bodysection-products2 {
+        display: block;
+        position: relative;
     }
 
-    .i-home-teclado{
+    .i-home-teclado {
         display: none;
     }
-    
-    .i-home-teclado-gradient{
-    display: block;
-    padding: 50px 0 90px;
-    width: 60%;
-    height: 60%;
+
+    .i-home-teclado-gradient {
+        display: block;
+        padding: 50px 0 90px;
+        width: 60%;
+        height: 60%;
     }
 
     .home-bodysection-products2 h3,
-    .home-bodysection-products2 p{
-    display:block;
-    color: white;
-    width: 400px;
-    height: 200px;
-    padding: 10px;
+    .home-bodysection-products2 p {
+        display: block;
+        color: white;
+        width: 400px;
+        height: 200px;
+        padding: 10px;
     }
 
-    .home-bodysection-products2 h3{
-    position: absolute;
-    bottom: 45%;
-    font-size: 34px;
+    .home-bodysection-products2 h3 {
+        position: absolute;
+        bottom: 45%;
+        font-size: 34px;
     }
 
-    .home-bodysection-products2 p{
-    position: absolute;
-    bottom: 35%;
-    font-size: 34px;
+    .home-bodysection-products2 p {
+        position: absolute;
+        bottom: 35%;
+        font-size: 34px;
     }
 
     .access-button-home {
-    display:none;
+        display: none;
     }
 
-    .access-button-home2{
-    display: block;
-    position: absolute;
-    bottom: 25%;
-    right: 11%;
+    .access-button-home2 {
+        display: block;
+        position: absolute;
+        bottom: 25%;
+        right: 11%;
     }
 
-    .home-bodysection-artists i{
-    display: inline-block;
-    position: relative;
-    align-self: auto;
-    font-size: 40px;
-    color: white;
-    padding: 10px;
+    .home-bodysection-artists i {
+        display: inline-block;
+        position: relative;
+        align-self: auto;
+        font-size: 40px;
+        color: white;
+        padding: 10px;
     }
 
 }
@@ -607,7 +613,7 @@ footer {
 
 /* ========= USER PROFILE  min-width:361px =========  */
 
-.userprofile-formulario{
+.userprofile-formulario {
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -615,11 +621,13 @@ footer {
     align-items: initial;
     margin: 30px;
 }
-.skills-form  {
+
+.skills-form {
     background-color: #001f2c;
-  
+
 }
-.userprofile-formulario h4{
+
+.userprofile-formulario h4 {
     text-align: left;
     font-size: 28px;
     font-family: 'Palette Mosaic', cursive;
@@ -628,66 +636,67 @@ footer {
     border-bottom: solid 2px white;
 }
 
-.userprofile-Texto-Descriptivo{
+.userprofile-Texto-Descriptivo {
     text-align: left;
     margin: 0px 0px 0px 15px;
     padding-bottom: 40px;
 }
 
-.userprofile-form p{
+.userprofile-form p {
     margin: 10px 10px 10px 30px;
 }
 
 
 /* FORMULARIO DE CARGA DE PRODUCTOS */
 
-.product-container h2 input{
-    background-color:Var(--azulOscuro);
-    padding:15px;
+.product-container h2 input {
+    background-color: Var(--azulOscuro);
+    padding: 15px;
     font-family: var(--letraTitulos);
-    color:white;
+    color: white;
     font-family: var(--letraTitulos);
-    width:300px;
-    border:none;
+    width: 300px;
+    border: none;
     text-align: center;
 }
 
-.product-container p input{
-    background-color:Var(--azulOscuro);
-    padding:15px;
+.product-container p input {
+    background-color: Var(--azulOscuro);
+    padding: 15px;
     font-family: var(--letraParrafos);
-    color:white;
+    color: white;
     font-family: var(--letraParrafos);
     width: 150px;
-    border:none;
+    border: none;
     font-size: 15px;
     text-align: center;
 }
 
-.product-container .productDescription input{
-    background-color:Var(--azulOscuro);
-    padding:15px;
+.product-container .productDescription input {
+    background-color: Var(--azulOscuro);
+    padding: 15px;
     font-family: var(--letraParrafos);
-    color:white;
+    color: white;
     font-family: var(--letraParrafos);
     width: 350px;
-    border:none;
+    border: none;
     font-size: 12PX;
     text-align: center;
 }
 
 
-.productImages{
+.productImages {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-       
+
 }
 
 .productImages label {
     margin: 5px;
 }
+
 .productImages input {
     margin: 0 5px;
 }
@@ -695,54 +704,54 @@ footer {
 
 
 /* Animacion de campos input del formulario */
-.userprofile-form input{
-    background-color:Var(--azulOscuro);
-    margin:5px;
-    padding:15px;
+.userprofile-form input {
+    background-color: Var(--azulOscuro);
+    margin: 5px;
+    padding: 15px;
     font-family: var(--letraParrafos);
-    color:white;
+    color: white;
     font-family: var(--letraParrafos);
     font-size: 13px;
-    width:180px;
-    border:none;
+    width: 180px;
+    border: none;
 }
 
-.userprofile-form input:hover{
-    border-bottom:1px solid white;
+.userprofile-form input:hover {
+    border-bottom: 1px solid white;
 }
 
 .userprofile-form input::placeholder,
 .userprofile-form textarea,
-.userprofile-form option{
+.userprofile-form option {
     font-size: 12px;
-    color:rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     font-style: italic;
     text-align: center;
 }
 
-.userprofile-form input{
-        transition: width .35s ease-in-out;
+.userprofile-form input {
+    transition: width .35s ease-in-out;
 }
 
-.userprofile-form input:focus{
-        width:200px;
+.userprofile-form input:focus {
+    width: 200px;
 }
 
 .userprofile-form textarea,
-.userprofile-form option{
+.userprofile-form option {
     height: 6em;
     width: auto;
-    background-color:Var(--azulOscuro);
-    margin:5px;
-    padding:15px;
+    background-color: Var(--azulOscuro);
+    margin: 5px;
+    padding: 15px;
     font-family: var(--letraParrafos);
-    color:white;
+    color: white;
     font-family: var(--letraParrafos);
     font-size: 13px;
-    border:none;
+    border: none;
 }
 
-.userprofile-form textarea{
+.userprofile-form textarea {
     margin: 10px, 10px, 10px, 10px
 }
 
@@ -759,7 +768,7 @@ footer {
     background-color: #00f6ff;
     margin: auto;
     margin-top: 50px;
-    margin-bottom:50px;
+    margin-bottom: 50px;
     border: solid #00bacd;
     text-align: center;
     transition: all 0.5s;
@@ -768,21 +777,23 @@ footer {
 
 .userprofile-button:hover,
 .userprofile-venderproducto-button:hover,
-.userprofile-vendercancion-button:hover{
+.userprofile-vendercancion-button:hover {
     color: #00f6ff;
     background-color: #004d61;
 }
 
-.userprofile-tableanuncios, th, td {
+.userprofile-tableanuncios,
+th,
+td {
     border: 0.1px solid white;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-  }
+}
 
-.userprofile-crearanuncios{
-    display:flex;
+.userprofile-crearanuncios {
+    display: flex;
     flex-direction: row;
     justify-content: center;
 }
@@ -796,30 +807,30 @@ footer {
 
 /* ========= USER PROFILE  min-width:570px =========  */
 
-@media(min-width:570px){
+@media(min-width:570px) {
 
     .userprofile-form textarea,
-    .userprofile-form option{
+    .userprofile-form option {
         height: 6em;
         width: 350px;
     }
 
-    .userprofile-form input{
-        width:300px;
+    .userprofile-form input {
+        width: 300px;
 
     }
 }
 
-@media(min-width:995px){
+@media(min-width:995px) {
 
     .userprofile-form textarea,
-    .userprofile-form option{
+    .userprofile-form option {
         height: 6em;
         width: 800px;
     }
 
-    .userprofile-form input{
-        width:500px;
+    .userprofile-form input {
+        width: 500px;
 
     }
 }
