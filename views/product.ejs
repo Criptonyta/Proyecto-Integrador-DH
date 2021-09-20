@@ -47,41 +47,9 @@
             <p>Talvez tambien te interese...</p>
             <div class="related-carrousel-container">
 
-                <%- include ('partials/cardhorizontalproduct.ejs', { 
-                    'productid': 123,
-                    'Instrument': 'adsafda',
-                    'img': 'fasdf',
-                    'productann': 'adadfa',
-                    'precio': 123
-
-                }) %>
-
-                <%- include ('partials/cardhorizontalproduct.ejs', {
-                    'productid': 123,
-                    'Instrument': 'adsafda',
-                    'img': 'fasdf',
-                    'productann': 'adadfa',
-                    'precio': 123
-
-                }) %>
-
-                <%- include ('partials/cardhorizontalproduct.ejs', {
-                    'productid': 123,
-                    'Instrument': 'adsafda',
-                    'img': 'fasdf',
-                    'productann': 'adadfa',
-                    'precio': 123
-
-                }) %>
-
-                <%- include ('partials/cardhorizontalproduct.ejs', {
-                    'productid': 123,
-                    'Instrument': 'adsafda',
-                    'img': 'fasdf',
-                    'productann': 'adadfa',
-                    'precio': 123
-
-                }) %>
+                <% relacionados.forEach(function(relacionado) { %>
+                    <%- include ('partials/cardhorizontalproduct.ejs', {relacionado}) %>
+                <% }) %>
         
             </div>
         </div>

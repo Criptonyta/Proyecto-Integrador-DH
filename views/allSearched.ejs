@@ -22,42 +22,36 @@
             </div>
         </form>
         <section class="cancionesMasEscuchadas">
-            <p class="cabecera">Canciones mas escuchadas<a href="/products/tienda/songs"><span>Ver más</span></a></p> 
+            <p class="cabecera">Canciones relacionadas</p> 
             <div class="cancionesMasEscuchadasContenedor">
-                <i class="fas fa-chevron-left"></i>
                 <div class="canciones">
                     <% musicos.forEach(function(cancion) { %>
                         <%- include ('partials/cardCancionTienda.ejs', {cancion}) %>
                     <% }) %>
                 </div>
-                <i class="fas fa-chevron-right"></i>
             </div>
         </section>
 
         <section class="instrumentosEnVenta">
-            <p class="cabecera">Instrumentos en venta<a href="/products/tienda/instruments"><span>Ver más</span></a></p>
+            <p class="cabecera">Instrumentos relacionados</p>
             <div class="instrumentosEnVentaContenedor">
-                <i class="fas fa-chevron-left"></i>
                 <div class="instrumentos">
                     <% instrumentos.forEach(function(instrumento) { %>
                         <%- include ('partials/cardInstrumentoTienda.ejs', {instrumento}) %>
                     <% }) %>
                 </div>
-                <i class="fas fa-chevron-right"></i>
             </div>
         </section>
 
-        <section class="ultimosAdicionados">
-            <p class="cabecera">Conoce a los artistas de nuestro catalogo<a href="/products/tienda/artists"><span>Ver más</span></a></p>
-            <i class="fas fa-chevron-left flechaIzq"></i>
-            <div class="ultimosAdicionadosContainer">
-
-                <% datos.forEach(function(dato) { %>
-                    <%- include ('partials/cardhorizontaltienda.ejs', {dato}) %>
-                <% }) %> 
-
+        <section class="instrumentosEnVenta">
+            <p class="cabecera">Artistas relacionados</p>
+            <div class="instrumentosEnVentaContenedor">
+                <div class="instrumentos">
+                    <% artistas.forEach(function(artista) { %>
+                        <%- include ('partials/cardArtistaTienda.ejs', {artista}) %>
+                    <% }) %>
+                </div>
             </div>
-            <i class="fas fa-chevron-right flechaDer"></i>  
         </section>
     </main>
     <!-- ======= FOOTER | PIE DE PAGINA ========= -->
