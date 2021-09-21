@@ -451,8 +451,6 @@ footer {
         display: flex;
         justify-content: space-around;
         max-width: 280px;
-        border: red 2px dotted;
-
     }
 
 
@@ -733,6 +731,10 @@ footer {
     transition: width .35s ease-in-out;
 }
 
+input[type='file'] {
+    display: none
+}
+
 .userprofile-form input:focus {
     width: 200px;
 }
@@ -755,7 +757,13 @@ footer {
     margin: 10px, 10px, 10px, 10px
 }
 
+
+.songEmptyImgBtn,
+.songEmptyFileBtn,
+.productEmptyButton,
 .userprofile-button,
+.userAvatarButton,
+.userAvatarRegisterButton,
 .userprofile-vendercancion-button,
 .userprofile-venderproducto-button {
     display: block;
@@ -775,11 +783,30 @@ footer {
     cursor: pointer;
 }
 
+
+.songEmptyImgBtn:hover,
+.songEmptyFileBtn:hover,
+.productEmptyButton:hover,
+.userAvatarButton:hover,
+.userAvatarRegisterButton:hover,
 .userprofile-button:hover,
 .userprofile-venderproducto-button:hover,
 .userprofile-vendercancion-button:hover {
     color: #00f6ff;
     background-color: #004d61;
+}
+
+.userAvatarButton {
+    display: inline-block;
+    align-self: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 200px;
+}
+
+.productEmptyButton {
+    margin: auto;
 }
 
 .userprofile-tableanuncios,

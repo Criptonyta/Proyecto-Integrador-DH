@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <%- include("partials/head.ejs")%>
-    <link rel="stylesheet" href="/css/stylesDan.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
-    <link rel="stylesheet" href="/css/stylesAlex.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
+    <link rel="stylesheet" href="/css/stylesDan.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
+    <link rel="stylesheet" href="/css/stylesAlex.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
 
-    
+
     <!--<link rel="stylesheet" href="/css/styles.css">  Descomentar esta linea cuando el CSS este compilado -->
 
 </head>
 
 <body>
-       <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
+    <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
 
-       <%- include ('partials/navbarlogada.ejs', {}) %>
+    <%- include ('partials/navbarlogada.ejs', {}) %>
 
     <!--CONTENIDO-->
     <main class="principal">
         <!--productos-->
         <form class="product-container" method='POST' action="/products/createsong">
             <div class="productImages">
-                <label>Imagen<input type='file' name="img" placeholder="Carga tu foto aqui"></label>
-                <label>Canción<input type='file' name="song" placeholder="Carga tu canción aqui"></label>
+                <label for='songEmptyImgBtn' class='songEmptyImgBtn'>Cargá una imagen</label>
+                <input class='songEmptyImgBtn' name='songEmptyImgBtn' id='songEmptyImgBtn' type='file'
+                    placeholder="Carga tu foto aqui">
+                <label for='songEmptyFileBtn' class='songEmptyFileBtn'>Cargá una canción</label>
+                <input type='file' name='songEmptyImgBtn' id='songEmptyImgBtn' class='songEmptyImgBtn'
+                    placeholder="Carga tu canción aqui">
                 <div class="productImagesButtons">
                     <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button> -->
                     <!-- <button><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
@@ -31,24 +36,28 @@
                 <div class="productInformation">
                     <h2><input type='text' name="titulo" placeholder="Carga tu titulo aqui"></h2>
                     <div class="priceStars">
-                        <p><input type='number' name="precio" placeholder="Carga tu precio aqui"><span class="currency">U$D</span></p>
+                        <p><input type='number' name="precio" placeholder="Carga tu precio aqui"><span
+                                class="currency">U$D</span></p>
                         <i class="fas fa-star"><span class="stars">4.5</span></i>
                     </div>
-                    <p class="productDescription"><input type='textarea' name="descripcion" placeholder="Carga una breve descripción breve de tu canción"></p>
+                    <p class="productDescription"><input type='textarea' name="descripcion"
+                            placeholder="Carga una breve descripción breve de tu canción"></p>
                     <!-- <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button> -->
                 </div>
                 <div class="editar">
-                    <button type="submit"><i class="fas fa-edit"><span class="agregarTexto">Salvar anuncio</span></i></button>
+                    <button type="submit"><i class="fas fa-edit"><span class="agregarTexto">Salvar
+                                anuncio</span></i></button>
                 </div>
             </div>
-       
-        </form>
-        
-    </main>
-    
-        <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
-        <%- include ('partials/footer.ejs', {}) %>
-        
+        </form>
+
+    </main>
+
+    <!-- ======= FOOTER | PIE DE PAGINA ========= -->
+
+    <%- include ('partials/footer.ejs', {}) %>
+
 </body>
+
 </html>

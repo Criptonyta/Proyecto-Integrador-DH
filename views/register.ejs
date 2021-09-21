@@ -1,76 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <%- include("partials/head.ejs")%>
-    <link rel="stylesheet" href="/css/stylesAgos.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
+    <link rel="stylesheet" href="/css/stylesAgos.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
     <!-- <link rel="stylesheet" href="/css/stylesDan.css"> -->
     <link rel="stylesheet" href="/css/styles.css">
 
 </head>
 
 
-    <body class="fondo">
-        
-            <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
+<body class="fondo">
 
-            <%- include ('partials/navbarlogada.ejs', {}) %>
+    <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
+
+    <%- include ('partials/navbarlogada.ejs', {}) %>
 
 
 
-        <!--FORMULARIO-->
+    <!--FORMULARIO-->
 
-        <section class="form-register">
-                <form action="/registro" method="POST">
-                <h4>¡Registrate!</h4>
-                    <div>
-                        <p class="Registro-Texto-Descriptivo">
-                            Para poder publicar y vender tus canciones o instrumentos, debes realizar tu registro en nuestra plataforma. <br><br>
-                            <strong><em>HACELO AHORA!</em></strong><br><br>
-                            Una vez que tu registro sea validado, podras cargar tus anuncios desde tu perfil de usuario.
-                        </p>
-                    </div>
-
-                <div class="items">
-                <p>
-                <i class="fas fa-id-badge"><label>     Como te llamas?</label></i><br>
-                <input class="datos" type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
+    <section class="form-register">
+        <form action="/registro" method="POST">
+            <h4>¡Registrate!</h4>
+            <div>
+                <p class="Registro-Texto-Descriptivo">
+                    Para poder publicar y vender tus canciones o instrumentos, debes realizar tu registro en nuestra
+                    plataforma. <br><br>
+                    <strong><em>HACELO AHORA!</em></strong><br><br>
+                    Una vez que tu registro sea validado, podras cargar tus anuncios desde tu perfil de usuario.
                 </p>
-                
+            </div>
+
+            <div class="items">
                 <p>
-                <i class="fas fa-id-badge"><label>     Y tu apellido es...</label></i><br>
-                <input class="datos" type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido" required>
-                </p>
-        
-                <p>
-                <i class="fas fa-at"><label>     Cual es tu Email?</label></i><br>
-                <input class="datos" type="email" name="email" id="email" placeholder="Te enviaremos un email para confirmarlo ;-)" required>
-                </label>
-                </p>
-        
-                <p>
-                <i class="fas fa-key"><label>      Contraseña:</label></i><br>
-                <input class="datos" type="password" name="password" id="password" placeholder="Elegí­ e ingresá tu contraseña" required>
+                    <i class="fas fa-id-badge"><label> Como te llamas?</label></i><br>
+                    <input class="datos" type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
                 </p>
 
                 <p>
-                    <i class="fas fa-camera"><label>      Foto de perfil:</label></i><br>
-                    <input class="datos" type="file" name="userAvatar" id="userAvatar" placeholder="Subi una imagen (minimo 360px x 360px)" required>
+                    <i class="fas fa-id-badge"><label> Y tu apellido es...</label></i><br>
+                    <input class="datos" type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido"
+                        required>
                 </p>
-        
+
                 <p>
-                <i class="fas fa-music"><label>     Si sos musico, escribí­ tu minibio aquí para destacar entre la multitud</label></i><br>
-                <textarea class="datos" name="minibio" id="minibio" rows="3" maxlength="120" placeholder="Por Ejemplo: Soy guitarrista profesional hace 15 aÃ±os. Tengo 4 trabajos publicados y estoy disponible para trabajar en conjunto con otros y crear una banda"></textarea>
+                    <i class="fas fa-at"><label> Cual es tu Email?</label></i><br>
+                    <input class="datos" type="email" name="email" id="email"
+                        placeholder="Te enviaremos un email para confirmarlo ;-)" required>
+                    </label>
                 </p>
-                
+
+                <p>
+                    <i class="fas fa-key"><label> Contraseña:</label></i><br>
+                    <input class="datos" type="password" name="password" id="password"
+                        placeholder="Elegí­ e ingresá tu contraseña" required>
+                </p>
+
+                <p>
+                    <i class="fas fa-camera"><label> Foto de perfil:</label></i><br>
+                    <label for='userAvatarRegisterButton' class="userAvatarRegisterButton">Cargá una imagen</label>
+                    <input class="userAvatarRegisterButton" id=userAvatarRegisterButton type="file"
+                        name="userAvatarRegisterButton" required>
+                </p>
+
+                <p>
+                    <i class="fas fa-music"><label> Si sos musico, escribí­ tu minibio aquí para destacar entre la
+                            multitud</label></i><br>
+                    <textarea class="datos" name="minibio" id="minibio" rows="3" maxlength="120"
+                        placeholder="Por Ejemplo: Soy guitarrista profesional hace 15 meses. Tengo 4 trabajos publicados y estoy disponible para trabajar en conjunto con otros y crear una banda"></textarea>
+                </p>
+
                 <input class="button" button type="submit" value="Registrar"></button>
-                </div>
-                </form>
-        </section>
+            </div>
+        </form>
+    </section>
 
-              <!-- ======= FOOTER | PIE DE PAGINA ========= -->
+    <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
-              <%- include ('partials/footer.ejs', {}) %>      
-      
-     </body>   
-        
+    <%- include ('partials/footer.ejs', {}) %>
+
+</body>
+
 </html>

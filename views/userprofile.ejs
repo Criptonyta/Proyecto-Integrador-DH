@@ -3,7 +3,7 @@
 
 <head>
     <%- include("partials/head.ejs")%>
-    <link rel="stylesheet" href="/css/styles.css"> 
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
@@ -16,60 +16,68 @@
     <!-- ======= BODY | CUERPO DEL USERPROFILE ========= -->
 
     <main>
-                <!--FORMULARIO-->
-                <section class="userprofile-form">        
-                    <form action="/registro" method="POST" class="userprofile-formulario">
-                    <h4>Edita tu perfil de usuario</h4>
-                        <div>
-                            <p class="userprofile-Texto-Descriptivo">
-                                Puedes editar tu perfil de usuario y publicar tus anuncios desde aqui.<br>
-                            </p>
-                        </div>
-    
-                    <p>
-                        <i class="fas fa-at"><label>     Email (no editable):</label></i>
-                        <input type="email" name="email" id="email" placeholder="Tu email">
-                        </label>
+        <!--FORMULARIO-->
+        <section class="userprofile-form">
+            <form action="/registro" method="POST" class="userprofile-formulario">
+                <h4>Edita tu perfil de usuario</h4>
+                <div>
+                    <p class="userprofile-Texto-Descriptivo">
+                        Puedes editar tu perfil de usuario y publicar tus anuncios desde aqui.<br>
                     </p>
-    
+                </div>
+
+                <p>
+                    <i class="fas fa-at"><label> Email (no editable):</label></i>
+                    <input type="email" name="email" id="email" placeholder="Tu email">
+                    </label>
+                </p>
+
                 <div class="userprofile-items">
                     <p>
-                    <i class="fas fa-id-badge"></i><label>     Nombre:</label></i>
-                    <input class="userprofile-datos" type="text" name="nombre" id="nombre" placeholder="Edita tu nombre"><i class="fas fa-user-edit"></i>
-                    </p>
-                    
-                    <p>
-                    <i class="fas fa-id-badge"><label>     Apellido:</label></i>
-                    <input class="userprofile-datos" type="text" name="apellido" id="apellido" placeholder="Edita tu apellido"><i class="fas fa-user-edit"></i>
-                    </p>
-    
-                    <p>
-                    <i class="fas fa-key"><label>      Contraseña:</label></i>
-                    <input class="userprofile-datos" type="password" name="password" id="password" placeholder="Edita tu contraseña"><i class="fas fa-user-edit"></i>
+                        <i class="fas fa-id-badge"></i><label> Nombre:</label></i>
+                        <input class="userprofile-datos" type="text" name="nombre" id="nombre"
+                            placeholder="Edita tu nombre"><i class="fas fa-user-edit"></i>
                     </p>
 
                     <p>
-                        <i class="fas fa-camera"><label>      Foto de perfil:</label></i><br>
-                        <input class="datos" type="file" name="userAvatar" id="userAvatar" placeholder="Subi una imagen (minimo 360px x 360px)" required>
-                    </p>
-            
-                    <p>
-                    <i class="fas fa-music"><label>     Edita tu minibio en menos de 120 caracteres (sólo si sos músico)</label><br></i>
-                    <textarea class="userprofile-datos" name="minibio" rows="3" maxlength="120" placeholder="Por Ejemplo: Soy guitarrista profesional hace 15 años. Tengo 4 trabajos publicados y estoy disponible para trabajar en conjunto con otros y crear una banda"></textarea><i class="fas fa-user-edit"></i>
+                        <i class="fas fa-id-badge"><label> Apellido:</label></i>
+                        <input class="userprofile-datos" type="text" name="apellido" id="apellido"
+                            placeholder="Edita tu apellido"><i class="fas fa-user-edit"></i>
                     </p>
 
                     <p>
-                    <label>     Cuales son tus habilidades musicales?</label></i>
+                        <i class="fas fa-key"><label> Contraseña:</label></i>
+                        <input class="userprofile-datos" type="password" name="password" id="password"
+                            placeholder="Edita tu contraseña"><i class="fas fa-user-edit"></i>
+                    </p>
+
+                    <p>
+                        <i class="fas fa-camera"><label> Foto de perfil:</label></i>
+                        <label for='userAvatarButton' class="userAvatarButton">Cargá una imagen</label>
+                        <input class="userAvatarButton" type="file" name="userAvatarButton" id="userAvatarButton"
+                            required>
+                    </p>
+
+                    <p>
+                        <i class="fas fa-music"><label> Edita tu minibio en menos de 120 caracteres (sólo si sos
+                                músico)</label><br></i>
+                        <textarea class="userprofile-datos" name="minibio" rows="3" maxlength="120"
+                            placeholder="Por Ejemplo: Soy guitarrista profesional hace 15 años. Tengo 4 trabajos publicados y estoy disponible para trabajar en conjunto con otros y crear una banda"></textarea><i
+                            class="fas fa-user-edit"></i>
+                    </p>
+
+                    <p>
+                        <label> Cuales son tus habilidades musicales?</label></i>
                         <select class="skills-form" name="skills">
-                        <option value="Bajista">Bajista</option> 
-                        <option value="Baterista">Baterista</option>
-                        <option value="Cantante">Cantante</option> 
-                        <option value="Guitarrista">Guitarrista</option> 
-                        <option value="Multistrumentista">Multinstumentista</option> 
-                        <option value="Productor">Productor</option> 
-                        <option value="Otros">Otros</option> 
-                        </select>          
-                    <i class="fas fa-user-edit"></i>
+                            <option value="Bajista">Bajista</option>
+                            <option value="Baterista">Baterista</option>
+                            <option value="Cantante">Cantante</option>
+                            <option value="Guitarrista">Guitarrista</option>
+                            <option value="Multistrumentista">Multinstumentista</option>
+                            <option value="Productor">Productor</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                        <i class="fas fa-user-edit"></i>
                     </p>
 
                     <section>
@@ -81,52 +89,53 @@
 
 
 
-            <h4>Mis anuncios</h4>
-                    <div>
-                        <p class="userprofile-Registro-Texto-Descriptivo">
-                            Podes ver, editar y crear tus anuncios desde aqui.<br>
-                        </p>
+                <h4>Mis anuncios</h4>
+                <div>
+                    <p class="userprofile-Registro-Texto-Descriptivo">
+                        Podes ver, editar y crear tus anuncios desde aqui.<br>
+                    </p>
 
-                        <table class="userprofile-tableanuncios">
-                            <tr>
-                              <th>Anuncio</th>
-                              <th>Descripción</th>
-                              <th>Actualización</th>
-                            </tr>
-                            <tr>
-                              <td>1</td>
-                              <td>Vendo Bajo Fender</td>
-                              <td>Eliminar | Editar</td>    
-                            </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>Rock para volarte la peluca</td>
-                              <td>Eliminar | Editar</td>   
-                            </tr>
-                          </table>
-                          
-                          <p class="userprofile-Registro-Texto-Descriptivo">
-                            Informa que tipo de anuncio quieres crear y completalo:<br>
-                          </p>
+                    <table class="userprofile-tableanuncios">
+                        <tr>
+                            <th>Anuncio</th>
+                            <th>Descripción</th>
+                            <th>Actualización</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Vendo Bajo Fender</td>
+                            <td>Eliminar | Editar</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Rock para volarte la peluca</td>
+                            <td>Eliminar | Editar</td>
+                        </tr>
+                    </table>
 
-                        <section class="userprofile-crearanuncios">
-                            <a href="/products/createproduct" class="userprofile-venderproducto-button">Instrumento </a>
+                    <p class="userprofile-Registro-Texto-Descriptivo">
+                        Informa que tipo de anuncio quieres crear y completalo:<br>
+                    </p>
 
-                            <a href="/products/createsong" class="userprofile-vendercancion-button">Canción </a>
-                        </section>
+                    <section class="userprofile-crearanuncios">
+                        <a href="/products/createproduct" class="userprofile-venderproducto-button">Instrumento </a>
+
+                        <a href="/products/createsong" class="userprofile-vendercancion-button">Canción </a>
+                    </section>
 
 
 
-                    </div>
+                </div>
 
-    </form>
+            </form>
 
-            </section>
+        </section>
 
     </main>
 
-        <!-- ======= FOOTER | PIE DE PAGINA ========= -->
+    <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
-        <%- include ('partials/footer.ejs', {}) %></body>
+    <%- include ('partials/footer.ejs', {}) %>
+</body>
 
 </html>
