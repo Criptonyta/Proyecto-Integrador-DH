@@ -8,8 +8,7 @@
     "userAvatar": "07.jpg",
     "skills": "Cantante",
     "bio": "Vivo en Rosario. Tengo influencias del jazz de Miles Davis. 34 años",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\07",
-    "undefined": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\07"  
   },
   {
     "id": "2",
@@ -20,7 +19,7 @@
     "userAvatar": "05.jpg",
     "skills": "Guitarrista",
     "bio": "Influencias de RHCP y de RATM. Vivo en Nueva York pero mantengo mis raices Argentinas ;-)",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\05"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\05"
   },
   {
     "id": "3",
@@ -31,7 +30,7 @@
     "userAvatar": "01.jpg",
     "skills": "Guitarrista",
     "bio": "Toco la guitarra y canto. Me gusta el rock y el trap",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\01"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\01"
   },
   {
     "id": "4",
@@ -41,7 +40,7 @@
     "userAvatar": "02.jpg",
     "skills": "Multinstrumentista",
     "bio": "Vivo en Chubut. Estoy disponible para crear bandas",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\02"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\02"
   },
   {
     "id": "5",
@@ -52,7 +51,7 @@
     "userAvatar": "06.jpg",
     "skills": "Bajista",
     "bio": "Nerd musical. Mis influencias son tan variadas que van desde la clasica hasta el rock fusion",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\06"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\06"
   },
   {
     "id": "6",
@@ -63,7 +62,7 @@
     "userAvatar": "03.jpg",
     "skills": "Multinstrumentista",
     "bio": "Somos una banda de Avellaneda. Nos influencia la musica urbana. Tocamos desde hace 10 años",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\03"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\03"
   },
   {
     "id": "7",
@@ -74,7 +73,7 @@
     "userAvatar": "08.jpg",
     "skills": "Cantante",
     "bio": "Me encanta Bork. Actualmente estoy sin banda por lo que estoy disponible para cantar en una",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\08"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\08"
   },
   {
     "id": "8",
@@ -85,7 +84,7 @@
     "userAvatar": "09.jpg",
     "skills": "Guitarrista",
     "bio": "Mis influencias son Jamie Collum. Mi genero musical preferido es el jazz contemporaneo",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\09"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\09"
   },
   {
     "id": "9",
@@ -96,7 +95,7 @@
     "userAvatar": "48.jpg",
     "skills": "Cantante",
     "bio": "Tengo una voz suave y armoniosa. Mi preferencia son las melodias y las baladas romanticas",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\"
   },
   {
     "id": "10",
@@ -106,7 +105,7 @@
     "userAvatar": "04.jpg",
     "skills": "Bajista",
     "bio": "Creamos Replacements porque somos amigos del barrio de Boedo. Hinchas de San Lorenzo y amantes del rock",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\04"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\04"
   },
   {
     "id": "11",
@@ -116,7 +115,7 @@
     "userAvatar": "11.jpg",
     "skills": "Baterista",
     "bio": "Outside in es una banda de Mar del Plata con influencias reggae. Estamos disponibles para shows",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\11"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\11"
   },
   {
     "id": "12",
@@ -127,7 +126,7 @@
     "userAvatar": "10.jpg",
     "skills": "Guitarrista",
     "bio": "Soy Americano pero vivo en Buenos Aires desde los 14 años. Me influencia Radiohead y Pulp",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\10"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\10"
   },
   {
     "id": "13",
@@ -138,7 +137,7 @@
     "userAvatar": "13.jpg",
     "skills": "Multinstrumentista",
     "bio": "Amante de la musica electronica. Geek de sintetizadores y guitarras electricas",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\13"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\13"
   },
   {
     "id": "14",
@@ -149,7 +148,7 @@
     "userAvatar": "19.jpg",
     "skills": "Bajista",
     "bio": "Duo de musica electronica, versatiles en todos los generos musicales.",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\19"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\19"
   },
   {
     "id": "15",
@@ -159,7 +158,7 @@
     "userAvatar": "14.jpg",
     "skills": "Bajista",
     "bio": "Trio trio creado en La Plata. Hacemos rock hasta llegar a los cimientos de la tierra",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\14"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\14"
   },
   {
     "id": "16",
@@ -170,7 +169,7 @@
     "userAvatar": "12.jpg",
     "skills": "Guitarrista",
     "bio": "Mis estilos preferidos son el Pop y el Rock, y logro combinaciones exquisitas con ellos",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\12"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\12"
   },
   {
     "id": "17",
@@ -181,7 +180,7 @@
     "userAvatar": "15.jpg",
     "skills": "Baterista",
     "bio": "Me especializo en ponerle ritmo a las melodias. Soy Baterista y percusionista",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\15"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\15"
   },
   {
     "id": "18",
@@ -192,7 +191,7 @@
     "userAvatar": "16.jpg",
     "skills": "Guitarrista",
     "bio": "5 discos editados y 5 canciones en el Billboard chart. Toque en el Quilmes Rock",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\16"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\16"
   },
   {
     "id": "19",
@@ -203,7 +202,7 @@
     "userAvatar": "21.jpg",
     "skills": "Cantante",
     "bio": "Me gusta conocer los misterios de la voz y desentranarlos. Soy cantante desde que tengo memoria",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\21"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\21"
   },
   {
     "id": "20",
@@ -214,7 +213,7 @@
     "userAvatar": "17.jpg",
     "skills": "Guitarrista",
     "bio": "Soy guitarrista, compositor y cantante. Me gustan bandas tipo Kings of Lions",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\17"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\17"
   },
   {
     "id": "21",
@@ -225,7 +224,7 @@
     "userAvatar": "18.jpg",
     "skills": "Guitarrista",
     "bio": "Hacemos power rock para despertar conciencias.",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\18"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\18"
   },
   {
     "id": "22",
@@ -236,7 +235,7 @@
     "userAvatar": "20.jpg",
     "skills": "Guitarrista",
     "bio": "Soy introvertido y me gusta crear mis composiciones en mi home studio. 30 años",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\20"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\20"
   },
   {
     "id": "23",
@@ -246,7 +245,7 @@
     "userAvatar": "22.jpg",
     "skills": "Bajista",
     "bio": "Estamos disponibles para shows y eventos empresariales. 3 discos editados. Influencias Magic Numbers",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\22"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\22"
   },
   {
     "id": "24",
@@ -256,7 +255,7 @@
     "userAvatar": "23.jpg",
     "skills": "Cantante",
     "bio": "Soy Zenegales. Vivo en Argentina desde hace 5 años. Disponible para bandas",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\23"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\23"
   },
   {
     "id": "25",
@@ -267,7 +266,7 @@
     "userAvatar": "25.jpg",
     "skills": "Cantante",
     "bio": "Admiro a los cantantes de musica folk y country. Vivo en Arkansas",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\25"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\25"
   },
   {
     "id": "26",
@@ -277,7 +276,7 @@
     "userAvatar": "26.jpg",
     "skills": "Baterista",
     "bio": "Somos una banda de Hurlingham. Nuestras influencias son bandas nacionales como Seru Giran y Pescado Rabioso. Tocamos juntos desde hace 5 años",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\26"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\26"
   },
   {
     "id": "27",
@@ -288,7 +287,7 @@
     "userAvatar": "24.jpg",
     "skills": "Guitarrista",
     "bio": "Vivo en la ciduad de Sao Paulo. Soy brasileño y me influencia el funk clasico",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\24"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\24"
   },
   {
     "id": "28",
@@ -298,7 +297,7 @@
     "userAvatar": "27.jpg",
     "skills": "Baterista",
     "bio": "Somos un duo de Drum and Bass. Nuestras influencias son claro, la mejor banda de todos los tiempos Morphine",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\27"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\27"
   },
   {
     "id": "29",
@@ -308,7 +307,7 @@
     "userAvatar": "29.jpg",
     "skills": "Cantante",
     "bio": "Banda de sonidos eclecticos y originales. Nos encanta la musica y poder fusionarla",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\29"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\29"
   },
   {
     "id": "30",
@@ -319,7 +318,7 @@
     "userAvatar": "30.jpg",
     "skills": "Bajista",
     "bio": "Tenemos influencias en el rock californiano. Combinamos la musica con el skate.",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\30"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\30"
   },
   {
     "id": "31",
@@ -330,7 +329,7 @@
     "userAvatar": "28.jpg",
     "skills": "Guitarrista",
     "bio": "Solista y multinstrumentista. Mi pasion es componer. La musica cambia al mundo",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\28"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\28"
   },
   {
     "id": "32",
@@ -341,7 +340,7 @@
     "userAvatar": "32.jpg",
     "skills": "Cantante",
     "bio": "Banda relajada de Rock and roll clasico, influenciados por Led Zeppellin y Black Sabbath",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\32"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\32"
   },
   {
     "id": "33",
@@ -352,7 +351,7 @@
     "userAvatar": "34.jpg",
     "skills": "Cantante",
     "bio": "Luego de haber pasado por varias bandas, inicie mi carrera solista y lance tres discos hasta el momento",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\34"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\34"
   },
   {
     "id": "34",
@@ -363,7 +362,7 @@
     "userAvatar": "36.jpg",
     "skills": "Guitarrista",
     "bio": "Observo el mundo desde mi estudio y escribo acerca de el, en tonos de rock sinfonico",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\36"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\36"
   },
   {
     "id": "35",
@@ -374,7 +373,7 @@
     "userAvatar": "31.jpg",
     "skills": "Cantante",
     "bio": "Soy Mezzosoprano. Cantante de opera profesional",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\31"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\31"
   },
   {
     "id": "36",
@@ -384,7 +383,7 @@
     "userAvatar": "37.jpg",
     "skills": "Cantante",
     "bio": "Estamos disponibles para shows y eventos empresariales. 2 discos editados. Influencias de grupos rhythm and blues",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\37"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\37"
   },
   {
     "id": "37",
@@ -395,7 +394,7 @@
     "userAvatar": "40.jpg",
     "skills": "Cantante",
     "bio": "Canto y compongo mis propias canciones, siendo influenciado por los clasicos del soul",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\40"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\40"
   },
   {
     "id": "38",
@@ -405,7 +404,7 @@
     "userAvatar": "35.jpg",
     "skills": "Cantante",
     "bio": "Banda liderada por la cantante Julia Nono. Hacemos Jazz vocal y shows tributo",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\35"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\35"
   },
   {
     "id": "39",
@@ -415,7 +414,7 @@
     "userAvatar": "39.jpg",
     "skills": "Cantante",
     "bio": "Soy Morena Lopez. Nuestras influencias van desde el flamenco hasta la electronica",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\39"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\39"
   },
   {
     "id": "40",
@@ -426,7 +425,7 @@
     "userAvatar": "33.jpg",
     "skills": "Cantante",
     "bio": "Lidero la banda Vans in Japan. Nos gusta experimentar y crear nuevas variantes de los clasicos generos musicales",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\33"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\33"
   },
   {
     "id": "41",
@@ -437,7 +436,7 @@
     "userAvatar": "38.jpg",
     "skills": "Guitarrista",
     "bio": "Trio que recrea los clasicos del rock nacional. Banda Tributo a los clasicos nacionales",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\38"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\38"
   },
   {
     "id": "42",
@@ -448,6 +447,6 @@
     "userAvatar": "44.jpg",
     "skills": "Tecladista",
     "bio": "Banda reggae de la zona oeste del gran Buenos Aires. 3 discos editados",
-    "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\44"
+    "pathAbsolute": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\44"
   }
 ]
