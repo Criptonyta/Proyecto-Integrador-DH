@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include("partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
+
+    <%- include ('partials/navbarlogada.ejs', {}) %>
+
+
+    <!-- ======= BODY | CUERPO DEL USERPROFILE ========= -->
+
+    <main>
+        <!--FORMULARIO-->
+        <section class="userprofile-form">
+            <form action="/user/userprofile/<%= usuarioInfo.id %>/edit?_method=PUT" method="POST" class="userprofile-formulario">
+                <h4>Edita tu perfil de usuario</h4>
+                <div>
+                    <p class="userprofile-Texto-Descriptivo">
+                        Puedes editar tu perfil de usuario y publicar tus anuncios desde aqui.<br>
+                    </p>
+                </div>
+
+                <p>
+                    <i class="fas fa-at"><label> Email:</label></i>
+                    <input value=<%= usuarioInfo.email %>type="email" name="email" id="email" placeholder="Tu email">
+                    </label>
+                </p>
+
+                <div class="userprofile-items">
+                    <p>
+                        <i class="fas fa-id-badge"></i><label> Nombre:</label></i>
+                        <input value=<%= usuarioInfo.nombre %> class="userprofile-datos" type="text" name="nombre" id="nombre"
+                            placeholder="Edita tu nombre"><i class="fas fa-user-edit"></i>
+                    </p>
+
+                    <p>
+                        <i class="fas fa-id-badge"><label> Apellido:</label></i>
+                        <input value = <%= usuarioInfo.apellido %>class="userprofile-datos" type="text" name="apellido" id="apellido"
+                            placeholder="Edita tu apellido"><i class="fas fa-user-edit"></i>
+                    </p>
+
+                    <p>
+                        <i class="fas fa-key"><label> Contraseña:</label></i>
+                        <input class="userprofile-datos" type="password" name="password" id="password"
+                            placeholder="Edita tu contraseña"><i class="fas fa-user-edit"></i>
+                    </p>
+
+                    <p>
+                        <i class="fas fa-camera"><label> Foto de perfil:</label></i>
+                        <label for='userAvatarButton' class="userAvatarButton">Cargá una imagen</label>
+                        <input class="userAvatarButton" type="file" name="userAvatarButton" id="userAvatarButton"
+                            required>
+                    </p>
+
+                    <p>
+                        <i class="fas fa-music"><label> Edita tu minibio en menos de 120 caracteres (sólo si sos
+                                músico)</label><br></i>
+                        <textarea class="userprofile-datos" name="minibio" rows="3" maxlength="120"><%= usuarioInfo.bio %></textarea><i
+                            class="fas fa-user-edit"></i>
+                    </p>
+
+                    <p>
+                        <label> Cuales son tus habilidades musicales?</label></i>
+                        <select class="skills-form" name="skills">
+                            <% skills.forEach(function(skill){ %>
+                                <option value=<%= skill %>><%= skill %></option>
+                            <% }) %>
+                        </select>
+                        <i class="fas fa-user-edit"></i>
+                    </p>
+                    
+                </div>
+                <button type="submit" class="userprofile-button">Salvar</button>
+            </form>
+
+
+
+            <form class="userprofile-formulario">
+
+                <h4>Mis anuncios</h4>
+
+                <p class="userprofile-Registro-Texto-Descriptivo">
+                    Informa que tipo de anuncio quieres crear y completalo:<br>
+                </p>
+
+                <section class="userprofile-crearanuncios">
+                    <a href="/products/createproduct" class="userprofile-venderproducto-button">Instrumento </a>
+
+                    <a href="/products/createsong" class="userprofile-vendercancion-button">Canción </a>
+                </section>
+
+                <div>
+                    <p class="userprofile-Registro-Texto-Descriptivo">
+                        Podes ver, editar y crear tus anuncios desde aqui.<br>
+                    </p>
+
+                    <table class="userprofile-tableanuncios">
+                        <tr>
+                            <th>Anuncio</th>
+                            <th>Descripción</th>
+                            <th>Actualización</th>
+                        </tr>
+
+                        <% anuncioUser.forEach(function(anuncio, indice){ %>
+
+                        <tr>
+                            <td><%= indice+1 %> </td>
+                            <td><%= anuncio.titulo %> </td>
+                            <td>Eliminar | Editar</td> <!-- VER DE APLICAR <a></a> -->
+                        </tr>
+                        <% }) %>
+
+                    </table>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- ======= FOOTER | PIE DE PAGINA ========= -->
+
+    <%- include ('partials/footer.ejs', {}) %>
+</body>
+
+</html>

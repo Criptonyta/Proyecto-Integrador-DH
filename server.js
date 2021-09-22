@@ -2,6 +2,7 @@ const express = require('express');
 const { appendFile } = require('fs');
 const server = express(); 
 server.set('view engine', 'ejs');
+const methodOverride = require("method-override")
 
 const path = require ('path');
 
@@ -22,6 +23,7 @@ console.log(`Server is runnig in the Port : ${port}`);
 server.use(express.static(path.resolve(__dirname,'./public')));
 server.use(express.urlencoded({extended:false}));
 server.use(express.json());
+server.use(methodOverride("_method"))
 
 server.use('/', mainRoutes);
 server.use('/products', productRoutes);
