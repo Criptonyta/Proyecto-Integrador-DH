@@ -1,12 +1,9 @@
-
-
-
-const express = require ('express');
-const router = express.Router(); 
+const express = require('express');
+const router = express.Router();
 const userController = require('../controllers/userController');
 
 
-router.get('/userprofile', userController.userprofile);
+router.get('/userprofile/:iduser', userController.userprofile);
 
 router.get('/login', userController.login);
 

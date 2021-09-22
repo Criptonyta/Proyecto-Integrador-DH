@@ -81,6 +81,36 @@ const controlador = {
 
 
     },
+    addProduct: (req, res) => {
+        const fs = require('fs');
+        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments, "UTF-8"));
+        instrumentcargar = {
+            id: 25,
+            /* Id usuario */
+            InstrumId: 1,
+            /* Id canción */
+            img: req.body.productEmptyButton,
+            titulo: req.body.titulo,
+            precio: req.body.precio,
+            descripcion: req.body.descripcion,
+        }
+        instrumentsDB.push(instrumentcargar)
+        fs.writeFileSync(pathInstruments, JSON.stringify(instrumentsDB))
+        const songsDB = JSON.parse(fs.readFileSync(pathSongs));
+        const usersDB = JSON.parse(fs.readFileSync(pathUsers));
+
+        const instrumentos = instrumentsDB.slice(1, 7);
+        const musicos = songsDB.slice(1, 7);
+
+        const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
+        const datos = artistsDB.slice(1, 5);
+
+        res.render('tienda.ejs', {
+            datos: datos,
+            musicos: musicos,
+            instrumentos: instrumentos
+        })
+    },
 
     tienda: (req, res) => {
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));

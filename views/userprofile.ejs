@@ -90,6 +90,17 @@
 
 
                 <h4>Mis anuncios</h4>
+
+                <p class="userprofile-Registro-Texto-Descriptivo">
+                    Informa que tipo de anuncio quieres crear y completalo:<br>
+                </p>
+
+                <section class="userprofile-crearanuncios">
+                    <a href="/products/createproduct" class="userprofile-venderproducto-button">Instrumento </a>
+
+                    <a href="/products/createsong" class="userprofile-vendercancion-button">Canción </a>
+                </section>
+
                 <div>
                     <p class="userprofile-Registro-Texto-Descriptivo">
                         Podes ver, editar y crear tus anuncios desde aqui.<br>
@@ -101,29 +112,17 @@
                             <th>Descripción</th>
                             <th>Actualización</th>
                         </tr>
+
+                        <% anuncioUser.forEach(function(anuncio, indice){ %>
+
                         <tr>
-                            <td>1</td>
-                            <td>Vendo Bajo Fender</td>
-                            <td>Eliminar | Editar</td>
+                            <td><%= indice+1 %> </td>
+                            <td><%= anuncio.titulo %> </td>
+                            <td>Eliminar | Editar</td> <!-- VER DE APLICAR <a></a> -->
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Rock para volarte la peluca</td>
-                            <td>Eliminar | Editar</td>
-                        </tr>
+                        <% }) %>
+
                     </table>
-
-                    <p class="userprofile-Registro-Texto-Descriptivo">
-                        Informa que tipo de anuncio quieres crear y completalo:<br>
-                    </p>
-
-                    <section class="userprofile-crearanuncios">
-                        <a href="/products/createproduct" class="userprofile-venderproducto-button">Instrumento </a>
-
-                        <a href="/products/createsong" class="userprofile-vendercancion-button">Canción </a>
-                    </section>
-
-
 
                 </div>
 
