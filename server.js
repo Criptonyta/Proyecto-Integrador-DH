@@ -1,10 +1,10 @@
 const express = require('express');
-const { appendFile } = require('fs');
-const server = express(); 
+const fs = require('fs');
+const server = express();
 server.set('view engine', 'ejs');
 const methodOverride = require("method-override")
 
-const path = require ('path');
+const path = require('path');
 
 const mainRoutes = require('./routes/mainRoutes')
 const productRoutes = require('./routes/productRoutes')
@@ -16,12 +16,14 @@ const userRoutes = require('./routes/userRoutes')
 // });
 
 const port = process.env.PORT || '5000';
-server.listen(port,()=>{
-console.log(`Server is runnig in the Port : ${port}`);
+server.listen(port, () => {
+    console.log(`Server is runnig in the Port : ${port}`);
 });
 
-server.use(express.static(path.resolve(__dirname,'./public')));
-server.use(express.urlencoded({extended:false}));
+server.use(express.static(path.resolve(__dirname, './public')));
+server.use(express.urlencoded({
+    extended: false
+}));
 server.use(express.json());
 server.use(methodOverride("_method"))
 
@@ -29,7 +31,9 @@ server.use('/', mainRoutes);
 server.use('/products', productRoutes);
 server.use('/cart', cartRoutes);
 server.use('/user', userRoutes);
-server.use((req,res,next)=>{res.status(404).render("error404")})
+server.use((req, res, next) => {
+    res.status(404).render("error404")
+})
 
 
 

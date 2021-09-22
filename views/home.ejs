@@ -3,14 +3,14 @@
 
 <head>
     <%- include("partials/head.ejs")%>
-    <link rel="stylesheet" href="/css/styles.css"> 
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
 
     <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
 
-<%- include ('partials/navbar.ejs', {}) %>
+    <%- include ('partials/navbar.ejs', {}) %>
 
 
 
@@ -20,14 +20,17 @@
         <section class="home-bodysection-head">
             <div>
                 <img src="/images/Images/ChicaEscuchandoMusicaCutted.JPG" class="i-home-inicial"
-                alt="girl listening music" />
+                    alt="girl listening music" />
                 <img src="/images/Images/ChicaEscuchandoMusicaCutted2.JPG" class="i-home-inicial-gradient"
                     alt="girl listening music" />
             </div>
 
             <div class="home-bodysection-head-content">
                 <h1>El marketplace de los amantes de la música</h1>
-                <p>Aqui se reunen artistas y consumidores.<br> <br> => Como músico puedes divulgar, publicar y vender tu música e instrumentos. <br> => Como consumidor puedes descubrir nuevos artistas y comprar los derechos reservados de las canciones para su utilización comercial</p>
+                <p>Aqui se reunen artistas y consumidores.<br> <br> <i class="fas fa-forward"></i> Como músico puedes
+                    divulgar, publicar y vender tu música e instrumentos. <br> <i class="fas fa-forward"></i> Como
+                    consumidor puedes descubrir nuevos artistas y comprar los derechos reservados de las canciones para
+                    su utilización comercial</p>
                 <!-- Boton Ingreso responsivo | Exibido en mobile en NavBar y siempre en main -->
                 <a href="/user/login" class="access-button-home" target="_blank">Ingresa </a>
             </div>
@@ -39,7 +42,8 @@
                 <i class="far fa-play-circle"></i>
                 <i class="fas fa-headphones"></i>
                 <h2>Vende y divulga tu arte</h2>
-                <p>Visibilizá y rentabilizá tu talento, vendiendo tu música utilizando licencias NTF's sin intermediarios</p>
+                <p>Visibilizá y rentabilizá tu talento, vendiendo tu música utilizando licencias NTF's sin
+                    intermediarios</p>
                 <!-- Boton Enterate Como Vender tu musica | Exibido en la Home | Linkea una pagina previa al formulario de registro -->
                 <a href="/user/register" class="SaleMusic-button-home" target="_blank">Enterate como </a>
 
@@ -49,7 +53,8 @@
                 <i class="fas fa-guitar"></i>
                 <i class="fas fa-drum"></i>
                 <h2>Publicá los instrumentos que quieras vender</h2>
-                <p>Quieres vender tus instrumentos pero no sabes a quien?. Estas a un par de clicks de lograrlo. Registrate ahora</p>
+                <p>Quieres vender tus instrumentos pero no sabes a quien?. Estas a un par de clicks de lograrlo.
+                    Registrate ahora</p>
                 <!-- Boton Enterate Como Vender tus Instrumentos | Exibido en la Home | Linkea una pagina previa al formulario de registro -->
                 <a href="/user/register" class="SaleInstruments-button-home" target="_blank">Enterate como </a>
             </div>
@@ -59,10 +64,11 @@
             <div>
                 <img src="/images/Images/TecladoAudifonoCutted.JPG" class="i-home-teclado"
                     alt="keyboard piano and headphones" />
-                    <img src="/images/Images/TecladoAudifonoCutted2.JPG" class="i-home-teclado-gradient"
+                <img src="/images/Images/TecladoAudifonoCutted2.JPG" class="i-home-teclado-gradient"
                     alt="keyboard piano and headphones2" />
                 <h3>Juntamos a todos los actores del ecosistema de la música en un mismo lugar</h3>
-                <p>Musiqueiros es un puente que reune artistas y consumidores, haciendo fáciles y accesibles sus negocios</p>
+                <p>Musiqueiros es un puente que reune artistas y consumidores, haciendo fáciles y accesibles sus
+                    negocios</p>
                 <a href="user/login" class="access-button-home2" target="_blank">Ingresa </a>
             </div>
         </section>
@@ -70,27 +76,27 @@
         <!-- ======= CARDS VERTICAL HOME ========= -->
 
         <section class="home-bodysection-artists">
-          
+
             <i class="fas fa-chevron-left"></i>
 
             <div>
                 <h2>Artistas que confian en nosotros</h2>
 
                 <% datos.forEach(function(dato) { %>
-                    <%- include('partials/cardverticalhome.ejs', {dato}) %>
-                <% }) %>        
+                <%- include('partials/cardverticalhome.ejs', {dato}) %>
+                <% }) %>
 
-    </div>
+            </div>
 
-    <i class="fas fa-chevron-right"></i> 
+            <i class="fas fa-chevron-right"></i>
 
-    </section>
+        </section>
 
     </main>
 
-        <!-- ======= FOOTER | PIE DE PAGINA ========= -->
+    <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
-        <%- include ('partials/footer.ejs', {}) %>
+    <%- include ('partials/footer.ejs', {}) %>
 
 
 </body>
