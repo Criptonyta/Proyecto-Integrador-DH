@@ -18,7 +18,8 @@
     <main>
         <!--FORMULARIO-->
         <section class="userprofile-form">
-            <form action="/user/userprofile/<%= usuarioInfo.id %>/edit?_method=PUT" method="POST" class="userprofile-formulario">
+            <form action="/user/userprofile/<%= usuarioInfo.id %>/edit?_method=PUT" method="POST"
+                class="userprofile-formulario">
                 <h4>Edita tu perfil de usuario</h4>
                 <div>
                     <p class="userprofile-Texto-Descriptivo">
@@ -26,23 +27,32 @@
                     </p>
                 </div>
 
+                <p class="userprofile-editAvatar-section">
+                    <i class="fas fa-camera"><label> Foto de perfil:</label></i>
+                    <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" width=100px
+                        alt="fotoPerfil">
+                    <label for='userAvatarButton' class="userAvatarButton">Cargá una imagen</label>
+                    <input class="userAvatarButton" type="file" name="userAvatarButton" id="userAvatarButton"
+                        value="<%= usuarioInfo.userAvatar %>">
+                </p>
+
                 <p>
                     <i class="fas fa-at"><label> Email:</label></i>
-                    <input value="<%= usuarioInfo.email %>"type="email" name="email" id="email" placeholder="Tu email">
+                    <input value="<%= usuarioInfo.email %>" type="email" name="email" id="email" placeholder="Tu email">
                     </label>
                 </p>
 
                 <div class="userprofile-items">
                     <p>
                         <i class="fas fa-id-badge"></i><label> Nombre:</label></i>
-                        <input value="<%= usuarioInfo.nombre %>" class="userprofile-datos" type="text" name="nombre" id="nombre"
-                            placeholder="Edita tu nombre"><i class="fas fa-user-edit"></i>
+                        <input value="<%= usuarioInfo.nombre %>" class="userprofile-datos" type="text" name="nombre"
+                            id="nombre" placeholder="Edita tu nombre"><i class="fas fa-user-edit"></i>
                     </p>
 
                     <p>
                         <i class="fas fa-id-badge"><label> Apellido:</label></i>
-                        <input value = "<%= usuarioInfo.apellido %>"class="userprofile-datos" type="text" name="apellido" id="apellido"
-                            placeholder="Edita tu apellido"><i class="fas fa-user-edit"></i>
+                        <input value="<%= usuarioInfo.apellido %>" class="userprofile-datos" type="text" name="apellido"
+                            id="apellido" placeholder="Edita tu apellido"><i class="fas fa-user-edit"></i>
                     </p>
 
                     <p>
@@ -52,31 +62,27 @@
                     </p>
 
                     <p>
-                        <i class="fas fa-camera"><label> Foto de perfil:</label></i>
-                        <label for='userAvatarButton' class="userAvatarButton">Cargá una imagen</label>
-                        <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" width=100px alt="fotoPerfil">
-                        <input class="userAvatarButton" type="file" name="userAvatarButton" id="userAvatarButton" value="<%= usuarioInfo.userAvatar %>">
-                    </p>
-
-                    <p>
                         <i class="fas fa-music"><label> Edita tu minibio en menos de 120 caracteres (sólo si sos
                                 músico)</label><br></i>
-                        <textarea class="userprofile-datos" name="minibio" rows="3" maxlength="120"><%= usuarioInfo.bio %></textarea><i
-                            class="fas fa-user-edit"></i>
+                        <textarea class="userprofile-datos" name="minibio" rows="3"
+                            maxlength="120"><%= usuarioInfo.bio %></textarea><i class="fas fa-user-edit"></i>
                     </p>
 
                     <p>
-                        <label> Cuales son tus habilidades musicales?</label></i>
+                        <label> Cuales son tus habilidades musicales?</label>
                         <select class="skills-form" name="skills">
                             <% skills.forEach(function(skill){ %>
-                                <option value=<%= skill %>><%= skill %></option>
+                            <option value=<%= skill %>><%= skill %></option>
                             <% }) %>
                         </select>
                         <i class="fas fa-user-edit"></i>
                     </p>
                 </div>
-                <button type="submit" class="userprofile-button">Salvar</button>
-                <a href="/user/userprofile/<%= usuarioInfo.id %>">Cancelar</a>
+                <section class="userprofile-edit-button-container">
+                    <button type="submit" class="userprofile-edit-button">Salvar</button>
+                    <button type="submit" class="userprofile-edit-button"><a
+                            href="/user/userprofile/<%= usuarioInfo.id %>">Cancelar</a></button>
+                </section>
             </form>
         </section>
 

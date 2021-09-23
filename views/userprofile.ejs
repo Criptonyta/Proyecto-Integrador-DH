@@ -15,45 +15,48 @@
 
     <!-- ======= BODY | CUERPO DEL USERPROFILE ========= -->
 
-    <main>
+    <main class="userprofile-form">
         <!--FORMULARIO-->
-        <section class="userprofile-form">
+        <section>
             <div class="userprofile-formulario">
                 <h4>Perfil</h4>
+
+                <p class="userprofile-editAvatar-section">
+                    <i class="fas fa-camera"><label> Foto de perfil:</label></i>
+                    <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" width=100px
+                        alt="fotoPerfil">
+                </p>
+
                 <p>
-                    <i class="fas fa-at"></i><label> Email:</label></i>
-                    <p><%= usuarioInfo.email %></p>
-                    </label>
+                    <i class="fas fa-at"><label> Email:</label></i>
+                    <%= usuarioInfo.email %>
+
                 </p>
 
                 <div class="userprofile-items">
                     <p>
-                        <i class="fas fa-id-badge"></i><label> Nombre:</label></i>
-                        <p><%= usuarioInfo.nombre %></p>
+                        <i class="fas fa-id-badge"><label> Nombre:</label></i>
+                        <%= usuarioInfo.nombre %>
                     </p>
 
                     <p>
                         <i class="fas fa-id-badge"><label> Apellido:</label></i>
-                        <p><%= usuarioInfo.apellido %></p>
+                        <%= usuarioInfo.apellido %>
                     </p>
 
                     <p>
-                        <i class="fas fa-camera"><label> Foto de perfil:</label></i>
-                        <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" width=100px alt="fotoPerfil">
+                        <i class="fas fa-music"><label>Biografia:</label><br></i>
+                        <%= usuarioInfo.bio %>
                     </p>
 
                     <p>
-                        <i class="fas fa-music"><label>Biografia</label><br></i>
-                        <p><%= usuarioInfo.bio %></p>
-                    </p>
+                        <label> Habilidades:</label></i>
+                        <%= usuarioInfo.skills %>
 
-                    <p>
-                        <label> Habilidades</label></i>
-                        <p><%= usuarioInfo.skills %></p>
-
-                    <section>
-                        <a href='/user/userprofile/<%= usuarioInfo.id %>/edit' class="userprofile-button">Editar perfil </a>
-                    </section>
+                        <section>
+                            <a href='/user/userprofile/<%= usuarioInfo.id %>/edit' class="userprofile-button">Editar
+                                perfil </a>
+                        </section>
 
                 </div>
             </div>
@@ -93,7 +96,7 @@
                             <td><a href="">Ver mas...</a></td> <!-- VER DE APLICAR <a></a> -->
                         </tr>
                         <% }) %>
-                        
+
                     </table>
                     <table class="userprofile-tableanuncios">
                         <p>Mis Instrumentos</p>

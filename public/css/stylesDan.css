@@ -666,6 +666,11 @@ footer {
     margin: 10px 10px 10px 30px;
 }
 
+.userprofile-edit-button-container {
+    display: flex;
+    justify-content: center;
+}
+
 
 /* FORMULARIO DE CARGA DE PRODUCTOS */
 
@@ -784,6 +789,7 @@ input[type='file'] {
 .songEmptyFileBtn,
 .productEmptyButton,
 .userprofile-button,
+.userprofile-edit-button,
 .userAvatarButton,
 .userAvatarRegisterButton,
 .userprofile-vendercancion-button,
@@ -812,6 +818,7 @@ input[type='file'] {
 .userAvatarButton:hover,
 .userAvatarRegisterButton:hover,
 .userprofile-button:hover,
+.userprofile-edit-button:hover,
 .userprofile-venderproducto-button:hover,
 .userprofile-vendercancion-button:hover {
     color: #00f6ff;
@@ -822,9 +829,15 @@ input[type='file'] {
     display: inline-block;
     align-self: center;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.userprofile-editAvatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .productEmptyButton {
@@ -847,6 +860,7 @@ td {
     justify-content: center;
 }
 
+.userprofile-edit-button,
 .userprofile-vendercancion-button,
 .userprofile-venderproducto-button {
     margin-right: 20px;
@@ -880,6 +894,7 @@ td {
 
     .userprofile-form input {
         width: 500px;
+        text-align: center;
 
     }
 }
