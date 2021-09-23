@@ -186,7 +186,7 @@ const controlador = {
         })
     },
     deleteInstrument: (req, res) => {},
-    deleteSong: (req, res) => {res.send(res.send("hola"))}
+    deleteSong: (req, res) => {res.send("hola")}
 };
 
 
