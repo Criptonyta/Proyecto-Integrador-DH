@@ -55,7 +55,7 @@
                         <i class="fas fa-camera"><label> Foto de perfil:</label></i>
                         <label for='userAvatarButton' class="userAvatarButton">Cargá una imagen</label>
                         <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" width=100px alt="fotoPerfil">
-                        <input class="userAvatarButton" type="file" name="userAvatarButton" id="userAvatarButton">
+                        <input class="userAvatarButton" type="file" name="userAvatarButton" id="userAvatarButton" value="<%= usuarioInfo.userAvatar %>">
                     </p>
 
                     <p>
@@ -76,6 +76,7 @@
                     </p>
                 </div>
                 <button type="submit" class="userprofile-button">Salvar</button>
+                <a href="/user/userprofile/<%= usuarioInfo.id %>">Cancelar</a>
             </form>
         </section>
 
