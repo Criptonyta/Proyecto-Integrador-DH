@@ -200,15 +200,6 @@ section {
     display: none;
 }
 
-.home-card-artist {
-    border: solid white 2px;
-    border-radius: 15px;
-    width: 180px;
-    height: 360px;
-    padding: 3px 3px 3px 3px;
-    margin: 25px auto;
-    text-align: center;
-}
 
 h5 {
     font-size: 17px;
@@ -439,10 +430,6 @@ footer {
         justify-content: center;
     }
 
-    .home-card-artist {
-        display: inline-block;
-        margin: 10px 3px;
-    }
 
 }
 

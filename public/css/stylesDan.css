@@ -169,7 +169,9 @@ h5 {
 
 .home-cards-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .main-footer li {
@@ -439,6 +441,13 @@ footer {
         margin: 10px 3px;
     }
 
+    .home-cards-container {
+        display: inline-flex;
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
 }
 
 
@@ -462,8 +471,8 @@ footer {
     .main-header-der ul {
         /* Muestro el texto */
         display: flex;
-        justify-content: space-around;
-        max-width: 280px;
+        justify-content: space-between;
+        max-width: 320px;
     }
 
 
