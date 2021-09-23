@@ -12,8 +12,8 @@ const controlador = {
         const instrumento = instrumentos.find(elemento => elemento.InstrumId == req.params.id);
         const relacionados = instrumentos.slice(1, 5) //Instrumentos relacionados
         const pathFotos = "/images/instrumentsImg/resizedandcropped/"
-        pathDetail = "/products/detailInstrument/"
-        nombreId = "InstrumId"
+        const pathDetail = "/products/detailInstrument/"
+        const nombreId = "InstrumId"
 
 
         res.render('product.ejs', {
@@ -31,8 +31,8 @@ const controlador = {
         const song = songs.find(elemento => elemento.songId == req.params.id);
         const relacionados = songs.slice(1, 5) //Instrumentos relacionados
         const pathFotos = "/images/MusicFilesCoverImg/resized/"
-        pathDetail = "/products/detailSong/"
-        nombreId = "songId"
+        const pathDetail = "/products/detailSong/"
+        const nombreId = "songId"
         res.render('product.ejs', {
             producto: song,
             relacionados,
