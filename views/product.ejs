@@ -48,7 +48,7 @@
             <div class="related-carrousel-container">
 
                 <% relacionados.forEach(function(relacionado) { %>
-                    <%- include ('partials/cardhorizontalproduct.ejs', {relacionado,pathFotos}) %>
+                    <%- include ('partials/cardhorizontalproduct.ejs', {relacionado,pathFotos,pathDetail,nombreId}) %>
                 <% }) %>
         
             </div>

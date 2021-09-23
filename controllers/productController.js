@@ -12,11 +12,17 @@ const controlador = {
         const instrumento = instrumentos.find(elemento => elemento.InstrumId == req.params.id);
         const relacionados = instrumentos.slice(1, 5) //Instrumentos relacionados
         const pathFotos = "" //FALTA AGREGAR EL PATH A LA CARPETA DE LAS FOTOS
+        pathDetail = "/products/detailInstrument/"
+        nombreId = "InstrumId"
+
 
         res.render('product.ejs', {
             producto: instrumento,
             relacionados,
-            pathFotos
+            pathFotos,
+            nombreId,
+            pathDetail,
+            nombreId
         });
 
     },
@@ -25,10 +31,14 @@ const controlador = {
         const song = songs.find(elemento => elemento.songId == req.params.id);
         const relacionados = songs.slice(1, 5) //Instrumentos relacionados
         const pathFotos = "/images/MusicFilesCoverImg/resized/"
+        pathDetail = "/products/detailSong/"
+        nombreId = "songId"
         res.render('product.ejs', {
             producto: song,
             relacionados,
-            pathFotos
+            pathFotos,
+            pathDetail,
+            nombreId
         });
 
     },
