@@ -1,8 +1,11 @@
 const express = require('express');
 const fs = require('fs');
 const server = express();
-server.set('view engine', 'ejs');
 const methodOverride = require("method-override")
+
+server.use(methodOverride("_method"))
+server.set('view engine', 'ejs');
+
 
 const path = require('path');
 
@@ -18,7 +21,6 @@ server.listen(port, () => {
     console.log(`Server is runnig in the Port : ${port}`);
 });
 
-server.use(methodOverride("_method"))
 server.use(express.static(path.resolve(__dirname, './public')));
 server.use(express.urlencoded({
     extended: false
