@@ -16,7 +16,7 @@ const controlador = {
         const anuncioUser = [...songsUser, ...instrumentUser];
 
 
-        res.render('userprofile.ejs', {anuncioUser,usuarioInfo});
+        res.render('userprofile.ejs', {anuncioUser,usuarioInfo,songsUser,instrumentUser});
     },
     userprofileEdit: (req, res) => {
         const userDB = require(pathUsers);
