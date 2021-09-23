@@ -15,10 +15,12 @@
     <%- include ('partials/navbar.ejs', {}) %>
 
     <main class="principal">
-        <div class="buscador">
-            <input class="inputBuscador" type="text" placeholder="Buscar cancion, artista o instrumento">
-            <i class="fas fa-search"></i>
-        </div>
+        <form action="/products/tienda/search" method="GET"><!--Formulario para buscar-->
+            <div class="buscador">
+                <input name="search" class="inputBuscador" type="text" placeholder="Buscar cancion, artista o instrumento">
+                <i class="fas fa-search"><button type="submit"></button></i>
+            </div>
+        </form>
 
         <section class="instrumentosEnVenta">
             <p class="cabecera">Instrumentos en venta</p>

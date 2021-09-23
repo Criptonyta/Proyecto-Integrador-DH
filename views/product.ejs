@@ -20,7 +20,7 @@
         <!--productos-->
         <div class="product-container">
             <div class="productImages">
-                <img src=<%= producto.img %> alt="productPhoto">
+                <img src="<%= pathFotos %>/<%= producto.img %>" alt="productPhoto">
                 <div class="productImagesButtons">
                     <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button>
                     <button><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
@@ -48,7 +48,7 @@
             <div class="related-carrousel-container">
 
                 <% relacionados.forEach(function(relacionado) { %>
-                    <%- include ('partials/cardhorizontalproduct.ejs', {relacionado}) %>
+                    <%- include ('partials/cardhorizontalproduct.ejs', {relacionado,pathFotos}) %>
                 <% }) %>
         
             </div>

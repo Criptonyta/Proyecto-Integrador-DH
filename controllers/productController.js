@@ -11,10 +11,12 @@ const controlador = {
         const instrumentos = JSON.parse(fs.readFileSync(pathInstruments));
         const instrumento = instrumentos.find(elemento => elemento.InstrumId == req.params.id);
         const relacionados = instrumentos.slice(1, 5) //Instrumentos relacionados
+        const pathFotos = "" //FALTA AGREGAR EL PATH A LA CARPETA DE LAS FOTOS
 
         res.render('product.ejs', {
             producto: instrumento,
-            relacionados
+            relacionados,
+            pathFotos
         });
 
     },
@@ -22,9 +24,11 @@ const controlador = {
         const songs = JSON.parse(fs.readFileSync(pathSongs));
         const song = songs.find(elemento => elemento.songId == req.params.id);
         const relacionados = songs.slice(1, 5) //Instrumentos relacionados
+        const pathFotos = "/images/MusicFilesCoverImg/resized/"
         res.render('product.ejs', {
             producto: song,
-            relacionados
+            relacionados,
+            pathFotos
         });
 
     },
