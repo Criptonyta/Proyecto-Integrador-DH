@@ -15,7 +15,7 @@ font-family: 'Roboto', sans-serif;
 
 
 
- * {
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -32,25 +32,26 @@ body {
 
 /* ========= FORM REGISTER Mobile =========  */
 
-.fondo{
+.fondo {
     background: url("/images/Images/Instrumentos_Musicales2.jpg") no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     /* overflow: hidden; */
 
 }
-.form-register{
-display: block;
-margin: auto;
-margin-top: 60px;
-margin-bottom: 60px;
-padding: 20px;
-font-size: 40px;
-text-align: center;
-background-color: #004d61;
-border-radius: 15px;
-border-color: #00bacd;
-max-width: 580px;
+
+.form-register {
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+    background-color: #004d61;
+    border-radius: 15px;
+    border-color: #00bacd;
+    max-width: 580px;
 
 }
 
@@ -61,31 +62,31 @@ max-width: 580px;
     border-bottom: solid 2px white;
 }
 
-.Registro-Texto-Descriptivo{
+.Registro-Texto-Descriptivo {
     padding-bottom: 20px;
     border-bottom: solid 2px white;
     margin: 30px;
 
 }
 
-.datos{
-    background-color:Var(--azulOscuro);
-    margin:5px;
-    padding:15px;
+.datos {
+    background-color: Var(--azulOscuro);
+    margin: 5px;
+    padding: 15px;
     font-family: 'Roboto', sans-serif;
-    color:white;
+    color: white;
     font-size: 13px;
-    width:80%;
-    border:none;
+    width: 80%;
+    border: none;
 }
 
-.items label{
+.items label {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-align: right;
 }
 
-.button:hover{
+.button:hover {
     color: #00f6ff;
     background-color: #004d61;
 }
@@ -97,7 +98,7 @@ main {
     text-align: center;
 }
 
-.i-home-inicial{
+.i-home-inicial {
     width: 100%;
     height: 100%;
 }
@@ -113,17 +114,18 @@ p {
     margin: 30px 10px 30px 10px;
 }
 
-section{
+section {
     margin-bottom: 70px;
 }
 
-.home-bodysection-head p{
+.home-bodysection-head p {
     text-align: center;
 }
 
 .button,
-.access-button-home,                            /* Estilizo los botones CTA */
-.access-button-home2,  
+.access-button-home,
+/* Estilizo los botones CTA */
+.access-button-home2,
 .SaleMusic-button-home,
 .SaleInstruments-button-home {
     display: block;
@@ -149,11 +151,12 @@ section{
     background-color: #004d61;
 }
 
-.i-home-inicial-gradient{
+.i-home-inicial-gradient {
     display: none;
 }
 
-.fa-play-circle,                            /*  Estilizando iconos Font-Awesome */
+.fa-play-circle,
+/*  Estilizando iconos Font-Awesome */
 .fa-headphones,
 .fa-guitar,
 .fa-drum {
@@ -164,20 +167,20 @@ section{
     text-align: center;
 }
 
-.i-home-teclado{
+.i-home-teclado {
     max-width: 85%;
     height: auto;
 }
 
-.i-home-teclado-gradient{
+.i-home-teclado-gradient {
     display: none;
 }
 
-.home-bodysection-products{
-    position:relative;
+.home-bodysection-products {
+    position: relative;
 }
 
-.home-bodysection-products2 h3, 
+.home-bodysection-products2 h3,
 .home-bodysection-products2 p {
     text-align: right;
 }
@@ -188,16 +191,16 @@ section{
     margin: 0px 30px 0px 0px;
 }
 
-.home-bodysection-products2 p{
+.home-bodysection-products2 p {
     display: block;
     margin: 5px 30px 90px 10px;
 }
 
-.access-button-home2{
+.access-button-home2 {
     display: none;
 }
 
-.home-card-artist{
+.home-card-artist {
     border: solid white 2px;
     border-radius: 15px;
     width: 180px;
@@ -207,27 +210,22 @@ section{
     text-align: center;
 }
 
-h5{
+h5 {
     font-size: 17px;
     font-style: bold;
 }
 
-.home-card-artist p{
+.home-card-artist p {
     font-size: 12px;
     margin: 30px 20px 30px 20px;
 }
 
-.i-home-artist{
-    padding-top: 15px;
-    max-width: 70%;
-    height: auto;
-}
 
-.main-footer li{
+.main-footer li {
     text-align: left;
 }
 
-.home-bodysection-artists i{
+.home-bodysection-artists i {
     display: none;
 }
 
@@ -324,24 +322,27 @@ footer {
 @media(min-width:361px) {
 
     /* ========= NavBar  min-width:361px =========  */
-    .logoMobile {                                      /* Oculto el logo pequeno */
+    .logoMobile {
+        /* Oculto el logo pequeno */
         display: none;
     }
 
-    .logo {                                             /* Muestro el logo completo*/
+    .logo {
+        /* Muestro el logo completo*/
         display: flex;
         height: 40px;
         margin: 10px;
     }
 
     /* ========= Footer  min-width:361px =========  */
-    .redessociales-footer i {                       /* Amplio el tamano de los logos de redes*/
+    .redessociales-footer i {
+        /* Amplio el tamano de los logos de redes*/
         font-size: 40px;
     }
 
     .main-footer {
-    display: flex;
-    justify-content: center;
+        display: flex;
+        justify-content: center;
     }
 
     .main-footer-der-text,
@@ -387,7 +388,7 @@ footer {
     }
 
     .home-bodysection-head-content h1,
-    .home-bodysection-head-content p{
+    .home-bodysection-head-content p {
         flex-direction: column;
         width: 60%;
         padding: 6px 0px 10px 12px;
@@ -399,18 +400,18 @@ footer {
         justify-content: center;
     }
 
-    .home-bodysection-products2{
+    .home-bodysection-products2 {
         display: block;
         position: relative;
     }
 
-    .i-home-teclado{
+    .i-home-teclado {
         width: 95%;
         height: 95%;
     }
 
     .home-bodysection-products2 h3,
-    .home-bodysection-products2 p{
+    .home-bodysection-products2 p {
         display: block;
         text-align: right;
         margin: 0px;
@@ -418,15 +419,15 @@ footer {
         left: 90%;
         transform: translate(-100%, 0);
         z-index: 1;
-        color: #004d61;        
+        color: #004d61;
     }
 
-    .home-bodysection-products2 h3{
+    .home-bodysection-products2 h3 {
         width: 270px;
         top: 5%;
     }
 
-    .home-bodysection-products2 p{
+    .home-bodysection-products2 p {
         width: 300px;
         bottom: 40%;
     }
@@ -460,14 +461,14 @@ footer {
 
     .main-header-der li {
         width: 100px;
-     }
+    }
 
     .main-header-der ul {
         /* Muestro el texto */
         display: flex;
         justify-content: space-between;
         max-width: 280px;
-    
+
     }
 
     .button {
@@ -510,16 +511,16 @@ footer {
 
     /* ========= Body min-width:768px =========  */
 
-    .home-bodysection-head{
+    .home-bodysection-head {
         display: block;
         position: relative;
     }
 
-    .i-home-inicial{
+    .i-home-inicial {
         display: none;
     }
 
-    .i-home-inicial-gradient{
+    .i-home-inicial-gradient {
         display: block;
         margin-left: auto;
         padding: 50px 0 90px;
@@ -528,33 +529,33 @@ footer {
     }
 
     .home-bodysection-head-content h1,
-    .home-bodysection-head-content p{
+    .home-bodysection-head-content p {
         display: block;
         text-align: left;
         margin: 0px;
         position: absolute;
         left: 65%;
         transform: translate(-100%, 0);
-        transform: scale(1.2, 1.2); 
+        transform: scale(1.2, 1.2);
         z-index: 1;
     }
 
-    .home-bodysection-head-content h1{
+    .home-bodysection-head-content h1 {
         width: 500px;
         top: 15%;
         left: 8%;
-        padding:5px;
+        padding: 5px;
     }
 
-    .home-bodysection-head-content p{
+    .home-bodysection-head-content p {
         width: 400px;
         top: 35%;
         left: 10%;
-        padding:5px;
+        padding: 5px;
     }
 
-    .home-bodysection-products{
-        display: flex; 
+    .home-bodysection-products {
+        display: flex;
         justify-content: space-evenly;
     }
 
@@ -563,61 +564,61 @@ footer {
         width: 350px;
     }
 
-    .home-bodysection-products2{
-    display: block;
-    position: relative;
+    .home-bodysection-products2 {
+        display: block;
+        position: relative;
     }
 
-    .i-home-teclado{
+    .i-home-teclado {
         display: none;
     }
-    
-    .i-home-teclado-gradient{
-    display: block;
-    padding: 50px 0 90px;
-    width: 60%;
-    height: 60%;
+
+    .i-home-teclado-gradient {
+        display: block;
+        padding: 50px 0 90px;
+        width: 60%;
+        height: 60%;
     }
 
     .home-bodysection-products2 h3,
-    .home-bodysection-products2 p{
-    display:block;
-    color: white;
-    width: 400px;
-    height: 200px;
-    padding: 10px;
+    .home-bodysection-products2 p {
+        display: block;
+        color: white;
+        width: 400px;
+        height: 200px;
+        padding: 10px;
     }
 
-    .home-bodysection-products2 h3{
-    position: absolute;
-    bottom: 45%;
-    font-size: 34px;
+    .home-bodysection-products2 h3 {
+        position: absolute;
+        bottom: 45%;
+        font-size: 34px;
     }
 
     .home-bodysection-products2 {
-    position: absolute;
-    bottom: 35%;
-    font-size: 34px;
+        position: absolute;
+        bottom: 35%;
+        font-size: 34px;
     }
 
     .access-button-home {
-    display:none;
+        display: none;
     }
 
-    .access-button-home2{
-    display: block;
-    position: absolute;
-    bottom: 25%;
-    right: 11%;
+    .access-button-home2 {
+        display: block;
+        position: absolute;
+        bottom: 25%;
+        right: 11%;
     }
 
-    .home-bodysection-artists i{
-    display: inline-block;
-    position: relative;
-    align-self: auto;
-    font-size: 40px;
-    color: white;
-    padding: 10px;
+    .home-bodysection-artists i {
+        display: inline-block;
+        position: relative;
+        align-self: auto;
+        font-size: 40px;
+        color: white;
+        padding: 10px;
     }
 
 }
@@ -626,13 +627,13 @@ footer {
 
 .menu-opciones {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     width: 100%;
     padding: 10px;
     background-color: #001f2c;
     opacity: 0.8;
     border: solid 1px #00bacd;
-    
+
 }
 
 .menu-options-one {
@@ -640,8 +641,8 @@ footer {
     font-family: "Roboto", sans-serif;
     font-size: 20px;
     text-decoration: none;
-   
-  
+
+
 }
 
 .menu-options-two {
@@ -649,7 +650,7 @@ footer {
     font-family: "Roboto", sans-serif;
     font-size: 20px;
     text-decoration: none;
-     
+
 }
 
 .menu-options-three {
@@ -657,7 +658,7 @@ footer {
     font-family: "Roboto", sans-serif;
     font-size: 20px;
     text-decoration: underline;
-    
+
 }
 
 .cart3-dates-payment {
@@ -670,135 +671,142 @@ footer {
     box-shadow: 7px 12px 35px #000;
     margin-left: 3%;
     font-size: 18px;
-    
-    }
-    .cart3-dates-payment h4 {
-        font-family: 'Palette Mosaic', 'sans-serif';
-        font-size: 28px;
-    }
-    
-    .cart3-button-radio-pay{
-        background-color: #00bacd;  
-        font-size: 18px;
-        font-family: "Roboto", sans-serif;
-        padding: 10px;
-        margin-top: 20px;
-        border-radius: 4px;
-        text-align: start;
-        
-        
-        
-    }
-    .cart3-radios-buttons {
-        background-color: #00bacd;  
-        font-size: 18px;
-        font-family: "Roboto", sans-serif;
-        padding: 10px;
-        margin-top: 20px;
-        border-radius: 4px;
-        display: flex;
-       justify-content: space-around;
-    }
-   
-    .cart3-button-radio-pay2 {
-        background-color: #008198;
-        font-size: 18px;
-        font-family: "Roboto", sans-serif;
-        border-radius:4px;
-        width: 45%;
 
-        
-    
-    }
+}
 
-    .cart3-button-radio-pay3 {
-        background-color: #008198;  
-        font-size: 18px;
-        font-family: "Roboto", sans-serif;
-        border-radius:4px;
-        width: 45%;
-    
-    }
-    
-    .cart3-control-2{
-        background-color:Var(--azulOscuro);
-        margin:5px;
-        font-family: var(--letraParrafos);
-        color:white;
-        font-family: var(--letraParrafos);
-        font-size: 13px;
-        width: 90%;
-        border:none;
+.cart3-dates-payment h4 {
+    font-family: 'Palette Mosaic', 'sans-serif';
+    font-size: 28px;
+}
 
-    
-    }
-    .cart3-control-2:hover {
-        border-bottom:1px solid white;
-    }
-    .cart3-control-2::placeholder {
-        font-size: 12px;
-        color:rgba(255,255,255,0.7);
-        font-style: italic;
-        text-align: center;
-    }
+.cart3-button-radio-pay {
+    background-color: #00bacd;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    text-align: start;
 
-    .cart3-control-3 {
-        background-color:Var(--azulOscuro);
-        margin:5px;
-        font-family: var(--letraParrafos);
-        color:white;
-        font-family: var(--letraParrafos);
-        font-size: 13px;
-        width:150px;
-        border:none;
-    }
-    .cart3-control-3:hover {
-        border-bottom:1px solid white;
-    }
-    .cart3-control-3::placeholder {
-        font-size: 12px;
-        color:rgba(255,255,255,0.7);
-        font-style: italic;
-        text-align: center;
-    }
 
-    .cart3-control-tarjeta {
-        background-color:Var(--azulOscuro);
-        margin:5px;
-        font-family: var(--letraParrafos);
-        color:white;
-        font-family: var(--letraParrafos);
-        font-size: 13px;
-        width:90%;
-        border:none;
-    }
-    .cart3-control-tarjeta:hover {
-        border-bottom:1px solid white;
-    }
-    
-    .cart3-control-tarjeta::placeholder {
-        font-size: 12px;
-        color:rgba(255,255,255,0.7);
-        font-style: italic;
-        text-align: center;
-    }
 
-    .cart3-carrito-pay {
-        width:90%;
-        background-color: #001f2c;
-        padding: 30px;
-        margin-top: 50px;
-        border-radius: 4px;
-        font-family: "Palette Mosaic", cursive;
-        color: white;
-        box-shadow: 7px 12px 35px #000;
-        margin-left: 3%;
-        font-size: 20px;
-        
-    }
+}
 
-    .cart3-button-envy {
-        display: block;
+.cart3-radios-buttons {
+    background-color: #00bacd;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart3-button-radio-pay2 {
+    background-color: #008198;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    border-radius: 4px;
+    width: 45%;
+
+
+
+}
+
+.cart3-button-radio-pay3 {
+    background-color: #008198;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    border-radius: 4px;
+    width: 45%;
+
+}
+
+.cart3-control-2 {
+    background-color: Var(--azulOscuro);
+    margin: 5px;
+    font-family: var(--letraParrafos);
+    color: white;
+    font-family: var(--letraParrafos);
+    font-size: 13px;
+    width: 90%;
+    border: none;
+
+
+}
+
+.cart3-control-2:hover {
+    border-bottom: 1px solid white;
+}
+
+.cart3-control-2::placeholder {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    text-align: center;
+}
+
+.cart3-control-3 {
+    background-color: Var(--azulOscuro);
+    margin: 5px;
+    font-family: var(--letraParrafos);
+    color: white;
+    font-family: var(--letraParrafos);
+    font-size: 13px;
+    width: 150px;
+    border: none;
+}
+
+.cart3-control-3:hover {
+    border-bottom: 1px solid white;
+}
+
+.cart3-control-3::placeholder {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    text-align: center;
+}
+
+.cart3-control-tarjeta {
+    background-color: Var(--azulOscuro);
+    margin: 5px;
+    font-family: var(--letraParrafos);
+    color: white;
+    font-family: var(--letraParrafos);
+    font-size: 13px;
+    width: 90%;
+    border: none;
+}
+
+.cart3-control-tarjeta:hover {
+    border-bottom: 1px solid white;
+}
+
+.cart3-control-tarjeta::placeholder {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    text-align: center;
+}
+
+.cart3-carrito-pay {
+    width: 90%;
+    background-color: #001f2c;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 4px;
+    font-family: "Palette Mosaic", cursive;
+    color: white;
+    box-shadow: 7px 12px 35px #000;
+    margin-left: 3%;
+    font-size: 20px;
+
+}
+
+.cart3-button-envy {
+    display: block;
     width: 150px;
     border-radius: 5px;
     padding: 10px 20px;
@@ -833,80 +841,82 @@ footer {
     transition: all 0.5s;
     cursor: pointer;
 }
+
 .cart3-button-cancel:hover {
     color: #00f6ff;
     background-color: #004d61;
 }
-  
+
 .cart3-ship-pay1 {
     text-align: initial;
     margin-bottom: 20px;
- font-family: 'Palette Mosaic', 'sans-serif';
+    font-family: 'Palette Mosaic', 'sans-serif';
     font-size: 28px;
 }
 
 .cart3-img-pay {
-        width: 70px;
-        height: 70px;
-        background-color: #001f2c;
-        border: solid 1px white;
-        padding: 10px;
+    width: 70px;
+    height: 70px;
+    background-color: #001f2c;
+    border: solid 1px white;
+    padding: 10px;
 
-    }
+}
 
 .cart3-img-pay2 {
-        width: 70px;
-        height: 70px;
-        background-color: #001f2c;
-        border: solid 1px white;
-        padding: 10px;
+    width: 70px;
+    height: 70px;
+    background-color: #001f2c;
+    border: solid 1px white;
+    padding: 10px;
 
 
-    }
+}
 
 .cart3-product-pay1 {
-        font-size: 18px;
-        font-family: "Roboto", sans-serif;
-        position: relative;
-        bottom: 80px;
-       
- 
-    }
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    bottom: 80px;
+
+
+}
 
 .cart3-product-pay2 {
-        font-size: 18px;
-        font-family: "Roboto", sans-serif;
-        position: relative;
-        bottom: 80px;
-       
- 
-    }
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    bottom: 80px;
 
 
-    .cart3-total-pay {
-        width:90%;
-        background-color: #001f2c;
-        padding: 30px;
-        margin-top: 50px;
-        border-radius: 4px;
-        font-family: "Roboto", sans-serif;
-        color: white;
-        box-shadow: 7px 12px 35px #000;
-        margin-left: 3%;
-        text-align: start;
-    }
+}
+
+
+.cart3-total-pay {
+    width: 90%;
+    background-color: #001f2c;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    box-shadow: 7px 12px 35px #000;
+    margin-left: 3%;
+    text-align: start;
+}
 
 .cart3-pay-total {
     text-align: initial;
     font-family: "Palette Mosaic", cursive;
     font-size: 28px;
 }
+
 .cart3-pay-subtotal {
     font-size: 18px;
     font-family: "Roboto", sans-serif;
     margin-bottom: 3px;
     text-align: initial;
-    }
+}
 
 
 
@@ -915,7 +925,7 @@ footer {
     font-family: "Roboto", sans-serif;
     margin-bottom: 3px;
     text-align: initial;
-    }
+}
 
 
 
@@ -924,51 +934,52 @@ footer {
     font-family: "Roboto", sans-serif;
     margin-bottom: 3px;
     text-align: initial;
-    }
+}
 
-    @media (min-width: 768px) {
-        .cart3-button-radio-pay {
-            background-color: #00bacd;  
+@media (min-width: 768px) {
+    .cart3-button-radio-pay {
+        background-color: #00bacd;
         font-size: 20px;
         font-family: "Roboto", sans-serif;
         padding: 10px;
         margin-top: 20px;
         border-radius: 4px;
         text-align: start;
-        height: 300px; 
-         }   
-       .cart3-total-pay {
-            width:30%;
-        }
-               
-                
-        .cart3-dates-payment{
-            width: 50%;
-           height: 680px;
+        height: 300px;
+    }
 
-        }
-        .cart3-carrito-pay {
-            width: 30%;   
-            height: 400px;       
-            position: absolute;
-            right: 80px;
-            bottom: 10px;
-        }
-        .cart3-total-pay {
-            width: 25%;
-            position: absolute;
-            right: 100px;
-            top:620px;
-            margin-bottom: 20px;
+    .cart3-total-pay {
+        width: 30%;
+    }
 
 
-        }
-      
-    .cart3-botones{
+    .cart3-dates-payment {
+        width: 50%;
+        height: 680px;
+
+    }
+
+    .cart3-carrito-pay {
+        width: 30%;
+        height: 400px;
+        position: absolute;
+        right: 80px;
+        bottom: 10px;
+    }
+
+    .cart3-total-pay {
+        width: 25%;
+        position: absolute;
+        right: 100px;
+        top: 620px;
+        margin-bottom: 20px;
+
+
+    }
+
+    .cart3-botones {
         display: flex;
         justify-content: stretch;
     }
-    
-    }
 
-
+}

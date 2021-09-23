@@ -163,6 +163,13 @@ h5 {
     padding-top: 15px;
     max-width: 70%;
     height: auto;
+    border-radius: 50px;
+
+}
+
+.home-cards-container {
+    display: flex;
+    justify-content: center;
 }
 
 .main-footer li {
@@ -229,6 +236,12 @@ h5 {
 .logoMobile {
     width: 40px;
     margin: 10px;
+}
+
+.menu-der-text-nav {
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .logo {
