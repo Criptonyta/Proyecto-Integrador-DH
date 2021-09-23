@@ -1,4 +1,5 @@
 /app/public/MusicFiles
+*.mp3
 
 /app/public/images/usersAvatars/fullsize
 /app/public/images/usersAvatars/resized
