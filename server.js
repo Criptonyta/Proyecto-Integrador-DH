@@ -1,19 +1,14 @@
 const express = require('express');
 const fs = require('fs');
 const server = express();
-const methodOverride = require("method-override")
-
-server.use(methodOverride("_method"))
-server.set('view engine', 'ejs');
-
-
 const path = require('path');
-
 const mainRoutes = require('./routes/mainRoutes')
 const productRoutes = require('./routes/productRoutes')
 const cartRoutes = require('./routes/cartRoutes')
 const userRoutes = require('./routes/userRoutes')
+const methodOverride = require('method-override')
 
+server.set('view engine', 'ejs');
 
 
 const port = process.env.PORT || '5000';
@@ -22,10 +17,9 @@ server.listen(port, () => {
 });
 
 server.use(express.static(path.resolve(__dirname, './public')));
-server.use(express.urlencoded({
-    extended: false
-}));
+server.use(express.urlencoded({extended: false}));
 server.use(express.json());
+server.use(methodOverride("_method"))
 
 server.use('/', mainRoutes);
 server.use('/products', productRoutes);
@@ -34,54 +28,3 @@ server.use('/user', userRoutes);
 server.use((req, res, next) => {
     res.status(404).render("error404")
 })
-
-
-
-
-// server.get('/',(req,res)=>{
-//     res.render('home.ejs')
-// });
-
-// server.get('/cart1',(req,res)=>{
-//     res.render('cart1.ejs')
-// });
-
-// server.get('/cart2',(req,res)=>{
-//     res.render('cart2.ejs')
-// });
-
-// server.get('/cart3',(req,res)=>{
-//     res.render('cart3.ejs')
-// });
-
-// server.get('/login',(req,res)=>{
-//     res.render('login.ejs')
-// });
-
-// server.get('/navbar',(req,res)=>{
-//     res.render('navbar.ejs')
-// });
-
-// server.get('/product',(req,res)=>{
-//     res.render('product.ejs')
-// });
-
-// server.get('/productempty',(req,res)=>{
-//     res.render('productempty.ejs')
-// });
-
-// server.get('/songempty',(req,res)=>{
-//     res.render('songempty.ejs')
-// });
-
-// server.get('/register',(req,res)=>{
-//     res.render('register.ejs')
-// });
-
-// server.get('/userprofile',(req,res)=>{
-//     res.render('userprofile.ejs')
-// });
-
-// server.get('/tienda',(req,res)=>{
-//     res.render('tienda.ejs')
-// });
