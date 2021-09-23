@@ -78,22 +78,42 @@
                     </p>
 
                     <table class="userprofile-tableanuncios">
+                        <p>Mis Canciones</p>
                         <tr>
                             <th>Anuncio</th>
                             <th>Descripción</th>
                             <th>Actualización</th>
                         </tr>
 
-                        <% anuncioUser.forEach(function(anuncio, indice){ %>
+                        <% songsUser.forEach(function(songUsuario, indice){ %>
 
                         <tr>
                             <td><%= indice+1 %> </td>
-                            <td><%= anuncio.titulo %> </td>
-                            <td>Eliminar | Editar</td> <!-- VER DE APLICAR <a></a> -->
+                            <td><%= songUsuario.titulo %> </td>
+                            <td><form action="/products/deletesong/<%= songUsuario.songId %>?_method=DELETE" method="POST"><button type="submit">Eliminar</button></form>|<form action="#" method="POST">Editar</form></td> <!-- VER DE APLICAR <a></a> -->
+                        </tr>
+                        <% }) %>
+                        
+                    </table>
+                    <table class="userprofile-tableanuncios">
+                        <p>Mis Instrumentos</p>
+                        <tr>
+                            <th>Anuncio</th>
+                            <th>Descripción</th>
+                            <th>Actualización</th>
+                        </tr>
+
+                        <% instrumentUser.forEach(function(instrumentoUsuario, indice){ %>
+
+                        <tr>
+                            <td><%= indice+1 %> </td>
+                            <td><%= instrumentoUsuario.titulo %> </td>
+                            <td><form action="#" method="POST">Eliminar</form>|<form action="#" method="POST">Editar</form></td> <!-- VER DE APLICAR <a></a> -->
                         </tr>
                         <% }) %>
 
                     </table>
+
 
                 </div>
 

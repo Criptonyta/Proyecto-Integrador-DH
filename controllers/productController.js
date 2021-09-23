@@ -184,7 +184,9 @@ const controlador = {
             instrumentos: resultadosInstruments,
             artistas: resultadosArtistas
         })
-    }
+    },
+    deleteInstrument: (req, res) => {},
+    deleteSong: (req, res) => {res.send("hola")}
 };
 
 
