@@ -145,15 +145,6 @@
    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\17.jpg"
  },
  {
-   "id": 20,
-   "InstrumId": 20,
-   "img": "20.jpg",
-   "titulo": "Bateria Mapex Prodigy Completa",
-   "descripcion": "Excelente batería MAPEX PRODIGY, con acabado recubierto, los tambores están equipados con Prodigy, el nuevo modelo que utiliza un solo punto de contacto.\nIncluye TODO lo que precisas para tocar",
-   "precio": 124,
-   "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\20.jpg"
- },
- {
    "id": 21,
    "InstrumId": 21,
    "img": "21.jpg",
