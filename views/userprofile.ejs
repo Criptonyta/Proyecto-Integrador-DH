@@ -18,7 +18,7 @@
     <main>
         <!--FORMULARIO-->
         <section class="userprofile-form">
-            <form action="/registro" method="POST" class="userprofile-formulario">
+            <div class="userprofile-formulario">
                 <h4>Perfil</h4>
                 <p>
                     <i class="fas fa-at"></i><label> Email:</label></i>
@@ -39,7 +39,7 @@
 
                     <p>
                         <i class="fas fa-camera"><label> Foto de perfil:</label></i>
-                        <img src="<%= usuarioInfo.userAvatar %>" width=100px alt="fotoPerfil">
+                        <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" width=100px alt="fotoPerfil">
                     </p>
 
                     <p>
@@ -56,7 +56,7 @@
                     </section>
 
                 </div>
-            </form>
+            </div>
 
 
             <form action="" class="userprofile-formulario">

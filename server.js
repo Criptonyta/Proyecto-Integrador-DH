@@ -11,21 +11,19 @@ const productRoutes = require('./routes/productRoutes')
 const cartRoutes = require('./routes/cartRoutes')
 const userRoutes = require('./routes/userRoutes')
 
-// server.listen (3001, () => {
-//     console.log ("Servidor rodando en puerto 3001")
-// });
+
 
 const port = process.env.PORT || '5000';
 server.listen(port, () => {
     console.log(`Server is runnig in the Port : ${port}`);
 });
 
+server.use(methodOverride("_method"))
 server.use(express.static(path.resolve(__dirname, './public')));
 server.use(express.urlencoded({
     extended: false
 }));
 server.use(express.json());
-server.use(methodOverride("_method"))
 
 server.use('/', mainRoutes);
 server.use('/products', productRoutes);

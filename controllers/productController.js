@@ -11,7 +11,7 @@ const controlador = {
         const instrumentos = JSON.parse(fs.readFileSync(pathInstruments));
         const instrumento = instrumentos.find(elemento => elemento.InstrumId == req.params.id);
         const relacionados = instrumentos.slice(1, 5) //Instrumentos relacionados
-        const pathFotos = "" //FALTA AGREGAR EL PATH A LA CARPETA DE LAS FOTOS
+        const pathFotos = "/images/instrumentsImg/resizedandcropped/"
         pathDetail = "/products/detailInstrument/"
         nombreId = "InstrumId"
 
