@@ -37,10 +37,6 @@ const controlador = {
         const songsDB = require(pathSongs);
         const instrumentsDB = require(pathInstruments);
 
-        const usuarioInfo = userDB.find(usuario => usuario.id == req.params.iduser)
-        const songsUser = songsDB.filter(song => song.id == req.params.iduser);
-        const instrumentUser = instrumentsDB.filter(instrument => instrument.id == req.params.iduser);
-        const anuncioUser = [...songsUser, ...instrumentUser];
         const skills = ["Bajista","Baterista","Cantante","Guitarrista","Multiinstrumentalista","Productor","Otros"]
 
         res.send(req.body)
