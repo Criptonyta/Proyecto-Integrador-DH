@@ -371,8 +371,9 @@
     align-items: center;
     margin-top: 10px;
 }
+
 .products-formButtons form {
-    margin:5px 10px;
+    margin: 5px 10px;
 }
 
 .products-formButtons form button {
@@ -404,6 +405,18 @@
     font-family: var(--letraParrafos);
     cursor: pointer;
     transition: width .35s ease-in-out
+}
+
+.product-container img {
+    margin: 0px 0px 20px 0px;
+
+}
+
+#youtube-icon {
+    width: 70px;
+    border-radius: 50px;
+    background-color: #00bacd;
+
 }
 
 .agregarTexto {
@@ -526,6 +539,21 @@
         height: 100%;
     }
 
+    .product-container {
+        padding: 10px 10px 10px 20px;
+    }
+
+    .product-container img {
+        margin: 0px 20px 20px 0px;
+
+    }
+
+    #youtube-icon {
+        width: 70px;
+        border-radius: 50px;
+        background-color: #00bacd;
+
+    }
 
     .productDescription {
         max-width: 45vw;
@@ -544,7 +572,19 @@
     }
 
     .product-container {
-        padding: 30px 30px 30px 120px;
+        padding: 30px 30px 30px 20px;
+    }
+
+    .product-container img {
+        margin: 0px 40px 20px 40px;
+
+    }
+
+    #youtube-icon {
+        width: 70px;
+        border-radius: 50px;
+        background-color: #00bacd;
+
     }
 
     .productImagesButtons button:hover {
@@ -911,6 +951,22 @@ i {
     .ultimosAdicionadosContainer {
         max-width: 1000px;
     }
+
+    .product-container {
+        padding: 30px 50px 30px 110px;
+    }
+
+    .product-container img {
+        margin: 0px 40px 20px 0px;
+
+    }
+
+    #youtube-icon {
+        width: 100px;
+        border-radius: 50px;
+        background-color: #00bacd;
+
+    }
 }
 
 /* STORE PAGE END */
@@ -921,9 +977,10 @@ i {
     border-collapse: collapse;
     width: 40%;
     font-family: var(--letraParrafos);
-  }
-  
-.user-productsTable td,.user-productsTable th {
+}
+
+.user-productsTable td,
+.user-productsTable th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
@@ -936,5 +993,5 @@ i {
 
 .user-productsTable th {
     background-color: var(--aguamarina);
-    color:rgba(0,0,0,0.6);
+    color: rgba(0, 0, 0, 0.6);
 }

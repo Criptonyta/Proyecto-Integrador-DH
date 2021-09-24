@@ -81,7 +81,8 @@ section {
     cursor: pointer;
 }
 
-.button,
+#youtube-icon:hover,
+.button:hover,
 .access-button-home:hover,
 .access-button-home2:hover,
 .SaleMusic-button-home:hover,

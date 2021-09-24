@@ -27,10 +27,20 @@
                     <button><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
                 </div>
             </div>
+
+            <!-- YT Player // Falta introducir en data-video la identificacion dinamica de cada cancion-->
+            <span class="Player-button">
+                <div data-video="QwwtcMulGq4" data-autoplay="0" data-loop="1" id="youtube-audio">
+                </div>
+                <script src="https://www.youtube.com/iframe_api"></script>
+                <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+            </span>
+
             <div class="productInformation-container">
                 <div class="productInformation">
                     <h2><%= producto.titulo %></h2>
-                    <p>By <a href="/user/viewuserprofile/<%= artista.id %>"><%= artista.nombre %> <%= artista.apellido %></a></p>
+                    <p>By <a href="/user/viewuserprofile/<%= artista.id %>"><%= artista.nombre %>
+                            <%= artista.apellido %></a></p>
                     <div class="priceStars">
                         <p><%= producto.precio %> <span class="currency">U$S</span></p>
                         <i class="fas fa-star"><span class="stars">4.5</span></i>
@@ -44,16 +54,13 @@
                 </div> -->
 
 
-                <!-- YT Player // Falta introducir en data-video la identificacion dinamica de cada cancion-->
 
-                <div class="Player-button" data-video="QwwtcMulGq4" data-autoplay="0" data-loop="1" id="youtube-audio"></div>
-                
                 <div class="products-formButtons">
                     <form action=""><button id="products-editarButton" type="submit">Editar</button></form>
-                    <form action="/products/<%= rutaDelete %>/<%= producto[nombreId] %>?_method=DELETE" method="POST"><button id="products-eliminarButton" type="submit">Eliminar</button></form>
+                    <form action="/products/<%= rutaDelete %>/<%= producto[nombreId] %>?_method=DELETE" method="POST">
+                        <button id="products-eliminarButton" type="submit">Eliminar</button></form>
                 </div>
-                <script src="https://www.youtube.com/iframe_api"></script>
-                <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+
 
 
 
