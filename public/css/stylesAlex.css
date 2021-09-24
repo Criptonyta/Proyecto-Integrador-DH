@@ -344,6 +344,11 @@
     max-height: 50px
 }
 
+.tituloCancion {
+    max-width: 100px;
+    max-height: 50px
+}
+
 .priceStars {
     display: flex;
     justify-content: center;
