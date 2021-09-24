@@ -81,13 +81,16 @@
 
             <div>
                 <h2>Artistas que confian en nosotros</h2>
-                <article class="home-cards-container">
+
+
+                <div class="home-cards-container">
 
                     <% datos.forEach(function(dato) { %>
                     <%- include('partials/cardverticalhome.ejs', {dato}) %>
                     <% }) %>
 
-                </article>
+                </div>
+
             </div>
 
             <i class="fas fa-chevron-right"></i>
