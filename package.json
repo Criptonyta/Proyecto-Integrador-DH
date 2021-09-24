@@ -24,7 +24,7 @@
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "method-override": "^3.0.0",
-    "nodemon": "^2.0.12",
+    "nodemon": "^2.0.13",
     "path": "^0.12.7"
   }
 }
