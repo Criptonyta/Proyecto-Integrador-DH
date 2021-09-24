@@ -1,11 +1,11 @@
 :root {
-    --azulOscuro:#001f2c;
-    --verdeOscuro:#004d61;
-    --verdeIntermedio:#008198;
-    --verdeClaro:#00bacd;
-    --aguamarina:#00f6ff;
-    --letraTitulos:'Palette Mosaic', cursive;
-    --letraParrafos:'Roboto', sans-serif;
+    --azulOscuro: #001f2c;
+    --verdeOscuro: #004d61;
+    --verdeIntermedio: #008198;
+    --verdeClaro: #00bacd;
+    --aguamarina: #00f6ff;
+    --letraTitulos: 'Palette Mosaic', cursive;
+    --letraParrafos: 'Roboto', sans-serif;
 }
 
 
@@ -15,9 +15,9 @@
 /* LOGIN PAGE START */
 
 .login-body {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-color: gray;
 
     background: url("/images/Images/Instrumentos_Musicales2.jpg") no-repeat center center fixed;
@@ -27,23 +27,23 @@
 }
 
 .mainContainer {
-    width:60%;
-    max-width:450px;
-    height:60vh;
-    margin:15vh auto;
-    display:flex;
-    flex-direction:column;
+    width: 60%;
+    max-width: 450px;
+    height: 60vh;
+    margin: 15vh auto;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
-    color:white;
+    color: white;
     /* box-shadow: 6px 10px 21px 0px rgba(0,0,0,0.6); */
-    
+
 }
 
 /* NAVBAR */
 #navbar {
     /* height:15vh; */
-    background:var(--verdeOscuro);
+    background: var(--verdeOscuro);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -51,7 +51,7 @@
     min-width: 200px;
     font-family: var(--letraParrafos);
     /* font-size: 0.9rem; */
-    
+
 }
 
 /* #navbar img {
@@ -62,14 +62,14 @@
     max-height:130px;
 } */
 
-.login-logo-redondo{
+.login-logo-redondo {
     display: inline-block;
     width: 50px;
     height: 50px;
     margin: 0 0 0 1px;
 }
 
-.login-logo{
+.login-logo {
     display: none;
 }
 
@@ -79,16 +79,16 @@
 } */
 
 #navbar li:hover {
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 .navbarOption {
     display: inline-block;
     margin: 0 1vw 0 0;
-    list-style-type:none;
-    color:white;
+    list-style-type: none;
+    color: white;
     text-decoration: none;
-    position:relative;
+    position: relative;
     left: 45%;
 }
 
@@ -99,32 +99,32 @@
 
 /* LOGIN */
 #login {
-    background-color:Var(--azulOscuro);
+    background-color: Var(--azulOscuro);
     font-family: var(--letraParrafos);
     font-size: 24px;
-    padding:10px;
+    padding: 10px;
     display: flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-width: 180px;
 }
 
-#login p{
+#login p {
     font-family: var(--letraTitulos);
     font-size: 28px;
 }
 
 #login img {
-    width:30px;
-    max-width:30px;
+    width: 30px;
+    max-width: 30px;
 }
 
 #login form {
-    background-color:Var(--azulOscuro);
+    background-color: Var(--azulOscuro);
     display: flex;
-    flex-direction:column;
-    justify-content:center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -132,47 +132,47 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     min-width: 190px;
 }
 
-#login form .information input  {
-    background-color:Var(--azulOscuro);
-    margin:5px;
-    padding:15px;
+#login form .information input {
+    background-color: Var(--azulOscuro);
+    margin: 5px;
+    padding: 15px;
     font-family: var(--letraParrafos);
-    color:white;
+    color: white;
     font-family: var(--letraParrafos);
     font-size: 13px;
-    width:150px;
-    border:none;
+    width: 150px;
+    border: none;
 }
 
 #login form .information input:hover {
-    border-bottom:1px solid white;
+    border-bottom: 1px solid white;
 }
 
 #login form .information input::placeholder {
     font-size: 12px;
-    color:rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     font-style: italic;
     text-align: center;
 }
 
 
 .options {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 14px;
 }
 
 .options .loggedIn {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     font-size: 12px;
     margin-top: 15px;
 }
@@ -185,22 +185,22 @@
     margin-left: 5px;
 }
 
-.options #forgotPassword{
+.options #forgotPassword {
     font-size: 12px;
     text-align: center;
     font-family: var(--letraParrafos);
-    margin:7px 0;
+    margin: 7px 0;
 }
 
 #forgotPassword:hover {
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 
 .options a {
-    color:white;
+    color: white;
     font-style: italic;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 #loginButton {
@@ -240,11 +240,11 @@
 
 
 
-@media (min-width:450px){
+@media (min-width:450px) {
 
 
     #forgotPassword {
-        width:190px;
+        width: 190px;
     }
 
     #login form .information input {
@@ -252,11 +252,11 @@
     }
 
     #login form .information input:focus {
-        width:200px;
+        width: 200px;
     }
 
     .navbarOption {
-        position:relative;
+        position: relative;
         left: 60%;
         font-size: 11px;
         font-family: var(--letraParrafos);
@@ -273,10 +273,10 @@
 }
 
 .product-container {
-    width:100%;
-    padding:30px;
-    display:flex;
-    flex-direction:column;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 
@@ -286,48 +286,48 @@
 
 .productImages img {
     width: 100%;
-    max-width:350px;
-    height:80%;
+    max-width: 350px;
+    height: 80%;
 }
 
 .productImagesButtons button {
-    color:white;
-    border:none;
-    overflow:none;
-    outline:none;
+    color: white;
+    border: none;
+    overflow: none;
+    outline: none;
     border-radius: 5px;
-    margin:5px;
+    margin: 5px;
     background-color: var(--verdeClaro);
-    font-size:10px;
-    padding:5px;
+    font-size: 10px;
+    padding: 5px;
     margin-top: 10px;
-    width:100px;
-    height:30px;
-    cursor:pointer;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
     transition: width .35s ease-in-out
 }
 
 .productImagesButtons button:hover {
-    width:120px;
+    width: 120px;
 }
 
 
 .productInformation-container {
     height: 50%;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 .productInformation {
-    padding:5px;
-    margin:5px;
-    display:flex;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
 .productInformation h2 {
-    margin:0;
+    margin: 0;
 }
 
 .currency {
@@ -335,13 +335,13 @@
 }
 
 .priceStars {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .priceStars p {
-    margin-right:20px;
+    margin-right: 20px;
 }
 
 .priceStars i {
@@ -353,112 +353,114 @@
 }
 
 .productDescription {
-    margin:0;
+    margin: 0;
     margin-bottom: 15px;
     font-style: italic;
-    font-size:10px;
+    font-size: 10px;
 }
 
 .agregar {
-    color:white;
-    border:none;
-    overflow:none;
-    outline:none;
+    color: white;
+    border: none;
+    overflow: none;
+    outline: none;
     border-radius: 5px;
-    margin:5px;
+    margin: 5px;
     background-color: var(--verdeClaro);
-    font-size:10px;
-    padding:5px;
-    width:100px;
-    height:30px;
+    font-size: 10px;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
     font-family: var(--letraParrafos);
-    cursor:pointer;
+    cursor: pointer;
     transition: width .35s ease-in-out
 }
 
 .agregarTexto {
     font-family: var(--letraParrafos);
     font-weight: normal;
-    margin-left: 0px; /* Era 2px */
-    font-size:9px; /* No estaba */
+    margin-left: 0px;
+    /* Era 2px */
+    font-size: 9px;
+    /* No estaba */
 }
 
 .special {
-    margin-left:2px;
+    margin-left: 2px;
 }
 
 .agregar:hover {
-    width:120px;
+    width: 120px;
 }
 
 .editar button {
-    color:white;
-    border:none;
-    overflow:none;
-    outline:none;
+    color: white;
+    border: none;
+    overflow: none;
+    outline: none;
     border-radius: 5px;
-    margin:5px;
+    margin: 5px;
     background-color: var(--verdeClaro);
-    font-size:10px;
-    padding:5px;
-    width:100px;
-    height:30px;
-    cursor:pointer;
+    font-size: 10px;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
     transition: width .35s ease-in-out
-
 }
 
 .editar button:hover {
-    width:120px;
+    width: 120px;
 }
 
 .related-container p {
     font-size: 12px;
-    margin:0 0 5px 10px;
+    margin: 0 0 5px 10px;
     text-align: left;
 }
 
 .related-carrousel-container {
     background-color: var(--verdeOscuro);
-    width:100%;
-    display:flex;
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
     /* margin: 40px; No se porque al habilitar el margen y poner el width a 90% se rompe el responsivo VER*/
 
 }
 
 .carrouselCard {
-    background-color:var(--azulOscuro);
+    background-color: var(--azulOscuro);
     margin: auto;
     display: flex;
-    justify-content:space-around;
-    align-items:center;
-    border-radius:20px;
-    border:1px solid var(--verdeIntermedio);
-    width:80%;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid var(--verdeIntermedio);
+    width: 80%;
     max-width: 350px;
     height: 80%;
-    margin:10px;
+    margin: 10px;
 }
 
 .carrouselCard img {
-    width:90px;
-    height:90px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    margin:5px 5px;
+    margin: 5px 5px;
 }
 
 .carrouselCardInfo {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .carrouselCardInfo h4 {
-    font-size:12px;
+    font-size: 12px;
     margin: 5px 5px 5px 0;
 }
 
@@ -474,24 +476,26 @@
 
 .carrouselCardInfo p {
     font-size: 11px;
-    margin:10px 5px;
+    margin: 10px 5px;
 }
 
 
-@media (min-width:480px){
+@media (min-width:480px) {
     .product-container {
         flex-direction: row;
-        height:70vh;
-        justify-content:center;
-        align-items:center;
+        height: 70vh;
+        justify-content: center;
+        align-items: center;
     }
+
     .productImages {
-        height:100%
+        height: 100%
     }
+
     .productInformation-container {
-        height:100%;
+        height: 100%;
     }
-    
+
 
     .productDescription {
         max-width: 45vw;
@@ -499,129 +503,157 @@
 }
 
 
-@media (min-width:768px){
-    .productImagesButtons button,.agregar,.editar button {
-        width:130px;
-        height:40px;
+@media (min-width:768px) {
+
+    .productImagesButtons button,
+    .agregar,
+    .editar button {
+        width: 130px;
+        height: 40px;
         font-size: 13px;
     }
+
+    .product-container {
+        padding: 30px 30px 30px 120px;
+    }
+
     .productImagesButtons button:hover {
-        width:160px;
+        width: 160px;
     }
 
     .agregar:hover {
-        width:160px;
+        width: 160px;
     }
+
     .editar button:hover {
-        width:160px;
+        width: 160px;
     }
+
     .productDescription {
         font-size: 12px;
         line-height: 18px;
     }
+
     .carrouselCard {
-        max-width:250px;
+        max-width: 250px;
     }
+
     .related-carrousel-container {
         justify-content: space-around;
-        flex-direction:row;
-
+        flex-direction: row;
+        margin-bottom: 50px;
     }
+
     .agregarTexto {
-        font-size:12px;
+        font-size: 12px;
     }
 
-    .login-logo{
-        display:inline-block;
+    .login-logo {
+        display: inline-block;
         height: 50px;
         /* width: 280px; */
         margin: 0 0 0 1vw;
     }
 
-    .login-logo-redondo{
+    .login-logo-redondo {
         display: none;
     }
 
 }
+
 /* PRODUCT PAGE END */
 
 /* STORE PAGE START */
 
 section {
-    margin:0;
+    margin: 0;
 }
+
 .inputBuscador {
-    width:80%;
-    height:30px;
+    width: 80%;
+    height: 30px;
     max-width: 400px;
-    border:none;
-    outline:none;
-    padding:5px;
-    margin:30px 5px 30px 5px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin: 30px 5px 30px 5px;
     border-radius: 5px;
     font-size: 14px;
-    color:black;
+    color: black;
     font-family: var(--letraParrafos);
 }
 
 .inputBuscador:hover {
-    background-color: rgb(128, 128, 128,0.2);
-    color:white;
+    background-color: rgb(128, 128, 128, 0.2);
+    color: white;
 }
 
 .inputBuscador:focus {
-    background-color:white;
-    color:black;
+    background-color: white;
+    color: black;
 }
 
 .inputBuscador::placeholder {
-    font-size:12px;
+    font-size: 12px;
 }
 
 i {
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.cancionesMasEscuchadas,.instrumentosEnVenta,.ultimosAdicionados {
-    display:flex;
+.cancionesMasEscuchadas,
+.instrumentosEnVenta,
+.ultimosAdicionados {
+    display: flex;
     flex-direction: column;
     margin-bottom: 40px;
 }
-.cancionesMasEscuchadas .cabecera,.instrumentosEnVenta .cabecera,.ultimosAdicionados .cabecera {
-    margin:15px 0 15px 10px;
+
+.cancionesMasEscuchadas .cabecera,
+.instrumentosEnVenta .cabecera,
+.ultimosAdicionados .cabecera {
+    margin: 15px 0 15px 10px;
     font-size: 13px;
     text-align: left;
     border-bottom: 1px solid white;
-    width:70%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
-    }
+}
+
 .cabecera span {
     font-size: 13px;
     font-family: var(--letraParrafos);
 }
+
 .cabecera a {
-    text-decoration:none
-}    
-.cancionesMasEscuchadasContenedor,.instrumentosEnVentaContenedor {
-    display:flex;
+    text-decoration: none
+}
+
+.cancionesMasEscuchadasContenedor,
+.instrumentosEnVentaContenedor {
+    display: flex;
     justify-content: space-around;
     align-items: center;
     position: relative;
 }
+
 .fa-chevron-left {
     margin: 0 5px;
-    position:absolute;
-    top:calc(30%);
-    left:calc(20%);
+    position: absolute;
+    top: calc(30%);
+    left: calc(20%);
 }
+
 .fa-chevron-right {
     margin: 0 5px;
-    position:absolute;
-    top:calc(30%);
-    right:calc(20%);
+    position: absolute;
+    top: calc(30%);
+    right: calc(20%);
 }
-.canciones,.instrumentos {
+
+.canciones,
+.instrumentos {
     display: grid;
     grid-template-columns: auto;
     grid-column-gap: 20px;
@@ -629,188 +661,225 @@ i {
 }
 
 /* .cancion,.instrumento {} */
-.cancion img,.instrumento img {
-    width:100px;
-    height:100px;
+.cancion img,
+.instrumento img {
+    width: 100px;
+    height: 100px;
 }
 
 
-.cancion p,.instrumento p {
-    margin:2px 0 5px 0;
-    text-align:center;
+.cancion p,
+.instrumento p {
+    margin: 2px 0 5px 0;
+    text-align: center;
     font-size: 11px;
     text-decoration: none;
 }
 
-.artistaCancion,.artistaInstrumento {
+.artistaCancion,
+.artistaInstrumento {
     font-style: italic;
     text-decoration: none;
 }
 
 .ultimosAdicionados {
-    position:relative;
+    position: relative;
 }
+
 .ultimosAdicionadosContainer {
     background-color: var(--verdeOscuro);
     display: grid;
     grid-template-columns: auto;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    width:90%;
-    margin:0 auto 20px;
+    width: 90%;
+    margin: 0 auto 20px;
 }
 
 .flechaIzq {
-    margin:0 5px;
-    left:calc(5%);
-    top:calc(50%)
-
+    margin: 0 5px;
+    left: calc(5%);
+    top: calc(50%)
 }
+
 .flechaDer {
-    margin:0 5px;
-    right:calc(5%);
-    top:calc(50%)
+    margin: 0 5px;
+    right: calc(5%);
+    top: calc(50%)
 }
 
 .ultimosAdicionadosCard {
-    background-color:var(--azulOscuro);
-    width:250px;
-    height:130px;
-    margin:10px auto;
-    padding:10px;
+    background-color: var(--azulOscuro);
+    width: 250px;
+    height: 130px;
+    margin: 10px auto;
+    padding: 10px;
     border-radius: 10%;
     display: flex;
-    justify-content:center;
-    align-items:center;
-}
-.ultimosAdicionadosCard  img {
-    width:60px;
-    height: 60px;
-    border-radius:50%;
-}
-.recomendadoInfo {
-    display: flex;
-    flex-direction:column;
-    justify-content: space-around;
-    align-items:center;
-}
-.ultimosAdicionadosCard .recomendadoInfo p {
-    margin:0;
-    font-size:10px;
-}
-.ultimosAdicionadosCard .recomendadoInfo h6 {
-    font-size:13px;
-    margin:5px 0;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (min-width:480px){
-    .canciones,.instrumentos {
+.ultimosAdicionadosCard img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.recomendadoInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ultimosAdicionadosCard .recomendadoInfo p {
+    margin: 0;
+    font-size: 10px;
+}
+
+.ultimosAdicionadosCard .recomendadoInfo h6 {
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+@media (min-width:480px) {
+
+    .canciones,
+    .instrumentos {
         grid-template-columns: auto auto;
     }
+
     .fa-chevron-left {
-        left:calc(20%);
-        top:calc(40%);
+        left: calc(20%);
+        top: calc(40%);
     }
+
     .fa-chevron-right {
-        right:calc(20%);
-        top:calc(40%);
+        right: calc(20%);
+        top: calc(40%);
     }
+
     .flechaIzq {
-        left:0;
-        top:calc(50%)
-    
+        left: 0;
+        top: calc(50%)
     }
+
     .flechaDer {
-        right:0;
-        top:calc(50%)
+        right: 0;
+        top: calc(50%)
     }
+
     .ultimosAdicionadosContainer {
-        max-width:400px;
+        max-width: 400px;
     }
-    
+
 }
-@media (min-width:600px){
-    .canciones,.instrumentos {
+
+@media (min-width:600px) {
+
+    .canciones,
+    .instrumentos {
         grid-template-columns: auto auto auto;
     }
+
     .fa-chevron-left {
-        left:calc(2%);
-        top:calc(30%);
+        left: calc(2%);
+        top: calc(30%);
     }
+
     .fa-chevron-right {
-        right:calc(2%);
-        top:calc(30%);
+        right: calc(2%);
+        top: calc(30%);
     }
+
     .ultimosAdicionadosContainer {
         grid-template-columns: auto auto;
     }
+
     .ultimosAdicionadosCard {
-        width:230px;
+        width: 230px;
     }
+
     .flechaIzq {
-        margin:0 5px;
-        left:calc(2%);
-        top:calc(50%)
-    
+        margin: 0 5px;
+        left: calc(2%);
+        top: calc(50%)
     }
+
     .flechaDer {
-        margin:0 5px;
-        right:calc(2%);
-        top:calc(50%)
+        margin: 0 5px;
+        right: calc(2%);
+        top: calc(50%)
     }
+
     .ultimosAdicionadosContainer {
-        max-width:550px;
+        max-width: 550px;
     }
 }
-@media (min-width:768px){
-    .canciones,.instrumentos {
+
+@media (min-width:768px) {
+
+    .canciones,
+    .instrumentos {
         grid-template-columns: auto auto auto auto auto auto;
     }
+
     .ultimosAdicionadosCard {
-        width:230px;
+        width: 230px;
     }
+
     .flechaIzq {
-        margin:0 5px;
-        left:calc(2%);
-        top:calc(50%)
-    
+        margin: 0 5px;
+        left: calc(2%);
+        top: calc(50%)
     }
+
     .flechaDer {
-        margin:0 5px;
-        right:calc(2%);
-        top:calc(50%)
+        margin: 0 5px;
+        right: calc(2%);
+        top: calc(50%)
     }
+
     .ultimosAdicionadosContainer {
-        max-width:650px;
+        max-width: 650px;
     }
+
     .navbarOption {
-        position:relative;
+        position: relative;
         left: 100px;
     }
 }
-@media (min-width:900px){
-    .canciones,.instrumentos {
+
+@media (min-width:900px) {
+
+    .canciones,
+    .instrumentos {
         grid-column-gap: 40px;
     }
+
     .ultimosAdicionadosContainer {
         grid-template-columns: auto auto auto auto;
     }
+
     .ultimosAdicionadosCard {
-        width:180px;
+        width: 180px;
     }
+
     .flechaIzq {
-        margin:0 5px;
-        left:calc(2%);
-        top:calc(50%)
-    
+        margin: 0 5px;
+        left: calc(2%);
+        top: calc(50%)
     }
+
     .flechaDer {
-        margin:0 5px;
-        right:calc(2%);
-        top:calc(50%)
+        margin: 0 5px;
+        right: calc(2%);
+        top: calc(50%)
     }
+
     .ultimosAdicionadosContainer {
-        max-width:1000px;
+        max-width: 1000px;
     }
 }
 
