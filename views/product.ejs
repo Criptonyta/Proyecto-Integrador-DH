@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <%- include("partials/head.ejs")%>
-    <link rel="stylesheet" href="/css/styles.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
 
-    
+
     <!--<link rel="stylesheet" href="/css/styles.css">  Descomentar esta linea cuando el CSS este compilado -->
 
 </head>
@@ -30,15 +31,27 @@
                 <div class="productInformation">
                     <h2><%= producto.titulo %></h2>
                     <div class="priceStars">
-                        <p><%= producto.precio %> <span class="currency">U$D</span></p>
+                        <p><%= producto.precio %> <span class="currency">U$S</span></p>
                         <i class="fas fa-star"><span class="stars">4.5</span></i>
                     </div>
                     <p class="productDescription"><%= producto.descripcion %></p>
-                    <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button>
+                    <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al
+                                carrito</span></i></button>
                 </div>
                 <!-- <div class="editar">
                     <button><i class="fas fa-edit"><span class="agregarTexto">Editar producto</span></i></button>
                 </div> -->
+
+
+                <!-- YT Player // Falta introducir en data-video la identificacion dinamica de cada cancion-->
+
+                <div class="Player-button" data-video="QwwtcMulGq4" data-autoplay="0" data-loop="1" id="youtube-audio">
+                </div>
+                <script src="https://www.youtube.com/iframe_api"></script>
+                <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+
+
+
             </div>
         </div>
 
@@ -48,16 +61,17 @@
             <div class="related-carrousel-container">
 
                 <% relacionados.forEach(function(relacionado) { %>
-                    <%- include ('partials/cardhorizontalproduct.ejs', {relacionado,pathFotos,pathDetail,nombreId}) %>
+                <%- include ('partials/cardhorizontalproduct.ejs', {relacionado,pathFotos,pathDetail,nombreId}) %>
                 <% }) %>
-        
+
             </div>
         </div>
     </main>
-    
-        <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
-        <%- include ('partials/footer.ejs', {}) %>
-        
+    <!-- ======= FOOTER | PIE DE PAGINA ========= -->
+
+    <%- include ('partials/footer.ejs', {}) %>
+
 </body>
+
 </html>

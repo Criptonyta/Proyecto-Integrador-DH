@@ -726,6 +726,10 @@ footer {
     margin: 0 5px;
 }
 
+.Player-button {
+    color: #00f6ff;
+}
+
 
 
 /* Animacion de campos input del formulario */
