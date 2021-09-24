@@ -364,6 +364,30 @@
     font-size: 10px;
 }
 
+.products-formButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.products-formButtons form {
+    margin:5px 10px;
+}
+
+.products-formButtons form button {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#products-editarButton {
+    background-color: rgb(207, 207, 47);
+}
+
+#products-eliminarButton {
+    background-color: rgb(235, 17, 17);
+}
+
 .agregar {
     color: white;
     border: none;
