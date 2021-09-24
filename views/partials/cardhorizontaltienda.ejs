@@ -1,7 +1,7 @@
 <div class="ultimosAdicionadosCard">
-    <a href="#"><img src= "/images/usersAvatars/resizedandcropped/<%= dato.userAvatar %>" alt="FotoRecomendado"></a>
+    <a href="/user/userprofile/<%= dato.id %>"><img src= "/images/usersAvatars/resizedandcropped/<%= dato.userAvatar %>" alt="FotoRecomendado"></a>
     <div class="recomendadoInfo">
-         <h6 class="recomendadoTitulo"><%= dato.nombre + " " + dato.apellido %></h5>   <!--  hacer dinamico el texto -->
+         <a href="/user/userprofile/<%= dato.id %>""><h6 class="recomendadoTitulo"><%= dato.nombre + " " + dato.apellido %></h5></a>   <!--  hacer dinamico el texto -->
         <p class="recomendoTexto"><%= dato.bio %><p>                            <!--  hacer dinamico el texto -->
     </div>
 </div>
