@@ -330,6 +330,11 @@
     margin: 0;
 }
 
+.productInformation a {
+    text-decoration: none;
+    font-style: italic;
+}
+
 .currency {
     font-style: italic;
 }

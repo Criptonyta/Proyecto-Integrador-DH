@@ -8,12 +8,15 @@ const pathFuncionesAuxiliares = path.join(__dirname, '../public/funcionesAuxilia
 
 const controlador = {
     instrumentDetail: (req, res) => {
+        const usersDB = require(pathUsers)
         const instrumentos = JSON.parse(fs.readFileSync(pathInstruments));
         const instrumento = instrumentos.find(elemento => elemento.InstrumId == req.params.id);
         const relacionados = instrumentos.slice(1, 5) //Instrumentos relacionados
         const pathFotos = "/images/instrumentsImg/resizedandcropped/"
         const pathDetail = "/products/detailInstrument/"
         const nombreId = "InstrumId"
+        const artista = usersDB.find(elemento => elemento.id == instrumento.id);
+
 
 
         res.render('product.ejs', {
@@ -22,23 +25,27 @@ const controlador = {
             pathFotos,
             nombreId,
             pathDetail,
-            nombreId
+            nombreId,
+            artista
         });
 
     },
     songDetail: (req, res) => {
+        const usersDB = require(pathUsers)
         const songs = JSON.parse(fs.readFileSync(pathSongs));
         const song = songs.find(elemento => elemento.songId == req.params.id);
         const relacionados = songs.slice(1, 5) //Instrumentos relacionados
         const pathFotos = "/images/MusicFilesCoverImg/resized/"
         const pathDetail = "/products/detailSong/"
         const nombreId = "songId"
+        const artista = usersDB.find(elemento => elemento.id == song.id);
         res.render('product.ejs', {
             producto: song,
             relacionados,
             pathFotos,
             pathDetail,
-            nombreId
+            nombreId,
+            artista
         });
 
     },

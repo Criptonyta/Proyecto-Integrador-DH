@@ -30,6 +30,7 @@
             <div class="productInformation-container">
                 <div class="productInformation">
                     <h2><%= producto.titulo %></h2>
+                    <p>By <a href="/user/viewuserprofile/<%= artista.id %>"><%= artista.nombre %> <%= artista.apellido %></a></p>
                     <div class="priceStars">
                         <p><%= producto.precio %> <span class="currency">U$S</span></p>
                         <i class="fas fa-star"><span class="stars">4.5</span></i>
