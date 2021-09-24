@@ -4,6 +4,7 @@ const userController = require('../controllers/userController');
 
 
 router.get('/userprofile/:iduser', userController.userprofile);
+router.get('/viewuserprofile/:iduser', userController.viewuserprofile);
 
 router.get('/userprofile/:iduser/edit', userController.userprofileEdit);
 router.put('/userprofile/:iduser/edit', userController.userprofileEditNew);

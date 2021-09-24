@@ -52,36 +52,16 @@
                     <p>
                         <label> Habilidades:</label></i>
                         <%= usuarioInfo.skills %>
-
-                        <section>
-                            <a href='/user/userprofile/<%= usuarioInfo.id %>/edit' class="userprofile-button">Editar
-                                perfil </a>
-                        </section>
-
                 </div>
             </div>
 
 
             <form action="" class="userprofile-formulario">
-                <h4>Mis anuncios</h4>
-
-                <p class="userprofile-Registro-Texto-Descriptivo">
-                    Informa que tipo de anuncio quieres crear y completalo:<br>
-                </p>
-
-                <section class="userprofile-crearanuncios">
-                    <a href="/products/createproduct" class="userprofile-venderproducto-button">Instrumento </a>
-
-                    <a href="/products/createsong" class="userprofile-vendercancion-button">Canción </a>
-                </section>
+                <h4>Anuncios de <%= usuarioInfo.nombre %> <%= usuarioInfo.apellido %> </h4>
 
                 <div>
-                    <p class="userprofile-Registro-Texto-Descriptivo">
-                        Podes ver, editar y crear tus anuncios desde aqui.<br>
-                    </p>
-
                     <table class="userprofile-tableanuncios user-productsTable">
-                        <p>Mis Canciones</p>
+                        <p>Sus Canciones</p>
                         <tr>
                             <th>Anuncio</th>
                             <th>Descripción</th>
@@ -97,7 +77,7 @@
 
                     </table>
                     <table class="userprofile-tableanuncios  user-productsTable">
-                        <p>Mis Instrumentos</p>
+                        <p>Sus Instrumentos</p>
                         <tr>
                             <th>Anuncio</th>
                             <th>Descripción</th>

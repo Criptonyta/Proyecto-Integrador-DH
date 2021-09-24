@@ -18,6 +18,17 @@ const controlador = {
 
         res.render('userprofile.ejs', {anuncioUser,usuarioInfo,songsUser,instrumentUser});
     },
+    viewuserprofile: (req, res) => {
+        const userDB = require(pathUsers);
+        const songsDB = require(pathSongs);
+        const instrumentsDB = require(pathInstruments);
+
+        const usuarioInfo = userDB.find(usuario => usuario.id == req.params.iduser)
+        const songsUser = songsDB.filter(song => song.id == req.params.iduser);
+        const instrumentUser = instrumentsDB.filter(instrument => instrument.id == req.params.iduser);
+
+        res.render('viewUserProfile.ejs', {usuarioInfo,songsUser,instrumentUser});
+    },
     userprofileEdit: (req, res) => {
         const userDB = require(pathUsers);
         const songsDB = require(pathSongs);

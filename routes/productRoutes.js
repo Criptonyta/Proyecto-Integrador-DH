@@ -7,8 +7,6 @@ router.get('/detailInstrument/:id', productController.instrumentDetail); //Te mu
 
 router.get('/detailSong/:id', productController.songDetail); //Te muestra el detalle de una cancion
 
-router.get('/detailArtist/:id', productController.artistDetail); //Te muestra el detalle de una cancion
-
 router.get('/createproduct', productController.productempty); //Hoja para cargar los productos
 router.post('/createproduct', productController.addProduct); //Hoja para crear productos
 

@@ -884,3 +884,27 @@ i {
 }
 
 /* STORE PAGE END */
+
+/* USERPROFILE START */
+.user-productsTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 40%;
+    font-family: var(--letraParrafos);
+  }
+  
+.user-productsTable td,.user-productsTable th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+
+.user-productsTable a {
+    text-decoration: none;
+}
+
+.user-productsTable th {
+    background-color: var(--aguamarina);
+    color:rgba(0,0,0,0.6);
+}

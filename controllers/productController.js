@@ -42,10 +42,6 @@ const controlador = {
         });
 
     },
-    artistDetail: (req, res) => { //FALTA HACER
-
-    },
-    //falta hacer la vista de usuario
     userDetail: (req, res) => {
         const songs = JSON.parse(fsreadFileSync(pathUsers));
         res.render('product.ejs', {
