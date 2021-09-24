@@ -50,7 +50,7 @@
                 
                 <div class="products-formButtons">
                     <form action=""><button id="products-editarButton" type="submit">Editar</button></form>
-                    <form action=""><button id="products-eliminarButton" type="submit">Eliminar</button></form>
+                    <form action="/products/<%= rutaDelete %>/<%= producto[nombreId] %>?_method=DELETE" method="POST"><button id="products-eliminarButton" type="submit">Eliminar</button></form>
                 </div>
                 <script src="https://www.youtube.com/iframe_api"></script>
                 <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>

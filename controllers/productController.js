@@ -15,6 +15,7 @@ const controlador = {
         const pathFotos = "/images/instrumentsImg/resizedandcropped/"
         const pathDetail = "/products/detailInstrument/"
         const nombreId = "InstrumId"
+        const rutaDelete = "deleteinstrument"
         const artista = usersDB.find(elemento => elemento.id == instrumento.id);
 
 
@@ -26,7 +27,8 @@ const controlador = {
             nombreId,
             pathDetail,
             nombreId,
-            artista
+            artista,
+            rutaDelete
         });
 
     },
@@ -38,6 +40,7 @@ const controlador = {
         const pathFotos = "/images/MusicFilesCoverImg/resized/"
         const pathDetail = "/products/detailSong/"
         const nombreId = "songId"
+        const rutaDelete = "deletesong"
         const artista = usersDB.find(elemento => elemento.id == song.id);
         res.render('product.ejs', {
             producto: song,
@@ -45,7 +48,8 @@ const controlador = {
             pathFotos,
             pathDetail,
             nombreId,
-            artista
+            artista,
+            rutaDelete
         });
 
     },
@@ -188,8 +192,49 @@ const controlador = {
             artistas: resultadosArtistas
         })
     },
-    deleteInstrument: (req, res) => {},
-    deleteSong: (req, res) => {res.send("hola")}
+    deleteInstrument: (req, res) => {
+        const instrumentDB = JSON.parse(fs.readFileSync(pathInstruments,"utf-8"))
+        const resultado = instrumentDB.filter(instrumento => instrumento.InstrumId != req.params.idInstrum)
+        fs.writeFileSync(pathInstruments,JSON.stringify(resultado))
+
+        const songsDB = JSON.parse(fs.readFileSync(pathSongs));
+        const usersDB = JSON.parse(fs.readFileSync(pathUsers));
+
+        const instrumentos = resultado.slice(1, 7);
+        const musicos = songsDB.slice(1, 7);
+
+        const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
+        const datos = artistsDB.slice(1, 5);
+
+        res.render('tienda.ejs', {
+            datos: datos,
+            musicos: musicos,
+            instrumentos: instrumentos
+        });
+
+    },
+    deleteSong: (req, res) => {
+        const songsDB = JSON.parse(fs.readFileSync(pathSongs,"utf-8"))
+        const resultado = songsDB.filter(song => song.songId != req.params.idSong)
+        fs.writeFileSync(pathSongs,JSON.stringify(resultado))
+
+        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
+        const usersDB = JSON.parse(fs.readFileSync(pathUsers));
+
+        const instrumentos = instrumentsDB.slice(1, 7);
+        const musicos = resultado.slice(1, 7);
+
+        const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
+        const datos = artistsDB.slice(1, 5);
+
+        res.render('tienda.ejs', {
+            datos: datos,
+            musicos: musicos,
+            instrumentos: instrumentos
+        });
+
+
+    }
 };
 
 

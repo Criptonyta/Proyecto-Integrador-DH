@@ -378,6 +378,7 @@
 .products-formButtons form button {
     padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #products-editarButton {
