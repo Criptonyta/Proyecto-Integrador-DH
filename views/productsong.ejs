@@ -28,9 +28,10 @@
                 </div>
             </div>
 
-            <!-- YT Player // Falta introducir en data-video la identificacion dinamica de cada cancion-->
+            <!-- YT Player // TODO  introducir en data-video la identificacion dinamica de cada cancion-->
+            <!-- <%= producto.audioFileYTPlayer %> kNYx2C995fc -->
             <span class="Player-button">
-                <div data-video="QwwtcMulGq4" data-autoplay="0" data-loop="1" id="youtube-audio">
+                <div data-video="<%= producto.audioFileYTPlayer %>" data-autoplay="0" data-loop="1" id="youtube-audio">
                 </div>
                 <script src="https://www.youtube.com/iframe_api"></script>
                 <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>

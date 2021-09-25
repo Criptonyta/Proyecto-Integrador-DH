@@ -8,6 +8,8 @@ Paleta de colores:
 
 Font Titulos:
 font-family: 'Palette Mosaic', cursive;
+font-family: 'Stick No Bills', sans-serif;
+
 
 Font parrafos:
 font-family: 'Roboto', sans-serif;
@@ -46,7 +48,7 @@ h1,
 h2 {
     font-family: 'Palette Mosaic', 'sans-serif';
     margin: 30px 20px 30px 20px;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 p {

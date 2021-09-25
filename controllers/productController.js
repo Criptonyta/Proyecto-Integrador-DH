@@ -42,6 +42,7 @@ const controlador = {
         const nombreId = "songId"
         const rutaDelete = "deletesong"
         const artista = usersDB.find(elemento => elemento.id == song.id);
+
         res.render('productsong.ejs', {
             producto: song,
             relacionados,
