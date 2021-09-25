@@ -28,14 +28,6 @@
                 </div>
             </div>
 
-            <!-- YT Player // Falta introducir en data-video la identificacion dinamica de cada cancion-->
-            <span class="Player-button">
-                <div data-video="QwwtcMulGq4" data-autoplay="0" data-loop="1" id="youtube-audio">
-                </div>
-                <script src="https://www.youtube.com/iframe_api"></script>
-                <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
-            </span>
-
             <div class="productInformation-container">
                 <div class="productInformation">
                     <h2><%= producto.titulo %></h2>
@@ -43,7 +35,7 @@
                             <%= artista.apellido %></a></p>
                     <div class="priceStars">
                         <p><%= producto.precio %> <span class="currency">U$S</span></p>
-                        <i class="fas fa-star"><span class="stars">4.5</span></i>
+                        <!-- <i class="fas fa-star"><span class="stars">4.5</span></i> -->
                     </div>
                     <p class="productDescription"><%= producto.descripcion %></p>
                     <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al

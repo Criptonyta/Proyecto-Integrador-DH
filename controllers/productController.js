@@ -20,7 +20,7 @@ const controlador = {
 
 
 
-        res.render('product.ejs', {
+        res.render('productinstrument.ejs', {
             producto: instrumento,
             relacionados,
             pathFotos,
@@ -42,7 +42,7 @@ const controlador = {
         const nombreId = "songId"
         const rutaDelete = "deletesong"
         const artista = usersDB.find(elemento => elemento.id == song.id);
-        res.render('product.ejs', {
+        res.render('productsong.ejs', {
             producto: song,
             relacionados,
             pathFotos,
@@ -52,12 +52,6 @@ const controlador = {
             rutaDelete
         });
 
-    },
-    userDetail: (req, res) => {
-        const songs = JSON.parse(fsreadFileSync(pathUsers));
-        res.render('product.ejs', {
-            user
-        });
     },
 
     productempty: (req, res) => {
@@ -72,17 +66,18 @@ const controlador = {
         const fs = require('fs');
         const songsDB = JSON.parse(fs.readFileSync(pathSongs, "UTF-8"));
         songcargar = {
-            id: 25,
+            id: 25, // TODO ACTIVAR CON SESSION
             /* Id usuario */
-            songId: 1,
+            songId: songsDB[songsDB.length - 1].songId + 1,
             /* Id canción */
-            img: req.body.img,
-            audioFile: req.body.song,
+            img: req.body.songEmptyImgBtn,
+            audioFile: req.body.songEmptyFileBtn,
             titulo: req.body.titulo,
             precio: req.body.precio,
             descripcion: req.body.descripcion,
         }
-        songsDB.push(songcargar)
+
+        songsDB.push(songcargar) // TODO SESSION + MULTER
         fs.writeFileSync(pathSongs, JSON.stringify(songsDB))
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
@@ -106,16 +101,18 @@ const controlador = {
         const fs = require('fs');
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments, "UTF-8"));
         instrumentcargar = {
-            id: 25,
+            id: 12, //  TODO: ARREGLAR CON LA IMPLEMENTACION DE SESSION
             /* Id usuario */
-            InstrumId: 1,
+            InstrumId: instrumentsDB[instrumentsDB.length - 1].InstrumId + 1,
             /* Id canción */
             img: req.body.productEmptyButton,
             titulo: req.body.titulo,
             precio: req.body.precio,
             descripcion: req.body.descripcion,
         }
-        instrumentsDB.push(instrumentcargar)
+
+
+        instrumentsDB.push(instrumentcargar) // TODO SESSION + MULTER
         fs.writeFileSync(pathInstruments, JSON.stringify(instrumentsDB))
         const songsDB = JSON.parse(fs.readFileSync(pathSongs));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
@@ -193,9 +190,9 @@ const controlador = {
         })
     },
     deleteInstrument: (req, res) => {
-        const instrumentDB = JSON.parse(fs.readFileSync(pathInstruments,"utf-8"))
+        const instrumentDB = JSON.parse(fs.readFileSync(pathInstruments, "utf-8"))
         const resultado = instrumentDB.filter(instrumento => instrumento.InstrumId != req.params.idInstrum)
-        fs.writeFileSync(pathInstruments,JSON.stringify(resultado))
+        fs.writeFileSync(pathInstruments, JSON.stringify(resultado))
 
         const songsDB = JSON.parse(fs.readFileSync(pathSongs));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
@@ -214,9 +211,9 @@ const controlador = {
 
     },
     deleteSong: (req, res) => {
-        const songsDB = JSON.parse(fs.readFileSync(pathSongs,"utf-8"))
+        const songsDB = JSON.parse(fs.readFileSync(pathSongs, "utf-8"))
         const resultado = songsDB.filter(song => song.songId != req.params.idSong)
-        fs.writeFileSync(pathSongs,JSON.stringify(resultado))
+        fs.writeFileSync(pathSongs, JSON.stringify(resultado))
 
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));

@@ -790,8 +790,8 @@ input[type='file'] {
 }
 
 
-.songEmptyImgBtn,
 .songEmptyFileBtn,
+.songEmptyImgBtn,
 .productEmptyButton,
 .userprofile-button,
 .userprofile-edit-button,
@@ -817,8 +817,8 @@ input[type='file'] {
 }
 
 
-.songEmptyImgBtn:hover,
 .songEmptyFileBtn:hover,
+.songEmptyImgBtn:hover,
 .productEmptyButton:hover,
 .userAvatarButton:hover,
 .userAvatarRegisterButton:hover,
