@@ -88,6 +88,10 @@ const controlador = {
     register: (req, res) => {
         res.render('register.ejs');
     },
+    deleteSongs: (req, res) => {
+        res.send("hola")
+    },
+    deleteInstruments: (req, res) => {}
 };
 
 

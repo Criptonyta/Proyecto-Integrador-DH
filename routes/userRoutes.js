@@ -13,4 +13,7 @@ router.get('/login', userController.login);
 
 router.get('/register', userController.register);
 
+router.delete('/mySongs/delete',userController.deleteSongs)
+router.delete('/myInstruments/delete',userController.deleteInstruments)
+
 module.exports = router
