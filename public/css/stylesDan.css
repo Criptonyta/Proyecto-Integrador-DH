@@ -8,7 +8,8 @@ Paleta de colores:
 
 Font Titulos:
 font-family: 'Palette Mosaic', cursive;
-font-family: 'Stick No Bills', sans-serif;
+font-family: 'Stick No Bills', sans-serif;    (No aplicable)
+font-family: 'Happy Monkey', cursive;
 
 
 Font parrafos:
@@ -46,9 +47,10 @@ main {
 
 h1,
 h2 {
-    font-family: 'Palette Mosaic', 'sans-serif';
+    font-family: 'Happy Monkey', 'sans-serif';
     margin: 30px 20px 30px 20px;
     font-size: 28px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
 }
 
 p {
@@ -128,6 +130,7 @@ section {
 }
 
 .home-bodysection-products2 h3 {
+    font-family: "Happy Monkey";
     font-size: 22px;
     font-style: bold;
     margin: 0px 30px 0px 0px;
@@ -143,31 +146,37 @@ section {
 }
 
 .home-card-artist {
-    border: solid white 2px;
+    border: solid white 1px;
     border-radius: 15px;
     width: 180px;
     height: 360px;
     padding: 3px 3px 3px 3px;
     margin: 25px auto;
     text-align: center;
+    box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
 }
 
 h5 {
-    font-size: 17px;
+    font-family: 'Happy Monkey', cursive;
+    font-size: 16px;
     font-style: bold;
+
 }
 
 .home-card-artist p {
-    font-size: 12px;
+    font-size: 14px;
     margin: 30px 20px 30px 20px;
+    padding-top: 15px;
+    border-top: white solid 1px;
 }
 
 .i-home-artist {
-    padding-top: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     max-width: 70%;
     height: auto;
-    border-radius: 50px;
-
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
 }
 
 .home-cards-container {
@@ -198,6 +207,7 @@ h5 {
     margin: 0px;
     height: 60px;
     width: auto;
+    border-bottom: solid 1px #00bacd;
 }
 
 .main-header-der,
@@ -259,6 +269,7 @@ h5 {
 
 footer {
     background-color: #008198;
+    border-top: solid 1px #00f6ff;
 }
 
 .redessociales-footer {
@@ -441,7 +452,7 @@ footer {
 
     .home-card-artist {
         display: inline-block;
-        margin: 10px 3px;
+        margin: 10px 15px;
     }
 
     .home-cards-container {
@@ -602,13 +613,13 @@ footer {
     .home-bodysection-products2 h3 {
         position: absolute;
         bottom: 45%;
-        font-size: 34px;
+        font-size: 36px;
     }
 
     .home-bodysection-products2 p {
         position: absolute;
         bottom: 35%;
-        font-size: 34px;
+        font-size: 28px;
     }
 
     .access-button-home {
@@ -653,7 +664,7 @@ footer {
 .userprofile-formulario h4 {
     text-align: left;
     font-size: 28px;
-    font-family: 'Palette Mosaic', cursive;
+    font-family: 'Happy Monkey', cursive;
     margin: 5px;
     padding-bottom: 20px;
     border-bottom: solid 2px white;

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <%- include("partials/head.ejs")%>
-    <link rel="stylesheet" href="/css/stylesDan.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
-    <link rel="stylesheet" href="/css/stylesAlex.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
-    
+    <link rel="stylesheet" href="/css/stylesDan.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
+    <link rel="stylesheet" href="/css/stylesAlex.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
+
     <!--<link rel="stylesheet" href="/css/styles.css">  Descomentar esta linea cuando el CSS este compilado -->
 
 </head>
@@ -15,19 +16,23 @@
     <%- include ('partials/navbar.ejs', {}) %>
 
     <main class="principal">
-        <form action="/products/tienda/search" method="GET"><!--Formulario para buscar-->
+        <form action="/products/tienda/search" method="GET">
+            <!--Formulario para buscar-->
             <div class="buscador">
-                <input name="search" class="inputBuscador" type="text" placeholder="Buscar cancion, artista o instrumento">
+                <input name="search" class="inputBuscador" type="text"
+                    placeholder="Buscar cancion, artista o instrumento">
                 <i class="fas fa-search"><button type="submit"></button></i>
             </div>
         </form>
         <section class="cancionesMasEscuchadas">
-            <p class="cabecera">Canciones mas escuchadas<a href="/products/tienda/songs"><span>Ver más</span></a></p> 
+            <p class="cabecera">Canciones mas escuchadas<a href="/products/tienda/songs"><span
+                        class="cabecera-vermas">Ver
+                        más</span></a></p>
             <div class="cancionesMasEscuchadasContenedor">
                 <i class="fas fa-chevron-left"></i>
                 <div class="canciones">
                     <% musicos.forEach(function(cancion) { %>
-                        <%- include ('partials/cardCancionTienda.ejs', {cancion}) %>
+                    <%- include ('partials/cardCancionTienda.ejs', {cancion}) %>
                     <% }) %>
                 </div>
                 <i class="fas fa-chevron-right"></i>
@@ -35,12 +40,14 @@
         </section>
 
         <section class="instrumentosEnVenta">
-            <p class="cabecera">Instrumentos en venta<a href="/products/tienda/instruments"><span>Ver más</span></a></p>
+            <p class="cabecera">Instrumentos en venta<a href="/products/tienda/instruments"><span
+                        class="cabecera-vermas">Ver
+                        más</span></a></p>
             <div class="instrumentosEnVentaContenedor">
                 <i class="fas fa-chevron-left"></i>
                 <div class="instrumentos">
                     <% instrumentos.forEach(function(instrumento) { %>
-                        <%- include ('partials/cardInstrumentoTienda.ejs', {instrumento}) %>
+                    <%- include ('partials/cardInstrumentoTienda.ejs', {instrumento}) %>
                     <% }) %>
                 </div>
                 <i class="fas fa-chevron-right"></i>
@@ -48,16 +55,18 @@
         </section>
 
         <section class="ultimosAdicionados">
-            <p class="cabecera">Conoce a los artistas de nuestro catalogo<a href="/products/tienda/artists"><span>Ver más</span></a></p>
+            <p class="cabecera">Conoce a los artistas de nuestro catalogo<a href="/products/tienda/artists"><span
+                        class="cabecera-vermas">Ver
+                        más</span></a></p>
             <i class="fas fa-chevron-left flechaIzq"></i>
             <div class="ultimosAdicionadosContainer">
 
                 <% datos.forEach(function(dato) { %>
-                    <%- include ('partials/cardhorizontaltienda.ejs', {dato}) %>
-                <% }) %> 
+                <%- include ('partials/cardhorizontaltienda.ejs', {dato}) %>
+                <% }) %>
 
             </div>
-            <i class="fas fa-chevron-right flechaDer"></i>  
+            <i class="fas fa-chevron-right flechaDer"></i>
         </section>
     </main>
     <!-- ======= FOOTER | PIE DE PAGINA ========= -->
@@ -65,4 +74,5 @@
     <%- include ('partials/footer.ejs', {}) %>
 
 </body>
+
 </html>

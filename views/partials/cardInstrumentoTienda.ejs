@@ -1,5 +1,7 @@
-<div class="instrumento">
-    <a href="/products/detailInstrument/<%= instrumento.InstrumId %>"><img src="/images/instrumentsImg/resizedandcropped/<%=instrumento.img %>" alt="fotoinstrumento">
-    <p class="tituloInstrumento"><%= instrumento.titulo %></p>
-    <p class="artistaInstrumento"><%= instrumento.precio %>$</p></a>
+<div class="instrumentoCard">
+    <a href="/products/detailInstrument/<%= instrumento.InstrumId %>"><img
+            src="/images/instrumentsImg/resizedandcropped/<%=instrumento.img %>" alt="fotoinstrumento">
+        <p class="tituloInstrumento"><%= instrumento.titulo %></p>
+        <p class="precioInstrumento"><%= instrumento.precio %>$</p>
+    </a>
 </div>

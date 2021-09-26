@@ -10,7 +10,7 @@ producto blanc y cancion blanc
 NAVBAR
 ///////////////////////////////////
 
-CAMBIAR EL INGRESO X MUNECO
+
 
 SACAR (COMENTAR)
 <!-- Boton Ingreso responsivo | Exibido en NavBar en > 700px -->
@@ -120,20 +120,70 @@ x                    <i class="fas fa-envelope"><input type="email" required pla
 }
 
 ///////////////////////////////////
-TITULOS
+TITULOS MUY IMPORTANTES
 ///////////////////////////////////
 
-    font-family: font-family: 'Palette Mosaic', 'sans-serif';
+    font-family: 'Happy Monkey', cursive;
+    font-size: 36px;
+
+///////////////////////////////////
+TITULOS MENOS IMPORTANTES
+///////////////////////////////////
+
+    font-family: 'Happy Monkey', cursive;
     font-size: 28px;
 
 
 ///////////////////////////////////
-ADD FAVICON
+PARRAFOS IMPORTANTES
 ///////////////////////////////////
-
-<link rel="shortcut icon" href="caminhodoarquivo/favicon.ico" />
-
 
 
 ///////////////////////////////////
+PARRAFOS MENOS IMPORTANTES
+///////////////////////////////////
 
+
+
+///////////////////////////////////
+TITULOS CARDS
+///////////////////////////////////
+
+    font-family: 'Happy Monkey', cursive;
+    font-size: 16px;
+
+
+///////////////////////////////////
+PARRAFOS CARDS
+///////////////////////////////////
+
+    font-family: 'Roboto', cursive;
+    font-size: 14px;
+
+///////////////////////////////////
+CARDS VERTICALES
+///////////////////////////////////
+.home-card-artist {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 10px;
+    margin: 18px;
+    box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
+
+    border: solid white 1px;
+    border-radius: 15px;
+    width: 180px;
+    height: 360px;
+    padding: 3px 3px 3px 3px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.i-home-artist {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 70%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
+}
