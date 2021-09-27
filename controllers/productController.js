@@ -232,7 +232,16 @@ const controlador = {
         });
 
     },
-    editSong:(req, res) => {res.send("hola")},
+    editSong:(req, res) => {
+        const songsDB = JSON.parse(fs.readFileSync(pathSongs));
+        for (let i=0;i<songsDB.length;i++) {
+            if (songsDB[i].songId == req.params.idSong){
+                let songOld = songsDB[i];
+                res.render('editSong.ejs',{songOld});
+            }
+        }
+
+    },
     editInstrument:(req, res) => {
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
         for (let i=0;i<instrumentsDB.length;i++) {
@@ -242,42 +251,39 @@ const controlador = {
             }
         }
     },
-    editSongPut:(req, res) => {res.send("hola put cancoion")},
+    editSongPut:(req, res) => {
+        const songsDB = JSON.parse(fs.readFileSync(pathSongs,"utf-8"));
+        const oldProduct = songsDB.filter(elements => elements.songId == req.params.idSong)
+
+        for (let i=0;i<songsDB.length;i++){
+            if (songsDB[i].songId == req.params.idSong){
+                songsDB[i].titulo = req.body.titulo;
+                songsDB[i].descripcion = req.body.descripcion;
+                songsDB[i].precio = req.body.precio;
+                if (req.body.songEmptyImgBtn == ""){songsDB[i].img = oldProduct[0].img}else{songsDB[i].img =req.body.songEmptyImgBtn}
+                if (req.body.songEmptyFileBtn == ""){songsDB[i].audioFile = oldProduct[0].audioFile}else{songsDB[i].audioFile =req.body.songEmptyFileBtn}
+
+            }
+        }
+        fs.writeFileSync(pathSongs,JSON.stringify(songsDB))
+        res.render("allSongs.ejs", {musicos:songsDB})        
+
+    },
+
     editInstrumentPut:(req, res) => {
-        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
-        const relevantProducts = instrumentsDB.filter(elements => elements.InstrumId != req.params.idInstrum)
+        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments,"utf-8"));
         const oldProduct = instrumentsDB.filter(elements => elements.InstrumId == req.params.idInstrum)
 
-        const editedProductPhoto = {//si viene con foto
-            id: 12, //CAMBIARLO CON SESSION
-            InstrumId: req.params.idInstrum,
-            img: req.body.productEmptyButton,
-            titulo: req.body.titulo,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-          }
-          const editedProductNotPhoto = {//si NO viene con foto
-            id: 12, //CAMBIARLO CON SESSION
-            InstrumId: req.params.idInstrum,
-            img: oldProduct[0].img,
-            titulo: req.body.titulo,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-          }
-          if (req.body.productEmptyButton == ""){
-                relevantProducts.push(editedProductNotPhoto)
-                fs.writeFileSync(pathInstruments,JSON.stringify(relevantProducts))
-                res.render("allInstruments.ejs", {instrumentos:relevantProducts})
-          }
-          else {
-            relevantProducts.push(editedProductPhoto)
-            fs.writeFileSync(pathInstruments,JSON.stringify(relevantProducts))
-            res.render("allInstruments.ejs", {instrumentos:relevantProducts})
-          }
-
-
-        
-        
+        for (let i=0;i<instrumentsDB.length;i++){
+            if (instrumentsDB[i].InstrumId == req.params.idInstrum){
+                instrumentsDB[i].titulo = req.body.titulo;
+                instrumentsDB[i].descripcion = req.body.descripcion;
+                instrumentsDB[i].precio = req.body.precio;
+                if (req.body.productEmptyButton == ""){instrumentsDB[i].img = oldProduct[0].img}else{instrumentsDB[i].img =req.body.productEmptyButton}
+            }
+        }
+        fs.writeFileSync(pathInstruments,JSON.stringify(instrumentsDB))
+        res.render("allInstruments.ejs", {instrumentos:instrumentsDB})        
     },
 };
 
