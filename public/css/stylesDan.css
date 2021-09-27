@@ -219,7 +219,7 @@ h5 {
 .main-header-der ul {
     /* Responsivo (oculto el texto) */
     display: none;
-    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5), 8px 3px 1px rgba(0, 186, 205, 0.2);
+    text-shadow: #474747 3px 5px 2px, 4px 4px 0px rgba(0, 246, 255, 0.81);
 }
 
 .button {
@@ -545,7 +545,7 @@ footer {
     .i-home-inicial-gradient {
         display: block;
         margin-left: auto;
-        padding: 50px 0 90px;
+        padding: 0px 0 90px;
         width: 80%;
         height: 80%;
     }
