@@ -245,7 +245,38 @@ const controlador = {
     editSongPut:(req, res) => {res.send("hola put cancoion")},
     editInstrumentPut:(req, res) => {
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
-        const oldProduct = instrumentsDB.filter(elements => elements.InstrumId == req.params.idInstrum)     
+        const relevantProducts = instrumentsDB.filter(elements => elements.InstrumId != req.params.idInstrum)
+        const oldProduct = instrumentsDB.filter(elements => elements.InstrumId == req.params.idInstrum)
+        const editedProductPhoto = {//si viene con foto
+            id: 12, //CAMBIARLO CON SESSION
+            InstrumId: req.params.idInstrum,
+            img: req.body.productEmptyButton,
+            titulo: req.body.titulo,
+            descripcion: req.body.descripcion,
+            precio: req.body.precio,
+          }
+          const editedProductNotPhoto = {//si NO viene con foto
+            id: 12, //CAMBIARLO CON SESSION
+            InstrumId: req.params.idInstrum,
+            img: oldProduct[0].img,
+            titulo: req.body.titulo,
+            descripcion: req.body.descripcion,
+            precio: req.body.precio,
+          }
+          if (req.body.productEmptyButton == ""){
+              relevantProducts.push(editedProductNotPhoto)
+              fs.writeFileSync(pathInstruments,JSON.stringify(editedProductNotPhoto))
+              res.render("allInstruments.ejs", {instrumentos:relevantProducts})
+          }
+          else {
+            relevantProducts.push(editedProductPhoto)
+            fs.writeFileSync(pathInstruments,JSON.stringify(editedProductPhoto))
+            res.render("allInstruments.ejs", {instrumentos:relevantProducts})
+          }
+
+
+        
+        
     },
 };
 
