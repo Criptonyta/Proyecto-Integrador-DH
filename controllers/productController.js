@@ -264,16 +264,16 @@ const controlador = {
             descripcion: req.body.descripcion,
             precio: req.body.precio,
           }
-          /*if (req.body.productEmptyButton == ""){
-              relevantProducts.push(editedProductNotPhoto)
-              fs.writeFileSync(pathInstruments,JSON.stringify(editedProductNotPhoto))
-              res.render("allInstruments.ejs", {instrumentos:relevantProducts})
+          if (req.body.productEmptyButton == ""){
+                relevantProducts.push(editedProductNotPhoto)
+                fs.writeFileSync(pathInstruments,JSON.stringify(editedProductNotPhoto))
+                res.render("allInstruments.ejs", {instrumentos:relevantProducts})
           }
           else {
             relevantProducts.push(editedProductPhoto)
             fs.writeFileSync(pathInstruments,JSON.stringify(editedProductPhoto))
             res.render("allInstruments.ejs", {instrumentos:relevantProducts})
-          }*/
+          }
 
 
         
