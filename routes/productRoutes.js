@@ -23,5 +23,12 @@ router.get('/tienda/search', productController.searched) //Todos los productos b
 router.delete("/deleteinstrument/:idInstrum", productController.deleteInstrument)
 router.delete("/deletesong/:idSong", productController.deleteSong)
 
+router.get("/editsong/:idSong", productController.editSong)//pagina para editar cancion
+router.get("/editinstrument/:idInstrum", productController.editInstrument)//pagina para editar instrumento
+
+router.put("/editsong/:idSong", productController.editSongPut)
+router.put("/editinstrument/:idInstrum", productController.editInstrumentPut)
+
+
 
 module.exports = router

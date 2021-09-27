@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include("partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
+
+
+    <!--<link rel="stylesheet" href="/css/styles.css">  Descomentar esta linea cuando el CSS este compilado -->
+
+</head>
+
+<body>
+    <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
+
+    <%- include ('partials/navbarlogada.ejs', {}) %>
+
+    <!--CONTENIDO-->
+    <main class="principal">
+        <!--productos-->
+        <form class="product-container" method='POST' action="/products/editinstrument/<%= instrumentoOld.InstrumId %>?_method=PUT">
+            <div class="productImages">
+                <label for='productEmptyButton' class='productEmptyButton'>Cargá una imagen</label>
+                <input class='productEmptyButton' name='productEmptyButton' id='productEmptyButton' type='file'
+                    placeholder="Carga tu foto aqui">
+                <div class="productImagesButtons">
+                    <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button> -->
+                    <!-- <button><input type='file' placeholder="Carga tu foto aqui" style="display: none"><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
+                </div>
+            </div>
+            <div class="productInformation-container">
+                <div class="productInformation">
+                    <h2><input type='text' name='titulo' placeholder="Carga tu titulo aqui" value="<%= instrumentoOld.titulo %>"></h2>
+                    <div class="priceStars">
+                        <p><input type='number' name='precio' placeholder="Carga tu precio aqui" value="<%= instrumentoOld.precio %>"><span
+                                class="currency">U$D</span></p>
+                        <!-- <i class="fas fa-star"><span class="stars">4.5</span></i> -->
+                    </div>
+                    <p class="productDescription"><input name='descripcion' type='textarea'
+                            placeholder="Carga una breve descripción breve de tu producto" value="<%= instrumentoOld.descripcion %>"></p>
+                    <!-- <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button> -->
+                </div>
+                <div class="editar">
+                    <button type="submit"><i class="fas fa-edit"><span class="agregarTexto">Salvar anuncio</span></i></button>
+                </div>
+            </div>
+        </form>
+
+
+    </main>
+
+    <!-- ======= FOOTER | PIE DE PAGINA ========= -->
+
+    <%- include ('partials/footer.ejs', {}) %>
+
+</body>
+
+</html>

@@ -231,8 +231,22 @@ const controlador = {
             instrumentos: instrumentos
         });
 
-
-    }
+    },
+    editSong:(req, res) => {res.send("hola")},
+    editInstrument:(req, res) => {
+        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
+        for (let i=0;i<instrumentsDB.length;i++) {
+            if (instrumentsDB[i].InstrumId == req.params.idInstrum){
+                let instrumentoOld = instrumentsDB[i];
+                res.render('editProduct.ejs',{instrumentoOld});
+            }
+        }
+    },
+    editSongPut:(req, res) => {res.send("hola put cancoion")},
+    editInstrumentPut:(req, res) => {
+        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
+        const oldProduct = instrumentsDB.filter(elements => elements.InstrumId == req.params.idInstrum)     
+    },
 };
 
 
