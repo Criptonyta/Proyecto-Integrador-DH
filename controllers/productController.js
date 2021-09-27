@@ -266,12 +266,12 @@ const controlador = {
           }
           if (req.body.productEmptyButton == ""){
                 relevantProducts.push(editedProductNotPhoto)
-                fs.writeFileSync(pathInstruments,JSON.stringify(editedProductNotPhoto))
+                fs.writeFileSync(pathInstruments,JSON.stringify(relevantProducts))
                 res.render("allInstruments.ejs", {instrumentos:relevantProducts})
           }
           else {
             relevantProducts.push(editedProductPhoto)
-            fs.writeFileSync(pathInstruments,JSON.stringify(editedProductPhoto))
+            fs.writeFileSync(pathInstruments,JSON.stringify(relevantProducts))
             res.render("allInstruments.ejs", {instrumentos:relevantProducts})
           }
 
