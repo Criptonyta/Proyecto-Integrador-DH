@@ -671,7 +671,7 @@ i {
     margin: 30px 0 30px 20px;
     text-align: left;
     border-bottom: 1px solid white;
-    width: 70%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
@@ -680,7 +680,8 @@ i {
 
 
 .instrumentoCard,
-.cancionCard {
+.cancionCard,
+.ultimosAdicionadosCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -689,21 +690,61 @@ i {
 
 }
 
+.ultimosAdicionadosCard {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 15px;
+    padding: 10px;
+    margin: 18px;
+    box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
+    border: solid white 1px;
+    border-radius: 15px;
+    width: 180px;
+    height: 360px;
+    padding: 3px 3px 3px 3px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.ultimosAdicionados img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 70%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
+}
+
+.ultimosAdicionados p {
+    font-size: 14px;
+    margin: 15px;
+    padding-top: 15px;
+}
+
+.ultimosAdicionados h6 {
+    padding: 10px;
+    border-bottom: solid 1px white;
+
+}
+
+
 .instrumentoCard img,
 .cancionCard img,
-.ultimosAdicionados img {
-    width: 120px;
-    height: 120px;
+.ultimosAdicionados img,
+.all-artists-img {
+    width: 140px;
     box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
 }
 
 .tituloCancion,
 .artistaCancion,
 .tituloInstrumento,
-.precioInstrumento {
+.precioInstrumento,
+.recomendadoInfo {
     font-style: bold;
-    max-width: 120px;
-    max-height: 50px;
+    max-width: 140px;
+    max-height: 80px;
     font-family: 'Roboto', cursive;
     font-size: 14px;
     margin: 5px;
@@ -715,67 +756,84 @@ i {
     text-decoration: none
 }
 
-/* .cancion img,
-.instrumento img,
-.ultimosAdicionados img {
-    width: 120px;
-    height: 120px;
-} */
+.flechaIzq,
+.fechaDer,
+.fa-chevron-left,
+.fa-chevron-right {
+    display: none;
+}
 
 .ultimosAdicionados img {
     border-radius: 50%;
 }
 
-.ultimosAdicionadosCard {
-    background-color: var(--azulOscuro);
-    width: 360px;
-    height: 180px;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-/* 
-.ultimosAdicionados {
-    position: relative;
-} */
-
-
-/* 
-.flechaIzq {
-    margin: 0 5px;
-    left: calc(5%);
-    top: calc(50%)
-}
-
-.flechaDer {
-    margin: 0 5px;
-    right: calc(5%);
-    top: calc(50%)
-} */
 
 
 @media(min-width:361px) {
 
+
     .canciones,
     .instrumentos,
-    .ultimosAdicionados {
-        display: inline-flex;
-        text-align: center;
+    .ultimosAdicionadosContainer {
+        display: flex;
         flex-direction: row;
+        margin-bottom: 40px;
         flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+}
+
+
+@media(min-width:700px) {
+
+    .ultimosAdicionadosCard {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 15px 10px;
+        padding: 10px;
+        margin: 18px;
+        width: 360px;
+        height: 180px;
+        padding: 3px 3px 3px 3px;
+        margin: 25px auto;
+        text-align: center;
+    }
+
+    .ultimosAdicionados p {
+        width: 160px;
+        padding-top: 15px;
+    }
+
+    .recomendadoTexto,
+    .recomendadoTitulo {
+        width: 180px;
+        margin: 0px;
     }
 
 }
 
+/* VISTA DE TODOS LOS ARTISTAS */
 
+.instrumento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.all-artists-img {
+    margin: 30px 30px 5px;
+}
 
+.artistaInstrumento,
+.tituloInstrumento {
+    margin: 5px;
+    font-size: 14px;
 
-
+}
 
 /* 
 .fa-chevron-left {

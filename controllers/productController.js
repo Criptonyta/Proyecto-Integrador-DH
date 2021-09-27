@@ -140,7 +140,7 @@ const controlador = {
         const musicos = songsDB.slice(1, 7);
 
         const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
-        const datos = artistsDB.slice(1, 5);
+        const datos = artistsDB.slice(1, 4);
 
         res.render('tienda.ejs', {
             datos: datos,

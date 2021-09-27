@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <%- include("partials/head.ejs")%>
-    <link rel="stylesheet" href="/css/stylesDan.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
-    <link rel="stylesheet" href="/css/stylesAlex.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
-    
+    <link rel="stylesheet" href="/css/stylesDan.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
+    <link rel="stylesheet" href="/css/stylesAlex.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
+
     <!--<link rel="stylesheet" href="/css/styles.css">  Descomentar esta linea cuando el CSS este compilado -->
 
 </head>
 
 <body>
+    <STYLE>
+        a {
+            text-decoration: none;
+        }
+    </STYLE>
+
     <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
 
     <%- include ('partials/navbar.ejs', {}) %>
 
     <main class="principal">
-        <form action="/products/tienda/search" method="GET"><!--Formulario para buscar-->
+        <form action="/products/tienda/search" method="GET">
+            <!--Formulario para buscar-->
             <div class="buscador">
-                <input name="search" class="inputBuscador" type="text" placeholder="Buscar cancion, artista o instrumento">
+                <input name="search" class="inputBuscador" type="text"
+                    placeholder="Buscar cancion, artista o instrumento">
                 <i class="fas fa-search"><button type="submit"></button></i>
             </div>
         </form>
@@ -27,7 +36,7 @@
             <div class="instrumentosEnVentaContenedor">
                 <div class="instrumentos">
                     <% instrumentos.forEach(function(instrumento) { %>
-                        <%- include ('partials/cardInstrumentoTienda.ejs', {instrumento}) %>
+                    <%- include ('partials/cardInstrumentoTienda.ejs', {instrumento}) %>
                     <% }) %>
                 </div>
             </div>
@@ -38,4 +47,5 @@
     <%- include ('partials/footer.ejs', {}) %>
 
 </body>
+
 </html>
