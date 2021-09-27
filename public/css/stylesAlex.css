@@ -257,7 +257,7 @@
 
 /* LOGIN PAGE END */
 
-
+/* DETALLE DE PRODUCTO */
 
 .principal {
     background-color: var(--azulOscuro);
@@ -273,12 +273,14 @@
 
 .productImages {
     height: 50%;
+
 }
 
 .productImages img {
     width: 100%;
     max-width: 350px;
     height: 80%;
+    box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
 }
 
 .productImagesButtons button {
@@ -339,10 +341,8 @@
 
 
 .productDescription {
-    margin: 0;
-    margin-bottom: 15px;
-    font-style: italic;
-    font-size: 10px;
+    margin: 30px 10px 60px 10px;
+    font-size: 14px;
 }
 
 .products-formButtons {
@@ -371,7 +371,7 @@
     background-color: rgb(235, 17, 17);
 }
 
-.agregar {
+/* .agregar {
     color: white;
     border: none;
     overflow: none;
@@ -386,10 +386,11 @@
     font-family: var(--letraParrafos);
     cursor: pointer;
     transition: width .35s ease-in-out
-}
+} */
 
 .product-container img {
     margin: 0px 0px 20px 0px;
+    box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
 
 }
 

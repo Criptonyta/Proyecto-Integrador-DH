@@ -65,6 +65,7 @@ section {
     text-align: center;
 }
 
+.agregar,
 .button,
 .access-button-home,
 /* Estilizo los botones CTA */
@@ -86,6 +87,7 @@ section {
 }
 
 #youtube-icon:hover,
+.agregar,
 .button:hover,
 .access-button-home:hover,
 .access-button-home2:hover,
