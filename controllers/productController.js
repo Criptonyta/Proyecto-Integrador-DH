@@ -247,6 +247,7 @@ const controlador = {
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
         const relevantProducts = instrumentsDB.filter(elements => elements.InstrumId != req.params.idInstrum)
         const oldProduct = instrumentsDB.filter(elements => elements.InstrumId == req.params.idInstrum)
+
         const editedProductPhoto = {//si viene con foto
             id: 12, //CAMBIARLO CON SESSION
             InstrumId: req.params.idInstrum,
@@ -263,7 +264,7 @@ const controlador = {
             descripcion: req.body.descripcion,
             precio: req.body.precio,
           }
-          if (req.body.productEmptyButton == ""){
+          /*if (req.body.productEmptyButton == ""){
               relevantProducts.push(editedProductNotPhoto)
               fs.writeFileSync(pathInstruments,JSON.stringify(editedProductNotPhoto))
               res.render("allInstruments.ejs", {instrumentos:relevantProducts})
@@ -272,7 +273,7 @@ const controlador = {
             relevantProducts.push(editedProductPhoto)
             fs.writeFileSync(pathInstruments,JSON.stringify(editedProductPhoto))
             res.render("allInstruments.ejs", {instrumentos:relevantProducts})
-          }
+          }*/
 
 
         
