@@ -45,6 +45,10 @@ main {
     height: 100%;
 }
 
+/* .i-home-inicial-gradient img {
+    background: linear-gradient(90deg, rgba(1, 30, 44, 0.94) 0.4364089775561097%, rgba(0, 32, 44, 0.96) 25.187032418952622%, rgba(0, 128, 153, 1) 100%);
+} */
+
 h1,
 h2 {
     font-family: 'Happy Monkey', 'sans-serif';
