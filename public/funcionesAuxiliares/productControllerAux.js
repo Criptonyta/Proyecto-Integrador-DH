@@ -35,19 +35,20 @@ function buscarNelementosAleatorios(lista,cantidad){//Te devuelve N elementos al
     return elementos
 }
 
-function buscarNelementosRelacionados (lista,nombreId,id,cantidad){//Te busca N elementos relacionados por artista, el resto completa con aleatorios
-    let relacionadosArtista = lista.filter(elementos => elementos[nombreId] == id)
-    let relacionadosFaltantes = cantidad - relacionadosArtista.length
+function buscarNelementosRelacionados (lista,nombreId,id,productNameId,productId,cantidad){//Te busca N elementos relacionados por artista, el resto completa con aleatorios
+    let relacionadosArtista = lista.filter(elementos => elementos[nombreId] == id) //Me quedo con los elementos del mismo artista (O canciones O instrumentos, no ambos)
+    let relacionadosArtistaFinal = relacionadosArtista.filter(elementos => elementos[productNameId] != productId)//Saco el elemento que estamos viendo
+    let relacionadosFaltantes = cantidad - relacionadosArtistaFinal.length
     if (relacionadosFaltantes > 0){//Si faltan elementos agrego con aleatorios
         while (relacionadosFaltantes > 0){
-            relacionadosArtista.push(buscarElementoAleatorio(lista))
+            relacionadosArtistaFinal.push(buscarElementoAleatorio(lista))
             relacionadosFaltantes--
         }
-        return relacionadosArtista 
+        return relacionadosArtistaFinal 
     }  
     else {//si no faltan elementos:
-        if (relacionadosArtista.length == cantidad){return relacionadosArtista}//Si tengo la cantidad que busco, la devuelvo
-        else {return buscarNelementosAleatorios(relacionadosArtista,cantidad)}//Si tengo mas de los que busco, eligo una cantidad aleatoria
+        if (relacionadosArtistaFinal.length == cantidad){return relacionadosArtistaFinal}//Si tengo la cantidad que busco, la devuelvo
+        else {return buscarNelementosAleatorios(relacionadosArtistaFinal,cantidad)}//Si tengo mas de los que busco, eligo una cantidad aleatoria
     }
 }
 module.exports = {

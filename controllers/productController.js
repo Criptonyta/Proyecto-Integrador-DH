@@ -12,7 +12,7 @@ const controlador = {
         const usersDB = require(pathUsers)
         const instrumentos = JSON.parse(fs.readFileSync(pathInstruments));
         const instrumento = instrumentos.find(elemento => elemento.InstrumId == req.params.id);
-        const relacionados = auxiliares.buscarNelementosRelacionados(instrumentos, "id", instrumento.id, 3) //Instrumentos relacionados
+        const relacionados = auxiliares.buscarNelementosRelacionados(instrumentos, "id", instrumento.id,"InstrumId",req.params.id, 3) //Instrumentos relacionados
         const pathFotos = "/images/instrumentsImg/resizedandcropped/"
         const pathDetail = "/products/detailInstrument/"
         const nombreId = "InstrumId"
@@ -37,7 +37,7 @@ const controlador = {
         const usersDB = require(pathUsers)
         const songs = JSON.parse(fs.readFileSync(pathSongs));
         const song = songs.find(elemento => elemento.songId == req.params.id);
-        const relacionados = auxiliares.buscarNelementosRelacionados(songs, "id", song.id, 3) //Instrumentos relacionados
+        const relacionados = auxiliares.buscarNelementosRelacionados(songs, "id",song.id, "songId",req.params.id, 3) //Instrumentos relacionados
         const pathFotos = "/images/MusicFilesCoverImg/resized/"
         const pathDetail = "/products/detailSong/"
         const nombreId = "songId"
