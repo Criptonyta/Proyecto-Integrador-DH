@@ -16,7 +16,7 @@
 
 .login-body {
     background-color: gray;
-    background: url("/images/Images/man-890877_1920 gradient.jpg") no-repeat center center fixed;
+    background: url("/images/Images/man-2179313_1920.jpg") no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     overflow: hidden;
@@ -65,30 +65,38 @@
 /* LOGIN */
 #login {
     background-color: Var(--azulOscuro);
-    font-family: var(--letraParrafos);
-    font-size: 24px;
+    /* font-family: var(--letraParrafos);
+    font-size: 24px; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     width: 100vw;
     height: 100vh;
     max-width: 500px;
-
 }
 
-#login p {
-    font-family: var(--letraTitulos);
-    margin: 30px 0px 30px 0px;
+#loginicon {
+    margin: 30px 0px 10px 0px;
+    font-size: 50px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
+}
+
+
+.Bienvenido {
+    font-family: 'Happy Monkey';
+    margin: 10px 0px 30px 0px;
     font-size: 28px;
     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
 }
 
-#login img {
-    padding: 30px, 0px, 30px, 0px;
-    width: 50px;
-    max-width: 50px;
+.registrarme {
+    font-family: 'Happy Monkey';
+    margin: 10px 0px 30px 0px;
+    font-size: 18px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
 }
+
 
 #login form {
     background-color: Var(--azulOscuro);
@@ -98,22 +106,22 @@
     align-items: center;
 }
 
+
 .information {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 190px;
+    min-width: 220px;
 }
 
 #login form .information input {
     background-color: Var(--azulOscuro);
-    margin: 30px 0px 0px 8px;
+    margin: 20px 0px 0px 8px;
     font-family: var(--letraParrafos);
     color: white;
-    font-family: var(--letraParrafos);
-    font-size: 14px;
-    width: 220px;
+    font-size: 18px;
+    width: 200px;
     height: 30px;
     border: white 1px solid;
 }
@@ -136,52 +144,33 @@
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    margin: 30px 0px 0px 8px;
+    height: 80px;
+    margin: 20px 0px 20px 8px;
 }
 
+.forgotPassword,
 .options .loggedIn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     font-size: 18px;
-    /* margin-top: 15px; */
+    font-family: 'roboto';
+    margin-bottom: 30px;
 }
 
-.options p {
-    margin-top: 30px;
-}
 
 .options .loggedIn label {
     margin-left: 5px;
 }
 
-.registrarme,
-.forgotPassword {
-    font-family: var(--letraParrafos);
-    font-size: 18px;
-    text-align: center;
-    margin: 25px 0;
-    margin: 30px;
-}
-
-/* #forgotPassword:hover {
-    text-decoration: underline;
-} */
 
 .registrarme,
 .options a {
     color: white;
     text-decoration: none;
-
 }
 
-#loginButton {
-
+.loginButton {
     display: block;
     width: 150px;
     border-radius: 5px;
-    margin: 25px 0px 25px 0px;
     padding: 10px 20px;
     font-size: 18px;
     text-decoration: none;
@@ -192,14 +181,20 @@
     text-align: center;
     transition: all 0.5s;
     cursor: pointer;
+    font-family: 'Roboto';
+    margin-bottom: 10px;
 }
 
-#loginButton:hover {
+.loginButton:hover {
     color: #00f6ff;
     background-color: #004d61;
 }
 
-
+.registrarme {
+    margin: 30px 0px 30px 0px;
+    display: block;
+    text-align: center;
+}
 
 /* @media (min-width:450px) {
 
