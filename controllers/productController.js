@@ -4,6 +4,7 @@ const pathInstruments = path.join(__dirname, '../database/instrumentsDB.json');
 const pathSongs = path.join(__dirname, '../database/songsDB.json');
 const pathUsers = path.join(__dirname, '../database/usersDB.json');
 const pathFuncionesAuxiliares = path.join(__dirname, '../public/funcionesAuxiliares/productControllerAux.js');
+const auxiliares = require(pathFuncionesAuxiliares);
 
 
 const controlador = {
@@ -11,7 +12,7 @@ const controlador = {
         const usersDB = require(pathUsers)
         const instrumentos = JSON.parse(fs.readFileSync(pathInstruments));
         const instrumento = instrumentos.find(elemento => elemento.InstrumId == req.params.id);
-        const relacionados = instrumentos.slice(1, 5) //Instrumentos relacionados
+        const relacionados = auxiliares.buscarNelementosRelacionados(instrumentos,"id",instrumento.id,4) //Instrumentos relacionados
         const pathFotos = "/images/instrumentsImg/resizedandcropped/"
         const pathDetail = "/products/detailInstrument/"
         const nombreId = "InstrumId"
@@ -36,7 +37,7 @@ const controlador = {
         const usersDB = require(pathUsers)
         const songs = JSON.parse(fs.readFileSync(pathSongs));
         const song = songs.find(elemento => elemento.songId == req.params.id);
-        const relacionados = songs.slice(1, 5) //Instrumentos relacionados
+        const relacionados = auxiliares.buscarNelementosRelacionados(songs,"id",song.id,4) //Instrumentos relacionados
         const pathFotos = "/images/MusicFilesCoverImg/resized/"
         const pathDetail = "/products/detailSong/"
         const nombreId = "songId"
@@ -83,11 +84,11 @@ const controlador = {
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
 
-        const instrumentos = instrumentsDB.slice(1, 7);
-        const musicos = songsDB.slice(1, 7);
+        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB,6);
+        const musicos = auxiliares.buscarNelementosAleatorios(songsDB,6);;
 
         const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
-        const datos = artistsDB.slice(1, 5);
+        const datos = auxiliares.buscarNelementosAleatorios(artistsDB,3);;
 
         res.render('tienda.ejs', {
             datos: datos,
@@ -118,11 +119,11 @@ const controlador = {
         const songsDB = JSON.parse(fs.readFileSync(pathSongs));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
 
-        const instrumentos = instrumentsDB.slice(1, 7);
-        const musicos = songsDB.slice(1, 7);
+        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB,6);;
+        const musicos = auxiliares.buscarNelementosAleatorios(songsDB,6);;
 
         const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
-        const datos = artistsDB.slice(1, 5);
+        const datos = auxiliares.buscarNelementosAleatorios(artistsDB,3);;
 
         res.render('tienda.ejs', {
             datos: datos,
@@ -136,11 +137,11 @@ const controlador = {
         const songsDB = JSON.parse(fs.readFileSync(pathSongs));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
 
-        const instrumentos = instrumentsDB.slice(1, 7);
-        const musicos = songsDB.slice(1, 7);
+        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB,6);
+        const musicos = auxiliares.buscarNelementosAleatorios(songsDB,6);
 
         const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
-        const datos = artistsDB.slice(1, 4);
+        const datos = auxiliares.buscarNelementosAleatorios(artistsDB,3);;
 
         res.render('tienda.ejs', {
             datos: datos,
@@ -175,7 +176,6 @@ const controlador = {
         const songsDB = JSON.parse(fs.readFileSync(pathSongs));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
         const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
-        const auxiliares = require(pathFuncionesAuxiliares);
 
         const buscado = req.query.search
         const palabras = buscado.split(' ')
@@ -198,11 +198,11 @@ const controlador = {
         const songsDB = JSON.parse(fs.readFileSync(pathSongs));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
 
-        const instrumentos = resultado.slice(1, 7);
-        const musicos = songsDB.slice(1, 7);
+        const instrumentos = auxiliares.buscarNelementosAleatorios(resultado,6);;
+        const musicos = auxiliares.buscarNelementosAleatorios(songsDB,6);;
 
         const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
-        const datos = artistsDB.slice(1, 5);
+        const datos = auxiliares.buscarNelementosAleatorios(artistsDB,3);;
 
         res.render('tienda.ejs', {
             datos: datos,
@@ -219,11 +219,11 @@ const controlador = {
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
 
-        const instrumentos = instrumentsDB.slice(1, 7);
-        const musicos = resultado.slice(1, 7);
+        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB,6);;
+        const musicos = auxiliares.buscarNelementosAleatorios(resultado,6);;
 
         const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
-        const datos = artistsDB.slice(1, 5);
+        const datos = auxiliares.buscarNelementosAleatorios(artistsDB,3);;
 
         res.render('tienda.ejs', {
             datos: datos,
