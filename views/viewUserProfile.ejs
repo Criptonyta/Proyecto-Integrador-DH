@@ -60,38 +60,43 @@
                 <h4>Anuncios de <%= usuarioInfo.nombre %> <%= usuarioInfo.apellido %> </h4>
 
                 <div>
-                    <table class="userprofile-tableanuncios user-productsTable">
-                        <p>Sus Canciones</p>
-                        <tr>
-                            <th>Anuncio</th>
-                            <th>Descripción</th>
-                        </tr>
+                    <% if (songsUser.length > 0) { %>
+                        <table class="userprofile-tableanuncios user-productsTable">
+                            <p>Sus Canciones</p>
+                            <tr>
+                                <th>Anuncio</th>
+                                <th>Descripción</th>
+                            </tr>
 
-                        <% songsUser.forEach(function(songUsuario, indice){ %>
+                            <% songsUser.forEach(function(songUsuario, indice){ %>
 
-                        <tr>
-                            <td><%= indice+1 %> </td>
-                            <td><a href="/products/detailSong/<%= songUsuario.songId %>"><%= songUsuario.titulo %></a></td>
-                        </tr>
-                        <% }) %>
+                            <tr>
+                                <td><%= indice+1 %> </td>
+                                <td><a href="/products/detailSong/<%= songUsuario.songId %>"><%= songUsuario.titulo %></a></td>
+                            </tr>
+                            <% }) %>
 
-                    </table>
-                    <table class="userprofile-tableanuncios  user-productsTable">
-                        <p>Sus Instrumentos</p>
-                        <tr>
-                            <th>Anuncio</th>
-                            <th>Descripción</th>
-                        </tr>
+                        </table>
+                    <% } %>
+                    
+                    <% if (instrumentUser.length > 0) { %>
+                        <table class="userprofile-tableanuncios  user-productsTable">
+                            <p>Sus Instrumentos</p>
+                            <tr>
+                                <th>Anuncio</th>
+                                <th>Descripción</th>
+                            </tr>
 
-                        <% instrumentUser.forEach(function(instrumentoUsuario, indice){ %>
+                            <% instrumentUser.forEach(function(instrumentoUsuario, indice){ %>
 
-                        <tr>
-                            <td><%= indice+1 %> </td>
-                            <td><a href="/products/detailInstrument/<%= instrumentoUsuario.InstrumId %>"><%= instrumentoUsuario.titulo %></a></td>
-                        </tr>
-                        <% }) %>
+                            <tr>
+                                <td><%= indice+1 %> </td>
+                                <td><a href="/products/detailInstrument/<%= instrumentoUsuario.InstrumId %>"><%= instrumentoUsuario.titulo %></a></td>
+                            </tr>
+                            <% }) %>
 
-                    </table>
+                        </table>
+                    <% } %>
 
 
                 </div>
