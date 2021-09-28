@@ -11,6 +11,11 @@
 </head>
 
 <body>
+    <STYLE>
+        a {
+            text-decoration: none;
+        }
+    </STYLE>
 
     <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
 
@@ -56,7 +61,8 @@
 
 
                 <div class="products-formButtons">
-                    <a href="/products/editsong/<%= producto[nombreId] %>"><button id="products-editarButton" type="submit">Editar</button></a>
+                    <a href="/products/editsong/<%= producto[nombreId] %>"><button id="products-editarButton"
+                            type="submit">Editar</button></a>
                     <form action="/products/<%= rutaDelete %>/<%= producto[nombreId] %>?_method=DELETE" method="POST">
                         <button id="products-eliminarButton" type="submit">Eliminar</button></form>
                 </div>

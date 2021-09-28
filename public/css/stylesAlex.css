@@ -4,7 +4,7 @@
     --verdeIntermedio: #008198;
     --verdeClaro: #00bacd;
     --aguamarina: #00f6ff;
-    --letraTitulos: 'Palette Mosaic', cursive;
+    --letraTitulos: 'Happy Monkey', cursive;
     --letraParrafos: 'Roboto', sans-serif;
 }
 
@@ -15,45 +15,35 @@
 /* LOGIN PAGE START */
 
 .login-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     background-color: gray;
-
-    background: url("/images/Images/Instrumentos_Musicales2.jpg") no-repeat center center fixed;
+    background: url("/images/Images/man-890877_1920 gradient.jpg") no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     overflow: hidden;
 }
 
 .mainContainer {
-    width: 60%;
-    max-width: 450px;
-    height: 60vh;
-    margin: 15vh auto;
+    height: 100vh;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-content: center;
     color: white;
-    /* box-shadow: 6px 10px 21px 0px rgba(0,0,0,0.6); */
-
+    box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
 }
 
 /* NAVBAR */
 #navbar {
-    /* height:15vh; */
     background: var(--verdeOscuro);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 60px;
-    min-width: 200px;
+    width: 100vw;
+    max-width: 500px;
     font-family: var(--letraParrafos);
-    /* font-size: 0.9rem; */
-
+    border-bottom: #00bacd solid 1px;
 }
-
 
 .login-logo-redondo {
     display: inline-block;
@@ -66,48 +56,38 @@
     display: none;
 }
 
-
-
-#navbar li:hover {
+/* #navbar li:hover {
     text-decoration: underline;
-}
+} */
 
-.navbarOption {
-    display: inline-block;
-    margin: 0 1vw 0 0;
-    list-style-type: none;
-    color: white;
-    text-decoration: none;
-    position: relative;
-    left: 45%;
-}
 
-.navbarOption {
-    font-size: 10px;
-    margin-right: 10px;
-}
 
 /* LOGIN */
 #login {
     background-color: Var(--azulOscuro);
     font-family: var(--letraParrafos);
     font-size: 24px;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 180px;
+    width: 100vw;
+    height: 100vh;
+    max-width: 500px;
+
 }
 
 #login p {
     font-family: var(--letraTitulos);
+    margin: 30px 0px 30px 0px;
     font-size: 28px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
 }
 
 #login img {
-    width: 30px;
-    max-width: 30px;
+    padding: 30px, 0px, 30px, 0px;
+    width: 50px;
+    max-width: 50px;
 }
 
 #login form {
@@ -128,24 +108,24 @@
 
 #login form .information input {
     background-color: Var(--azulOscuro);
-    margin: 5px;
-    padding: 15px;
+    margin: 30px 0px 0px 8px;
     font-family: var(--letraParrafos);
     color: white;
     font-family: var(--letraParrafos);
-    font-size: 13px;
-    width: 150px;
-    border: none;
+    font-size: 14px;
+    width: 220px;
+    height: 30px;
+    border: white 1px solid;
 }
 
-#login form .information input:hover {
+/* #login form .information input:hover {
     border-bottom: 1px solid white;
-}
+} */
 
 #login form .information input::placeholder {
-    font-size: 12px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.7);
-    font-style: italic;
+    /* font-style: italic; */
     text-align: center;
 }
 
@@ -155,7 +135,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 18px;
+    margin: 30px 0px 0px 8px;
 }
 
 .options .loggedIn {
@@ -163,50 +144,44 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-size: 12px;
-    margin-top: 15px;
+    font-size: 18px;
+    /* margin-top: 15px; */
 }
 
 .options p {
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .options .loggedIn label {
     margin-left: 5px;
 }
 
-.options #forgotPassword {
-    font-size: 12px;
-    text-align: center;
+.registrarme,
+.forgotPassword {
     font-family: var(--letraParrafos);
-    margin: 7px 0;
+    font-size: 18px;
+    text-align: center;
+    margin: 25px 0;
+    margin: 30px;
 }
 
-#forgotPassword:hover {
+/* #forgotPassword:hover {
     text-decoration: underline;
-}
+} */
 
-
+.registrarme,
 .options a {
     color: white;
-    font-style: italic;
     text-decoration: none;
+
 }
 
 #loginButton {
-    /* background-color:var(--verdeOscuro);
-    color:white;
-    outline: none;
-    padding:5px;
-    width:150px;
-    cursor:pointer;
-    border:none;
-    margin: 15px 0;
-    transition-duration: 0.4s; */
 
     display: block;
     width: 150px;
     border-radius: 5px;
+    margin: 25px 0px 25px 0px;
     padding: 10px 20px;
     font-size: 18px;
     text-decoration: none;
@@ -217,21 +192,16 @@
     text-align: center;
     transition: all 0.5s;
     cursor: pointer;
-    margin-bottom: 30px;
 }
 
 #loginButton:hover {
-    /* background-color: white;
-    color:black; */
-
     color: #00f6ff;
     background-color: #004d61;
 }
 
-/* */
 
 
-@media (min-width:450px) {
+/* @media (min-width:450px) {
 
 
     #forgotPassword {
@@ -247,12 +217,9 @@
     }
 
     .navbarOption {
-        position: relative;
-        left: 60%;
-        font-size: 11px;
-        font-family: var(--letraParrafos);
+        left: 65%;
     }
-}
+} */
 
 
 /* LOGIN PAGE END */
@@ -431,6 +398,7 @@
 
     }
 
+
     .productDescription {
         max-width: 45vw;
     }
@@ -512,6 +480,10 @@
 
     .login-logo-redondo {
         display: none;
+    }
+
+    .navbarOption {
+        left: 20%;
     }
 
 }
@@ -707,6 +679,8 @@ i {
         margin-bottom: 90px;
 
     }
+
+
 }
 
 
@@ -751,8 +725,9 @@ i {
         margin: 0px;
     }
 
-    .details-related-container {
-        margin-top: 90px;
+    .details-related-container,
+    .related-container {
+        margin-top: 180px;
     }
 
 }

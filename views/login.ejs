@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <%- include("partials/head.ejs")%>    
-    <link rel="stylesheet" href="/css/normalize.css"> <!-- Implementando Libreria Normalize.css (https://necolas.github.io/normalize.css/) para que el sitio web sea homogeneo en los diferentes navegadores. Desde el sitio, descargo, guardo como la css en la misma carpeta del proyecto y luego la linkeo -->
-    <link rel="stylesheet" href="/css/stylesAlex.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
-    
+    <%- include("partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- Implementando Libreria Normalize.css (https://necolas.github.io/normalize.css/) para que el sitio web sea homogeneo en los diferentes navegadores. Desde el sitio, descargo, guardo como la css en la misma carpeta del proyecto y luego la linkeo -->
+    <link rel="stylesheet" href="/css/stylesAlex.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
+
     <!--<link rel="stylesheet" href="/css/styles.css">  Descomentar esta linea cuando el CSS este compilado -->
 
 </head>
+
 <body class=login-body>
+    <STYLE>
+        a {
+            text-decoration: none;
+        }
+    </STYLE>
+
     <main class="mainContainer">
 
         <!--NAVBAR-->
         <section id="navbar">
             <a href="/"><img src="/images/Images/Logo Horizontal.jpg" class="login-logo" alt="logo"></a>
             <a href="/"><img src="/images/Images/Logo redondo.jpg" class="login-logo-redondo" alt="logo"></a>
-            <a href="/user/register" class="navbarOption" style="text-decoration:none">Registrarme</a>
+
             <!-- <ul>
                 <li class="navbarOption"><a href="#">Ayuda</a></li>
             </ul> -->
@@ -36,11 +45,19 @@
                         <input type="checkbox" name="options" value="yes" id="loggedInOption">
                         <label for="loggedInOption">Mantengame conectado</label>
                     </div>
-                    <p id="forgotPassword"><a href="#">Olvide de mi clave</a></p>
+                    <div>
+                        <a href="#" class="forgotPassword">Olvide de mi clave</a>
+                    </div>
+
                 </div>
-                <button type="submit" id="loginButton">Login</button>
+                <div><button type="submit" id="loginButton">Login</button></div>
+                <div>
+                    <a href="/user/register" class="registrarme">No sos usuario? =>
+                        Registrate</a>
+                </div>
             </form>
         </section>
     </main>
 </body>
+
 </html>
