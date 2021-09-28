@@ -11,7 +11,7 @@ const controlador = {
         const usersDB = require(pathUsers)
         const instrumentos = JSON.parse(fs.readFileSync(pathInstruments));
         const instrumento = instrumentos.find(elemento => elemento.InstrumId == req.params.id);
-        const relacionados = instrumentos.slice(1, 5) //Instrumentos relacionados
+        const relacionados = instrumentos.slice(1, 4) //Instrumentos relacionados
         const pathFotos = "/images/instrumentsImg/resizedandcropped/"
         const pathDetail = "/products/detailInstrument/"
         const nombreId = "InstrumId"
@@ -232,52 +232,61 @@ const controlador = {
         });
 
     },
-    editSong:(req, res) => {res.send("hola")},
-    editInstrument:(req, res) => {
+    editSong: (req, res) => {
+        res.send("hola")
+    },
+    editInstrument: (req, res) => {
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
-        for (let i=0;i<instrumentsDB.length;i++) {
-            if (instrumentsDB[i].InstrumId == req.params.idInstrum){
+        for (let i = 0; i < instrumentsDB.length; i++) {
+            if (instrumentsDB[i].InstrumId == req.params.idInstrum) {
                 let instrumentoOld = instrumentsDB[i];
-                res.render('editProduct.ejs',{instrumentoOld});
+                res.render('editProduct.ejs', {
+                    instrumentoOld
+                });
             }
         }
     },
-    editSongPut:(req, res) => {res.send("hola put cancoion")},
-    editInstrumentPut:(req, res) => {
+    editSongPut: (req, res) => {
+        res.send("hola put cancoion")
+    },
+    editInstrumentPut: (req, res) => {
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
         const relevantProducts = instrumentsDB.filter(elements => elements.InstrumId != req.params.idInstrum)
         const oldProduct = instrumentsDB.filter(elements => elements.InstrumId == req.params.idInstrum)
 
-        const editedProductPhoto = {//si viene con foto
+        const editedProductPhoto = { //si viene con foto
             id: 12, //CAMBIARLO CON SESSION
             InstrumId: req.params.idInstrum,
             img: req.body.productEmptyButton,
             titulo: req.body.titulo,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
-          }
-          const editedProductNotPhoto = {//si NO viene con foto
+        }
+        const editedProductNotPhoto = { //si NO viene con foto
             id: 12, //CAMBIARLO CON SESSION
             InstrumId: req.params.idInstrum,
             img: oldProduct[0].img,
             titulo: req.body.titulo,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
-          }
-          if (req.body.productEmptyButton == ""){
-                relevantProducts.push(editedProductNotPhoto)
-                fs.writeFileSync(pathInstruments,JSON.stringify(relevantProducts))
-                res.render("allInstruments.ejs", {instrumentos:relevantProducts})
-          }
-          else {
+        }
+        if (req.body.productEmptyButton == "") {
+            relevantProducts.push(editedProductNotPhoto)
+            fs.writeFileSync(pathInstruments, JSON.stringify(relevantProducts))
+            res.render("allInstruments.ejs", {
+                instrumentos: relevantProducts
+            })
+        } else {
             relevantProducts.push(editedProductPhoto)
-            fs.writeFileSync(pathInstruments,JSON.stringify(relevantProducts))
-            res.render("allInstruments.ejs", {instrumentos:relevantProducts})
-          }
+            fs.writeFileSync(pathInstruments, JSON.stringify(relevantProducts))
+            res.render("allInstruments.ejs", {
+                instrumentos: relevantProducts
+            })
+        }
 
 
-        
-        
+
+
     },
 };
 

@@ -257,7 +257,7 @@
 
 /* LOGIN PAGE END */
 
-/* DETALLE DE PRODUCTO */
+/* DETALLE DE PRODUCTO Y CANCION */
 
 .principal {
     background-color: var(--azulOscuro);
@@ -307,11 +307,10 @@
 
 .productInformation-container {
     height: 50%;
-    margin: 0 auto;
 }
 
 .productInformation {
-    padding: 5px;
+    padding: 20px 5px;
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -328,26 +327,22 @@
     font-style: italic;
 }
 
-.currency {
-    font-style: italic;
-}
 
-
-.priceStars {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.productdetail-precio {
+    margin: 0px;
 }
 
 
 .productDescription {
     margin: 30px 10px 60px 10px;
     font-size: 14px;
+    padding-bottom: 50px;
+    border-bottom: solid white 1px;
 }
 
 .products-formButtons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
@@ -363,30 +358,15 @@
     cursor: pointer;
 }
 
-#products-editarButton {
+/* #products-editarButton {
     background-color: rgb(207, 207, 47);
-}
-
-#products-eliminarButton {
-    background-color: rgb(235, 17, 17);
-}
-
-/* .agregar {
-    color: white;
-    border: none;
-    overflow: none;
-    outline: none;
-    border-radius: 5px;
-    margin: 5px;
-    background-color: var(--verdeClaro);
-    font-size: 10px;
-    padding: 5px;
-    width: 100px;
-    height: 30px;
-    font-family: var(--letraParrafos);
-    cursor: pointer;
-    transition: width .35s ease-in-out
 } */
+
+/* #products-eliminarButton {
+    background-color: rgb(235, 17, 17);
+} */
+
+
 
 .product-container img {
     margin: 0px 0px 20px 0px;
@@ -414,11 +394,11 @@
     margin-left: 2px;
 }
 
-.agregar:hover {
+/* .agregar:hover {
     width: 120px;
-}
+} */
 
-.editar button {
+/* .editar button {
     color: white;
     border: none;
     overflow: none;
@@ -432,82 +412,55 @@
     height: 30px;
     cursor: pointer;
     transition: width .35s ease-in-out
-}
+} */
 
-.editar button:hover {
+/* .editar button:hover {
     width: 120px;
-}
-
-.related-container p {
-    font-size: 12px;
-    margin: 0 0 5px 10px;
-    text-align: left;
-}
-
-.related-carrousel-container {
-    background-color: var(--verdeOscuro);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-    /* margin: 40px; No se porque al habilitar el margen y poner el width a 90% se rompe el responsivo VER*/
-
-}
-
-.carrouselCard {
-    background-color: var(--azulOscuro);
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 20px;
-    border: 1px solid var(--verdeIntermedio);
-    width: 80%;
-    max-width: 350px;
-    height: 80%;
-    margin: 10px;
-}
+} */
 
 
-
-.carrouselCard img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    margin: 5px 5px;
-}
-
-.carrouselCardInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.carrouselCardInfo h4 {
-    font-size: 12px;
-    margin: 5px 5px 5px 0;
-}
-
-
-.carrouselCard a {
-    text-decoration: none;
-    border-bottom: none;
-}
-
-.carrouselCard a:hover {
-    text-decoration: underline;
-}
-
-.carrouselCardInfo p {
-    font-size: 11px;
-    margin: 10px 5px;
-}
 
 
 @media (min-width:480px) {
+
+
+    #youtube-icon {
+        width: 70px;
+        border-radius: 50px;
+        background-color: #00bacd;
+
+    }
+
+    .productDescription {
+        max-width: 45vw;
+    }
+
+    .products-formButtons {
+        flex-direction: row;
+    }
+}
+
+
+@media (min-width:768px) {
+
+    /* .productImagesButtons button,
+    .agregar,
+    .editar button {
+        width: 130px;
+        height: 40px;
+        font-size: 13px;
+    } */
+
+    .product-container {
+        padding: 30px 90px 30px 90px;
+    }
+
+    .product-container img {
+        margin: 0px 40px 20px 40px;
+
+    }
+
+
     .product-container {
         flex-direction: row;
         height: 70vh;
@@ -523,44 +476,8 @@
         height: 100%;
     }
 
-    .product-container {
-        padding: 10px 10px 10px 20px;
-    }
-
     .product-container img {
         margin: 0px 20px 20px 0px;
-
-    }
-
-    #youtube-icon {
-        width: 70px;
-        border-radius: 50px;
-        background-color: #00bacd;
-
-    }
-
-    .productDescription {
-        max-width: 45vw;
-    }
-}
-
-
-@media (min-width:768px) {
-
-    .productImagesButtons button,
-    .agregar,
-    .editar button {
-        width: 130px;
-        height: 40px;
-        font-size: 13px;
-    }
-
-    .product-container {
-        padding: 30px 30px 30px 20px;
-    }
-
-    .product-container img {
-        margin: 0px 40px 20px 40px;
 
     }
 
@@ -575,27 +492,11 @@
         width: 160px;
     }
 
-    .agregar:hover {
-        width: 160px;
-    }
-
-    .editar button:hover {
-        width: 160px;
-    }
-
-    .productDescription {
-        font-size: 12px;
-        line-height: 18px;
-    }
-
-    .carrouselCard {
-        max-width: 250px;
-    }
 
     .related-carrousel-container {
         justify-content: space-around;
         flex-direction: row;
-        margin-bottom: 50px;
+        margin-bottom: 90px;
     }
 
     .agregarTexto {
@@ -663,7 +564,8 @@ i {
     margin-bottom: 40px;
 }
 
-
+.details-related-container p,
+.related-container p,
 .cancionesMasEscuchadas .cabecera,
 .instrumentosEnVenta .cabecera,
 .ultimosAdicionados .cabecera {
@@ -679,7 +581,13 @@ i {
 
 }
 
+.details-related-container p,
+.related-container p {
+    padding-top: 60px;
+}
 
+
+.carrouselCard,
 .instrumentoCard,
 .cancionCard,
 .ultimosAdicionadosCard {
@@ -691,6 +599,7 @@ i {
 
 }
 
+.carrouselCard,
 .ultimosAdicionadosCard {
     display: flex;
     justify-content: flex-start;
@@ -708,23 +617,29 @@ i {
     text-align: center;
 }
 
+.carrouselCard h4 {
+    padding-top: 45px;
+}
+
+.carrouselCard img,
 .ultimosAdicionados img {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    max-width: 70%;
-    height: auto;
+    margin: 20px 20px 20px 20px;
+    max-width: 80%;
+    width: 120px;
     border-radius: 50%;
     box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
 }
 
+
+
 .ultimosAdicionados p {
     font-size: 14px;
-    margin: 15px;
+    /* margin: 15px; */
     padding-top: 15px;
 }
 
 .ultimosAdicionados h6 {
-    padding: 10px;
+    padding: 10px 0px 10px 0px;
     border-bottom: solid 1px white;
 
 }
@@ -736,6 +651,11 @@ i {
 .all-artists-img {
     width: 140px;
     box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
+
+}
+
+.ultimosAdicionados img {
+    border-radius: 50%;
 }
 
 .tituloCancion,
@@ -764,16 +684,14 @@ i {
     display: none;
 }
 
-.ultimosAdicionados img {
-    border-radius: 50%;
-}
+
 
 
 
 
 @media(min-width:361px) {
 
-
+    .related-carrousel-container,
     .canciones,
     .instrumentos,
     .ultimosAdicionadosContainer {
@@ -784,11 +702,19 @@ i {
         align-items: flex-start;
         justify-content: space-evenly;
     }
+
+    .related-carrousel-container {
+        margin-bottom: 90px;
+
+    }
 }
+
+
 
 
 @media(min-width:700px) {
 
+    .carrouselCard,
     .ultimosAdicionadosCard {
         display: flex;
         flex-direction: row;
@@ -804,15 +730,29 @@ i {
         text-align: center;
     }
 
-    .ultimosAdicionados p {
+    /* .ultimosAdicionados p {
         width: 160px;
         padding-top: 15px;
+    } */
+
+    .carrouselCard img {
+        margin-left: 20px;
     }
+
+    .carrouselCard {
+        padding: 5px;
+    }
+
+
 
     .recomendadoTexto,
     .recomendadoTitulo {
-        width: 180px;
+        width: 140px;
         margin: 0px;
+    }
+
+    .details-related-container {
+        margin-top: 90px;
     }
 
 }
@@ -835,199 +775,6 @@ i {
     font-size: 14px;
 
 }
-
-/* 
-.fa-chevron-left {
-    margin: 0 5px;
-    position: absolute;
-    top: calc(30%);
-    left: calc(20%);
-}
-
-.fa-chevron-right {
-    margin: 0 5px;
-    position: absolute;
-    top: calc(30%);
-    right: calc(20%);
-}
-
-
-
-
-
-.ultimosAdicionadosCard {
-    background-color: var(--azulOscuro);
-    width: 250px;
-    height: 130px;
-    margin: 10px auto;
-    padding: 10px;
-    border-radius: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ultimosAdicionadosCard img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
-
-.recomendadoInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.ultimosAdicionadosCard .recomendadoInfo p {
-    margin: 0;
-    font-size: 10px;
-}
-
-.ultimosAdicionadosCard .recomendadoInfo h6 {
-    font-size: 13px;
-    margin: 5px 0;
-}
-
-@media (min-width:480px) {
-
-
-    .fa-chevron-left {
-        left: calc(20%);
-        top: calc(40%);
-    }
-
-    .fa-chevron-right {
-        right: calc(20%);
-        top: calc(40%);
-    }
-
-    .flechaIzq {
-        left: 0;
-        top: calc(50%)
-    }
-
-    .flechaDer {
-        right: 0;
-        top: calc(50%)
-    }
-
-    .ultimosAdicionadosContainer {
-        max-width: 400px;
-    } 
-
-}
-
-@media (min-width:600px) {
-
-
-
-    .fa-chevron-left {
-        left: calc(2%);
-        top: calc(30%);
-    }
-
-    .fa-chevron-right {
-        right: calc(2%);
-        top: calc(30%);
-    }
-
-    .ultimosAdicionadosContainer {
-        grid-template-columns: auto auto;
-    } 
-
-    .ultimosAdicionadosCard {
-        width: 230px;
-    }
-
-    .flechaIzq {
-        margin: 0 5px;
-        left: calc(2%);
-        top: calc(50%)
-    }
-
-    .flechaDer {
-        margin: 0 5px;
-        right: calc(2%);
-        top: calc(50%)
-    }
-
-     .ultimosAdicionadosContainer {
-        max-width: 550px;
-    } 
-}
-
-@media (min-width:768px) {
-
-
-
-    .ultimosAdicionadosCard {
-        width: 230px;
-    }
-
-    .flechaIzq {
-        margin: 0 5px;
-        left: calc(2%);
-        top: calc(50%)
-    }
-
-    .flechaDer {
-        margin: 0 5px;
-        right: calc(2%);
-        top: calc(50%)
-    }
-
-     .ultimosAdicionadosContainer {
-        max-width: 650px;
-    } 
-
-    .navbarOption {
-        position: relative;
-        left: 100px;
-    }
-}
-
-@media (min-width:900px) {
-
-
-    .ultimosAdicionadosCard {
-        width: 180px;
-    }
-
-    .flechaIzq {
-        margin: 0 5px;
-        left: calc(2%);
-        top: calc(50%)
-    }
-
-    .flechaDer {
-        margin: 0 5px;
-        right: calc(2%);
-        top: calc(50%)
-    }
-
-     .ultimosAdicionadosContainer {
-        max-width: 1000px;
-    } 
-
-    .product-container {
-        padding: 30px 50px 30px 110px;
-    }
-
-    .product-container img {
-        margin: 0px 40px 20px 0px;
-
-    }
-
-    #youtube-icon {
-        width: 100px;
-        border-radius: 50px;
-        background-color: #00bacd;
-
-    }
-}
-} */
 
 
 

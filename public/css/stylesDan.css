@@ -53,9 +53,9 @@ h2 {
     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
 }
 
-p {
-    margin: 30px 10px 30px 10px;
-}
+/* p {
+    margin: 30px 10px 30px 10px;       VER SI IMPACTA EN OTRAS PAGINAS O RENOMBRAR LA CLASE. SI NO IMPACTA BORRAR
+} */
 
 section {
     margin-bottom: 70px;
@@ -65,6 +65,8 @@ section {
     text-align: center;
 }
 
+#products-eliminarButton,
+#products-editarButton,
 .agregar,
 .button,
 .access-button-home,
@@ -87,7 +89,9 @@ section {
 }
 
 #youtube-icon:hover,
-.agregar,
+#products-eliminarButton,
+#products-editarButton,
+.agregar:hover,
 .button:hover,
 .access-button-home:hover,
 .access-button-home2:hover,
@@ -221,7 +225,7 @@ h5 {
 .main-header-der ul {
     /* Responsivo (oculto el texto) */
     display: none;
-    text-shadow: #474747 3px 5px 2px, 4px 4px 0px rgba(0, 246, 255, 0.81);
+
 }
 
 .button {

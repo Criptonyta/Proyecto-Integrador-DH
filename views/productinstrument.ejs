@@ -11,7 +11,11 @@
 </head>
 
 <body>
-
+    <STYLE>
+        a {
+            text-decoration: none;
+        }
+    </STYLE>
     <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
 
     <%- include ('partials/navbar.ejs', {}) %>
@@ -34,12 +38,11 @@
                     <p>By <a href="/user/viewuserprofile/<%= artista.id %>"><%= artista.nombre %>
                             <%= artista.apellido %></a></p>
                     <div class="priceStars">
-                        <p><%= producto.precio %> <span class="currency">U$S</span></p>
+                        <p class="productdetail-precio"><%= producto.precio %> <span class="currency">U$S</span></p>
                         <!-- <i class="fas fa-star"><span class="stars">4.5</span></i> -->
                     </div>
                     <p class="productDescription"><%= producto.descripcion %></p>
-                    <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al
-                                carrito</span></i></button>
+                    <button class="agregar">Agregar al carrito</button>
                 </div>
                 <!-- <div class="editar">
                     <button><i class="fas fa-edit"><span class="agregarTexto">Editar producto</span></i></button>
@@ -48,19 +51,16 @@
 
 
                 <div class="products-formButtons">
-                    <a href="/products/editinstrument/<%= producto[nombreId] %>"><button id="products-editarButton" type="submit">Editar</button></a>
+                    <a href="/products/editinstrument/<%= producto[nombreId] %>"><button id="products-editarButton"
+                            type="submit">Editar</button></a>
                     <form action="/products/<%= rutaDelete %>/<%= producto[nombreId] %>?_method=DELETE" method="POST">
                         <button id="products-eliminarButton" type="submit">Eliminar</button></form>
                 </div>
-
-
-
-
             </div>
         </div>
 
         <!--productos relacionados, reemplazar por el partial-->
-        <div class="related-container">
+        <div class="details-related-container">
             <p>Talvez tambien te interese...</p>
             <div class="related-carrousel-container">
 
