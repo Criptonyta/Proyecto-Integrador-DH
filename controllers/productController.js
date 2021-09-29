@@ -84,11 +84,11 @@ const controlador = {
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
 
-        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, 6);
-        const musicos = auxiliares.buscarNelementosAleatorios(songsDB, 6);;
+        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, "InstrumId" ,6);
+        const musicos = auxiliares.buscarNelementosAleatorios(songsDB, "songId" ,6);;
 
         const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
-        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, 3);;
+        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id" ,3);;
 
         res.render('tienda.ejs', {
             datos: datos,
@@ -119,11 +119,11 @@ const controlador = {
         const songsDB = JSON.parse(fs.readFileSync(pathSongs));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
 
-        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, 6);;
-        const musicos = auxiliares.buscarNelementosAleatorios(songsDB, 6);;
+        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, "InstrumId" ,6);;
+        const musicos = auxiliares.buscarNelementosAleatorios(songsDB, "songId" ,6);;
 
         const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
-        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, 3);;
+        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id" ,3);;
 
         res.render('tienda.ejs', {
             datos: datos,
@@ -137,11 +137,11 @@ const controlador = {
         const songsDB = JSON.parse(fs.readFileSync(pathSongs));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
 
-        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, 6);
-        const musicos = auxiliares.buscarNelementosAleatorios(songsDB, 6);
+        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, "InstrumId" ,6);
+        const musicos = auxiliares.buscarNelementosAleatorios(songsDB, "songId" ,6);
 
         const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
-        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, 3);;
+        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id" ,3);;
 
         res.render('tienda.ejs', {
             datos: datos,
@@ -198,11 +198,11 @@ const controlador = {
         const songsDB = JSON.parse(fs.readFileSync(pathSongs));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
 
-        const instrumentos = auxiliares.buscarNelementosAleatorios(resultado, 6);;
-        const musicos = auxiliares.buscarNelementosAleatorios(songsDB, 6);;
+        const instrumentos = auxiliares.buscarNelementosAleatorios(resultado, "InstrumId" ,6);;
+        const musicos = auxiliares.buscarNelementosAleatorios(songsDB, "songId" ,6);;
 
         const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
-        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, 3);;
+        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id" ,3);;
 
         res.render('tienda.ejs', {
             datos: datos,
@@ -219,11 +219,11 @@ const controlador = {
         const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
 
-        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, 6);;
-        const musicos = auxiliares.buscarNelementosAleatorios(resultado, 6);;
+        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, "InstrumId",6);;
+        const musicos = auxiliares.buscarNelementosAleatorios(resultado,"songId" ,6);;
 
         const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
-        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, 3);;
+        const datos = auxiliares.buscarNelementosAleatorios(artistsDB,"id" ,3);;
 
         res.render('tienda.ejs', {
             datos: datos,
