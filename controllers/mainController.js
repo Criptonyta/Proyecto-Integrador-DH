@@ -13,7 +13,7 @@ const controlador = {
         const usersDB = JSON.parse(fs.readFileSync(pathUsers));
         const artistsDB = usersDB.filter(item => item.bio != "")//Los artistas son los que tienen bio
         const artistas = artistsDB;
-        const datos = auxiliares.buscarNelementosAleatorios(artistas,3);
+        const datos = auxiliares.buscarNelementosAleatorios(artistas,"id",3);
         res.render('home.ejs',{datos:datos});
     }
 
