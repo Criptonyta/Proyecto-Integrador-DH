@@ -89,7 +89,13 @@ const controlador = {
         res.render('register.ejs');
     },
     deleteSongs: (req, res) => {
-        res.send("hola")
+        let songsDB = JSON.parse(fs.readFileSync(pathSongs,"utf-8"))
+        const elemsBorrar = req.body.eliminarCancion //una lista con los songId de las canciones a borrar
+        for (let i=0; i< elemsBorrar.length; i++) {//Borramos las canciones de songsDB
+            songsDB = songsDB.filter(elementos => elementos["songId"] != elemsBorrar[i]) 
+        }
+        fs.writeFileSync(pathSongs,JSON.stringify(songsDB))
+        res.send("productos borrados")//CUANDO ESTE SESSION SE PUEDE REDIRIGIR A LA MISMA DE USUARIO PAGINA USANDO SU ID
     },
     deleteInstruments: (req, res) => {}
 };

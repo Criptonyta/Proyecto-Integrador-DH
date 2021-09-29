@@ -61,7 +61,7 @@
             </div>
 
 
-            <form action="" class="userprofile-formulario">
+            <div class="userprofile-formulario">
                 <h4>Mis anuncios</h4>
 
                 <p class="userprofile-Registro-Texto-Descriptivo">
@@ -79,60 +79,62 @@
                         Podes ver, editar y crear tus anuncios desde aquí.<br>
                     </p>
                     <% if (songsUser.length > 0) { %>
-                    <form id="userProfile-tablaCancion" action="/user/mySongs/delete?_method=DELETE" method="POST">
+                        <form id="userProfile-tablaCancion" action="/user/mySongs/delete?_method=DELETE" method="POST">
 
-                        <table class="userprofile-tableanuncios user-productsTable">
-                            <p>Mis Canciones</p>
-                            <tr>
-                                <th>Anuncio</th>
-                                <th>Descripción</th>
-                                <th>Eliminar</th>
-                            </tr>
+                            <table class="userprofile-tableanuncios user-productsTable">
+                                <p>Mis Canciones</p>
+                                <tr>
+                                    <th>Anuncio</th>
+                                    <th>Descripción</th>
+                                    <th>Eliminar</th>
+                                </tr>
 
-                            <% songsUser.forEach(function(songUsuario, indice){ %>
+                                <% songsUser.forEach(function(songUsuario, indice){ %>
 
-                            <tr>
-                                <td><%= indice+1 %> </td>
-                                <td><a
-                                        href="/products/detailSong/<%= songUsuario.songId %>"><%= songUsuario.titulo %></a>
-                                </td>
-                                <td><input id="userProfile-eliminarCancion" type="checkbox" name="eliminarCancion"
-                                        value="<%= songUsuario.songId %>"></td>
-                            </tr>
-                            <% }) %>
-                        </table>
-                        <button type="submit">Eliminar</button>
-                    </form>
+                                <tr>
+                                    <td><%= indice+1 %> </td>
+                                    <td><a
+                                            href="/products/detailSong/<%= songUsuario.songId %>"><%= songUsuario.titulo %></a>
+                                    </td>
+                                    <td><input id="userProfile-eliminarCancion" type="checkbox" name="eliminarCancion"
+                                            value="<%= songUsuario.songId %>"></td>
+                                </tr>
+                                <% }) %>
+                            </table>
+                            <button type="submit">Eliminar</button>
+                        </form>
                     <% } %>
 
                     <% if (instrumentUser.length > 0) { %>
-                    <table class="userprofile-tableanuncios  user-productsTable">
-                        <p>Mis Instrumentos</p>
-                        <tr>
-                            <th>Anuncio</th>
-                            <th>Descripción</th>
-                            <th>Eliminar</th>
-                        </tr>
+                        <form action="">
+                            <table class="userprofile-tableanuncios  user-productsTable">
+                                <p>Mis Instrumentos</p>
+                                <tr>
+                                    <th>Anuncio</th>
+                                    <th>Descripción</th>
+                                    <th>Eliminar</th>
+                                </tr>
 
-                        <% instrumentUser.forEach(function(instrumentoUsuario, indice){ %>
+                                <% instrumentUser.forEach(function(instrumentoUsuario, indice){ %>
 
-                        <tr>
-                            <td><%= indice+1 %> </td>
-                            <td><a
-                                    href="/products/detailInstrument/<%= instrumentoUsuario.InstrumId %>"><%= instrumentoUsuario.titulo %></a>
-                            </td>
-                            <td><input id="userProfile-eliminarInstrumento" type="checkbox" name="eliminarInstrumento"
-                                    value="<%= instrumentoUsuario.InstrumId %>"></td>
+                                <tr>
+                                    <td><%= indice+1 %> </td>
+                                    <td><a
+                                            href="/products/detailInstrument/<%= instrumentoUsuario.InstrumId %>"><%= instrumentoUsuario.titulo %></a>
+                                    </td>
+                                    <td><input id="userProfile-eliminarInstrumento" type="checkbox" name="eliminarInstrumento"
+                                            value="<%= instrumentoUsuario.InstrumId %>"></td>
 
-                        </tr>
-                        <% }) %>
+                                </tr>
+                                <% }) %>
 
-                    </table>
+                            </table>
+                        </form>
                     <% } %>
 
                 </div>
 
-            </form>
+            </div>
 
         </section>
 
