@@ -106,7 +106,7 @@
                     <% } %>
 
                     <% if (instrumentUser.length > 0) { %>
-                        <form action="">
+                        <form action="/user/myInstruments/delete?_method=DELETE" method="POST">
                             <table class="userprofile-tableanuncios  user-productsTable">
                                 <p>Mis Instrumentos</p>
                                 <tr>
@@ -129,6 +129,7 @@
                                 <% }) %>
 
                             </table>
+                            <button type="submit">Eliminar</button>
                         </form>
                     <% } %>
 

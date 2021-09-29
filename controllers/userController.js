@@ -97,7 +97,16 @@ const controlador = {
         fs.writeFileSync(pathSongs,JSON.stringify(songsDB))
         res.send("productos borrados")//CUANDO ESTE SESSION SE PUEDE REDIRIGIR A LA MISMA DE USUARIO PAGINA USANDO SU ID
     },
-    deleteInstruments: (req, res) => {}
+    deleteInstruments: (req, res) => {
+        let instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments,"utf-8"))
+        const elemsBorrar = req.body.eliminarInstrumento //una lista con los songId de las canciones a borrar
+        for (let i=0; i< elemsBorrar.length; i++) {//Borramos las canciones de songsDB
+            instrumentsDB = instrumentsDB.filter(elementos => elementos["InstrumId"] != elemsBorrar[i]) 
+        }
+        fs.writeFileSync(pathInstruments,JSON.stringify(instrumentsDB))
+        res.send("productos borrados")//CUANDO ESTE SESSION SE PUEDE REDIRIGIR A LA MISMA DE USUARIO PAGINA USANDO SU ID
+
+    }
 };
 
 
