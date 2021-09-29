@@ -660,6 +660,8 @@ footer {
 /* ========= USER PROFILE  min-width:361px =========  */
 
 .userprofile-formulario {
+    display: flex;
+    flex-direction: row;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -673,15 +675,17 @@ footer {
 
 }
 
-.userprofile-formulario h4 {
+.userprofile-form h4 {
     text-align: left;
     font-size: 28px;
     font-family: 'Happy Monkey', cursive;
-    margin: 5px;
+    margin: 50px 30px 50px 10px;
     padding-bottom: 20px;
     border-bottom: solid 1px white;
     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
 }
+
+
 
 .userprofile-Texto-Descriptivo {
     text-align: left;
@@ -881,7 +885,7 @@ input[type='file'] {
 .userprofile-editAvatar-section img {
     margin: 5px 5px 5px 5px;
     box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
-    max-width: 250px;
+    max-width: 200px;
 
 }
 
