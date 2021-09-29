@@ -41,7 +41,7 @@ const controlador = {
         const skills = ["Bajista","Baterista","Cantante","Guitarrista","Multiinstrumentalista","Productor","Otros"]
 
 
-        res.render('userprofileEdit.ejs',{anuncioUser,usuarioInfo,skills});
+        res.render('userprofileEdit.ejs',{anuncioUser,usuarioInfo,habilidades:skills});
     },
     userprofileEditNew: (req, res) => {//editar usuario
         const userDB = require(pathUsers);

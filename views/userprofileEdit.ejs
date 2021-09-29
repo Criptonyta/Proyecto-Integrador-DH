@@ -75,8 +75,8 @@
                     <p>
                         <i class="fas fa-microphone-alt"><label> Cuáles son tus habilidades musicales?</label></i>
                         <select class="skills-form" name="skills">
-                            <% skills.forEach(function(skill){ %>
-                            <option value=<%= skill %>><%= skill %></option>
+                            <% habilidades.forEach(function(skill){ %>
+                            <option value=<%= skill %> <% if (skill == usuarioInfo.skills){%>selected <% } %> ><%= skill %></option>
                             <% }) %>
                         </select>
                         <i class="fas fa-user-edit"></i>
