@@ -33,9 +33,8 @@
                 </div>
 
                 <p class="userprofile-editAvatar-section">
-                    <i class="fas fa-camera"><label> Foto de perfil:</label></i>
-                    <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" width=100px
-                        alt="fotoPerfil">
+                    <!-- <i class="fas fa-camera"><label> Foto de perfil:</label></i> -->
+                    <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" alt="fotoPerfil">
                     <label for='userAvatarButton' class="userAvatarButton">Cargá una imagen</label>
                     <input class="userAvatarButton" type="file" name="userAvatarButton" id="userAvatarButton"
                         value="<%= usuarioInfo.userAvatar %>">
@@ -74,7 +73,7 @@
                     </p>
 
                     <p>
-                        <label> Cuales son tus habilidades musicales?</label>
+                        <i class="fas fa-microphone-alt"><label> Cuales son tus habilidades musicales?</label></i>
                         <select class="skills-form" name="skills">
                             <% skills.forEach(function(skill){ %>
                             <option value=<%= skill %>><%= skill %></option>

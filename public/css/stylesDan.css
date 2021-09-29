@@ -690,7 +690,7 @@ footer {
 }
 
 .userprofile-form p {
-    margin: 10px 10px 10px 30px;
+    margin: 30px 10px 30px 10px;
 }
 
 .userprofile-edit-button-container {
@@ -766,23 +766,22 @@ footer {
     padding: 15px;
     font-family: var(--letraParrafos);
     color: white;
-    font-family: var(--letraParrafos);
-    font-size: 13px;
-    width: 180px;
-    border: none;
+    font-size: 14px;
+    width: 220px;
+    height: 30px;
+    border: white 1px solid;
 }
 
 .userprofile-form input:hover {
-    border-bottom: 1px solid white;
+    border: 2px solid white;
 }
 
 .userprofile-form input::placeholder,
 .userprofile-form textarea,
 .userprofile-form option {
-    font-size: 12px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.7);
-    font-style: italic;
-    text-align: center;
+    text-align: right;
 }
 
 .userprofile-form input {
@@ -793,9 +792,9 @@ input[type='file'] {
     display: none
 }
 
-.userprofile-form input:focus {
+/* .userprofile-form input:focus {
     width: 200px;
-}
+} */
 
 .userprofile-form textarea,
 .userprofile-form option {
@@ -869,6 +868,21 @@ input[type='file'] {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+}
+
+.userprofile-formulario label,
+.userprofile-items label {
+    font-family: 'Roboto';
+    margin: 15px 20px 30px 5px;
+}
+
+
+.userprofile-editAvatar-section img {
+    margin: 5px 5px 5px 5px;
+    box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
+    max-width: 250px;
+
 }
 
 .productEmptyButton {
@@ -913,9 +927,20 @@ td {
         width: 300px;
 
     }
+
+    .userprofile-editAvatar-section img {
+        margin: 30px 30px 30px 30px;
+        max-width: 400px;
+    }
+
 }
 
 @media(min-width:995px) {
+
+    .userprofile-editAvatar-section img {
+        margin: 40px 40px 40px 40px;
+        max-width: 600px;
+    }
 
     .userprofile-form textarea,
     .userprofile-form option {

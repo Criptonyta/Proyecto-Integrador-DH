@@ -22,9 +22,8 @@
                 <h4>Perfil</h4>
 
                 <p class="userprofile-editAvatar-section">
-                    <i class="fas fa-camera"><label> Foto de perfil:</label></i>
-                    <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" width=100px
-                        alt="fotoPerfil">
+                    <!-- <i class="fas fa-camera"><label> Foto de perfil:</label></i> -->
+                    <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" alt="fotoPerfil">
                 </p>
 
                 <p>
@@ -50,7 +49,7 @@
                     </p>
 
                     <p>
-                        <label> Habilidades:</label></i>
+                        <i class="fas fa-microphone-alt"><label> Habilidades:</label></i>
                         <%= usuarioInfo.skills %>
                 </div>
             </div>
@@ -61,41 +60,44 @@
 
                 <div>
                     <% if (songsUser.length > 0) { %>
-                        <table class="userprofile-tableanuncios user-productsTable">
-                            <p>Sus Canciones</p>
-                            <tr>
-                                <th>Anuncio</th>
-                                <th>Descripción</th>
-                            </tr>
+                    <table class="userprofile-tableanuncios user-productsTable">
+                        <p>Sus Canciones</p>
+                        <tr>
+                            <th>Anuncio</th>
+                            <th>Descripción</th>
+                        </tr>
 
-                            <% songsUser.forEach(function(songUsuario, indice){ %>
+                        <% songsUser.forEach(function(songUsuario, indice){ %>
 
-                            <tr>
-                                <td><%= indice+1 %> </td>
-                                <td><a href="/products/detailSong/<%= songUsuario.songId %>"><%= songUsuario.titulo %></a></td>
-                            </tr>
-                            <% }) %>
+                        <tr>
+                            <td><%= indice+1 %> </td>
+                            <td><a href="/products/detailSong/<%= songUsuario.songId %>"><%= songUsuario.titulo %></a>
+                            </td>
+                        </tr>
+                        <% }) %>
 
-                        </table>
+                    </table>
                     <% } %>
-                    
+
                     <% if (instrumentUser.length > 0) { %>
-                        <table class="userprofile-tableanuncios  user-productsTable">
-                            <p>Sus Instrumentos</p>
-                            <tr>
-                                <th>Anuncio</th>
-                                <th>Descripción</th>
-                            </tr>
+                    <table class="userprofile-tableanuncios  user-productsTable">
+                        <p>Sus Instrumentos</p>
+                        <tr>
+                            <th>Anuncio</th>
+                            <th>Descripción</th>
+                        </tr>
 
-                            <% instrumentUser.forEach(function(instrumentoUsuario, indice){ %>
+                        <% instrumentUser.forEach(function(instrumentoUsuario, indice){ %>
 
-                            <tr>
-                                <td><%= indice+1 %> </td>
-                                <td><a href="/products/detailInstrument/<%= instrumentoUsuario.InstrumId %>"><%= instrumentoUsuario.titulo %></a></td>
-                            </tr>
-                            <% }) %>
+                        <tr>
+                            <td><%= indice+1 %> </td>
+                            <td><a
+                                    href="/products/detailInstrument/<%= instrumentoUsuario.InstrumId %>"><%= instrumentoUsuario.titulo %></a>
+                            </td>
+                        </tr>
+                        <% }) %>
 
-                        </table>
+                    </table>
                     <% } %>
 
 
