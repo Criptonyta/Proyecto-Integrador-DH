@@ -18,34 +18,35 @@
     <!--CONTENIDO-->
     <main class="principal">
         <!--productos-->
-        <form class="product-container" method='POST' action="/products/createproduct">
-            <div class="productImages">
-                <label for='productEmptyButton' class='productEmptyButton'>Cargá una imagen</label>
-                <input class='productEmptyButton' name='productEmptyButton' id='productEmptyButton' type='file'
-                    placeholder="Cargá tu foto aqui" required>
-                <div class="productImagesButtons">
-                    <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button> -->
-                    <!-- <button><input type='file' placeholder="Carga tu foto aqui" style="display: none"><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
+        <div class="create-product-container">
+            <form method='POST' action="/products/createproduct">
+                <div class="productImages">
+                    <label for='productEmptyButton' class='productEmptyButton'>Cargá una imagen</label>
+                    <input class='productEmptyButton' name='productEmptyButton' id='productEmptyButton' type='file'
+                        placeholder="Cargá tu foto aqui" required>
                 </div>
-            </div>
-            <div class="productInformation-container">
-                <div class="productInformation">
-                    <h2><input type='text' name='titulo' placeholder="Cargá tu titulo aquí"></h2>
-                    <div class="priceStars">
-                        <p><input type='number' name='precio' placeholder="Cargá tu precio aquí"><span
+                <!-- <div class="productImagesButtons"> -->
+                <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button> -->
+                <!-- <button><input type='file' placeholder="Carga tu foto aqui" style="display: none"><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
+                <!-- </div> -->
+
+                <div class="create-productInformation-container">
+                    <div class="productInformation">
+                        <h2><input type='text' name='titulo' placeholder="Cargá tu titulo aquí"></h2>
+                        <p class='create-productprice'><input type='number' name='precio' placeholder="Precio"><span
                                 class="currency">U$D</span></p>
                         <!-- <i class="fas fa-star"><span class="stars">4.5</span></i> -->
                     </div>
-                    <p class="productDescription"><input name='descripcion' type='textarea'
+                    <p class="create-productDescription"><input name='descripcion' type='textarea'
                             placeholder="Cargá una breve descripción de tu producto"></p>
                     <!-- <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button> -->
-                </div>
-                <div class="editar">
-                    <button><i class="fas fa-edit"><span class="agregarTexto">Salvar anuncio</span></i></button>
-                </div>
-            </div>
-        </form>
 
+                    <div class="editar">
+                        <button class='Salvar-anuncio-button'>Salvar anuncio</button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
     </main>
 
