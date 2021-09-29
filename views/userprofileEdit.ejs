@@ -25,10 +25,10 @@
         <section class="userprofile-formulario">
             <form action="/user/userprofile/<%= usuarioInfo.id %>/edit?_method=PUT" method="POST"
                 class="userprofile-formulario">
-                <h4>Edita tu perfil de usuario</h4>
+                <h4>Editá tu perfil de usuario</h4>
                 <div>
                     <p class="userprofile-Texto-Descriptivo">
-                        Puedes editar tu perfil de usuario y publicar tus anuncios desde aqui.<br>
+                        Puedes editar tu perfil de usuario y publicar tus anuncios desde aquí.<br>
                     </p>
                 </div>
 
@@ -50,30 +50,30 @@
                     <p>
                         <i class="fas fa-id-badge"></i><label> Nombre:</label></i>
                         <input value="<%= usuarioInfo.nombre %>" class="userprofile-datos" type="text" name="nombre"
-                            id="nombre" placeholder="Edita tu nombre"><i class="fas fa-user-edit"></i>
+                            id="nombre" placeholder="Editá tu nombre"><i class="fas fa-user-edit"></i>
                     </p>
 
                     <p>
                         <i class="fas fa-id-badge"><label> Apellido:</label></i>
                         <input value="<%= usuarioInfo.apellido %>" class="userprofile-datos" type="text" name="apellido"
-                            id="apellido" placeholder="Edita tu apellido"><i class="fas fa-user-edit"></i>
+                            id="apellido" placeholder="Editá tu apellido"><i class="fas fa-user-edit"></i>
                     </p>
 
                     <p>
                         <i class="fas fa-key"><label> Contraseña:</label></i>
                         <input class="userprofile-datos" type="password" name="password" id="password"
-                            placeholder="Edita tu contraseña"><i class="fas fa-user-edit"></i>
+                            placeholder="Editá tu contraseña"><i class="fas fa-user-edit"></i>
                     </p>
 
                     <p>
-                        <i class="fas fa-music"><label> Edita tu minibio en menos de 120 caracteres (sólo si sos
+                        <i class="fas fa-music"><label> Editá tu minibio en menos de 120 caracteres (sólo si sos
                                 músico)</label><br></i>
                         <textarea class="userprofile-datos" name="minibio" rows="3"
                             maxlength="120"><%= usuarioInfo.bio %></textarea><i class="fas fa-user-edit"></i>
                     </p>
 
                     <p>
-                        <i class="fas fa-microphone-alt"><label> Cuales son tus habilidades musicales?</label></i>
+                        <i class="fas fa-microphone-alt"><label> Cuáles son tus habilidades musicales?</label></i>
                         <select class="skills-form" name="skills">
                             <% skills.forEach(function(skill){ %>
                             <option value=<%= skill %>><%= skill %></option>
