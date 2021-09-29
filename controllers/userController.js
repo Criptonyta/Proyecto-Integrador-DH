@@ -49,6 +49,7 @@ const controlador = {
         const instrumentsDB = require(pathInstruments);
 
         const skills = ["Bajista","Baterista","Cantante","Guitarrista","Multiinstrumentalista","Productor","Otros"]
+        const profileOld = userDB.find(elemento => elemento.id == req.params.iduser)
 
         const profileNew = {email:req.body.email,
                            nombre:req.body.nombre,
@@ -66,6 +67,7 @@ const controlador = {
                 usuario.password = profileNew.password;
                 usuario.minibio = profileNew.minibio;
                 usuario.skills = profileNew.skills;
+                if (profileNew.userAvatarButton == ""){usuario.userAvatar = profileOld.userAvatar}else{usuario.userAvatar = profileNew.userAvatarButton}
             }
         })
         fs.writeFileSync(pathUsers,JSON.stringify(userDB))
