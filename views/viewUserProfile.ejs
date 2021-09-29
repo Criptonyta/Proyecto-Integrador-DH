@@ -25,13 +25,14 @@
                     <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" alt="fotoPerfil">
                 </p>
 
-                <p>
-                    <i class="fas fa-at"><label> Email:</label></i>
-                    <%= usuarioInfo.email %>
 
-                </p>
 
                 <div class="userprofile-items">
+                    <p>
+                        <i class="fas fa-at"><label> Email:</label></i>
+                        <%= usuarioInfo.email %>
+                    </p>
+
                     <p>
                         <i class="fas fa-id-badge"><label> Nombre:</label></i>
                         <%= usuarioInfo.nombre %>
@@ -54,7 +55,7 @@
             </div>
 
 
-            <form action="" class="userprofile-formulario">
+            <form action="" class="userprofile-formulario2">
                 <h4>Anuncios de <%= usuarioInfo.nombre %> <%= usuarioInfo.apellido %> </h4>
 
                 <div>

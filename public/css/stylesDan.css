@@ -658,12 +658,10 @@ footer {
 
 
 /* ========= USER PROFILE  min-width:361px =========  */
-
+.userprofile-formulario2,
 .userprofile-formulario {
     display: flex;
-    flex-direction: row;
     text-align: left;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: initial;
@@ -824,6 +822,7 @@ input[type='file'] {
 .productEmptyButton,
 .userprofile-button,
 .userprofile-edit-button,
+.userprofile-eliminar-button,
 .userAvatarButton,
 .userAvatarRegisterButton,
 .userprofile-vendercancion-button,
@@ -852,6 +851,7 @@ input[type='file'] {
 .userAvatarButton:hover,
 .userAvatarRegisterButton:hover,
 .userprofile-button:hover,
+.userprofile-eliminar-button:hover,
 .userprofile-edit-button:hover,
 .userprofile-venderproducto-button:hover,
 .userprofile-vendercancion-button:hover {
@@ -875,6 +875,7 @@ input[type='file'] {
 
 }
 
+.userprofile-formulario2 label,
 .userprofile-formulario label,
 .userprofile-items label {
     font-family: 'Roboto';
@@ -940,6 +941,17 @@ td {
 }
 
 @media(min-width:995px) {
+
+
+    .userprofile-formulario {
+        display: flex;
+        text-align: left;
+        align-items: center;
+        margin: 30px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
 
     .userprofile-editAvatar-section img {
         margin: 40px 40px 40px 40px;
