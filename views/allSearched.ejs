@@ -21,38 +21,44 @@
                 <i class="fas fa-search"><button type="submit"></button></i>
             </div>
         </form>
-        <section class="cancionesMasEscuchadas">
-            <p class="cabecera">Canciones relacionadas</p> 
-            <div class="cancionesMasEscuchadasContenedor">
-                <div class="canciones">
-                    <% musicos.forEach(function(cancion) { %>
-                        <%- include ('partials/cardCancionTienda.ejs', {cancion}) %>
-                    <% }) %>
+        <% if (musicos.length > 0 ) { %>
+            <section class="cancionesMasEscuchadas">
+                <p class="cabecera">Canciones relacionadas</p> 
+                <div class="cancionesMasEscuchadasContenedor">
+                    <div class="canciones">
+                        <% musicos.forEach(function(cancion) { %>
+                            <%- include ('partials/cardCancionTienda.ejs', {cancion}) %>
+                        <% }) %>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <% } %>
 
-        <section class="instrumentosEnVenta">
-            <p class="cabecera">Instrumentos relacionados</p>
-            <div class="instrumentosEnVentaContenedor">
-                <div class="instrumentos">
-                    <% instrumentos.forEach(function(instrumento) { %>
-                        <%- include ('partials/cardInstrumentoTienda.ejs', {instrumento}) %>
-                    <% }) %>
+        <% if (instrumentos.length > 0 ) { %>
+            <section class="instrumentosEnVenta">
+                <p class="cabecera">Instrumentos relacionados</p>
+                <div class="instrumentosEnVentaContenedor">
+                    <div class="instrumentos">
+                        <% instrumentos.forEach(function(instrumento) { %>
+                            <%- include ('partials/cardInstrumentoTienda.ejs', {instrumento}) %>
+                        <% }) %>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <% } %>
 
-        <section class="instrumentosEnVenta">
-            <p class="cabecera">Artistas relacionados</p>
-            <div class="instrumentosEnVentaContenedor">
-                <div class="instrumentos">
-                    <% artistas.forEach(function(artista) { %>
-                        <%- include ('partials/cardArtistaTienda.ejs', {artista}) %>
-                    <% }) %>
+        <% if (artistas.length > 0 ) { %>
+            <section class="instrumentosEnVenta">
+                <p class="cabecera">Artistas relacionados</p>
+                <div class="instrumentosEnVentaContenedor">
+                    <div class="instrumentos">
+                        <% artistas.forEach(function(artista) { %>
+                            <%- include ('partials/cardArtistaTienda.ejs', {artista}) %>
+                        <% }) %>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <% } %>
     </main>
     <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
