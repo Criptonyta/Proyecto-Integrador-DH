@@ -1,8 +1,11 @@
 const fs = require('fs');
 const path = require("path");
-const pathInstruments = path.join(__dirname, '../database/instrumentsDB.json');
-const pathSongs = path.join(__dirname, '../database/songsDB.json');
-const pathUsers = path.join(__dirname, '../database/usersDB.json');
+
+//const {instrumentsModel,songsModel,usersModel} = require("../models/index")//Importamos los models
+
+const pathInstruments = path.join(__dirname, '../database/instrumentsDB.json');//Cuando esten los models BORRAR
+const pathSongs = path.join(__dirname, '../database/songsDB.json');//Cuando esten los models BORRAR
+const pathUsers = path.join(__dirname, '../database/usersDB.json');//Cuando esten los models BORRAR
 const pathFuncionesAuxiliares = path.join(__dirname, '../public/funcionesAuxiliares/productControllerAux.js');
 const auxiliares = require(pathFuncionesAuxiliares);
 

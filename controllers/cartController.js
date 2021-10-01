@@ -1,3 +1,5 @@
+//const {instrumentsModel,songsModel,usersModel} = require("../models/index")//Importamos los models
+
 const controlador = {
     cart1: (req, res) => {
         let paises = ["","Argentina","Brazil","Chile","EEUU","Mexico","Bolivia","Uruguay","Paraguay","Suecia","Escocia","Inglaterra","EEUU","Mexico","Bolivia","Uruguay","Paraguay","Suecia","Escocia","Inglaterra","Argentina","Brazil","Chile","EEUU","Mexico","Bolivia","Uruguay","Paraguay","Suecia","Escocia","Inglaterra","EEUU","Mexico","Bolivia","Uruguay","Paraguay","Suecia","Escocia","Inglaterra"]
