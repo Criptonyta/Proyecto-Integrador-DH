@@ -2,5 +2,5 @@
     <a href="/products/detailSong/<%= cancion.songId %>"><img
             src="/images/MusicFilesCoverImg/resized/<%= cancion.img%>"></a>
     <p class="tituloCancion"><%= cancion.titulo %></p>
-    <p class="artistaCancion"><%= cancion.nombre +" "+ cancion.apellido %></p>
+    <a href="/user/viewuserprofile/<%= cancion.id %>"><p class="artistaCancion"><%= cancion.nombre +" "+ cancion.apellido %></p></a>
 </div>
