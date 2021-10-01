@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const productController = require('../controllers/productController');
+const {productController} = require('../controllers/index');
 
 
 router.get('/detailInstrument/:id', productController.instrumentDetail); //Te muestra el detalle de un instrumento  
