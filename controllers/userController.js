@@ -1,118 +1,54 @@
 const fs = require('fs');
 const path = require("path");
 
-//const {instrumentsModel,songsModel,usersModel} = require("../models/index")//Importamos los models
-
-const pathInstruments = path.join(__dirname, '../database/instrumentsDB.json');//CUANDO ESTEN LOS MODELOS BORRAR
-const pathSongs = path.join(__dirname, '../database/songsDB.json');//CUANDO ESTEN LOS MODELOS BORRAR
-const pathUsers = path.join(__dirname, '../database/usersDB.json');//CUANDO ESTEN LOS MODELOS BORRAR
+const {instrumentsModel,songsModel,usersModel} = require("../models/index");//Importamos los models
+const skills = ["Bajista","Baterista","Cantante","Guitarrista","Multiinstrumentalista","Productor","Otros"]//Skills
 
 const controlador = {
     userprofile: (req, res) => {
-        const userDB = require(pathUsers);
-        const songsDB = require(pathSongs);
-        const instrumentsDB = require(pathInstruments);
+        const usuarioInfo = usersModel.findUser(req.params.iduser)
+        const songsUser = songsModel.findArtistSongs(req.params.iduser)
+        const instrumentUser = instrumentsModel.findArtistInstruments(req.params.iduser)
 
-        const usuarioInfo = userDB.find(usuario => usuario.id == req.params.iduser)
-        const songsUser = songsDB.filter(song => song.id == req.params.iduser);
-        const instrumentUser = instrumentsDB.filter(instrument => instrument.id == req.params.iduser);
-        const anuncioUser = [...songsUser, ...instrumentUser];
-
-
-        res.render('userprofile.ejs', {anuncioUser,usuarioInfo,songsUser,instrumentUser});
+        res.render('userprofile.ejs', {usuarioInfo,songsUser,instrumentUser});
     },
     viewuserprofile: (req, res) => {
-        const userDB = require(pathUsers);
-        const songsDB = require(pathSongs);
-        const instrumentsDB = require(pathInstruments);
-
-        const usuarioInfo = userDB.find(usuario => usuario.id == req.params.iduser)
-        const songsUser = songsDB.filter(song => song.id == req.params.iduser);
-        const instrumentUser = instrumentsDB.filter(instrument => instrument.id == req.params.iduser);
+        const usuarioInfo = usersModel.findUser(req.params.iduser)
+        const songsUser = songsModel.findArtistSongs(req.params.iduser)
+        const instrumentUser = instrumentsModel.findArtistInstruments(req.params.iduser)
 
         res.render('viewUserProfile.ejs', {usuarioInfo,songsUser,instrumentUser});
     },
     userprofileEdit: (req, res) => {
-        const userDB = require(pathUsers);
-        const songsDB = require(pathSongs);
-        const instrumentsDB = require(pathInstruments);
-
-        const usuarioInfo = userDB.find(usuario => usuario.id == req.params.iduser)
-        const songsUser = songsDB.filter(song => song.id == req.params.iduser);
-        const instrumentUser = instrumentsDB.filter(instrument => instrument.id == req.params.iduser);
-        const anuncioUser = [...songsUser, ...instrumentUser];
-        const skills = ["Bajista","Baterista","Cantante","Guitarrista","Multiinstrumentalista","Productor","Otros"]
-
-
-        res.render('userprofileEdit.ejs',{anuncioUser,usuarioInfo,habilidades:skills});
+        const usuarioInfo = usersModel.findUser(req.params.iduser)
+        res.render('userprofileEdit.ejs',{usuarioInfo,habilidades:skills});
     },
     userprofileEditNew: (req, res) => {//editar usuario
-        const userDB = require(pathUsers);
-        const songsDB = require(pathSongs);
-        const instrumentsDB = require(pathInstruments);
+        const profileOld = usersModel.findUser(req.params.iduser)
+        const profileNew = {email:req.body.email,nombre:req.body.nombre,apellido:req.body.apellido,password:req.body.password,userAvatarButton:req.body.userAvatarButton,minibio:req.body.minibio,skills:req.body.skills}
 
-        const skills = ["Bajista","Baterista","Cantante","Guitarrista","Multiinstrumentalista","Productor","Otros"]
-        const profileOld = userDB.find(elemento => elemento.id == req.params.iduser)
+        usersModel.editarUsuario(profileOld,profileNew)
 
-        const profileNew = {email:req.body.email,
-                           nombre:req.body.nombre,
-                           apellido:req.body.apellido,
-                           password:req.body.password,
-                           userAvatarButton:req.body.userAvatarButton,
-                           minibio:req.body.minibio,
-                           skills:req.body.skills}
+        const usuarioInfo = usersModel.findUser(req.params.iduser)
+        const songsUser = songsModel.findArtistSongs(req.params.iduser)
+        const instrumentUser = instrumentModel.findArtistInstruments(req.params.iduser)
 
-        userDB.forEach(function(usuario){
-            if (usuario.id == req.params.iduser){
-                usuario.email = profileNew.email;
-                usuario.nombre = profileNew.nombre;
-                usuario.apellido = profileNew.apellido;
-                usuario.password = profileNew.password;
-                usuario.minibio = profileNew.minibio;
-                usuario.skills = profileNew.skills;
-                if (profileNew.userAvatarButton == ""){usuario.userAvatar = profileOld.userAvatar}else{usuario.userAvatar = profileNew.userAvatarButton}
-            }
-        })
-        fs.writeFileSync(pathUsers,JSON.stringify(userDB))
-
-        const usuarioInfo = userDB.find(usuario => usuario.id == req.params.iduser)
-        const songsUser = songsDB.filter(song => song.id == req.params.iduser);
-        const instrumentUser = instrumentsDB.filter(instrument => instrument.id == req.params.iduser);
-        const anuncioUser = [...songsUser, ...instrumentUser];
-
-
-        res.render('userprofile.ejs', {anuncioUser,usuarioInfo,songsUser,instrumentUser});
-
+        res.render('userprofile.ejs', {usuarioInfo,songsUser,instrumentUser});
     },
-
-
     login: (req, res) => {
         res.render('login.ejs');
     },
-
     register: (req, res) => {
         res.render('register.ejs');
     },
     deleteSongs: (req, res) => {
-        let songsDB = JSON.parse(fs.readFileSync(pathSongs,"utf-8"))
-        const elemsBorrar = req.body.eliminarCancion //una lista con los songId de las canciones a borrar
-        for (let i=0; i< elemsBorrar.length; i++) {//Borramos las canciones de songsDB
-            songsDB = songsDB.filter(elementos => elementos["songId"] != elemsBorrar[i]) 
-        }
-        fs.writeFileSync(pathSongs,JSON.stringify(songsDB))
+        songsModel.borrarNcanciones(req.body.eliminarCancion)
         res.send("productos borrados")//CUANDO ESTE SESSION SE PUEDE REDIRIGIR A LA MISMA DE USUARIO PAGINA USANDO SU ID
     },
     deleteInstruments: (req, res) => {
-        let instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments,"utf-8"))
-        const elemsBorrar = req.body.eliminarInstrumento //una lista con los songId de las canciones a borrar
-        for (let i=0; i< elemsBorrar.length; i++) {//Borramos las canciones de songsDB
-            instrumentsDB = instrumentsDB.filter(elementos => elementos["InstrumId"] != elemsBorrar[i]) 
-        }
-        fs.writeFileSync(pathInstruments,JSON.stringify(instrumentsDB))
+        instrumentsModel.borrarNinstrumentos(req.body.eliminarInstrumento)
         res.send("productos borrados")//CUANDO ESTE SESSION SE PUEDE REDIRIGIR A LA MISMA DE USUARIO PAGINA USANDO SU ID
-
     }
 };
-
 
 module.exports = controlador

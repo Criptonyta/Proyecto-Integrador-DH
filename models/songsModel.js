@@ -14,9 +14,9 @@ const songsModel = {
         let song = this.getAll().find(cancion => cancion.songId == idsong)
         return song
     },
-    findOwner:function(iduser){//Busca de quien es la cancion
-        let usuario = this.getAll().find(cancion => cancion.id == iduser)
-        return usuario
+    findArtistSongs:function(iduser){//Devuelve todas las canciones de un artista
+        let canciones = this.getAll().filter(song => song.id == iduser)
+        return canciones
     },
     crearId:function(){//Te genera el ID para agregar canciones
         let all = this.getAll()
@@ -27,13 +27,22 @@ const songsModel = {
         let id = this.crearId()
         let nuevaCancion = {id,...cancion}
         let canciones = this.getAll().push(nuevaCancion)
-        fs.writeFileSync(pathSongs,JSON.stringify(canciones,null,4))
+        this.rescribirDB(canciones)
     },
     editarCancion:function(){},
     borrarCancion:function(idsong){//Te borra una cancion
         let canciones = this.getAll().filter(cancion => cancion.songId != idsong)
-        fs.writeFileSync(pathSongs,JSON.stringify(canciones,null,4))
+        this.rescribirDB(canciones)
     },
+    borrarNcanciones:function(canciones){//Te borra todas las canciones que le pases el songId en la lista canciones
+        let songsDB = this.getAll();
+        for (let i=0; i< canciones.length; i++) {//Borramos las canciones de songsDB
+            songsDB = songsDB.filter(elementos => elementos["songId"] != elemsBorrar[i])
+            }
+        this.rescribirDB(songsDB)
+        return true
+        }
+
 }
 
-module.exports = {songsModel}
+module.exports = songsModel

@@ -14,9 +14,9 @@ const instrumentModel = {
         let instrument = this.getAll().find(instrumento => instrumento.InstrumId == idinstrument)
         return instrument
     },
-    findOwner:function(iduser){//Busca de quien es el instrumento
-        let usuario = this.getAll().find(instrumento => instrumento.id == iduser)
-        return usuario
+    findArtistInstruments:function(iduser){//Devuelve todas las canciones de un artista
+        let instrumentos = this.getAll().filter(instrumento => instrumento.id == iduser)
+        return instrumentos
     },
     crearId:function(){//Te genera el ID para agregar usuarios
         let all = this.getAll()
@@ -34,6 +34,14 @@ const instrumentModel = {
         let instrumentos = this.getAll().filter(instrumento => instrumento.InstrumId != idinstrument)
         fs.writeFileSync(pathInstruments,JSON.stringify(instrumentos,null,4))
     },
+    borrarNinstrumentos:function(instrumentos){//Te borra todas los instrumentos que le pases el InstrumId en la lista de instrumentos
+        let instrumentsDB = this.getAll();
+        for (let i=0; i< instrumentos.length; i++) {//Borramos los instrumentos de instrumentsDB
+            instrumentsDB = instrumentsDB.filter(elementos => elementos["InstrumId"] != elemsBorrar[i])
+            }
+        this.rescribirDB(instrumentsDB)
+        return true
+        }
 }
 
-module.exports = {instrumentModel}
+module.exports = instrumentModel
