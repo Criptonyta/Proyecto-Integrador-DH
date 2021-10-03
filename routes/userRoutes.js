@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const {userController} = require('../controllers/index');
+const {
+    userController
+} = require('../controllers/index');
+const multer = require('multer');
 
 
 router.get('/userprofile/:iduser', userController.userprofile);
@@ -13,7 +16,7 @@ router.get('/login', userController.login);
 
 router.get('/register', userController.register);
 
-router.delete('/mySongs/delete',userController.deleteSongs)//Para eliminar varias canciones a la vez
-router.delete('/myInstruments/delete',userController.deleteInstruments)//Para eliminar varios instrumentos a la vez
+router.delete('/mySongs/delete', userController.deleteSongs) //Para eliminar varias canciones a la vez
+router.delete('/myInstruments/delete', userController.deleteInstruments) //Para eliminar varios instrumentos a la vez
 
 module.exports = router

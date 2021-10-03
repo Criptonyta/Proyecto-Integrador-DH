@@ -24,7 +24,8 @@
         <!--FORMULARIO-->
         <section class="userprofile-formulario">
             <form action="/user/userprofile/<%= usuarioInfo.id %>/edit?_method=PUT" method="POST"
-                class="userprofile-formulario">
+                class="userprofile-formulario" enctype="multipart/form-data">
+                <!--Adicionado soporte para multer -->
                 <h4>Editá tu perfil de usuario</h4>
                 <div>
                     <p class="userprofile-Texto-Descriptivo">
@@ -76,7 +77,8 @@
                         <i class="fas fa-microphone-alt"><label> Cuáles son tus habilidades musicales?</label></i>
                         <select class="skills-form" name="skills">
                             <% habilidades.forEach(function(skill){ %>
-                            <option value=<%= skill %> <% if (skill == usuarioInfo.skills){%>selected <% } %> ><%= skill %></option>
+                            <option value=<%= skill %> <% if (skill == usuarioInfo.skills){%>selected <% } %>>
+                                <%= skill %></option>
                             <% }) %>
                         </select>
                         <i class="fas fa-user-edit"></i>
