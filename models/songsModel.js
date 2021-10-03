@@ -24,15 +24,30 @@ const songsModel = {
         return id
     },
     agregarCancion:function(cancion){//Te agrega una cancion
-        let id = this.crearId()
-        let nuevaCancion = {id,...cancion}
-        let canciones = this.getAll().push(nuevaCancion)
+        let songId = this.crearId()
+        let nuevaCancion = {songId,...cancion}
+        let canciones = this.getAll()
+        canciones.push(nuevaCancion)
         this.rescribirDB(canciones)
+        return true
     },
-    editarCancion:function(){},
+    editarCancion:function(oldSong,newData){//Edita cancion
+        let songsDB = this.getAll()
+        for (let i = 0; i < songsDB.length; i++) {
+            if (songsDB[i].songId == oldSong["songId"]) {
+                songsDB[i].titulo = newData.titulo;
+                songsDB[i].descripcion = newData.descripcion;
+                songsDB[i].precio = newData.precio;
+                if (newData.img){songsDB[i].img = newData.img}
+                if (newData.audioFile){songsDB[i].audioFile = newData.audioFile}
+            }
+        }
+        this.rescribirDB(songsDB)
+    },
     borrarCancion:function(idsong){//Te borra una cancion
         let canciones = this.getAll().filter(cancion => cancion.songId != idsong)
         this.rescribirDB(canciones)
+        return true
     },
     borrarNcanciones:function(canciones){//Te borra todas las canciones que le pases el songId en la lista canciones
         let songsDB = this.getAll();

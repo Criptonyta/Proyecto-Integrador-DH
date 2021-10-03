@@ -24,15 +24,29 @@ const instrumentModel = {
         return id
     },
     agregarInstrumento:function(instrumento){//Te agrega un instrumento
-        let id = this.crearId()
-        let nuevoInstrumento = {id,...instrumento}
-        let instrumentos = this.getAll().push(nuevoInstrumento)
-        fs.writeFileSync(pathInstruments,JSON.stringify(instrumentos,null,4))
+        let InstrumId = this.crearId()
+        let nuevoInstrumento = {InstrumId,...instrumento}
+        let instrumentos = this.getAll()
+        instrumentos.push(nuevoInstrumento)
+        this.rescribirDB(instrumentos)
+        return true
     },
-    editarInstrumento:function(){},
+    editarInstrumento:function(oldInstrument,newData){//Edita un instrumento
+        let instrumentsDB = this.getAll()
+        for (let i = 0; i < instrumentsDB.length; i++) {
+            if (instrumentsDB[i].InstrumId == oldInstrument["InstrumId"]) {
+                instrumentsDB[i].titulo = newData.titulo;
+                instrumentsDB[i].descripcion = newData.descripcion;
+                instrumentsDB[i].precio = newData.precio;
+                if (newData.img){instrumentsDB[i].img = newData.img}
+            }
+        }
+        this.rescribirDB(instrumentsDB)
+    },
     borrarInstrumento:function(idinstrument){//Te borra el instrumento
         let instrumentos = this.getAll().filter(instrumento => instrumento.InstrumId != idinstrument)
-        fs.writeFileSync(pathInstruments,JSON.stringify(instrumentos,null,4))
+        this.rescribirDB(instrumentos)
+        return true
     },
     borrarNinstrumentos:function(instrumentos){//Te borra todas los instrumentos que le pases el InstrumId en la lista de instrumentos
         let instrumentsDB = this.getAll();

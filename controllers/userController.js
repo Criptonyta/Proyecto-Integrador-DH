@@ -31,7 +31,7 @@ const controlador = {
 
         const usuarioInfo = usersModel.findUser(req.params.iduser)
         const songsUser = songsModel.findArtistSongs(req.params.iduser)
-        const instrumentUser = instrumentModel.findArtistInstruments(req.params.iduser)
+        const instrumentUser = instrumentsModel.findArtistInstruments(req.params.iduser)
 
         res.render('userprofile.ejs', {usuarioInfo,songsUser,instrumentUser});
     },
