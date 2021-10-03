@@ -15,7 +15,7 @@ const usersModel = {
         let usuario = this.getAll().find(usuario => usuario.id == iduser)
         return usuario
     },
-    findArtist:function(){//Te busca todos los artistas (los que tienen bio)
+    findArtists:function(){//Te busca todos los artistas (los que tienen bio)
         let artistas = this.getAll().filter(item => item.bio != "")
         return artistas
     },
