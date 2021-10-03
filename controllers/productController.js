@@ -1,93 +1,64 @@
 const fs = require('fs');
 const path = require("path");
-const pathInstruments = path.join(__dirname, '../database/instrumentsDB.json');
-const pathSongs = path.join(__dirname, '../database/songsDB.json');
-const pathUsers = path.join(__dirname, '../database/usersDB.json');
+
+const {instrumentsModel,songsModel,usersModel} = require("../models/index");//Importamos los models
 const pathFuncionesAuxiliares = path.join(__dirname, '../public/funcionesAuxiliares/productControllerAux.js');
 const auxiliares = require(pathFuncionesAuxiliares);
 
-
 const controlador = {
     instrumentDetail: (req, res) => {
-        const usersDB = require(pathUsers)
-        const instrumentos = JSON.parse(fs.readFileSync(pathInstruments));
-        const instrumento = instrumentos.find(elemento => elemento.InstrumId == req.params.id);
+        const usersDB = usersModel.getAll()
+        const instrumentos = instrumentsModel.getAll()
+        const instrumento = instrumentsModel.findInstrument(req.params.id)
         const relacionados = auxiliares.buscarNelementosRelacionados(instrumentos, "id", instrumento.id,"InstrumId",req.params.id, 3) //Instrumentos relacionados
-        const pathFotos = "/images/instrumentsImg/resizedandcropped/"
-        const pathDetail = "/products/detailInstrument/"
-        const nombreId = "InstrumId"
-        const rutaDelete = "deleteinstrument"
-        const artista = usersDB.find(elemento => elemento.id == instrumento.id);
+        const pathFotos = "/images/instrumentsImg/resizedandcropped/"//Donde guardamos las fotos
+        const pathDetail = "/products/detailInstrument/"//Ruta al detalle del producto
+        const nombreId = "InstrumId"//Id de los instrumentos
+        const rutaDelete = "deleteinstrument"//Donde eliminamos los productos
+        const artista = usersModel.findUser(instrumento.id)
 
-
-
-        res.render('productinstrument.ejs', {
-            producto: instrumento,
-            relacionados,
-            pathFotos,
-            nombreId,
-            pathDetail,
-            nombreId,
-            artista,
-            rutaDelete
-        });
-
+        res.render('productinstrument.ejs', {producto: instrumento,relacionados,pathFotos,nombreId,pathDetail,nombreId,artista,rutaDelete});
     },
     songDetail: (req, res) => {
-        const usersDB = require(pathUsers)
-        const songs = JSON.parse(fs.readFileSync(pathSongs));
-        const song = songs.find(elemento => elemento.songId == req.params.id);
+        const usersDB = usersModel.getAll()
+        const songs = songsModel.getAll()
+        const song = songsModel.findSong(req.params.id)
         const relacionados = auxiliares.buscarNelementosRelacionados(songs, "id",song.id, "songId",req.params.id, 3) //Instrumentos relacionados
-        const pathFotos = "/images/MusicFilesCoverImg/resized/"
-        const pathDetail = "/products/detailSong/"
-        const nombreId = "songId"
-        const rutaDelete = "deletesong"
-        const artista = usersDB.find(elemento => elemento.id == song.id);
+        const pathFotos = "/images/MusicFilesCoverImg/resized/"//Donde guardamos las fotos
+        const pathDetail = "/products/detailSong/"//Donde esta el detalle
+        const nombreId = "songId"//Id de las canciones
+        const rutaDelete = "deletesong"//Donde se borra la cancion
+        const artista = usersModel.findUser(song.id)
 
-        res.render('productsong.ejs', {
-            producto: song,
-            relacionados,
-            pathFotos,
-            pathDetail,
-            nombreId,
-            artista,
-            rutaDelete
-        });
-
+        res.render('productsong.ejs', {producto: song,relacionados,pathFotos,pathDetail,nombreId,artista,rutaDelete});
     },
-
     productempty: (req, res) => {
         res.render('productempty.ejs');
     },
-
     songempty: (req, res) => {
         res.render('songempty.ejs');
     },
-
     addSong: (req, res) => {
-        const fs = require('fs');
-        const songsDB = JSON.parse(fs.readFileSync(pathSongs, "UTF-8"));
+        const songsDB = songsModel.getAll()
         songcargar = {
-            id: 25, // TODO ACTIVAR CON SESSION
-            /* Id usuario */
-            songId: songsDB[songsDB.length - 1].songId + 1,
-            /* Id canción */
-            img: req.body.songEmptyImgBtn,
-            audioFile: req.body.songEmptyFileBtn,
-            titulo: req.body.titulo,
-            precio: req.body.precio,
-            descripcion: req.body.descripcion,
+            id: 25, // TODO ACTIVAR CON SESSION /* Id usuario */
+            img: req.body.songEmptyImgBtn,//Imagen de la cancion
+            audioFile: req.body.songEmptyFileBtn,//Nombre del MP3
+            audioFileYTPlayer:"kNYx2C995fc",//Codigo en la cancion de youtube CAMBIAR!
+            YT_URL:"https://youtu.be/"+"kNYx2C995fc",//URL a youtube
+            titulo: req.body.titulo,//Titulo de la cancion
+            precio: req.body.precio,//Precio de la cancion
+            descripcion: req.body.descripcion,//Descripcion de la cancion
+            nombre:usersModel.findUser(25)["nombre"],//SESSION
+            apellido:usersModel.findUser(25)["apellido"]//SESSION
         }
+        // TODO SESSION + MULTER
+        songsModel.agregarCancion(songcargar)
 
-        songsDB.push(songcargar) // TODO SESSION + MULTER
-        fs.writeFileSync(pathSongs, JSON.stringify(songsDB))
-        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
-        const usersDB = JSON.parse(fs.readFileSync(pathUsers));
-
+        const instrumentsDB = instrumentsModel.getAll()//Todos los instrumentos
         const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, "InstrumId" ,6);
         const musicos = auxiliares.buscarNelementosAleatorios(songsDB, "songId" ,6);;
-
-        const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
+        const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
         const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id" ,3);;
 
         res.render('tienda.ejs', {
@@ -95,34 +66,22 @@ const controlador = {
             musicos: musicos,
             instrumentos: instrumentos
         })
-
-
-
     },
     addProduct: (req, res) => {
-        const fs = require('fs');
-        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments, "UTF-8"));
+        const instrumentsDB = instrumentsModel.getAll()
         instrumentcargar = {
-            id: 12, //  TODO: ARREGLAR CON LA IMPLEMENTACION DE SESSION
-            /* Id usuario */
-            InstrumId: instrumentsDB[instrumentsDB.length - 1].InstrumId + 1,
-            /* Id canción */
+            id: 12, //  TODO: ARREGLAR CON LA IMPLEMENTACION DE SESSION/* Id usuario */
             img: req.body.productEmptyButton,
             titulo: req.body.titulo,
             precio: req.body.precio,
             descripcion: req.body.descripcion,
         }
+        instrumentsModel.agregarInstrumento(instrumentcargar)
 
-
-        instrumentsDB.push(instrumentcargar) // TODO SESSION + MULTER
-        fs.writeFileSync(pathInstruments, JSON.stringify(instrumentsDB))
-        const songsDB = JSON.parse(fs.readFileSync(pathSongs));
-        const usersDB = JSON.parse(fs.readFileSync(pathUsers));
-
+        const songsDB = songsModel.getAll()
         const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, "InstrumId" ,6);;
         const musicos = auxiliares.buscarNelementosAleatorios(songsDB, "songId" ,6);;
-
-        const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
+        const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
         const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id" ,3);;
 
         res.render('tienda.ejs', {
@@ -131,16 +90,12 @@ const controlador = {
             instrumentos: instrumentos
         })
     },
-
     tienda: (req, res) => {
-        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
-        const songsDB = JSON.parse(fs.readFileSync(pathSongs));
-        const usersDB = JSON.parse(fs.readFileSync(pathUsers));
-
+        const instrumentsDB = instrumentsModel.getAll()
+        const songsDB = songsModel.getAll()
         const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, "InstrumId" ,6);
         const musicos = auxiliares.buscarNelementosAleatorios(songsDB, "songId" ,6);
-
-        const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
+        const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
         const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id" ,3);;
 
         res.render('tienda.ejs', {
@@ -150,39 +105,27 @@ const controlador = {
         });
     },
     songs: (req, res) => {
-        const songsDB = JSON.parse(fs.readFileSync(pathSongs));
-        const musicos = songsDB;
-        res.render("allSongs.ejs", {
-            musicos
-        })
+        const songsDB = songsModel.getAll()
+        res.render("allSongs.ejs", {musicos:songsDB})
     },
     instruments: (req, res) => {
-        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
-        const instrumentos = instrumentsDB;
-        res.render("allInstruments.ejs", {
-            instrumentos
-        })
+        const instrumentsDB = instrumentsModel.getAll()
+        res.render("allInstruments.ejs", {instrumentos:instrumentsDB})
     },
     artists: (req, res) => {
-        const usersDB = JSON.parse(fs.readFileSync(pathUsers));
-        const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
-        const artistas = artistsDB;
-        res.render("allArtists.ejs", {
-            artistas
-        })
+        const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
+        res.render("allArtists.ejs", {artistas:artistsDB})
     },
     searched: (req, res) => { //Controlador para mostrar cuando se busca algo
-        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
-        const songsDB = JSON.parse(fs.readFileSync(pathSongs));
-        const usersDB = JSON.parse(fs.readFileSync(pathUsers));
-        const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
+        const instrumentsDB = instrumentsModel.getAll()
+        const songsDB = songsModel.getAll()
+        const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
 
         const buscado = req.query.search
         const palabras = buscado.split(' ')
         const resultadosSongs = auxiliares.checkAtribute(songsDB, ["titulo", "descripcion", "nombre", "apellido"], palabras) //Canciones que coinciden
         const resultadosInstruments = auxiliares.checkAtribute(instrumentsDB, ["titulo", "descripcion"], palabras) //Instrumentos que coinciden
         const resultadosArtistas = auxiliares.checkAtribute(artistsDB, ["nombre", "apellido", "skills", "bio"], palabras) //Artistas que coinciden
-
 
         res.render("allSearched.ejs", {
             musicos: resultadosSongs,
@@ -191,17 +134,13 @@ const controlador = {
         })
     },
     deleteInstrument: (req, res) => {
-        const instrumentDB = JSON.parse(fs.readFileSync(pathInstruments, "utf-8"))
-        const resultado = instrumentDB.filter(instrumento => instrumento.InstrumId != req.params.idInstrum)
-        fs.writeFileSync(pathInstruments, JSON.stringify(resultado))
+        instrumentsModel.borrarInstrumento(req.params.idInstrum)//Borramos el instrumento
 
-        const songsDB = JSON.parse(fs.readFileSync(pathSongs));
-        const usersDB = JSON.parse(fs.readFileSync(pathUsers));
-
-        const instrumentos = auxiliares.buscarNelementosAleatorios(resultado, "InstrumId" ,6);;
+        const songsDB = songsModel.getAll()
+        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsModel.getAll(), "InstrumId" ,6);;
         const musicos = auxiliares.buscarNelementosAleatorios(songsDB, "songId" ,6);;
 
-        const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
+        const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
         const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id" ,3);;
 
         res.render('tienda.ejs', {
@@ -209,20 +148,14 @@ const controlador = {
             musicos: musicos,
             instrumentos: instrumentos
         });
-
     },
     deleteSong: (req, res) => {
-        const songsDB = JSON.parse(fs.readFileSync(pathSongs, "utf-8"))
-        const resultado = songsDB.filter(song => song.songId != req.params.idSong)
-        fs.writeFileSync(pathSongs, JSON.stringify(resultado))
+        songsModel.borrarCancion(req.params.idSong)
 
-        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
-        const usersDB = JSON.parse(fs.readFileSync(pathUsers));
-
+        const instrumentsDB = instrumentsModel.getAll()
         const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, "InstrumId",6);;
-        const musicos = auxiliares.buscarNelementosAleatorios(resultado,"songId" ,6);;
-
-        const artistsDB = usersDB.filter(item => item.bio != "") //Los artistas son los que tienen bio
+        const musicos = auxiliares.buscarNelementosAleatorios(songsModel.getAll(),"songId" ,6);;
+        const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
         const datos = auxiliares.buscarNelementosAleatorios(artistsDB,"id" ,3);;
 
         res.render('tienda.ejs', {
@@ -230,82 +163,55 @@ const controlador = {
             musicos: musicos,
             instrumentos: instrumentos
         });
-
     },
     editSong: (req, res) => {
-        const songsDB = JSON.parse(fs.readFileSync(pathSongs));
+        const songsDB = songsModel.getAll()
         for (let i = 0; i < songsDB.length; i++) {
             if (songsDB[i].songId == req.params.idSong) {
                 let songOld = songsDB[i];
-                res.render('editSong.ejs', {
-                    songOld
-                });
+                res.render('editSong.ejs', {songOld});
             }
         }
-
     },
     editInstrument: (req, res) => {
-        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments));
+        const instrumentsDB = instrumentsModel.getAll()
         for (let i = 0; i < instrumentsDB.length; i++) {
             if (instrumentsDB[i].InstrumId == req.params.idInstrum) {
                 let instrumentoOld = instrumentsDB[i];
-                res.render('editProduct.ejs', {
-                    instrumentoOld
-                });
+                res.render('editProduct.ejs', {instrumentoOld});
             }
         }
     },
     editSongPut: (req, res) => {
-        const songsDB = JSON.parse(fs.readFileSync(pathSongs, "utf-8"));
-        const oldProduct = songsDB.filter(elements => elements.songId == req.params.idSong)
+        const songsDB = songsModel.getAll()
+        const oldProduct = songsModel.findSong(req.params.idSong)
 
-        for (let i = 0; i < songsDB.length; i++) {
-            if (songsDB[i].songId == req.params.idSong) {
-                songsDB[i].titulo = req.body.titulo;
-                songsDB[i].descripcion = req.body.descripcion;
-                songsDB[i].precio = req.body.precio;
-                if (req.body.songEmptyImgBtn == "") {
-                    songsDB[i].img = oldProduct[0].img
-                } else {
-                    songsDB[i].img = req.body.songEmptyImgBtn
-                }
-                if (req.body.songEmptyFileBtn == "") {
-                    songsDB[i].audioFile = oldProduct[0].audioFile
-                } else {
-                    songsDB[i].audioFile = req.body.songEmptyFileBtn
-                }
-
-            }
+        const editSong = {
+            img:req.body.songEmptyImgBtn,
+            titulo: req.body.titulo,
+            precio: req.body.precio,
+            descripcion: req.body.descripcion,
+            audioFileYTPlayer: "Cmzuaozboms",//CAMBIAR!
+            audioFile: req.body.songEmptyFileBtn,
+            YT_URL: "https://youtu.be/Cmzuaozboms",//CAMBIAR
         }
-        fs.writeFileSync(pathSongs, JSON.stringify(songsDB))
-        res.render("allSongs.ejs", {
-            musicos: songsDB
-        })
+        songsModel.editarCancion(oldProduct,editSong)
 
+        res.render("allSongs.ejs", {musicos: songsDB})
     },
-
     editInstrumentPut: (req, res) => {
-        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments, "utf-8"));
-        const oldProduct = instrumentsDB.filter(elements => elements.InstrumId == req.params.idInstrum)
+        const instrumentsDB = instrumentsModel.getAll()
+        const oldProduct = instrumentsModel.findInstrument(req.params.idInstrum)
 
-        for (let i = 0; i < instrumentsDB.length; i++) {
-            if (instrumentsDB[i].InstrumId == req.params.idInstrum) {
-                instrumentsDB[i].titulo = req.body.titulo;
-                instrumentsDB[i].descripcion = req.body.descripcion;
-                instrumentsDB[i].precio = req.body.precio;
-                if (req.body.productEmptyButton == "") {
-                    instrumentsDB[i].img = oldProduct[0].img
-                } else {
-                    instrumentsDB[i].img = req.body.productEmptyButton
-                }
-            }
+        const editInstrument = {
+            img: req.body.productEmptyButton,
+            titulo: req.body.titulo,
+            descripcion: req.body.descripcion,
+            precio: req.body.precio,
         }
-        fs.writeFileSync(pathInstruments, JSON.stringify(instrumentsDB))
-        res.render("allInstruments.ejs", {
-            instrumentos: instrumentsDB
-        })
+        instrumentsModel.editarInstrumento(oldProduct,editInstrument)
+        res.render("allInstruments.ejs", {instrumentos: instrumentsDB})
     },
 };
-
 
 module.exports = controlador;
