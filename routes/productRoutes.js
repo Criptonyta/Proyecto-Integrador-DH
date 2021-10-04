@@ -7,30 +7,34 @@ const multer = require('multer');
 const path = require('path');
 
 //Permite al usuario cargar su cancion con multer en un proceso BATCH (subida manual a Youtube)
-const songstorage = multer.diskStorage({ // Configura el almacenamiento
+const contentstorage = multer.diskStorage({ // Configura el almacenamiento
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, '../public/batchSongs'))
+        if (file.mimetype == 'audio/mpeg') { // || 'audio/mp3' || 'audio/wav' || 'audio/flac'
+            cb(null, path.join(__dirname, '../public/batchSongs'))
+        } else {
+            cb(null, path.join(__dirname, '../public/images/MusicFilesCoverImg/resized'))
+        }
     },
     filename: function (req, file, cb) {
         cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
     }
 })
-const uploadsong = multer({
-    songstorage
+const songupload = multer({
+    storage: contentstorage
 }) // Variable de ejecucion
 
-//Permite al usuario cargar el arte de tapa del desco de su cancion con multer
-const storage = multer.diskStorage({ // Configura el almacenamiento
-    destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, '../public/images/MusicFilesCoverImg/resized'))
-    },
-    filename: function (req, file, cb) {
-        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
-    }
-})
-const upload = multer({
-    storage
-}) // Variable de ejecucion
+//Permite al usuario cargar el arte de tapa del disco de su cancion con multer
+// const imgstorage = multer.diskStorage({ // Configura el almacenamiento
+//     destination: function (req, file, cb) {
+//         cb(null, path.join(__dirname, '../public/images/MusicFilesCoverImg/resized'))
+//     },
+//     filename: function (req, file, cb) {
+//         cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
+//     }
+// })
+// const imgupload = multer({
+//     storage: imgstorage
+// }) // Variable de ejecucion
 
 
 
@@ -42,12 +46,20 @@ router.get('/createproduct', productController.productempty); //Hoja para cargar
 router.post('/createproduct', productController.addProduct); //Hoja para crear productos 
 
 router.get('/createsong', productController.songempty); //Hoja para cargar la cancion
-router.post('/createsong', upload.single('songEmptyImgBtn'), productController.addSong); //Hoja para crear canciones con Multer
+router.post('/createsong', songupload.fields([{
+        name: 'songEmptyContentBtn1',
+        maxCount: 1
+    },
+    {
+        name: 'songEmptyContentBtn2',
+        maxCount: 8
+    }
+]), productController.addSong); //Hoja para subir imagenes y mp3s de canciones con Multer 'songEmptyContentBtn'
 
 router.get('/tienda', productController.tienda); //Tienda
 
-router.get('/tienda/songs', productController.songs); //Te muestra todas las canciones PRUEBA
-router.get('/tienda/instruments', productController.instruments); //Te muestra todos las instrumentos PRUEBA
+router.get('/tienda/songs', productController.songs); //Te muestra todas las canciones 
+router.get('/tienda/instruments', productController.instruments); //Te muestra todos las instrumentos 
 router.get('/tienda/artists', productController.artists); //Te muestra todos los artistas
 router.get('/tienda/search', productController.searched) //Todos los productos buscados
 

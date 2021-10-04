@@ -19,18 +19,19 @@
     <main class="principal">
         <!--productos-->
         <div class="create-product-container">
-            <form method='POST' action="/products/createproduct">
-                <div class="productImages">
-                    <label for='productEmptyButton' class='productEmptyButton'>Cargá una imagen</label>
-                    <input class='productEmptyButton' name='productEmptyButton' id='productEmptyButton' type='file'
-                        placeholder="Cargá tu foto aqui">
-                </div>
-                <!-- <div class="productImagesButtons"> -->
-                <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button> -->
-                <!-- <button><input type='file' placeholder="Carga tu foto aqui" style="display: none"><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
-                <!-- </div> -->
 
-                <div class="create-productInformation-container">
+            <!-- <div class="productImagesButtons"> -->
+            <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button> -->
+            <!-- <button><input type='file' placeholder="Carga tu foto aqui" style="display: none"><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
+            <!-- </div> -->
+
+            <div class="create-productInformation-container">
+                <form method='POST' action="/products/createproduct">
+                    <div class="productImages">
+                        <label for='productEmptyButton' class='productEmptyButton'>Cargá una imagen</label>
+                        <input class='productEmptyButton' name='productEmptyButton' id='productEmptyButton' type='file'
+                            placeholder="Cargá tu foto aqui">
+                    </div>
                     <div class="productInformation">
                         <h2><input type='text' name='titulo' placeholder="Cargá tu titulo aquí"></h2>
                         <p class='create-productprice'><input type='number' name='precio' placeholder="Precio"><span
@@ -44,7 +45,7 @@
                     <div class="editar">
                         <button class='Salvar-anuncio-button'>Salvar anuncio</button>
                     </div>
-                </div>
+            </div>
             </form>
         </div>
 

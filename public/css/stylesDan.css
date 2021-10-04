@@ -703,13 +703,13 @@ footer {
 
 /* FORMULARIO DE CARGA DE PRODUCTOS */
 
-.create-product-container {
+/* .create-product-container {
     width: 100%;
     padding: 30px;
     display: flex;
     flex-direction: column;
     text-align: center
-}
+} */
 
 .create-product-container h2 input {
     background-color: Var(--azulOscuro);
@@ -732,27 +732,27 @@ footer {
     text-align: center;
 }
 
-
+/* 
 .create-productInformation-container {
     /* display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center; */
+    align-items: center; 
 
     width: 100%;
     padding: 30px;
     display: flex;
     flex-direction: column;
     text-align: center;
-}
+} */
 
-.create-productInformation-container {
+/* .create-productInformation-container {
     width: auto;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
-}
+} */
 
 .create-productDescription {
     background-color: Var(--azulOscuro);
@@ -825,6 +825,10 @@ footer {
     border: white 1px solid;
 }
 
+
+/* .productInformation-description:hover, */
+.productInformation-name:hover,
+.productInformation-precio:hover,
 .userprofile-form input:hover {
     border: 2px solid white;
 }
@@ -867,7 +871,7 @@ input[type='file'] {
     margin: 10px, 10px, 10px, 10px
 }
 
-
+.songempty-saveedit-btn,
 .songEmptyFileBtn,
 .songEmptyImgBtn,
 .Salvar-anuncio-button,
@@ -896,7 +900,7 @@ input[type='file'] {
     cursor: pointer;
 }
 
-
+.songempty-saveedit-btn:hover,
 .songEmptyFileBtn:hover,
 .songEmptyImgBtn:hover,
 .productEmptyButton:hover,

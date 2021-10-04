@@ -65,10 +65,10 @@ const controlador = {
         const songsDB = songsModel.getAll()
         songcargar = {
             id: 25, // TODO ACTIVAR CON SESSION /* Id usuario */
-            img: req.file.filename, //Imagen de la cancion
-            audioFile: req.body.songEmptyFileBtn, //Nombre del MP3
+            img: req.files.songEmptyContentBtn1[0].filename, //Imagen de la cancion
+            audioFile: req.files.songEmptyContentBtn2[0].filename, //Nombre del MP3
             audioFileYTPlayer: "kNYx2C995fc", //TODO Codigo en la cancion de youtube CAMBIAR!
-            YT_URL: "https://youtu.be/" + "kNYx2C995fc", //TODO URL a youtube
+            YT_URL: "https://youtu.be/", //TODO URL a youtube
             titulo: req.body.titulo, //Titulo de la cancion
             precio: req.body.precio, //Precio de la cancion
             descripcion: req.body.descripcion, //Descripcion de la cancion
