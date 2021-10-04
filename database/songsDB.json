@@ -1,20 +1,5 @@
 [
     {
-        "id": 36,
-        "songId": 1,
-        "img": "36.jpg",
-        "titulo": "1968",
-        "precio": 11,
-        "descripcion": "Rock, con influencias de Vernon Reid/Living Colour",
-        "nombre": "TrackTribe",
-        "apellido": "",
-        "audioFileYTPlayer": "kNYx2C995fc",
-        "audioFile": "1968 - TrackTribe.mp3",
-        "YT_URL": "https://youtu.be/kNYx2C995fc",
-        "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\1968 - TrackTribe.mp3",
-        "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\36.jpg"
-    },
-    {
         "id": 28,
         "songId": 2,
         "img": "28.jpg",
@@ -25,7 +10,7 @@
         "apellido": "",
         "audioFileYTPlayer": "P6MmUUzL-LI",
         "audioFile": "American Idle - RKVC.mp3",
-        "YT_URL": "https://youtu.be/P6MmUUzL-LI",
+        "YT URL": "https://youtu.be/P6MmUUzL-LI",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\American Idle - RKVC.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\28.jpg"
     },
@@ -40,7 +25,7 @@
         "apellido": "",
         "audioFileYTPlayer": "GZDXEfy05vM",
         "audioFile": "Anywhen You Say - Cheel.mp3",
-        "YT_URL": "https://youtu.be/GZDXEfy05vM",
+        "YT URL": "https://youtu.be/GZDXEfy05vM",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Anywhen You Say - Cheel.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\04.jpg"
     },
@@ -55,7 +40,7 @@
         "apellido": "Fenn",
         "audioFileYTPlayer": "vEMR-d4VP_U",
         "audioFile": "Awake - Emmit Fenn.mp3",
-        "YT_URL": "https://youtu.be/vEMR-d4VP_U",
+        "YT URL": "https://youtu.be/vEMR-d4VP_U",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Awake - Emmit Fenn.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\12.jpg"
     },
@@ -70,7 +55,7 @@
         "apellido": "",
         "audioFileYTPlayer": "xmrsl0gUabo",
         "audioFile": "Beach Walk - Unicorn Heads.mp3",
-        "YT_URL": "https://youtu.be/xmrsl0gUabo",
+        "YT URL": "https://youtu.be/xmrsl0gUabo",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Beach Walk - Unicorn Heads.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\39.jpg"
     },
@@ -85,7 +70,7 @@
         "apellido": "",
         "audioFileYTPlayer": "yp4F34m3d7Y",
         "audioFile": "Burlesque Heartache - RKVC.mp3",
-        "YT_URL": "https://youtu.be/yp4F34m3d7Y",
+        "YT URL": "https://youtu.be/yp4F34m3d7Y",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Burlesque Heartache - RKVC.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\28.jpg"
     },
@@ -100,7 +85,7 @@
         "apellido": "Duski",
         "audioFileYTPlayer": "PNDZyA9yvYs",
         "audioFile": "Carried - Lauren Duski.mp3",
-        "YT_URL": "https://youtu.be/PNDZyA9yvYs",
+        "YT URL": "https://youtu.be/PNDZyA9yvYs",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Carried - Lauren Duski.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\19.jpg"
     },
@@ -115,24 +100,9 @@
         "apellido": "Steve",
         "audioFileYTPlayer": "PwjyPFdifkk",
         "audioFile": "Cattle - Delicate Steve.mp3",
-        "YT_URL": "https://youtu.be/PwjyPFdifkk",
+        "YT URL": "https://youtu.be/PwjyPFdifkk",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Cattle - Delicate Steve.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\09.jpg"
-    },
-    {
-        "id": 3,
-        "songId": 9,
-        "img": "03.jpg",
-        "titulo": "Caverns ",
-        "precio": 7,
-        "descripcion": "Cancion lenta y motivacional, perfecta para ambientar comerciales",
-        "nombre": "Bad",
-        "apellido": "Snacks",
-        "audioFileYTPlayer": "o582JD5OoyU",
-        "audioFile": "Caverns - Bad Snacks.mp3",
-        "YT_URL": "https://youtu.be/o582JD5OoyU",
-        "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Caverns - Bad Snacks.mp3",
-        "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\03.jpg"
     },
     {
         "id": 1,
@@ -145,7 +115,7 @@
         "apellido": "Kenny",
         "audioFileYTPlayer": "dMHs6rjAgI8",
         "audioFile": "Cocktail Hour - Aaron Kenny.mp3",
-        "YT_URL": "https://youtu.be/dMHs6rjAgI8",
+        "YT URL": "https://youtu.be/dMHs6rjAgI8",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Cocktail Hour - Aaron Kenny.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\01.jpg"
     },
@@ -160,7 +130,7 @@
         "apellido": "",
         "audioFileYTPlayer": "L1d4h2180mo",
         "audioFile": "Come Get With Us - TrackTribe.mp3",
-        "YT_URL": "https://youtu.be/L1d4h2180mo",
+        "YT URL": "https://youtu.be/L1d4h2180mo",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Come Get With Us - TrackTribe.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\36.jpg"
     },
@@ -175,7 +145,7 @@
         "apellido": "Hansen",
         "audioFileYTPlayer": "3rXuuqcz-ck",
         "audioFile": "Come On Out - Dan Lebowitz.mp3",
-        "YT_URL": "https://youtu.be/3rXuuqcz-ck",
+        "YT URL": "https://youtu.be/3rXuuqcz-ck",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Come On Out - Dan Lebowitz.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\08.jpg"
     },
@@ -190,7 +160,7 @@
         "apellido": "Pedals",
         "audioFileYTPlayer": "eb2WikNu_BA",
         "audioFile": "Concrete - JHS Pedals.mp3",
-        "YT_URL": "https://youtu.be/eb2WikNu_BA",
+        "YT URL": "https://youtu.be/eb2WikNu_BA",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Concrete - JHS Pedals.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\17.jpg"
     },
@@ -205,7 +175,7 @@
         "apellido": "Morondo",
         "audioFileYTPlayer": "WT2-HXnGEDk",
         "audioFile": "Cottonmouth Strut - The Whole Other.mp3",
-        "YT_URL": "https://youtu.be/WT2-HXnGEDk",
+        "YT URL": "https://youtu.be/WT2-HXnGEDk",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Cottonmouth Strut - The Whole Other.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\35.jpg"
     },
@@ -220,7 +190,7 @@
         "apellido": "Steve",
         "audioFileYTPlayer": "p33Trpj3nA4",
         "audioFile": "County Lines - Delicate Steve.mp3",
-        "YT_URL": "https://youtu.be/p33Trpj3nA4",
+        "YT URL": "https://youtu.be/p33Trpj3nA4",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\County Lines - Delicate Steve.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\09.jpg"
     },
@@ -235,7 +205,7 @@
         "apellido": "Steve",
         "audioFileYTPlayer": "KbWS8mZJNGU",
         "audioFile": "Crops - Delicate Steve.mp3",
-        "YT_URL": "https://youtu.be/KbWS8mZJNGU",
+        "YT URL": "https://youtu.be/KbWS8mZJNGU",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Crops - Delicate Steve.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\09.jpg"
     },
@@ -250,7 +220,7 @@
         "apellido": "Garrod",
         "audioFileYTPlayer": "jdTnBGemqZo",
         "audioFile": "Crush - Trevor Garrod.mp3",
-        "YT_URL": "https://youtu.be/jdTnBGemqZo",
+        "YT URL": "https://youtu.be/jdTnBGemqZo",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Crush - Trevor Garrod.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\37.jpg"
     },
@@ -265,7 +235,7 @@
         "apellido": "in Japan",
         "audioFileYTPlayer": "oooSZHP3upk",
         "audioFile": "Deep State - Vans in Japan.mp3",
-        "YT_URL": "https://youtu.be/oooSZHP3upk",
+        "YT URL": "https://youtu.be/oooSZHP3upk",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Deep State - Vans in Japan.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\40.jpg"
     },
@@ -280,7 +250,7 @@
         "apellido": "in Japan",
         "audioFileYTPlayer": "W--AstqvU30",
         "audioFile": "Desert Brawl - Vans in Japan.mp3",
-        "YT_URL": "https://youtu.be/W--AstqvU30",
+        "YT URL": "https://youtu.be/W--AstqvU30",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Desert Brawl - Vans in Japan.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\40.jpg"
     },
@@ -295,7 +265,7 @@
         "apellido": "Moreira",
         "audioFileYTPlayer": "MDYIDMNipEY",
         "audioFile": "Disco Knights - Quincas Moreira.mp3",
-        "YT_URL": "https://youtu.be/MDYIDMNipEY",
+        "YT URL": "https://youtu.be/MDYIDMNipEY",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Disco Knights - Quincas Moreira.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\25.jpg"
     },
@@ -310,7 +280,7 @@
         "apellido": "Square",
         "audioFileYTPlayer": "QwwtcMulGq4",
         "audioFile": "Dive Down - VYEN.mp3",
-        "YT_URL": "https://youtu.be/QwwtcMulGq4",
+        "YT URL": "https://youtu.be/QwwtcMulGq4",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Dive Down - VYEN.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\41.jpg"
     },
@@ -325,7 +295,7 @@
         "apellido": "Hansen",
         "audioFileYTPlayer": "puYtMtXwmHI",
         "audioFile": "Don't Ya Bite Now - Dan Lebowitz.mp3",
-        "YT_URL": "https://youtu.be/puYtMtXwmHI",
+        "YT URL": "https://youtu.be/puYtMtXwmHI",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Don't Ya Bite Now - Dan Lebowitz.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\08.jpg"
     },
@@ -340,7 +310,7 @@
         "apellido": "",
         "audioFileYTPlayer": "p4OOL6P_ND4",
         "audioFile": "Down Time In My Soul - RAGE.mp3",
-        "YT_URL": "https://youtu.be/p4OOL6P_ND4",
+        "YT URL": "https://youtu.be/p4OOL6P_ND4",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Down Time In My Soul - RAGE.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\26.jpg"
     },
@@ -355,7 +325,7 @@
         "apellido": "Head",
         "audioFileYTPlayer": "zbEXXszusjs",
         "audioFile": "Earth Bound - Slynk.mp3",
-        "YT_URL": "https://youtu.be/zbEXXszusjs",
+        "YT URL": "https://youtu.be/zbEXXszusjs",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Earth Bound - Slynk.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\30.jpg"
     },
@@ -370,7 +340,7 @@
         "apellido": "Korpas",
         "audioFileYTPlayer": "LQXFrZZKl6k",
         "audioFile": "Emergency On Level 3 - Jeremy Korpas.mp3",
-        "YT_URL": "https://youtu.be/LQXFrZZKl6k",
+        "YT URL": "https://youtu.be/LQXFrZZKl6k",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Emergency On Level 3 - Jeremy Korpas.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\16.jpg"
     },
@@ -385,7 +355,7 @@
         "apellido": "Hansen",
         "audioFileYTPlayer": "G5VSU0kbehg",
         "audioFile": "Everything You Wanted - Dan Lebowitz.mp3",
-        "YT_URL": "https://youtu.be/G5VSU0kbehg",
+        "YT URL": "https://youtu.be/G5VSU0kbehg",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Everything You Wanted - Dan Lebowitz.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\08.jpg"
     },
@@ -400,7 +370,7 @@
         "apellido": "Fields",
         "audioFileYTPlayer": "GGSzSjIIsHU",
         "audioFile": "Fanta Mankane - The Mini Vandals featuring Mamadou Koita and Lasso.mp3",
-        "YT_URL": "https://youtu.be/GGSzSjIIsHU",
+        "YT URL": "https://youtu.be/GGSzSjIIsHU",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Fanta Mankane - The Mini Vandals featuring Mamadou Koita and Lasso.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\34.jpg"
     },
@@ -415,9 +385,24 @@
         "apellido": "Korpas",
         "audioFileYTPlayer": "FYC37xj7lZ4",
         "audioFile": "Finding Synergy - Jeremy Korpas.mp3",
-        "YT_URL": "https://youtu.be/FYC37xj7lZ4",
+        "YT URL": "https://youtu.be/FYC37xj7lZ4",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Finding Synergy - Jeremy Korpas.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\16.jpg"
+    },
+    {
+        "id": 8,
+        "songId": 29,
+        "img": "08.jpg",
+        "titulo": "Freedom_ ",
+        "precio": 3,
+        "descripcion": "Balada lenta buscando los sentimientos nostalgicos que todos llevamos dentro",
+        "nombre": "Timothy",
+        "apellido": "Hansen",
+        "audioFileYTPlayer": "kOKAujY8SsE",
+        "audioFile": "Freedom_ - Dan Lebowitz.mp3",
+        "YT URL": "https://youtu.be/kOKAujY8SsE",
+        "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Freedom_ - Dan Lebowitz.mp3",
+        "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\08.jpg"
     },
     {
         "id": 14,
@@ -430,7 +415,7 @@
         "apellido": "Leddy",
         "audioFileYTPlayer": "xozSHF9ki48",
         "audioFile": "General One - Freedom Trail Studio.mp3",
-        "YT_URL": "https://youtu.be/xozSHF9ki48",
+        "YT URL": "https://youtu.be/xozSHF9ki48",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\General One - Freedom Trail Studio.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\14.jpg"
     },
@@ -445,7 +430,7 @@
         "apellido": "Hansen",
         "audioFileYTPlayer": "BFjzpvWMQ2o",
         "audioFile": "Get Yer Glow - Dan Lebowitz.mp3",
-        "YT_URL": "https://youtu.be/BFjzpvWMQ2o",
+        "YT URL": "https://youtu.be/BFjzpvWMQ2o",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Get Yer Glow - Dan Lebowitz.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\08.jpg"
     },
@@ -460,7 +445,7 @@
         "apellido": "Morondo",
         "audioFileYTPlayer": "Iz7e6DY1_CA",
         "audioFile": "Glitchin’ a Ride - The Whole Other.mp3",
-        "YT_URL": "https://youtu.be/Iz7e6DY1_CA",
+        "YT URL": "https://youtu.be/Iz7e6DY1_CA",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Glitchin’ a Ride - The Whole Other.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\35.jpg"
     },
@@ -475,7 +460,7 @@
         "apellido": "",
         "audioFileYTPlayer": "sAE621VPLTU",
         "audioFile": "Greaser - TrackTribe.mp3",
-        "YT_URL": "https://youtu.be/sAE621VPLTU",
+        "YT URL": "https://youtu.be/sAE621VPLTU",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Greaser - TrackTribe.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\36.jpg"
     },
@@ -490,7 +475,7 @@
         "apellido": "in Japan",
         "audioFileYTPlayer": "pv8czz-lfo8",
         "audioFile": "Grey Flannel - Vans in Japan.mp3",
-        "YT_URL": "https://youtu.be/pv8czz-lfo8",
+        "YT URL": "https://youtu.be/pv8czz-lfo8",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Grey Flannel - Vans in Japan.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\40.jpg"
     },
@@ -505,7 +490,7 @@
         "apellido": "",
         "audioFileYTPlayer": "LWIVnWzzidQ",
         "audioFile": "Hedge Your Bets - TrackTribe.mp3",
-        "YT_URL": "https://youtu.be/LWIVnWzzidQ",
+        "YT URL": "https://youtu.be/LWIVnWzzidQ",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Hedge Your Bets - TrackTribe.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\36.jpg"
     },
@@ -520,7 +505,7 @@
         "apellido": "Animals",
         "audioFileYTPlayer": "mx5OV7ly8MY",
         "audioFile": "Ice Kenkey Beat - Nana Kwabena.mp3",
-        "YT_URL": "https://youtu.be/mx5OV7ly8MY",
+        "YT URL": "https://youtu.be/mx5OV7ly8MY",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Ice Kenkey Beat - Nana Kwabena.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\21.jpg"
     },
@@ -535,7 +520,7 @@
         "apellido": "Monae",
         "audioFileYTPlayer": "9VzNXANC7DE",
         "audioFile": "Infiltration Device - Craig MacArthur.mp3",
-        "YT_URL": "https://youtu.be/9VzNXANC7DE",
+        "YT URL": "https://youtu.be/9VzNXANC7DE",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Infiltration Device - Craig MacArthur.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\07.jpg"
     },
@@ -550,7 +535,7 @@
         "apellido": "Leddy",
         "audioFileYTPlayer": "8ddmRsH_2d0",
         "audioFile": "Island Woke - Freedom Trail Studio.mp3",
-        "YT_URL": "https://youtu.be/8ddmRsH_2d0",
+        "YT URL": "https://youtu.be/8ddmRsH_2d0",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Island Woke - Freedom Trail Studio.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\14.jpg"
     },
@@ -565,7 +550,7 @@
         "apellido": "",
         "audioFileYTPlayer": "WkyHCxsPi0Y",
         "audioFile": "Karma Cat - Dyalla.mp3",
-        "YT_URL": "https://youtu.be/WkyHCxsPi0Y",
+        "YT URL": "https://youtu.be/WkyHCxsPi0Y",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Karma Cat - Dyalla.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\11.jpg"
     },
@@ -580,7 +565,7 @@
         "apellido": "Cummins",
         "audioFileYTPlayer": "xZ3CWXH-p48",
         "audioFile": "King Porter Stomp - Joel Cummins.mp3",
-        "YT_URL": "https://youtu.be/xZ3CWXH-p48",
+        "YT URL": "https://youtu.be/xZ3CWXH-p48",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\King Porter Stomp - Joel Cummins.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\18.jpg"
     },
@@ -595,7 +580,7 @@
         "apellido": "Leddy",
         "audioFileYTPlayer": "Yk-kFJOoBzk",
         "audioFile": "Kraya - Freedom Trail Studio.mp3",
-        "YT_URL": "https://youtu.be/Yk-kFJOoBzk",
+        "YT URL": "https://youtu.be/Yk-kFJOoBzk",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Kraya - Freedom Trail Studio.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\14.jpg"
     },
@@ -610,7 +595,7 @@
         "apellido": "Fields",
         "audioFileYTPlayer": "FjIS38EIKCY",
         "audioFile": "Kuku - The Mini Vandals featuring Mamadou Koita and Lasso.mp3",
-        "YT_URL": "https://youtu.be/FjIS38EIKCY",
+        "YT URL": "https://youtu.be/FjIS38EIKCY",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Kuku - The Mini Vandals featuring Mamadou Koita and Lasso.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\34.jpg"
     },
@@ -625,7 +610,7 @@
         "apellido": "",
         "audioFileYTPlayer": "Akj5pZpMl0E",
         "audioFile": "Kurt - Cheel.mp3",
-        "YT_URL": "https://youtu.be/Akj5pZpMl0E",
+        "YT URL": "https://youtu.be/Akj5pZpMl0E",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Kurt - Cheel.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\04.jpg"
     },
@@ -640,7 +625,7 @@
         "apellido": "in Japan",
         "audioFileYTPlayer": "t8o07bICVjc",
         "audioFile": "Late Night Train - Vans in Japan.mp3",
-        "YT_URL": "https://youtu.be/t8o07bICVjc",
+        "YT URL": "https://youtu.be/t8o07bICVjc",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Late Night Train - Vans in Japan.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\40.jpg"
     },
@@ -655,7 +640,7 @@
         "apellido": "",
         "audioFileYTPlayer": "zwYcrTizgXs",
         "audioFile": "Leave It Alone - Underbelly.mp3",
-        "YT_URL": "https://youtu.be/zwYcrTizgXs",
+        "YT URL": "https://youtu.be/zwYcrTizgXs",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Leave It Alone - Underbelly.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\38.jpg"
     },
@@ -670,7 +655,7 @@
         "apellido": "Sea",
         "audioFileYTPlayer": "foHF_xOvCy0",
         "audioFile": "Letter To Natalie - The Great North Sound Society.mp3",
-        "YT_URL": "https://youtu.be/foHF_xOvCy0",
+        "YT URL": "https://youtu.be/foHF_xOvCy0",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Letter To Natalie - The Great North Sound Society.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\33.jpg"
     },
@@ -685,7 +670,7 @@
         "apellido": "",
         "audioFileYTPlayer": "nUVsJCNAEoE",
         "audioFile": "Light Expanse - Unicorn Heads.mp3",
-        "YT_URL": "https://youtu.be/nUVsJCNAEoE",
+        "YT URL": "https://youtu.be/nUVsJCNAEoE",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Light Expanse - Unicorn Heads.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\39.jpg"
     },
@@ -700,7 +685,7 @@
         "apellido": "Kites",
         "audioFileYTPlayer": "pOZ6u4VupYU",
         "audioFile": "Lilac Skies - Corbyn Kites.mp3",
-        "YT_URL": "https://youtu.be/pOZ6u4VupYU",
+        "YT URL": "https://youtu.be/pOZ6u4VupYU",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Lilac Skies - Corbyn Kites.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\06.jpg"
     },
@@ -715,7 +700,7 @@
         "apellido": "Pedals",
         "audioFileYTPlayer": "AkCi49gL59o",
         "audioFile": "Listen to the Radio - JHS Pedals.mp3",
-        "YT_URL": "https://youtu.be/AkCi49gL59o",
+        "YT URL": "https://youtu.be/AkCi49gL59o",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Listen to the Radio - JHS Pedals.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\17.jpg"
     },
@@ -730,7 +715,7 @@
         "apellido": "",
         "audioFileYTPlayer": "PqiWdtTUn14",
         "audioFile": "Make Love Not War - Patiño.mp3",
-        "YT_URL": "https://youtu.be/PqiWdtTUn14",
+        "YT URL": "https://youtu.be/PqiWdtTUn14",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Make Love Not War - Patiño.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\24.jpg"
     },
@@ -745,7 +730,7 @@
         "apellido": "Korpas",
         "audioFileYTPlayer": "qcCrq0UYymk",
         "audioFile": "Manic. No Depression. - Jeremy Korpas.mp3",
-        "YT_URL": "https://youtu.be/qcCrq0UYymk",
+        "YT URL": "https://youtu.be/qcCrq0UYymk",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Manic. No Depression. - Jeremy Korpas.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\16.jpg"
     },
@@ -760,7 +745,7 @@
         "apellido": "Scott",
         "audioFileYTPlayer": "pAx4Yf3ntOE",
         "audioFile": "Middle Age Blues - Mini Vandals.mp3",
-        "YT_URL": "https://youtu.be/pAx4Yf3ntOE",
+        "YT URL": "https://youtu.be/pAx4Yf3ntOE",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Middle Age Blues - Mini Vandals.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\20.jpg"
     },
@@ -775,7 +760,7 @@
         "apellido": "",
         "audioFileYTPlayer": "okJd5s9h_rM",
         "audioFile": "Modern Situations - Unicorn Heads.mp3",
-        "YT_URL": "https://youtu.be/okJd5s9h_rM",
+        "YT URL": "https://youtu.be/okJd5s9h_rM",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Modern Situations - Unicorn Heads.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\39.jpg"
     },
@@ -790,7 +775,7 @@
         "apellido": "Fields",
         "audioFileYTPlayer": "EaAjW1QNibM",
         "audioFile": "Momo Do - The Mini Vandals featuring Mamadou Koita and Lasso.mp3",
-        "YT_URL": "https://youtu.be/EaAjW1QNibM",
+        "YT URL": "https://youtu.be/EaAjW1QNibM",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Momo Do - The Mini Vandals featuring Mamadou Koita and Lasso.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\34.jpg"
     },
@@ -805,7 +790,7 @@
         "apellido": "Moore",
         "audioFileYTPlayer": "5fI8RPjCIKo",
         "audioFile": "Moon Rock - Nathan Moore.mp3",
-        "YT_URL": "https://youtu.be/5fI8RPjCIKo",
+        "YT URL": "https://youtu.be/5fI8RPjCIKo",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Moon Rock - Nathan Moore.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\22.jpg"
     },
@@ -820,7 +805,7 @@
         "apellido": "",
         "audioFileYTPlayer": "l97ZNvPHmrU",
         "audioFile": "Motorbike - TrackTribe.mp3",
-        "YT_URL": "https://youtu.be/l97ZNvPHmrU",
+        "YT URL": "https://youtu.be/l97ZNvPHmrU",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Motorbike - TrackTribe.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\36.jpg"
     },
@@ -835,7 +820,7 @@
         "apellido": "Hansen",
         "audioFileYTPlayer": "XNeTns45wm8",
         "audioFile": "Movin' Up - Dan Lebowitz.mp3",
-        "YT_URL": "https://youtu.be/XNeTns45wm8",
+        "YT URL": "https://youtu.be/XNeTns45wm8",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Movin' Up - Dan Lebowitz.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\08.jpg"
     },
@@ -850,7 +835,7 @@
         "apellido": "Hansen",
         "audioFileYTPlayer": "dV0eWrRGq6s",
         "audioFile": "Never You Mind - Dan Lebowitz.mp3",
-        "YT_URL": "https://youtu.be/dV0eWrRGq6s",
+        "YT URL": "https://youtu.be/dV0eWrRGq6s",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Never You Mind - Dan Lebowitz.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\08.jpg"
     },
@@ -865,7 +850,7 @@
         "apellido": "Fields",
         "audioFileYTPlayer": "lj0jm9kDknI",
         "audioFile": "Ngoni - The Mini Vandals featuring Mamadou Koita and Lasso.mp3",
-        "YT_URL": "https://youtu.be/lj0jm9kDknI",
+        "YT URL": "https://youtu.be/lj0jm9kDknI",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Ngoni - The Mini Vandals featuring Mamadou Koita and Lasso.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\34.jpg"
     },
@@ -880,7 +865,7 @@
         "apellido": "Review",
         "audioFileYTPlayer": "St62ZePnsQM",
         "audioFile": "Not Impossible - The 126ers.mp3",
-        "YT_URL": "https://youtu.be/St62ZePnsQM",
+        "YT URL": "https://youtu.be/St62ZePnsQM",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Not Impossible - The 126ers.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\32.jpg"
     },
@@ -895,7 +880,7 @@
         "apellido": "Haugen",
         "audioFileYTPlayer": "KO27HopJAOk",
         "audioFile": "Old Blue - Chris Haugen.mp3",
-        "YT_URL": "https://youtu.be/KO27HopJAOk",
+        "YT URL": "https://youtu.be/KO27HopJAOk",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Old Blue - Chris Haugen.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\05.jpg"
     },
@@ -910,7 +895,7 @@
         "apellido": "Hansen",
         "audioFileYTPlayer": "_YJO9xrJhPg",
         "audioFile": "Overdrive Ride - Dan Lebowitz.mp3",
-        "YT_URL": "https://youtu.be/_YJO9xrJhPg",
+        "YT URL": "https://youtu.be/_YJO9xrJhPg",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Overdrive Ride - Dan Lebowitz.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\08.jpg"
     },
@@ -925,7 +910,7 @@
         "apellido": "Korpas",
         "audioFileYTPlayer": "NjIGvYyhg-M",
         "audioFile": "Patterns Of Sadness - Jeremy Korpas.mp3",
-        "YT_URL": "https://youtu.be/NjIGvYyhg-M",
+        "YT URL": "https://youtu.be/NjIGvYyhg-M",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Patterns Of Sadness - Jeremy Korpas.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\16.jpg"
     },
@@ -940,7 +925,7 @@
         "apellido": "Jammy Jams",
         "audioFileYTPlayer": "QtZrec_R1bU",
         "audioFile": "Peacefully - E's Jammy Jams.mp3",
-        "YT_URL": "https://youtu.be/QtZrec_R1bU",
+        "YT URL": "https://youtu.be/QtZrec_R1bU",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Peacefully - E's Jammy Jams.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\13.jpg"
     },
@@ -955,7 +940,7 @@
         "apellido": "Monae",
         "audioFileYTPlayer": "5l5Fybp712I",
         "audioFile": "Potato Deal - Craig MacArthur.mp3",
-        "YT_URL": "https://youtu.be/5l5Fybp712I",
+        "YT URL": "https://youtu.be/5l5Fybp712I",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Potato Deal - Craig MacArthur.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\07.jpg"
     },
@@ -970,7 +955,7 @@
         "apellido": "Leddy",
         "audioFileYTPlayer": "riG3R9KfKqE",
         "audioFile": "Remember September - Freedom Trail Studio.mp3",
-        "YT_URL": "https://youtu.be/riG3R9KfKqE",
+        "YT URL": "https://youtu.be/riG3R9KfKqE",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Remember September - Freedom Trail Studio.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\14.jpg"
     },
@@ -985,7 +970,7 @@
         "apellido": "",
         "audioFileYTPlayer": "4soZwSEsD4w",
         "audioFile": "Rolling Heads - Unicorn Heads.mp3",
-        "YT_URL": "https://youtu.be/4soZwSEsD4w",
+        "YT URL": "https://youtu.be/4soZwSEsD4w",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Rolling Heads - Unicorn Heads.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\39.jpg"
     },
@@ -1000,7 +985,7 @@
         "apellido": "Steve",
         "audioFileYTPlayer": "TkPGZL87nOI",
         "audioFile": "Rooster - Delicate Steve.mp3",
-        "YT_URL": "https://youtu.be/TkPGZL87nOI",
+        "YT URL": "https://youtu.be/TkPGZL87nOI",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Rooster - Delicate Steve.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\09.jpg"
     },
@@ -1015,7 +1000,7 @@
         "apellido": "Steve",
         "audioFileYTPlayer": "SwstFJ8kzkI",
         "audioFile": "Sailing - Delicate Steve.mp3",
-        "YT_URL": "https://youtu.be/SwstFJ8kzkI",
+        "YT URL": "https://youtu.be/SwstFJ8kzkI",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Sailing - Delicate Steve.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\09.jpg"
     },
@@ -1030,7 +1015,7 @@
         "apellido": "Steve",
         "audioFileYTPlayer": "8OGBfA6O3lY",
         "audioFile": "Seasons - Delicate Steve.mp3",
-        "YT_URL": "https://youtu.be/8OGBfA6O3lY",
+        "YT URL": "https://youtu.be/8OGBfA6O3lY",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Seasons - Delicate Steve.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\09.jpg"
     },
@@ -1045,7 +1030,7 @@
         "apellido": "Review",
         "audioFileYTPlayer": "Lcv0TAF0wnA",
         "audioFile": "See You On The Otherside - The 126ers.mp3",
-        "YT_URL": "https://youtu.be/Lcv0TAF0wnA",
+        "YT URL": "https://youtu.be/Lcv0TAF0wnA",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\See You On The Otherside - The 126ers.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\32.jpg"
     },
@@ -1060,7 +1045,7 @@
         "apellido": "Animals",
         "audioFileYTPlayer": "7bflzjLFZqg",
         "audioFile": "She No Dull Beat - Nana Kwabena.mp3",
-        "YT_URL": "https://youtu.be/7bflzjLFZqg",
+        "YT URL": "https://youtu.be/7bflzjLFZqg",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\She No Dull Beat - Nana Kwabena.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\21.jpg"
     },
@@ -1075,7 +1060,7 @@
         "apellido": "",
         "audioFileYTPlayer": "sn7OY_FP5Og",
         "audioFile": "Soft Feeling - Cheel.mp3",
-        "YT_URL": "https://youtu.be/sn7OY_FP5Og",
+        "YT URL": "https://youtu.be/sn7OY_FP5Og",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Soft Feeling - Cheel.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\04.jpg"
     },
@@ -1090,7 +1075,7 @@
         "apellido": "in Japan",
         "audioFileYTPlayer": "Li2Pr_W65ws",
         "audioFile": "Sonic Pogo - Vans in Japan.mp3",
-        "YT_URL": "https://youtu.be/Li2Pr_W65ws",
+        "YT URL": "https://youtu.be/Li2Pr_W65ws",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Sonic Pogo - Vans in Japan.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\40.jpg"
     },
@@ -1105,7 +1090,7 @@
         "apellido": "Sea",
         "audioFileYTPlayer": "AaoFCOtKRFY",
         "audioFile": "South Street Strut - The Great North Sound Society.mp3",
-        "YT_URL": "https://youtu.be/AaoFCOtKRFY",
+        "YT URL": "https://youtu.be/AaoFCOtKRFY",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\South Street Strut - The Great North Sound Society.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\33.jpg"
     },
@@ -1120,7 +1105,7 @@
         "apellido": "",
         "audioFileYTPlayer": "Bpq7qQJIMw4",
         "audioFile": "Spy vs Spy - DJ Williams.mp3",
-        "YT_URL": "https://youtu.be/Bpq7qQJIMw4",
+        "YT URL": "https://youtu.be/Bpq7qQJIMw4",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Spy vs Spy - DJ Williams.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\10.jpg"
     },
@@ -1135,7 +1120,7 @@
         "apellido": "Kites",
         "audioFileYTPlayer": "3YeZ4T1hkKM",
         "audioFile": "Staycation - Corbyn Kites.mp3",
-        "YT_URL": "https://youtu.be/3YeZ4T1hkKM",
+        "YT URL": "https://youtu.be/3YeZ4T1hkKM",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Staycation - Corbyn Kites.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\06.jpg"
     },
@@ -1150,7 +1135,7 @@
         "apellido": "",
         "audioFileYTPlayer": "yurWoLO2X5c",
         "audioFile": "Stoner Things - Patiño.mp3",
-        "YT_URL": "https://youtu.be/yurWoLO2X5c",
+        "YT URL": "https://youtu.be/yurWoLO2X5c",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Stoner Things - Patiño.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\24.jpg"
     },
@@ -1165,7 +1150,7 @@
         "apellido": "Pedals",
         "audioFileYTPlayer": "ACYCwBoO6mI",
         "audioFile": "Summer - JHS Pedals.mp3",
-        "YT_URL": "https://youtu.be/ACYCwBoO6mI",
+        "YT URL": "https://youtu.be/ACYCwBoO6mI",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Summer - JHS Pedals.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\17.jpg"
     },
@@ -1180,7 +1165,7 @@
         "apellido": "Steve",
         "audioFileYTPlayer": "wuSUg-eI5YA",
         "audioFile": "Sunshine - Delicate Steve.mp3",
-        "YT_URL": "https://youtu.be/wuSUg-eI5YA",
+        "YT URL": "https://youtu.be/wuSUg-eI5YA",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Sunshine - Delicate Steve.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\09.jpg"
     },
@@ -1195,7 +1180,7 @@
         "apellido": "Korpas",
         "audioFileYTPlayer": "tZ7hhkfLpt4",
         "audioFile": "Superfuzz Grind - Jeremy Korpas.mp3",
-        "YT_URL": "https://youtu.be/tZ7hhkfLpt4",
+        "YT URL": "https://youtu.be/tZ7hhkfLpt4",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Superfuzz Grind - Jeremy Korpas.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\16.jpg"
     },
@@ -1210,7 +1195,7 @@
         "apellido": "Haugen",
         "audioFileYTPlayer": "SANccBFu_b4",
         "audioFile": "Swampland - Chris Haugen.mp3",
-        "YT_URL": "https://youtu.be/SANccBFu_b4",
+        "YT URL": "https://youtu.be/SANccBFu_b4",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Swampland - Chris Haugen.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\05.jpg"
     },
@@ -1225,7 +1210,7 @@
         "apellido": "Hansen",
         "audioFileYTPlayer": "ARt3H26Ddms",
         "audioFile": "Sweet Release - Dan Lebowitz.mp3",
-        "YT_URL": "https://youtu.be/ARt3H26Ddms",
+        "YT URL": "https://youtu.be/ARt3H26Ddms",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Sweet Release - Dan Lebowitz.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\08.jpg"
     },
@@ -1240,7 +1225,7 @@
         "apellido": "Hickman",
         "audioFileYTPlayer": "bHYra7xqVpA",
         "audioFile": "Sweet Relief - Zachariah Hickman.mp3",
-        "YT_URL": "https://youtu.be/bHYra7xqVpA",
+        "YT URL": "https://youtu.be/bHYra7xqVpA",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Sweet Relief - Zachariah Hickman.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\42.jpg"
     },
@@ -1255,7 +1240,7 @@
         "apellido": "",
         "audioFileYTPlayer": "_i1OLC7W3Ns",
         "audioFile": "Take it Slow - SefChol.mp3",
-        "YT_URL": "https://youtu.be/_i1OLC7W3Ns",
+        "YT URL": "https://youtu.be/_i1OLC7W3Ns",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Take it Slow - SefChol.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\29.jpg"
     },
@@ -1270,7 +1255,7 @@
         "apellido": "",
         "audioFileYTPlayer": "F5BpJ46BYYI",
         "audioFile": "Tea Time - Ofshane.mp3",
-        "YT_URL": "https://youtu.be/F5BpJ46BYYI",
+        "YT URL": "https://youtu.be/F5BpJ46BYYI",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Tea Time - Ofshane.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\23.jpg"
     },
@@ -1285,7 +1270,7 @@
         "apellido": "",
         "audioFileYTPlayer": "Qz4mWKSzLcI",
         "audioFile": "That One Bar Scene - RKVC.mp3",
-        "YT_URL": "https://youtu.be/Qz4mWKSzLcI",
+        "YT URL": "https://youtu.be/Qz4mWKSzLcI",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\That One Bar Scene - RKVC.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\28.jpg"
     },
@@ -1300,7 +1285,7 @@
         "apellido": "Head",
         "audioFileYTPlayer": "kUxpApYRXzU",
         "audioFile": "The Jam - Slynk & Mr Stabalina.mp3",
-        "YT_URL": "https://youtu.be/kUxpApYRXzU",
+        "YT URL": "https://youtu.be/kUxpApYRXzU",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\The Jam - Slynk & Mr Stabalina.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\30.jpg"
     },
@@ -1315,7 +1300,7 @@
         "apellido": "Monae",
         "audioFileYTPlayer": "MzEgUqXiaqc",
         "audioFile": "The Old RV - Craig MacArthur.mp3",
-        "YT_URL": "https://youtu.be/MzEgUqXiaqc",
+        "YT URL": "https://youtu.be/MzEgUqXiaqc",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\The Old RV - Craig MacArthur.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\07.jpg"
     },
@@ -1330,7 +1315,7 @@
         "apellido": "Parrish",
         "audioFileYTPlayer": "5DzpaGtCcKE",
         "audioFile": "The Truth - Anno Domini Beats.mp3",
-        "YT_URL": "https://youtu.be/5DzpaGtCcKE",
+        "YT URL": "https://youtu.be/5DzpaGtCcKE",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\The Truth - Anno Domini Beats.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\02.jpg"
     },
@@ -1345,7 +1330,7 @@
         "apellido": "",
         "audioFileYTPlayer": "HU98xmWK5DU",
         "audioFile": "Thumbs On Ones - TrackTribe.mp3",
-        "YT_URL": "https://youtu.be/HU98xmWK5DU",
+        "YT URL": "https://youtu.be/HU98xmWK5DU",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Thumbs On Ones - TrackTribe.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\36.jpg"
     },
@@ -1360,7 +1345,7 @@
         "apellido": "Leddy",
         "audioFileYTPlayer": "O1HuqmLvsUA",
         "audioFile": "Tin Spirit - Freedom Trail Studio.mp3",
-        "YT_URL": "https://youtu.be/O1HuqmLvsUA",
+        "YT URL": "https://youtu.be/O1HuqmLvsUA",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Tin Spirit - Freedom Trail Studio.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\14.jpg"
     },
@@ -1375,7 +1360,7 @@
         "apellido": "",
         "audioFileYTPlayer": "XBm2F1dyp_U",
         "audioFile": "Toddler Band - Godmode.mp3",
-        "YT_URL": "https://youtu.be/XBm2F1dyp_U",
+        "YT URL": "https://youtu.be/XBm2F1dyp_U",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Toddler Band - Godmode.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\15.jpg"
     },
@@ -1390,7 +1375,7 @@
         "apellido": "Hansen",
         "audioFileYTPlayer": "NQGlr8PmdYg",
         "audioFile": "Trimmed & Taught - Dan Lebowitz.mp3",
-        "YT_URL": "https://youtu.be/NQGlr8PmdYg",
+        "YT URL": "https://youtu.be/NQGlr8PmdYg",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Trimmed & Taught - Dan Lebowitz.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\08.jpg"
     },
@@ -1405,7 +1390,7 @@
         "apellido": "Adams",
         "audioFileYTPlayer": "19yP-DoB69g",
         "audioFile": "Tubby - Steve Adams.mp3",
-        "YT_URL": "https://youtu.be/19yP-DoB69g",
+        "YT URL": "https://youtu.be/19yP-DoB69g",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Tubby - Steve Adams.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\31.jpg"
     },
@@ -1420,7 +1405,7 @@
         "apellido": "",
         "audioFileYTPlayer": "KzuXkIh0cVA",
         "audioFile": "Two Sides - SefChol.mp3",
-        "YT_URL": "https://youtu.be/KzuXkIh0cVA",
+        "YT URL": "https://youtu.be/KzuXkIh0cVA",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Two Sides - SefChol.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\29.jpg"
     },
@@ -1435,7 +1420,7 @@
         "apellido": "Review",
         "audioFileYTPlayer": "WG6S1BerpJw",
         "audioFile": "Warships - The 126ers.mp3",
-        "YT_URL": "https://youtu.be/WG6S1BerpJw",
+        "YT URL": "https://youtu.be/WG6S1BerpJw",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Warships - The 126ers.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\32.jpg"
     },
@@ -1450,7 +1435,7 @@
         "apellido": "Mathis",
         "audioFileYTPlayer": "Cmzuaozboms",
         "audioFile": "We Ride! - Reed Mathis.mp3",
-        "YT_URL": "https://youtu.be/Cmzuaozboms",
+        "YT URL": "https://youtu.be/Cmzuaozboms",
         "pathAbsolute MP3 (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\We Ride! - Reed Mathis.mp3",
         "pathAbsolute img (native cover)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\27.jpg"
     }

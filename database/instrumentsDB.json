@@ -27,13 +27,22 @@
         "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\04.jpg"
     },
     {
-        "id": 7,
-        "InstrumId": 7,
-        "img": "07.jpg",
-        "titulo": "Bajo Eléctrico Corvette Rock Bass By Warwick 5 Cuerdas Local",
-        "descripcion": "SE RETIRA POR EL CENTRO DE LOMAS DE ZAMORA O ENVIO POR MERCADO ENVIO. LOCAL A LA CALLE",
-        "precio": 27,
-        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\07.jpg"
+        "id": 5,
+        "InstrumId": 5,
+        "img": "05.jpg",
+        "titulo": "Bajo Electrico Texas",
+        "descripcion": "Bajo eléctrico de 4 cuerdas tipo Ibanez, de circuito Activo. Dos mics unos tipo jazz bass y el otro precision bass. Dos perillas de tonos, dos perillas de volumen. Color Tobacoo Burst.",
+        "precio": 134,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\05.jpg"
+    },
+    {
+        "id": 6,
+        "InstrumId": 6,
+        "img": "06.jpg",
+        "titulo": "Bajo Electrico Tipo Fender Tyler",
+        "descripcion": "Exelente bajo tipo fender tyler vintage series jazz bass, exelente estado se lo compre a la persona q lo compro nuevo y no lo uso yo lo use muy copo, lindo sonido con funda",
+        "precio": 37,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\06.jpg"
     },
     {
         "id": 8,
@@ -97,15 +106,6 @@
         "descripcion": "Batería 4 cuerpos Maple Tom tom 12\" x 10\" Tom de pie 14\" x 16\" Bombo 18\" x 18\" Tambor 14 Rims Flotantes Bombo con 8 torres AROS DE MADERA\nTom holder t/YAMAHA Patas telescópicas Fierros Dobles Soporte Recto Platillo pata doble Soporte HH con regulación pata doble Pedal de bombo cadena doble plataforma de acero\nSoporte de redoblante pata doble",
         "precio": 14,
         "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\14.jpg"
-    },
-    {
-        "id": 16,
-        "InstrumId": 16,
-        "img": "16.jpg",
-        "titulo": "Bateria Mapex Mars Fusion Bombo De 20 Bloodwood Cuotas",
-        "descripcion": "Bombo 20\"x16\" sin soporte para Tom. Tom Tom 10\"x07\" y 12\"x08\" Tom Base 14\"x12\" Caja 14\"x6,5 Mars Incluye Soporte doble de tom TH676 No incluye herrajes ni platos ",
-        "precio": 265,
-        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\16.jpg"
     },
     {
         "id": 17,
@@ -214,29 +214,5 @@
         "descripcion": "Diseñado para amortiguar los golpes y ruidos de manipulación. Totalmente dinámico, solo debés conectarlo y empezar a grabar.",
         "precio": 333,
         "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\40.jpg"
-    },
-    {
-        "id": 12,
-        "InstrumId": "6",
-        "img": "06.jpg",
-        "titulo": "Bajo Electrico Tipo Fender Tyler",
-        "descripcion": "Exelente bajo tipo fender tyler vintage series jazz bass, exelente estado se lo compre a la persona q lo compro nuevo y no lo uso yo lo use muy copo, lindo sonido con funda",
-        "precio": "37"
-    },
-    {
-        "id": 12,
-        "InstrumId": "5",
-        "img": "05.jpg",
-        "titulo": "Bajo Electrico Texas",
-        "descripcion": "Bajo eléctrico de 4 cuerdas tipo Ibanez, de circuito Activo. Dos mics unos tipo jazz bass y el otro precision bass. Dos perillas de tonos, dos perillas de volumen. Color Tobacoo Burst.",
-        "precio": "134"
-    },
-    {
-        "id": 12,
-        "InstrumId": "3",
-        "img": "03.jpg",
-        "titulo": "Bajo Electrico 4 Cuedras Con Ampli Y Afinador",
-        "descripcion": "Bajo usado en buen estado no se la marca",
-        "precio": "36"
     }
 ]

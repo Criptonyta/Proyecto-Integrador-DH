@@ -65,17 +65,17 @@ const controlador = {
         const songsDB = songsModel.getAll()
         songcargar = {
             id: 25, // TODO ACTIVAR CON SESSION /* Id usuario */
-            img: req.body.songEmptyImgBtn, //Imagen de la cancion
+            img: req.file.filename, //Imagen de la cancion
             audioFile: req.body.songEmptyFileBtn, //Nombre del MP3
-            audioFileYTPlayer: "kNYx2C995fc", //Codigo en la cancion de youtube CAMBIAR!
-            YT_URL: "https://youtu.be/" + "kNYx2C995fc", //URL a youtube
+            audioFileYTPlayer: "kNYx2C995fc", //TODO Codigo en la cancion de youtube CAMBIAR!
+            YT_URL: "https://youtu.be/" + "kNYx2C995fc", //TODO URL a youtube
             titulo: req.body.titulo, //Titulo de la cancion
             precio: req.body.precio, //Precio de la cancion
             descripcion: req.body.descripcion, //Descripcion de la cancion
             nombre: usersModel.findUser(25)["nombre"], //SESSION
             apellido: usersModel.findUser(25)["apellido"] //SESSION
         }
-        // TODO SESSION + MULTER
+        // TODO SESSION
         songsModel.agregarCancion(songcargar)
 
         const instrumentsDB = instrumentsModel.getAll() //Todos los instrumentos
@@ -220,7 +220,7 @@ const controlador = {
         const oldProduct = songsModel.findSong(req.params.idSong)
 
         const editSong = {
-            img: req.body.songEmptyImgBtn,
+            img: req.file.originalname, //Imagen de la cancion
             titulo: req.body.titulo,
             precio: req.body.precio,
             descripcion: req.body.descripcion,

@@ -998,11 +998,9 @@ td {
 
     .userprofile-formulario {
         display: flex;
-        text-align: left;
-        align-items: center;
+        text-align: center;
         margin: 30px;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
     }
 
 

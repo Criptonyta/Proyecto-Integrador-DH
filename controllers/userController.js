@@ -1,8 +1,13 @@
 const fs = require('fs');
 const path = require("path");
+const multer = require('multer');
 
-const {instrumentsModel,songsModel,usersModel} = require("../models/index");//Importamos los models
-const skills = ["Bajista","Baterista","Cantante","Guitarrista","Multiinstrumentalista","Productor","Otros"]//Skills
+const {
+    instrumentsModel,
+    songsModel,
+    usersModel
+} = require("../models/index"); //Importamos los models
+const skills = ["Bajista", "Baterista", "Cantante", "Guitarrista", "Multiinstrumentalista", "Productor", "Otros"] //Skills
 
 const controlador = {
     userprofile: (req, res) => {
@@ -10,30 +15,53 @@ const controlador = {
         const songsUser = songsModel.findArtistSongs(req.params.iduser)
         const instrumentUser = instrumentsModel.findArtistInstruments(req.params.iduser)
 
-        res.render('userprofile.ejs', {usuarioInfo,songsUser,instrumentUser});
+        res.render('userprofile.ejs', {
+            usuarioInfo,
+            songsUser,
+            instrumentUser
+        });
     },
     viewuserprofile: (req, res) => {
         const usuarioInfo = usersModel.findUser(req.params.iduser)
         const songsUser = songsModel.findArtistSongs(req.params.iduser)
         const instrumentUser = instrumentsModel.findArtistInstruments(req.params.iduser)
 
-        res.render('viewUserProfile.ejs', {usuarioInfo,songsUser,instrumentUser});
+        res.render('viewUserProfile.ejs', {
+            usuarioInfo,
+            songsUser,
+            instrumentUser
+        });
     },
     userprofileEdit: (req, res) => {
         const usuarioInfo = usersModel.findUser(req.params.iduser)
-        res.render('userprofileEdit.ejs',{usuarioInfo,habilidades:skills});
+        res.render('userprofileEdit.ejs', {
+            usuarioInfo,
+            habilidades: skills
+        });
     },
-    userprofileEditNew: (req, res) => {//editar usuario
+    userprofileEditNew: (req, res) => { //editar usuario
         const profileOld = usersModel.findUser(req.params.iduser)
-        const profileNew = {email:req.body.email,nombre:req.body.nombre,apellido:req.body.apellido,password:req.body.password,userAvatarButton:req.body.userAvatarButton,minibio:req.body.minibio,skills:req.body.skills}
+        const profileNew = {
+            email: req.body.email,
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            password: req.body.password,
+            userAvatarButton: req.file.originalname, //Deberia funcionar con multer
+            minibio: req.body.minibio,
+            skills: req.body.skills
+        }
 
-        usersModel.editarUsuario(profileOld,profileNew)
+        usersModel.editarUsuario(profileOld, profileNew)
 
         const usuarioInfo = usersModel.findUser(req.params.iduser)
         const songsUser = songsModel.findArtistSongs(req.params.iduser)
         const instrumentUser = instrumentsModel.findArtistInstruments(req.params.iduser)
 
-        res.render('userprofile.ejs', {usuarioInfo,songsUser,instrumentUser});
+        res.render('userprofile.ejs', {
+            usuarioInfo,
+            songsUser,
+            instrumentUser
+        });
     },
     login: (req, res) => {
         res.render('login.ejs');
@@ -43,11 +71,11 @@ const controlador = {
     },
     deleteSongs: (req, res) => {
         songsModel.borrarNcanciones(req.body.eliminarCancion)
-        res.send("productos borrados")//CUANDO ESTE SESSION SE PUEDE REDIRIGIR A LA MISMA DE USUARIO PAGINA USANDO SU ID
+        res.send("productos borrados") //CUANDO ESTE SESSION SE PUEDE REDIRIGIR A LA MISMA DE USUARIO PAGINA USANDO SU ID
     },
     deleteInstruments: (req, res) => {
         instrumentsModel.borrarNinstrumentos(req.body.eliminarInstrumento)
-        res.send("productos borrados")//CUANDO ESTE SESSION SE PUEDE REDIRIGIR A LA MISMA DE USUARIO PAGINA USANDO SU ID
+        res.send("productos borrados") //CUANDO ESTE SESSION SE PUEDE REDIRIGIR A LA MISMA DE USUARIO PAGINA USANDO SU ID
     }
 };
 

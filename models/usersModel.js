@@ -4,7 +4,7 @@ const {
 const fs = require("fs")
 const path = require("path")
 const pathUsers = path.join(__dirname, "../database/usersDB.json")
-const multer = require('multer')
+
 
 const usersModel = {
     getAll: function () { //Te devuelve todos los usuarios
@@ -37,9 +37,6 @@ const usersModel = {
         this.rescribirDB(usuarios)
     },
 
-    agregarAvatar: function (avatar) { //Cargar el avatar del usuario con multer
-
-    },
 
 
     editarUsuario: function (profileOld, profileNew) { //Le pasas los datos viejos y los nuevos y te edita la info del usuario
