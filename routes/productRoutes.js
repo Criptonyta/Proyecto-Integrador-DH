@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const {productController} = require('../controllers/index');
+const {multerMid} = require("../middlewares/index")
 const multer = require('multer');
 const path = require('path');
 
