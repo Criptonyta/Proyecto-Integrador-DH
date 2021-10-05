@@ -59,7 +59,6 @@ const controlador = {
     },
     addSong: (req, res) => {
         const songsDB = songsModel.getAll()
-        console.log(req.files)
         songcargar = {
             id: 25, // TODO ACTIVAR CON SESSION /* Id usuario */
             img: req.files.songEmptyContentBtn1[0].filename, //Imagen de la cancion
@@ -91,7 +90,7 @@ const controlador = {
         const instrumentsDB = instrumentsModel.getAll()
         instrumentcargar = {
             id: 12, //  TODO: ARREGLAR CON LA IMPLEMENTACION DE SESSION/* Id usuario */
-            img: req.body.productEmptyButton,
+            img: req.files.productEmptyButton.filename,
             titulo: req.body.titulo,
             precio: req.body.precio,
             descripcion: req.body.descripcion,
