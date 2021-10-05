@@ -9,7 +9,7 @@ router.get('/detailInstrument/:id', productController.instrumentDetail); //Te mu
 router.get('/detailSong/:id', productController.songDetail); //Te muestra el detalle de una cancion
 
 router.get('/createproduct', productController.productempty); //Hoja para cargar los productos
-router.post('/createproduct',multerMid.upload.fields([{name:"productEmptyButton",maxCount: 1}]) ,productController.addProduct); //Hoja para crear productos 
+router.post('/createproduct',multerMid.upload.fields([{name:"productEmptyButton",maxCount: 1}]),productController.addProduct); //Hoja para crear productos 
 
 router.get('/createsong', productController.songempty); //Hoja para cargar la cancion
 router.post('/createsong', multerMid.upload.fields([{name: 'songEmptyContentBtn1',maxCount: 1},{name: 'songEmptyContentBtn2',maxCount: 1}]), productController.addSong); //Hoja para subir imagenes y mp3s de canciones con Multer 'songEmptyContentBtn'
@@ -28,7 +28,7 @@ router.get("/editsong/:idSong", productController.editSong) //pagina para editar
 router.get("/editinstrument/:idInstrum", productController.editInstrument) //pagina para editar instrumento
 
 router.put("/editsong/:idSong", productController.editSongPut) // upload.single('songEmptyImgBtn'),
-router.put("/editinstrument/:idInstrum", productController.editInstrumentPut)
+router.put("/editinstrument/:idInstrum",multerMid.upload.fields([{name:"productEmptyButton",maxCount: 1}]),productController.editInstrumentPut)
 
 
 

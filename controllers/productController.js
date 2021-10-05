@@ -233,17 +233,26 @@ const controlador = {
     editInstrumentPut: (req, res) => {
         const instrumentsDB = instrumentsModel.getAll()
         const oldProduct = instrumentsModel.findInstrument(req.params.idInstrum)
-
-        const editInstrument = {
-            img: req.body.productEmptyButton,
-            titulo: req.body.titulo,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
+        if (typeof req.files == "object" && req.files.productEmptyButton){//Si tiene req.files es porque le mande una foto
+            const editInstrument = {
+                img: req.files.productEmptyButton[0].filename,
+                titulo: req.body.titulo,
+                descripcion: req.body.descripcion,
+                precio: req.body.precio,
+            }
+            instrumentsModel.editarInstrumento(oldProduct, editInstrument)
+            res.render("allInstruments.ejs", {instrumentos: instrumentsDB})
         }
+        else {
+            const editInstrument = {
+                titulo: req.body.titulo,
+                descripcion: req.body.descripcion,
+                precio: req.body.precio,
+            }
         instrumentsModel.editarInstrumento(oldProduct, editInstrument)
-        res.render("allInstruments.ejs", {
-            instrumentos: instrumentsDB
-        })
+        res.render("allInstruments.ejs", {instrumentos: instrumentsDB})
+    
+        }
     },
 };
 

@@ -41,9 +41,7 @@ const instrumentModel = {
                 instrumentsDB[i].titulo = newData.titulo;
                 instrumentsDB[i].descripcion = newData.descripcion;
                 instrumentsDB[i].precio = newData.precio;
-                if (newData.img) {
-                    instrumentsDB[i].img = newData.img
-                }
+                if (newData.img) {instrumentsDB[i].img = newData.img}
             }
         }
         this.rescribirDB(instrumentsDB)

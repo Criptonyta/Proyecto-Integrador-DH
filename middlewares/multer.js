@@ -7,7 +7,7 @@ const contentstorage = multer.diskStorage({ // Configura el almacenamiento  || '
         if (file.fieldname == "songEmptyContentBtn1" || file.fieldname == "songEmptyContentBtn2")//Caso cargar cancion POST
             if (file.mimetype == 'audio/mpeg') {cb(null, path.join(__dirname, '../public/batchSongs'))} 
             else {cb(null, path.join(__dirname, '../public/images/MusicFilesCoverImg/resized'))}
-        else if (file.fieldname == "productEmptyButton"){console.log(file);cb(null, path.join(__dirname, '../public/images/instrumentsImg/resizedandcropped'))}//Caso cargar instrumento POST
+        else if (file.fieldname == "productEmptyButton"){cb(null, path.join(__dirname, '../public/images/instrumentsImg/resizedandcropped'))}//Caso cargar instrumento POST
     },
     filename: function (req, file, cb) {
         cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
