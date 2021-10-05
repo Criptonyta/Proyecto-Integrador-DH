@@ -2,11 +2,7 @@ const fs = require('fs');
 const path = require("path");
 const multer = require('multer');
 
-const {
-    instrumentsModel,
-    songsModel,
-    usersModel
-} = require("../models/index"); //Importamos los models
+const {instrumentsModel,songsModel,usersModel} = require("../models/index"); //Importamos los models
 const skills = ["Bajista", "Baterista", "Cantante", "Guitarrista", "Multiinstrumentalista", "Productor", "Otros"] //Skills
 
 const controlador = {

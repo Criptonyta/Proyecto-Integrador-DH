@@ -2,11 +2,7 @@ const fs = require('fs');
 const path = require("path");
 const multer = require('multer');
 
-const {
-    instrumentsModel,
-    songsModel,
-    usersModel
-} = require("../models/index"); //Importamos los models
+const {instrumentsModel,songsModel,usersModel} = require("../models/index"); //Importamos los models
 const pathFuncionesAuxiliares = path.join(__dirname, '../public/funcionesAuxiliares/productControllerAux.js');
 const auxiliares = require(pathFuncionesAuxiliares);
 
@@ -63,6 +59,7 @@ const controlador = {
     },
     addSong: (req, res) => {
         const songsDB = songsModel.getAll()
+        console.log(req.files)
         songcargar = {
             id: 25, // TODO ACTIVAR CON SESSION /* Id usuario */
             img: req.files.songEmptyContentBtn1[0].filename, //Imagen de la cancion
