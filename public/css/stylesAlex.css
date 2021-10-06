@@ -604,6 +604,8 @@ i {
     text-align: center;
 }
 
+.ultimosAdicionadosCard,
+.home-card-artist,
 .carrouselCard h4 {
     padding: 15px 5px 10px 5px;
     border-bottom: 1px solid white;
@@ -613,6 +615,8 @@ i {
     overflow: hidden;
 }
 
+.ultimosAdicionadosCard,
+.home-card-artist,
 .carrouselCard p {
     font-family: 'Roboto';
     font-size: 14px;
