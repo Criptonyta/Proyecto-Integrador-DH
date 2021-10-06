@@ -19,13 +19,13 @@
     <!--CONTENIDO-->
     <main class="principal">
         <!--productos-->
-        <form class="product-container" method='POST' action="/products/editsong/<%= songOld.songId %>?_method=PUT">
+        <form class="product-container" method='POST' action="/products/editsong/<%= songOld.songId %>?_method=PUT" enctype="multipart/form-data">
             <div class="productImages">
                 <label for='songEmptyImgBtn' class='songEmptyImgBtn'>Cargá una imagen</label>
-                <input class='songEmptyImgBtn' name='songEmptyImgBtn' id='songEmptyImgBtn' type='file'
+                <input class='songEmptyImgBtn' name='songEmptyContentBtn1' id='songEmptyImgBtn' type='file'
                     placeholder="Cargá tu foto aquí">
                 <label for='songEmptyFileBtn' class='songEmptyFileBtn'>Cargá una canción</label>
-                <input type='file' name='songEmptyFileBtn' id='songEmptyFileBtn' class='songEmptyFileBtn'
+                <input type='file' name='songEmptyContentBtn2' id='songEmptyFileBtn' class='songEmptyFileBtn'
                     placeholder="Cargá tu canción aquí">
                 <div class="productImagesButtons">
                     <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button> -->

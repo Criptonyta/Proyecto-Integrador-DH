@@ -214,21 +214,54 @@ const controlador = {
     editSongPut: (req, res) => {
         const songsDB = songsModel.getAll()
         const oldProduct = songsModel.findSong(req.params.idSong)
-
-        const editSong = {
-            img: req.file.originalname, //Imagen de la cancion
-            titulo: req.body.titulo,
-            precio: req.body.precio,
-            descripcion: req.body.descripcion,
-            audioFileYTPlayer: "Cmzuaozboms", //CAMBIAR!
-            audioFile: req.body.songEmptyFileBtn,
-            YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
+        if (req.files.songEmptyContentBtn1 && req.files.songEmptyContentBtn2){//CASO SI TIENE FOTO Y VIDEO
+            const editSong = {
+                img: req.files.songEmptyContentBtn1[0].filename,
+                titulo: req.body.titulo,
+                precio: req.body.precio,
+                descripcion: req.body.descripcion,
+                audioFileYTPlayer: "Cmzuaozboms", //CAMBIAR!
+                audioFile: req.files.songEmptyContentBtn2[0].filename,
+                YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
+            }
+            songsModel.editarCancion(oldProduct, editSong)
+            res.render("allSongs.ejs", {musicos: songsDB})
         }
-        songsModel.editarCancion(oldProduct, editSong)
-
-        res.render("allSongs.ejs", {
-            musicos: songsDB
-        })
+        else if (req.files.songEmptyContentBtn1){//CASO SI TIENE FOTO
+            const editSong = {
+                img: req.files.songEmptyContentBtn1[0].filename,
+                titulo: req.body.titulo,
+                precio: req.body.precio,
+                descripcion: req.body.descripcion,
+                audioFileYTPlayer: "Cmzuaozboms", //CAMBIAR!
+                YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
+            }
+            songsModel.editarCancion(oldProduct, editSong)
+            res.render("allSongs.ejs", {musicos: songsDB})
+        }
+        else if (req.files.songEmptyContentBtn2){//CASO SI TIENE VIDEO
+            const editSong = {
+                titulo: req.body.titulo,
+                precio: req.body.precio,
+                descripcion: req.body.descripcion,
+                audioFileYTPlayer: "Cmzuaozboms", //CAMBIAR!
+                audioFile: req.files.songEmptyContentBtn2[0].filename,
+                YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
+            }
+            songsModel.editarCancion(oldProduct, editSong)
+            res.render("allSongs.ejs", {musicos: songsDB})
+        }
+        else {
+            const editSong = {//CASO NI FOTO NI VIDEO
+                titulo: req.body.titulo,
+                precio: req.body.precio,
+                descripcion: req.body.descripcion,
+                audioFileYTPlayer: "Cmzuaozboms", //CAMBIAR!
+                YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
+            }
+            songsModel.editarCancion(oldProduct, editSong)
+            res.render("allSongs.ejs", {musicos: songsDB})
+        }
     },
     editInstrumentPut: (req, res) => {
         const instrumentsDB = instrumentsModel.getAll()

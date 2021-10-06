@@ -27,7 +27,7 @@ router.delete("/deletesong/:idSong", productController.deleteSong)
 router.get("/editsong/:idSong", productController.editSong) //pagina para editar cancion
 router.get("/editinstrument/:idInstrum", productController.editInstrument) //pagina para editar instrumento
 
-router.put("/editsong/:idSong", productController.editSongPut) // upload.single('songEmptyImgBtn'),
+router.put("/editsong/:idSong",multerMid.upload.fields([{name: 'songEmptyContentBtn1',maxCount: 1},{name: 'songEmptyContentBtn2',maxCount: 1}]) ,productController.editSongPut) // upload.single('songEmptyImgBtn'),
 router.put("/editinstrument/:idInstrum",multerMid.upload.fields([{name:"productEmptyButton",maxCount: 1}]),productController.editInstrumentPut)
 
 
