@@ -21,7 +21,7 @@
     <!--FORMULARIO-->
 
     <section class="form-register">
-        <form action="/registro" method="POST">
+        <form action="/user/register" method="POST" enctype="multipart/form-data">
             <h4>¡Registrate!</h4>
             <div>
                 <p class="Registro-Texto-Descriptivo">
@@ -35,34 +35,50 @@
             <div class="items">
                 <p>
                     <i class="fas fa-id-badge"><label> Cómo te llamas?</label></i><br>
-                    <input class="datos" type="text" name="nombre" id="nombre" placeholder="Ingresá tu nombre" required>
+                    <input class="datos" type="text" name="nombre" id="nombre" placeholder="Ingresá tu nombre">
+                    <!--required -->
                 </p>
 
                 <p>
                     <i class="fas fa-id-badge"><label> Y tu apellido es...</label></i><br>
-                    <input class="datos" type="text" name="apellido" id="apellido" placeholder="Ingresá tu apellido"
-                        required>
+                    <input class="datos" type="text" name="apellido" id="apellido" placeholder="Ingresá tu apellido">
+                    <!--required -->
                 </p>
 
                 <p>
                     <i class="fas fa-at"><label> Cuál es tu Email?</label></i><br>
                     <input class="datos" type="email" name="email" id="email"
-                        placeholder="Te enviaremos un email para confirmarlo ;-)" required>
+                        placeholder="Te enviaremos un email para confirmarlo ;-)">
+                    <!--required -->
                     </label>
                 </p>
 
                 <p>
                     <i class="fas fa-key"><label> Contraseña:</label></i><br>
                     <input class="datos" type="password" name="password" id="password"
-                        placeholder="Elegí­ e ingresá tu contraseña" required>
+                        placeholder="Elegí­ e ingresá tu contraseña">
+                    <!--required -->
+                </p>
+
+                <p>
+                    <i class="fas fa-microphone-alt"><label> Cuáles son tus habilidades musicales?</label></i>
+                    <select class="skills-form" name="skills">
+                        <% habilidades.forEach(function(skill){ %>
+                        <option><%= skill %></option>
+                        <% }) %>
+                    </select>
+                    <i class="fas fa-user-edit"></i>
                 </p>
 
                 <p>
                     <i class="fas fa-camera"><label> Foto de perfil:</label></i><br>
                     <label for='userAvatarRegisterButton' class="userAvatarRegisterButton">Cargá una imagen</label>
                     <input class="userAvatarRegisterButton" id=userAvatarRegisterButton type="file"
-                        name="userAvatarRegisterButton" required>
+                        name="userAvatarRegisterButton">
+                    <!--required -->
                 </p>
+
+
 
                 <p>
                     <i class="fas fa-music"><label> Si sos músico, escribí­ tu minibio aquí para destacar entre la

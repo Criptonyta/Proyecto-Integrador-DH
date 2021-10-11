@@ -33,7 +33,8 @@ const usersModel = {
             id,
             ...usuario
         }
-        let usuarios = this.getAll().push(nuevoUsuario)
+        let usuarios = this.getAll()
+        usuarios.push(nuevoUsuario)
         this.rescribirDB(usuarios)
     },
 
