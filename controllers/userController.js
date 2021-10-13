@@ -106,24 +106,27 @@ const controlador = {
     },
 
     registerpost: (req, res) => {
-        let createNewId = usersModel.crearId();
-        let newPassword = bcryptjs.hashSync(req.body.password, 10);
-        let createNewUser = {
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            password: newPassword,
-            email: req.body.email,
-            userAvatar: req.file.filename,
-            skills: req.body.skills,
-            bio: req.body.minibio,
+        let usuarioBuscado = usersModel.findByField("email",req.body.email)
+        if (usuarioBuscado != undefined){//Si el mail ya esta registrado...
+            res.send("el mail ya esta registrado")
         }
-        usersModel.agregarUsuario(createNewUser)
-        const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
-        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id", 3);
-        res.render('home.ejs', {
-            datos: datos
-        });
-
+        else {//Si el mail del usuario no esta en la base de datos...
+            let createNewId = usersModel.crearId();
+            let newPassword = bcryptjs.hashSync(req.body.password, 10);
+            let createNewUser = {
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                password: newPassword,
+                email: req.body.email,
+                userAvatar: req.file.filename,
+                skills: req.body.skills,
+                bio: req.body.minibio,
+            }
+            usersModel.agregarUsuario(createNewUser)
+            const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
+            const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id", 3);
+            return res.render('home.ejs', {datos: datos});
+        }
     },
 
 

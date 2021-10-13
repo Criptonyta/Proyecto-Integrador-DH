@@ -18,6 +18,11 @@ const usersModel = {
         let usuario = this.getAll().find(usuario => usuario.id == iduser)
         return usuario
     },
+    findByField: function(field,value){//te busca el value en el field que pedi
+        let usuarios = this.getAll()
+        let usuarioBuscado = usuarios.find(usuario => usuario[field] == value)
+        return usuarioBuscado
+    },
     findArtists: function () { //Te busca todos los artistas (los que tienen bio)
         let artistas = this.getAll().filter(item => item.bio != "")
         return artistas
