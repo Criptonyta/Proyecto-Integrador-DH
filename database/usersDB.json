@@ -502,45 +502,5 @@
     "bio": "Banda reggae de la zona oeste del gran Buenos Aires. 3 discos editados",
     "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\44",
     "FIELD10": ""
-  },
-  {
-    "id": 43,
-    "nombre": "esta es prueba final",
-    "apellido": "esta es prueba final",
-    "password": "$2a$10$IhyB4BRp28vLBZGGtqdoGeoenWPWpr59rvMSpucUE9ofVRm2UdOX2",
-    "email": "estaespruebafinal@fasdf",
-    "userAvatar": "1633986773437_img_.JPG",
-    "skills": "Bajista",
-    "bio": "esta prueba"
-  },
-  {
-    "id": 44,
-    "nombre": "esta es prueba final",
-    "apellido": "esta es prueba final",
-    "password": "$2a$10$0iW5ydSvYq1.Z2tntPl8IObV2u5oAMjNXhArMje/24rva0ReycE9K",
-    "email": "estaespruebafinal@fasdf",
-    "userAvatar": "1633986783065_img_.JPG",
-    "skills": "Bajista",
-    "bio": "esta prueba"
-  },
-  {
-    "id": 45,
-    "nombre": "esta es prueba final",
-    "apellido": "esta es prueba final",
-    "password": "$2a$10$Gm81sAr.T151k4ZWWVSzLeDNBF74Y2p45ov9yGMt5w.nVgqDRF8ka",
-    "email": "estaespruebafinal@fasdf",
-    "userAvatar": "1633986813940_img_.JPG",
-    "skills": "Bajista",
-    "bio": ""
-  },
-  {
-    "id": 46,
-    "nombre": "Daniel",
-    "apellido": "Navaza",
-    "password": "$2a$10$J0bg1lWYA/u3ufBBIOQN6../wMctb9jdHOjN3eC9VPoBtQ1JnPqsy",
-    "email": "daninavaza@yahoo.com",
-    "userAvatar": "1633986861564_img_.JPG",
-    "skills": "Bajista",
-    "bio": ""
   }
 ]
