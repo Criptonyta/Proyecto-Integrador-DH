@@ -2,6 +2,9 @@ const express = require('express');
 const fs = require('fs');
 const server = express();
 const path = require('path');
+const {
+    authMiddleware
+} = require('./middlewares/index')
 
 //ROUTES
 const mainRoutes = require('./routes/mainRoutes')
@@ -31,6 +34,8 @@ server.use(expressSession({
     saveUninitialized: true,
     //    cookie: { secure: true }
 })) // Para usar session
+
+// server.use(authMiddleware)
 
 server.use('/', mainRoutes);
 server.use('/products', productRoutes);
