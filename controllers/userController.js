@@ -94,10 +94,24 @@ const controlador = {
     },
     login: (req, res) => {
         res.render('login.ejs');
-
-        //  console.log(bcryptjs.compareSync('abc123', bcryptjs.hash)); FALTA CREEAR EL LOGIN POST
-
     },
+    loginpost: (req, res) => {
+        let userToLogin = usersModel.findByField('email', req.body.email) // Busca el usuario x email
+        if (userToLogin) {
+            let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password) // compara contrasena del form con la de la BD
+            if (isOkPassword) {
+                delete userToLogin.password
+                req.session.userLogged = userToLogin
+                console.log(req.session.userLogged)
+                res.redirect('/user/userprofile/' + userToLogin.id)
+            } else {
+                res.redirect('/user/login')
+            }
+        } else {
+            res.redirect('/user/login')
+        }
+    },
+
     register: (req, res) => {
         res.render('register.ejs', {
             habilidades: skills
@@ -106,11 +120,10 @@ const controlador = {
     },
 
     registerpost: (req, res) => {
-        let usuarioBuscado = usersModel.findByField("email",req.body.email)
-        if (usuarioBuscado != undefined){//Si el mail ya esta registrado...
+        let usuarioBuscado = usersModel.findByField("email", req.body.email)
+        if (usuarioBuscado != undefined) { //Si el mail ya esta registrado...
             res.send("el mail ya esta registrado")
-        }
-        else {//Si el mail del usuario no esta en la base de datos...
+        } else { //Si el mail del usuario no esta en la base de datos...
             let createNewId = usersModel.crearId();
             let newPassword = bcryptjs.hashSync(req.body.password, 10);
             let createNewUser = {
@@ -125,7 +138,9 @@ const controlador = {
             usersModel.agregarUsuario(createNewUser)
             const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
             const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id", 3);
-            return res.render('home.ejs', {datos: datos});
+            return res.render('home.ejs', {
+                datos: datos
+            });
         }
     },
 

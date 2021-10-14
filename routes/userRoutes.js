@@ -18,6 +18,7 @@ router.put('/userprofile/:iduser/edit', multerMid.uploaduserProfileStorage.singl
 
 
 router.get('/login', userController.login);
+router.post('/login', userController.loginpost);
 
 router.get('/register', userController.register);
 router.post('/register', multerMid.uploadRegister.single('userAvatarRegisterButton'), userController.registerpost); // Para crear un nuevo usuario en register 
