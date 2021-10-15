@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <%- include("partials/head.ejs")%>
-    <link rel="stylesheet" href="/css/styles.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
-    <link rel="stylesheet" href="/css/cart2Alex.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
+    <link rel="stylesheet" href="/css/cart2Alex.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
 
     <title>Musiqueiros</title>
 </head>
+
 <body>
     <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
 
@@ -16,9 +18,12 @@
         <!--Section para la barra que dice en que parte del pago estas-->
         <section class="cart2Alex-menu">
             <ul class="cart2Alex-menuContainer">
-                <li class="cart2Alex-menuOption" id="cart2Alex-menuOption-1"><a href="/cart/cart1">Tu carrito</a></li>
-                <li class="cart2Alex-menuOption" id="cart2Alex-menuOption-2"><a href="/cart/cart2">Detalles del envio</a></li>
-                <li class="cart2Alex-menuOption" id="cart2Alex-menuOption-3"><a href="/cart/cart3">Opciones de pago</a></li>
+                <li class="cart2Alex-menuOption" id="cart2Alex-menuOption-1"><a href="/cart/cart1">Tu
+                        carrito</a></li>
+                <li class="cart2Alex-menuOption" id="cart2Alex-menuOption-2"><a href="/cart/cart2">Detalles del
+                        envio</a></li>
+                <li class="cart2Alex-menuOption" id="cart2Alex-menuOption-3"><a href="/cart/cart3">Opciones de pago</a>
+                </li>
             </ul>
         </section>
         <div class="cart2Alex-mainContainer">
@@ -26,56 +31,65 @@
                 <p>Detalles de envio</p>
                 <form>
                     <div class="cart2Alex-detallesEnvioNombre">
-                        <input type="text" name="nombre" placeholder="Nombre" class="cart2Alex-detallesEnvioEntradaInput">
-                        <input type="text" name="apellido" placeholder="Apellido" class="cart2Alex-detallesEnvioEntradaInput">
+                        <input type="text" name="nombre" placeholder="Nombre"
+                            class="cart2Alex-detallesEnvioEntradaInput">
+                        <input type="text" name="apellido" placeholder="Apellido"
+                            class="cart2Alex-detallesEnvioEntradaInput">
                     </div>
                     <div class="cart2Alex-detallesEnvioLocacion">
                         <select name="pais" required class="cart2Alex-detallesEnvioEntradaInput">
                             <% for (const pais of paises) { %>
-                                <option value=<%= pais %>><%= pais %></option> 
+                            <option value=<%= pais %>><%= pais %></option>
                             <% } %>
                         </select>
                         <select name="provincia" required class="cart2Alex-detallesEnvioEntradaInput">
                             <% for (const provincia of provincias) { %>
-                                <option value=<%= provincia %>><%= provincia %></option> 
+                            <option value=<%= provincia %>><%= provincia %></option>
                             <% } %>
                         </select>
                     </div>
                     <div class="cart2Alex-detallesEnvioLocalidad">
-                        <input type="text" name="ciudad" placeholder="Ciudad" class="cart2Alex-detallesEnvioEntradaInput">
-                        <input type="text" name="codigoPostal" placeholder="Codigo postal" class="cart2Alex-detallesEnvioEntradaInput">
+                        <input type="text" name="ciudad" placeholder="Ciudad"
+                            class="cart2Alex-detallesEnvioEntradaInput">
+                        <input type="text" name="codigoPostal" placeholder="Codigo postal"
+                            class="cart2Alex-detallesEnvioEntradaInput">
                     </div>
-                    <input type="text" name="direccion" placeholder="Direccion" id="cart2Alex-cart2Alex-detallesEnvioDireccion" class="cart2Alex-detallesEnvioEntradaInput">
+                    <input type="text" name="direccion" placeholder="Direccion"
+                        id="cart2Alex-cart2Alex-detallesEnvioDireccion" class="cart2Alex-detallesEnvioEntradaInput">
                     <div class="cart2Alex-detallesEnvioPiso">
                         <input type="text" name="piso" placeholder="Piso" class="cart2Alex-detallesEnvioEntradaInput">
-                        <input type="text" name="depto" placeholder="Departamento" class="cart2Alex-detallesEnvioEntradaInput">
+                        <input type="text" name="depto" placeholder="Departamento"
+                            class="cart2Alex-detallesEnvioEntradaInput">
                     </div>
-    
-                    <input type="text" name="telefono" placeholder="Numero de telefono" class="cart2Alex-detallesEnvioEntradaInput">
+
+                    <input type="text" name="telefono" placeholder="Numero de telefono"
+                        class="cart2Alex-detallesEnvioEntradaInput">
                     <div class="cart2Alex-detallesEnvioBotones">
                         <button type="submit" class="cart2Alex-botonesOpcion">Cancelar</button>
-                        <button type="submit" class="cart2Alex-botonesOpcion">Siguiente<i class="fas fa-arrow-right"></i></button>
+                        <button type="submit" class="cart2Alex-botonesOpcion">Siguiente<i
+                                class="fas fa-arrow-right"></i></button>
                     </div>
                 </form>
             </section>
             <section class="cart2Alex-resumenCarrito">
                 <article class="cart2Alex-datosTotales">
                     <p class="cart2Alex-datosTotalesSubrayado">Totales con envio<p>
-                    <p>Subtotal:<span>15000$</span></p>
-                    <p class="cart2Alex-datosTotalesSubrayado">Envio:<span>1000$</span></p>
-                    <p>Total<span>16000$</span></p>
+                            <p>Subtotal:<span>15000$</span></p>
+                            <p class="cart2Alex-datosTotalesSubrayado">Envio:<span>1000$</span></p>
+                            <p>Total<span>16000$</span></p>
                 </article>
             </section>
-    
+
         </div>
     </main>
 
 
 
-        <!-- ======= FOOTER | PIE DE PAGINA ========= -->
+    <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
-        <%- include ('partials/footer.ejs', {}) %>
+    <%- include ('partials/footer.ejs', {}) %>
 
 
 </body>
+
 </html>

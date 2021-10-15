@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <%- include("partials/head.ejs")%>
-    <link rel="stylesheet" href="/css/styles.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
-    <link rel="stylesheet" href="/css/cart3Alex.css">  <!-- Usa esta linea para direccionarla a tu CSS -->
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
+    <link rel="stylesheet" href="/css/cart3Alex.css"> <!-- Usa esta linea para direccionarla a tu CSS -->
 
     <title>Musiqueiros</title>
 </head>
+
 <body>
     <!-- ======= HEADER | BARRA DE NAVEGACION HOME ========= -->
 
@@ -17,9 +19,12 @@
         <!--Section para la barra que dice en que parte del pago estas-->
         <section class="cart3Alex-menu">
             <ul class="cart3Alex-menuContainer">
-                <li class="cart3Alex-menuOption" id="cart3Alex-menuOption-1"><a href="/cart/cart1">Tu carrito</a></li>
-                <li class="cart3Alex-menuOption" id="cart3Alex-menuOption-2"><a href="/cart/cart2">Detalles del envio</a></li>
-                <li class="cart3Alex-menuOption" id="cart3Alex-menuOption-3"><a href="/cart/cart3">Opciones de pago</a></li>
+                <li class="cart3Alex-menuOption" id="cart3Alex-menuOption-1"><a href="/cart/cart1">Tu
+                        carrito</a></li>
+                <li class="cart3Alex-menuOption" id="cart3Alex-menuOption-2"><a href="/cart/cart2">Detalles del
+                        envio</a></li>
+                <li class="cart3Alex-menuOption" id="cart3Alex-menuOption-3"><a href="/cart/cart3">Opciones de pago</a>
+                </li>
             </ul>
         </section>
         <div class="cart3Alex-mainContainer">
@@ -28,11 +33,13 @@
                     <article class="cart3Alex-tarjetaCredito">
                         <p><i class="far fa-circle"><span>Tarjeta de credito</span></i></p>
                         <div class="cart3Alex-tarjetaCreditoNumeros">
-                            <input class="cart3Alex-input" type="number" name="numeroTarjeta" placeholder="0000 0000 0000 0000" required>
+                            <input class="cart3Alex-input" type="number" name="numeroTarjeta"
+                                placeholder="0000 0000 0000 0000" required>
                             <input class="cart3Alex-input" type="date" name="fecha" placeholder="DD/MM/YYYY" required>
                             <input class="cart3Alex-input" type="number" name="codigo" placeholder="Codigo" required>
                         </div>
-                        <input class="cart3Alex-input" type="text" name="titular" placeholder="Nombre del titular" required>
+                        <input class="cart3Alex-input" type="text" name="titular" placeholder="Nombre del titular"
+                            required>
                     </article>
                     <article class="cart3Alex-formaPago">
                         <div class="cart3Alex-formaPagoMercado">
@@ -46,7 +53,8 @@
                     </article>
                     <article class="cart3Alex-botones">
                         <button type="delete" class="cart3Alex-botonesOpcion"><span>Cancelar</span></button>
-                        <button type="submit" class="cart3Alex-botonesOpcion"><i class="fas fa-id-card"><span>Pagar</span></i></button>
+                        <button type="submit" class="cart3Alex-botonesOpcion"><i
+                                class="fas fa-id-card"><span>Pagar</span></i></button>
                     </article>
                 </form>
             </section>
@@ -55,9 +63,9 @@
                 <section class="cart3Alex-resumenCarrito">
                     <article class="cart3Alex-datosTotales">
                         <p class="cart3Alex-datosTotalesSubrayado">Totales con envio<p>
-                        <p>Subtotal:<span>15000$</span></p>
-                        <p class="cart3Alex-datosTotalesSubrayado">Envio:<span>1000$</span></p>
-                        <p>Total<span>16000$</span></p>
+                                <p>Subtotal:<span>15000$</span></p>
+                                <p class="cart3Alex-datosTotalesSubrayado">Envio:<span>1000$</span></p>
+                                <p>Total<span>16000$</span></p>
                     </article>
                 </section>
             </div>
@@ -66,10 +74,11 @@
 
 
 
-        <!-- ======= FOOTER | PIE DE PAGINA ========= -->
+    <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
-        <%- include ('partials/footer.ejs', {}) %>
+    <%- include ('partials/footer.ejs', {}) %>
 
 
 </body>
+
 </html>

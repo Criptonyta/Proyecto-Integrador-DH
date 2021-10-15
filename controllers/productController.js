@@ -64,18 +64,18 @@ const controlador = {
     addSong: (req, res) => {
         const songsDB = songsModel.getAll()
         songcargar = {
-            id: 25, // TODO ACTIVAR CON SESSION /* Id usuario */
+            id: req.session.userLogged.id,
             img: req.files.songEmptyContentBtn1[0].filename, //Imagen de la cancion
             audioFile: req.files.songEmptyContentBtn2[0].filename, //Nombre del MP3
-            audioFileYTPlayer: "kNYx2C995fc", //TODO Codigo en la cancion de youtube CAMBIAR!
-            YT_URL: "https://youtu.be/", //TODO URL a youtube
+            audioFileYTPlayer: "kNYx2C995fc", //TODO CREAR MODAL=> "TU CANCION ESTA SIENDO REVISADA" 
+            YT_URL: "https://youtu.be/", //TODO URL a youtube (sera un proceso manual del administrador)
             titulo: req.body.titulo, //Titulo de la cancion
             precio: req.body.precio, //Precio de la cancion
             descripcion: req.body.descripcion, //Descripcion de la cancion
-            nombre: usersModel.findUser(25)["nombre"], //SESSION
-            apellido: usersModel.findUser(25)["apellido"] //SESSION
+            nombre: usersModel.findUser(req.session.userLogged.id)["nombre"],
+            apellido: usersModel.findUser(req.session.userLogged.id)["apellido"]
         }
-        // TODO SESSION
+
         songsModel.agregarCancion(songcargar)
 
         const instrumentsDB = instrumentsModel.getAll() //Todos los instrumentos
@@ -92,9 +92,10 @@ const controlador = {
     },
     addProduct: (req, res) => {
         const instrumentsDB = instrumentsModel.getAll()
+        console.log(req.files)
         instrumentcargar = {
-            id: 12, //  TODO: ARREGLAR CON LA IMPLEMENTACION DE SESSION/* Id usuario */
-            img: req.files.productEmptyButton.filename,
+            id: req.session.userLogged.id,
+            img: req.files.productEmptyButton[0].filename,
             titulo: req.body.titulo,
             precio: req.body.precio,
             descripcion: req.body.descripcion,

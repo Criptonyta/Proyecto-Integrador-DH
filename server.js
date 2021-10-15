@@ -1,4 +1,5 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const fs = require('fs');
 const server = express();
 const path = require('path');
@@ -13,6 +14,7 @@ const cartRoutes = require('./routes/cartRoutes')
 const userRoutes = require('./routes/userRoutes')
 const methodOverride = require('method-override')
 const expressSession = require('express-session')
+
 
 server.set('view engine', 'ejs');
 
@@ -35,7 +37,7 @@ server.use(expressSession({
     //    cookie: { secure: true }
 })) // Para usar session
 
-// server.use(authMiddleware)
+server.use(cookieParser());
 
 server.use('/', mainRoutes);
 server.use('/products', productRoutes);

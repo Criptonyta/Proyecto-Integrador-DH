@@ -100,9 +100,15 @@ const controlador = {
         if (userToLogin) {
             let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password) // compara contrasena del form con la de la BD
             if (isOkPassword) {
+
+                if (req.body.checkboxLogin) {
+                    res.cookie('recordame', userToLogin.id, {
+                        maxAge: 60000 * 1
+                    })
+                }
                 delete userToLogin.password
                 req.session.userLogged = userToLogin
-                console.log(req.session.userLogged)
+                res.locals.id = userToLogin.id
                 res.redirect('/user/userprofile/' + userToLogin.id)
             } else {
                 res.redirect('/user/login')
@@ -152,6 +158,7 @@ const controlador = {
         res.send("productos borrados") //CUANDO ESTE SESSION SE PUEDE REDIRIGIR A LA MISMA DE USUARIO PAGINA USANDO SU ID
     },
     deleteInstruments: (req, res) => {
+        console.log(req.body.eliminarInstrumento)
         instrumentsModel.borrarNinstrumentos(req.body.eliminarInstrumento)
         res.send("productos borrados") //CUANDO ESTE SESSION SE PUEDE REDIRIGIR A LA MISMA DE USUARIO PAGINA USANDO SU ID
     }

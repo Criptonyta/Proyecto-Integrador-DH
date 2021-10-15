@@ -9,8 +9,8 @@ const {
 } = require('../controllers/index');
 
 
-router.get('/cart1', authMiddleware, authMiddlewareMe, cartController.cart1);
-router.get('/cart2', authMiddleware, authMiddlewareMe, cartController.cart2);
-router.get('/cart3', authMiddleware, authMiddlewareMe, cartController.cart3);
+router.get('/cart1', authMiddleware, cartController.cart1);
+router.get('/cart2', authMiddleware, cartController.cart2);
+router.get('/cart3', authMiddleware, cartController.cart3);
 
 module.exports = router
