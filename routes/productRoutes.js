@@ -34,20 +34,20 @@ router.get('/tienda/instruments', productController.instruments); //Te muestra t
 router.get('/tienda/artists', productController.artists); //Te muestra todos los artistas
 router.get('/tienda/search', productController.searched) //Todos los productos buscados
 
-router.delete("/deleteinstrument/:idInstrum", authMiddleware, productController.deleteInstrument)
-router.delete("/deletesong/:idSong", authMiddleware, productController.deleteSong)
+router.delete("/deleteinstrument/:idInstrum/:iduser?", authMiddleware,authMiddlewareMe,productController.deleteInstrument)
+router.delete("/deletesong/:idSong/:iduser?", authMiddleware, authMiddlewareMe,productController.deleteSong)
 
-router.get("/editsong/:idSong", authMiddleware, productController.editSong) //pagina para editar cancion
-router.get("/editinstrument/:idInstrum", authMiddleware, productController.editInstrument) //pagina para editar instrumento
+router.get("/editsong/:idSong/:iduser?", authMiddleware,authMiddlewareMe, productController.editSong) //pagina para editar cancion
+router.get("/editinstrument/:idInstrum/:iduser?", authMiddleware, authMiddlewareMe,productController.editInstrument) //pagina para editar instrumento
 
-router.put("/editsong/:idSong", authMiddleware, multerMid.upload.fields([{
+router.put("/editsong/:idSong/:iduser?", authMiddleware,authMiddlewareMe ,multerMid.upload.fields([{
     name: 'songEmptyContentBtn1',
     maxCount: 1
 }, {
     name: 'songEmptyContentBtn2',
     maxCount: 1
 }]), productController.editSongPut) // upload.single('songEmptyImgBtn'),
-router.put("/editinstrument/:idInstrum", authMiddleware, multerMid.upload.fields([{
+router.put("/editinstrument/:idInstrum/:iduser?", authMiddleware,authMiddlewareMe ,multerMid.upload.fields([{
     name: "productEmptyButton",
     maxCount: 1
 }]), productController.editInstrumentPut)

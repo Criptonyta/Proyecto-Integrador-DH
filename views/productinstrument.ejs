@@ -53,7 +53,7 @@
                 <div class="products-formButtons">
                     <a href="/products/editinstrument/<%= producto[nombreId] %>"><button id="products-editarButton"
                             type="submit">Editar</button></a>
-                    <form action="/products/<%= rutaDelete %>/<%= producto[nombreId] %>?_method=DELETE" method="POST">
+                    <form action="/products/<%= rutaDelete %>/<%= producto[nombreId] %>/<%= producto.id %>?_method=DELETE" method="POST">
                         <button id="products-eliminarButton" type="submit">Eliminar</button></form>
                 </div>
             </div>

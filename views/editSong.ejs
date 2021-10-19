@@ -19,7 +19,7 @@
     <!--CONTENIDO-->
     <main class="principal">
         <!--productos-->
-        <form class="product-container" method='POST' action="/products/editsong/<%= songOld.songId %>?_method=PUT" enctype="multipart/form-data">
+        <form class="product-container" method='POST' action="/products/editsong/<%= songOld.songId %>/<%= songOld.id %>?_method=PUT" enctype="multipart/form-data">
             <div class="productImages">
                 <label for='songEmptyImgBtn' class='songEmptyImgBtn'>Cargá una imagen</label>
                 <input class='songEmptyImgBtn' name='songEmptyContentBtn1' id='songEmptyImgBtn' type='file'
