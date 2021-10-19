@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {
-    productController
-} = require('../controllers/index');
+const {productController} = require('../controllers/index');
 const {
     multerMid,
     authMiddleware,

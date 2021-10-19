@@ -7,6 +7,7 @@ const {
     songsModel,
     usersModel
 } = require("../models/index"); //Importamos los models
+const instrumentModel = require('../models/instrumentsModel');
 const pathFuncionesAuxiliares = path.join(__dirname, '../public/funcionesAuxiliares/productControllerAux.js');
 const auxiliares = require(pathFuncionesAuxiliares);
 
@@ -75,20 +76,8 @@ const controlador = {
             nombre: usersModel.findUser(req.session.userLogged.id)["nombre"],
             apellido: usersModel.findUser(req.session.userLogged.id)["apellido"]
         }
-
         songsModel.agregarCancion(songcargar)
-
-        const instrumentsDB = instrumentsModel.getAll() //Todos los instrumentos
-        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, "InstrumId", 6);
-        const musicos = auxiliares.buscarNelementosAleatorios(songsDB, "songId", 6);;
-        const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
-        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id", 3);;
-
-        res.render('tienda.ejs', {
-            datos: datos,
-            musicos: musicos,
-            instrumentos: instrumentos
-        })
+        res.redirect("/products/tienda/")
     },
     addProduct: (req, res) => {
         const instrumentsDB = instrumentsModel.getAll()
@@ -101,18 +90,7 @@ const controlador = {
             descripcion: req.body.descripcion,
         }
         instrumentsModel.agregarInstrumento(instrumentcargar)
-
-        const songsDB = songsModel.getAll()
-        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, "InstrumId", 6);;
-        const musicos = auxiliares.buscarNelementosAleatorios(songsDB, "songId", 6);;
-        const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
-        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id", 3);;
-
-        res.render('tienda.ejs', {
-            datos: datos,
-            musicos: musicos,
-            instrumentos: instrumentos
-        })
+        res.redirect("/products/tienda/")
     },
     tienda: (req, res) => {
         const instrumentsDB = instrumentsModel.getAll()
@@ -165,56 +143,19 @@ const controlador = {
     },
     deleteInstrument: (req, res) => {
         instrumentsModel.borrarInstrumento(req.params.idInstrum) //Borramos el instrumento
-
-        const songsDB = songsModel.getAll()
-        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsModel.getAll(), "InstrumId", 6);;
-        const musicos = auxiliares.buscarNelementosAleatorios(songsDB, "songId", 6);;
-
-        const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
-        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id", 3);;
-
-        res.render('tienda.ejs', {
-            datos: datos,
-            musicos: musicos,
-            instrumentos: instrumentos
-        });
+        res.redirect("/products/tienda/")
     },
     deleteSong: (req, res) => {
         songsModel.borrarCancion(req.params.idSong)
-
-        const instrumentsDB = instrumentsModel.getAll()
-        const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, "InstrumId", 6);;
-        const musicos = auxiliares.buscarNelementosAleatorios(songsModel.getAll(), "songId", 6);;
-        const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
-        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id", 3);;
-
-        res.render('tienda.ejs', {
-            datos: datos,
-            musicos: musicos,
-            instrumentos: instrumentos
-        });
+        res.redirect("/products/tienda/")
     },
     editSong: (req, res) => {
-        const songsDB = songsModel.getAll()
-        for (let i = 0; i < songsDB.length; i++) {
-            if (songsDB[i].songId == req.params.idSong) {
-                let songOld = songsDB[i];
-                res.render('editSong.ejs', {
-                    songOld
-                });
-            }
-        }
+        let songOld = songsModel.findSong(req.params.idSong)
+        res.render('editSong.ejs', {songOld});
     },
     editInstrument: (req, res) => {
-        const instrumentsDB = instrumentsModel.getAll()
-        for (let i = 0; i < instrumentsDB.length; i++) {
-            if (instrumentsDB[i].InstrumId == req.params.idInstrum) {
-                let instrumentoOld = instrumentsDB[i];
-                res.render('editProduct.ejs', {
-                    instrumentoOld
-                });
-            }
-        }
+        let instrumentoOld = instrumentModel.findInstrument(req.params.idInstrum)
+        res.render('editProduct.ejs', {instrumentoOld});
     },
     editSongPut: (req, res) => {
         const songsDB = songsModel.getAll()
@@ -230,9 +171,7 @@ const controlador = {
                 YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
             }
             songsModel.editarCancion(oldProduct, editSong)
-            res.render("allSongs.ejs", {
-                musicos: songsDB
-            })
+            res.redirect("/products/tienda/songs/")
         } else if (req.files.songEmptyContentBtn1) { //CASO SI TIENE FOTO
             const editSong = {
                 img: req.files.songEmptyContentBtn1[0].filename,
@@ -243,9 +182,7 @@ const controlador = {
                 YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
             }
             songsModel.editarCancion(oldProduct, editSong)
-            res.render("allSongs.ejs", {
-                musicos: songsDB
-            })
+            res.redirect("/products/tienda/songs/")
         } else if (req.files.songEmptyContentBtn2) { //CASO SI TIENE VIDEO
             const editSong = {
                 titulo: req.body.titulo,
@@ -256,9 +193,8 @@ const controlador = {
                 YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
             }
             songsModel.editarCancion(oldProduct, editSong)
-            res.render("allSongs.ejs", {
-                musicos: songsDB
-            })
+            res.redirect("/products/tienda/songs/")
+
         } else {
             const editSong = { //CASO NI FOTO NI VIDEO
                 titulo: req.body.titulo,
@@ -268,9 +204,7 @@ const controlador = {
                 YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
             }
             songsModel.editarCancion(oldProduct, editSong)
-            res.render("allSongs.ejs", {
-                musicos: songsDB
-            })
+            res.redirect("/products/tienda/songs/")
         }
     },
     editInstrumentPut: (req, res) => {
@@ -284,9 +218,8 @@ const controlador = {
                 precio: req.body.precio,
             }
             instrumentsModel.editarInstrumento(oldProduct, editInstrument)
-            res.render("allInstruments.ejs", {
-                instrumentos: instrumentsDB
-            })
+            res.redirect("/products/tienda/instruments/")
+
         } else {
             const editInstrument = {
                 titulo: req.body.titulo,
@@ -294,10 +227,7 @@ const controlador = {
                 precio: req.body.precio,
             }
             instrumentsModel.editarInstrumento(oldProduct, editInstrument)
-            res.render("allInstruments.ejs", {
-                instrumentos: instrumentsDB
-            })
-
+            res.redirect("/products/tienda/instruments/")
         }
     },
 };
