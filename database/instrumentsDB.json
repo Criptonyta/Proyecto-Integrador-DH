@@ -1,247 +1,226 @@
-
 [
-  {
-    "id": 1,
-    "InstrumId": 1,
-    "img": "01.jpg",
-    "titulo": "Bajo Eléctrico Acústico Femmto Precision",
-    "descripcion": "CARACTERISTICAS - Formato de guitarra símil Jazz Bass, para diestros, pasivo - Madera cuerpo: Aliso - Madera mástil: Arce - Diapasón: Palisandro - Clavijas forma trébol, 4L, de fundición cromadas - Cuerdas de metal - microfono bobina partida (split coil, tipo Precision Bass) - 2 perillas (volumen y tono) - 21 trastes - Pick guard\n- Salida: Jack plug 6.5mm",
-    "precio": 42,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\01.jpg"
-  },
-  {
-    "id": 2,
-    "InstrumId": 2,
-    "img": "02.jpg",
-    "titulo": "Bajo Eléctrico Fender Jaguar Bass 4 Cuerdas",
-    "descripcion": "Producto: Bajo Eléctrico\nMarca: Fender\nModelo: Jaguar Bass Características: Bajo Eléctrico Fender Jaguar Bass 4 Cuerdas Perfecto Estado.",
-    "precio": 333,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\02.jpg"
-  },
-  {
-    "id": 3,
-    "InstrumId": 3,
-    "img": "03.jpg",
-    "titulo": "Bajo Eléctrico 4 Cuedras Con Ampli Y Afinador",
-    "descripcion": "Bajo usado en buen estado, no sé la marca.",
-    "precio": 36,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\03.jpg"
-  },
-  {
-    "id": 4,
-    "InstrumId": 4,
-    "img": "04.jpg",
-    "titulo": "Bajo Eléctrico Guild - Década Del 90 Impecable - Gran Sonido",
-    "descripcion": "Como nuevo. Hecho en Argentina. Década de 1980 a 1990. Impecable",
-    "precio": 140,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\04.jpg"
-  },
-  {
-    "id": 5,
-    "InstrumId": 5,
-    "img": "05.jpg",
-    "titulo": "Bajo Eléctrico Texas",
-    "descripcion": "Bajo eléctrico de 4 cuerdas tipo Ibánez, de circuito Activo. Dos mics unos tipo jazz bass y el otro precision bass. Dos perillas de tonos, dos perillas de volúmen. Color Tobacoo Burst.",
-    "precio": 134,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\05.jpg"
-  },
-  {
-    "id": 6,
-    "InstrumId": 6,
-    "img": "06.jpg",
-    "titulo": "Bajo Eléctrico Tipo Fender Tyler",
-    "descripcion": "Excelente bajo tipo fender tyler vintage series jazz bass, excelente estado, se lo compré a la persona que lo compró nuevo y no lo usó. Yo lo usé muy poco, lindo sonido con funda",
-    "precio": 37,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\06.jpg"
-  },
-  {
-    "id": 7,
-    "InstrumId": 7,
-    "img": "07.jpg",
-    "titulo": "Bajo Eléctrico Corvette Rock Bass By Warwick 5 Cuerdas Local",
-    "descripcion": "SE RETIRA POR EL CENTRO DE LOMAS DE ZAMORA O ENVIO POR MERCADO ENVIO. LOCAL A LA CALLE",
-    "precio": 27,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\07.jpg"
-  },
-  {
-    "id": 8,
-    "InstrumId": 8,
-    "img": "08.jpg",
-    "titulo": "Bajo Eléctrico Ibanez Gio Gsr 200",
-    "descripcion": "Poco uso, solo para maquetear en casa y algún ensayo.\nDetalles que pueden verse en las fotos.\nLa tapa de la batería engancha de un solo lado y del otro lo sostengo con cinta, no afecta al uso ni se cae la batería.\nAnda 10 puntos pero busco algún bajo PASIVO ya que soy guitarrista y me resulta más practico para maquetear, no preciso la ganancia de un bajo activo.",
-    "precio": 330,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\08.jpg"
-  },
-  {
-    "id": 9,
-    "InstrumId": 9,
-    "img": "09.jpg",
-    "titulo": "Bajo Eléctrico Dean Hillsboro Blue Activo Jazz Bass",
-    "descripcion": "Los bajos de Dean Hillsboro tienen un aspecto retro y un cabezal clásico. Diseñados para jazz, funk y rock, estos instrumentos son ideales para músicos con poco presupuesto que buscan algo un poco diferente.",
-    "precio": 181,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\09.jpg"
-  },
-  {
-    "id": 10,
-    "InstrumId": 10,
-    "img": "10.jpg",
-    "titulo": "Bajo Eléctrico 5 Cuerdas Ibanez Btb 775 Pb/indonesia",
-    "descripcion": "Ibanez BTB five string with Poplar Burl top, Maple neck and Mahogany body.  MK-2 Pickups . 35\" scale. 1.85\" at nut.  Neck through. Has been played but still in mint condition. Includes cool Hanewinckel padded Gigbag.  Really nice playing fiver with typical Ibanez quality.   Always wanted to try one of these and it didn't disappoint but I just got an Alembic five string so I can let this go. Ver detalle de la foto.",
-    "precio": 329,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\10.jpg"
-  },
-  {
-    "id": 11,
-    "InstrumId": 11,
-    "img": "11.jpg",
-    "titulo": "Batería Acústica 5 Cpos Platos Fierros",
-    "descripcion": "BATERIA STAR 5 CUERPOS CON FIERROS Y SIN PALILLOS -Tom 12\" -Tom 13\" -Redoblante 14\" -Chancha 16\" -Soportes y pedal para Hihat -Soporte recto para Crash.",
-    "precio": 151,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\11.jpg"
-  },
-  {
-    "id": 12,
-    "InstrumId": 12,
-    "img": "12.jpg",
-    "titulo": "Batería De 5 Cuerpos + Banqueta Y Platillos Natal Dna Gris",
-    "descripcion": "La batería NATAL DNA viene completa, con hardware, platillos, pedal para el bombo, butaca e incluso baquetas; todo lo que necesitas para tocar la batería directamente de la caja.",
-    "precio": 331,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\12.jpg"
-  },
-  {
-    "id": 13,
-    "InstrumId": 13,
-    "img": "13.jpg",
-    "titulo": "Batería Pearl 5 C Export Exx725 22/10/12/16/14x5 Blanco Mate",
-    "descripcion": "BATERÍA PEARL Export - 5 Cuerpos - B22\"x18 | TT10\"x7 | TT12\"x8 | TF16\"x16 | R14\"x5 - Poplar-Mahogany- Jet Black - Sin Fierros",
-    "precio": 91,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\13.jpg"
-  },
-  {
-    "id": 14,
-    "InstrumId": 14,
-    "img": "14.jpg",
-    "titulo": "Batería Acústica Taurus Jazz Maple 4 Cpos Tambo 14 Bombo 18",
-    "descripcion": "Batería 4 cuerpos Maple Tom tom 12\" x 10\" Tom de pie 14\" x 16\" Bombo 18\" x 18\" Tambor 14 Rims Flotantes Bombo con 8 torres AROS DE MADERA\nTom holder t/YAMAHA Patas telescópicas Fierros Dobles Soporte Recto Platillo pata doble Soporte HH con regulación pata doble Pedal de bombo cadena doble plataforma de acero\nSoporte de redoblante pata doble",
-    "precio": 14,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\14.jpg"
-  },
-  {
-    "id": 16,
-    "InstrumId": 16,
-    "img": "16.jpg",
-    "titulo": "Batería Mapex Mars Fusion Bombo De 20 Bloodwood Cuotas",
-    "descripcion": "Bombo 20\"x16\" sin soporte para Tom. Tom Tom 10\"x07\" y 12\"x08\" Tom Base 14\"x12\" Caja 14\"x6,5 Mars Incluye Soporte doble de tom TH676 No incluye herrajes ni platos ",
-    "precio": 265,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\16.jpg"
-  },
-  {
-    "id": 17,
-    "InstrumId": 17,
-    "img": "17.jpg",
-    "titulo": "Batería Acústica Completa 5 Cuerpos Platos Fierros",
-    "descripcion": "Excelente batería MAPEX PRODIGY, con acabado recubierto, los tambores están equipados con Prodigy, el nuevo modelo que utiliza un solo punto de contacto.\nIncluye TODO lo que precisas para tocar",
-    "precio": 115,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\17.jpg"
-  },
-  {
-    "id": 21,
-    "InstrumId": 21,
-    "img": "21.jpg",
-    "titulo": "Guitarra Acústica CORT EARTH 70 NAT ",
-    "descripcion": "De tapa sólida. Gracias a su gran caja, tienen un sonido enorme y un timbre muy cálido.",
-    "precio": 326,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\21.jpg"
-  },
-  {
-    "id": 23,
-    "InstrumId": 23,
-    "img": "23.jpg",
-    "titulo": "Guitarra Eléctrica Sx Les Paul Series Ee-3 Vintage",
-    "descripcion": "Body: Basswood Neck: Selected Canadian Maple Truss Rod: 2 Way Truss Rod Neck Joint: Set Neck Fingerboard: Engineered Rosewood or Rosewood",
-    "precio": 250,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\23.jpg"
-  },
-  {
-    "id": 24,
-    "InstrumId": 24,
-    "img": "24.jpg",
-    "titulo": "Guitarra Electroacústica Yamaha Ncx1 Natural",
-    "descripcion": "La guitarra electroacústica con cuerdas de nylon Yamaha NCX1 trae la artesanía tradicional a la era moderna, con una sensación familiar con grandes elementos de diseño innovadores. La NCX1 tiene una forma de cuerpo elegante, de un corte que extiende el acceso a los trastes altos, junto con una trastera de nogal de radio plano con un generoso espaciado de cuerdas de 11.8mm",
-    "precio": 180,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\24.jpg"
-  },
-  {
-    "id": 28,
-    "InstrumId": 28,
-    "img": "28.jpg",
-    "titulo": "Guitarra Eléctrica Stratocaster 22 Trastes Con Palanca ",
-    "descripcion": "Selectora: 1. Humbucker, 2. Humbucker y 1er simple, 3. 1er simple, 4. 1er y 2do simple, 5. 2do simple Controles: Volúmen Master, Tono 1. (Pastilla del mástil), Tono 2. (Pastilla central)",
-    "precio": 400,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\28.jpg"
-  },
-  {
-    "id": 32,
-    "InstrumId": 32,
-    "img": "32.jpg",
-    "titulo": "Micrófono SF 666 condensador omnidireccional",
-    "descripcion": "Al ser condensador, posibilitará un resultado claro y fino. Es ideal para percusiones, guitarras, pianos, entre otros. Por su respuesta tan definida ante la voz, es el más elegido por los profesionales.",
-    "precio": 253,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\32.jpg"
-  },
-  {
-    "id": 33,
-    "InstrumId": 33,
-    "img": "33.jpg",
-    "titulo": "Micrófono Fifine T730 condensador cardioide",
-    "descripcion": "Su patrón polar cardioide ofrece una mayor sensibilidad hacia los sonidos frontales, y así evita los ruidos provenientes de la parte posterior.",
-    "precio": 345,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\33.jpg"
-  },
-  {
-    "id": 36,
-    "InstrumId": 36,
-    "img": "36.jpg",
-    "titulo": "Micrófono Fifine K730 condensador cardioide",
-    "descripcion": "Ideal para varias actividades. Te brindará un sonido de calidad y conseguirás la nitidez de las voces.",
-    "precio": 100,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\36.jpg"
-  },
-  {
-    "id": 37,
-    "InstrumId": 37,
-    "img": "37.jpg",
-    "titulo": "Micrófono Blue Yeti condensador multipatrón blackout",
-    "descripcion": "La comunicación clara y poderosa es importante para todas las organizaciones. Los micrófonos de Blue te permiten capturar y transmitir con una calidad de sonido sorprendente. Blue combina audio de calidad profesional con la simplicidad plug-and-play para ofrecer un rendimiento que está a años luz de los micrófonos integrados para portátiles y cámaras.",
-    "precio": 243,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\37.jpg"
-  },
-  {
-    "id": 38,
-    "InstrumId": 38,
-    "img": "38.jpg",
-    "titulo": "Micrófono Sennheiser MK 4 condensador cardioide",
-    "descripcion": "Con este producto lograrás que la reproducción obtenida sea lo más parecida a la original. Excelente para grabar voces debido a su sensibilidad y amplio rango de frecuencia",
-    "precio": 211,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\38.jpg"
-  },
-  {
-    "id": 39,
-    "InstrumId": 39,
-    "img": "39.jpg",
-    "titulo": "Micrófono Fifine K780 condensador cardioide",
-    "descripcion": "Al ser condensador, posibilitará un resultado claro y fino. Es ideal para percusiones, guitarras, pianos, entre otros. Por su respuesta tan definida ante la voz, es el más elegido por los profesionales",
-    "precio": 432,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\39.jpg"
-  },
-  {
-    "id": 40,
-    "InstrumId": 40,
-    "img": "40.jpg",
-    "titulo": "Micrófono Fifine K028",
-    "descripcion": "Diseñado para amortiguar los golpes y ruidos de manipulación. Totalmente dinámico, solo debés conectarlo y empezar a grabar.",
-    "precio": 333,
-    "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\40.jpg"
-  }
+    {
+        "id": 3,
+        "InstrumId": 3,
+        "img": "03.jpg",
+        "titulo": "Bajo Eléctrico 4 Cuedras Con Ampli Y Afinador",
+        "descripcion": "Bajo usado en buen estado, no sé la marca.",
+        "precio": 36,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\03.jpg"
+    },
+    {
+        "id": 5,
+        "InstrumId": 5,
+        "img": "05.jpg",
+        "titulo": "Bajo Eléctrico Texas",
+        "descripcion": "Bajo eléctrico de 4 cuerdas tipo Ibánez, de circuito Activo. Dos mics unos tipo jazz bass y el otro precision bass. Dos perillas de tonos, dos perillas de volúmen. Color Tobacoo Burst.",
+        "precio": 134,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\05.jpg"
+    },
+    {
+        "id": 6,
+        "InstrumId": 6,
+        "img": "06.jpg",
+        "titulo": "Bajo Eléctrico Tipo Fender Tyler",
+        "descripcion": "Excelente bajo tipo fender tyler vintage series jazz bass, excelente estado, se lo compré a la persona que lo compró nuevo y no lo usó. Yo lo usé muy poco, lindo sonido con funda",
+        "precio": 37,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\06.jpg"
+    },
+    {
+        "id": 7,
+        "InstrumId": 7,
+        "img": "07.jpg",
+        "titulo": "Bajo Eléctrico Corvette Rock Bass By Warwick 5 Cuerdas Local",
+        "descripcion": "SE RETIRA POR EL CENTRO DE LOMAS DE ZAMORA O ENVIO POR MERCADO ENVIO. LOCAL A LA CALLE",
+        "precio": 27,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\07.jpg"
+    },
+    {
+        "id": 8,
+        "InstrumId": 8,
+        "img": "08.jpg",
+        "titulo": "Bajo Eléctrico Ibanez Gio Gsr 200",
+        "descripcion": "Poco uso, solo para maquetear en casa y algún ensayo.\nDetalles que pueden verse en las fotos.\nLa tapa de la batería engancha de un solo lado y del otro lo sostengo con cinta, no afecta al uso ni se cae la batería.\nAnda 10 puntos pero busco algún bajo PASIVO ya que soy guitarrista y me resulta más practico para maquetear, no preciso la ganancia de un bajo activo.",
+        "precio": 330,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\08.jpg"
+    },
+    {
+        "id": 9,
+        "InstrumId": 9,
+        "img": "09.jpg",
+        "titulo": "Bajo Eléctrico Dean Hillsboro Blue Activo Jazz Bass",
+        "descripcion": "Los bajos de Dean Hillsboro tienen un aspecto retro y un cabezal clásico. Diseñados para jazz, funk y rock, estos instrumentos son ideales para músicos con poco presupuesto que buscan algo un poco diferente.",
+        "precio": 181,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\09.jpg"
+    },
+    {
+        "id": 10,
+        "InstrumId": 10,
+        "img": "10.jpg",
+        "titulo": "Bajo Eléctrico 5 Cuerdas Ibanez Btb 775 Pb/indonesia",
+        "descripcion": "Ibanez BTB five string with Poplar Burl top, Maple neck and Mahogany body.  MK-2 Pickups . 35\" scale. 1.85\" at nut.  Neck through. Has been played but still in mint condition. Includes cool Hanewinckel padded Gigbag.  Really nice playing fiver with typical Ibanez quality.   Always wanted to try one of these and it didn't disappoint but I just got an Alembic five string so I can let this go. Ver detalle de la foto.",
+        "precio": 329,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\10.jpg"
+    },
+    {
+        "id": 11,
+        "InstrumId": 11,
+        "img": "11.jpg",
+        "titulo": "Batería Acústica 5 Cpos Platos Fierros",
+        "descripcion": "BATERIA STAR 5 CUERPOS CON FIERROS Y SIN PALILLOS -Tom 12\" -Tom 13\" -Redoblante 14\" -Chancha 16\" -Soportes y pedal para Hihat -Soporte recto para Crash.",
+        "precio": 151,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\11.jpg"
+    },
+    {
+        "id": 12,
+        "InstrumId": 12,
+        "img": "12.jpg",
+        "titulo": "Batería De 5 Cuerpos + Banqueta Y Platillos Natal Dna Gris",
+        "descripcion": "La batería NATAL DNA viene completa, con hardware, platillos, pedal para el bombo, butaca e incluso baquetas; todo lo que necesitas para tocar la batería directamente de la caja.",
+        "precio": 331,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\12.jpg"
+    },
+    {
+        "id": 13,
+        "InstrumId": 13,
+        "img": "13.jpg",
+        "titulo": "Batería Pearl 5 C Export Exx725 22/10/12/16/14x5 Blanco Mate",
+        "descripcion": "BATERÍA PEARL Export - 5 Cuerpos - B22\"x18 | TT10\"x7 | TT12\"x8 | TF16\"x16 | R14\"x5 - Poplar-Mahogany- Jet Black - Sin Fierros",
+        "precio": 91,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\13.jpg"
+    },
+    {
+        "id": 14,
+        "InstrumId": 14,
+        "img": "14.jpg",
+        "titulo": "Batería Acústica Taurus Jazz Maple 4 Cpos Tambo 14 Bombo 18",
+        "descripcion": "Batería 4 cuerpos Maple Tom tom 12\" x 10\" Tom de pie 14\" x 16\" Bombo 18\" x 18\" Tambor 14 Rims Flotantes Bombo con 8 torres AROS DE MADERA\nTom holder t/YAMAHA Patas telescópicas Fierros Dobles Soporte Recto Platillo pata doble Soporte HH con regulación pata doble Pedal de bombo cadena doble plataforma de acero\nSoporte de redoblante pata doble",
+        "precio": 14,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\14.jpg"
+    },
+    {
+        "id": 16,
+        "InstrumId": 16,
+        "img": "16.jpg",
+        "titulo": "Batería Mapex Mars Fusion Bombo De 20 Bloodwood Cuotas",
+        "descripcion": "Bombo 20\"x16\" sin soporte para Tom. Tom Tom 10\"x07\" y 12\"x08\" Tom Base 14\"x12\" Caja 14\"x6,5 Mars Incluye Soporte doble de tom TH676 No incluye herrajes ni platos ",
+        "precio": 265,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\16.jpg"
+    },
+    {
+        "id": 17,
+        "InstrumId": 17,
+        "img": "17.jpg",
+        "titulo": "Batería Acústica Completa 5 Cuerpos Platos Fierros",
+        "descripcion": "Excelente batería MAPEX PRODIGY, con acabado recubierto, los tambores están equipados con Prodigy, el nuevo modelo que utiliza un solo punto de contacto.\nIncluye TODO lo que precisas para tocar",
+        "precio": 115,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\17.jpg"
+    },
+    {
+        "id": 21,
+        "InstrumId": 21,
+        "img": "21.jpg",
+        "titulo": "Guitarra Acústica CORT EARTH 70 NAT ",
+        "descripcion": "De tapa sólida. Gracias a su gran caja, tienen un sonido enorme y un timbre muy cálido.",
+        "precio": 326,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\21.jpg"
+    },
+    {
+        "id": 23,
+        "InstrumId": 23,
+        "img": "23.jpg",
+        "titulo": "Guitarra Eléctrica Sx Les Paul Series Ee-3 Vintage",
+        "descripcion": "Body: Basswood Neck: Selected Canadian Maple Truss Rod: 2 Way Truss Rod Neck Joint: Set Neck Fingerboard: Engineered Rosewood or Rosewood",
+        "precio": 250,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\23.jpg"
+    },
+    {
+        "id": 24,
+        "InstrumId": 24,
+        "img": "24.jpg",
+        "titulo": "Guitarra Electroacústica Yamaha Ncx1 Natural",
+        "descripcion": "La guitarra electroacústica con cuerdas de nylon Yamaha NCX1 trae la artesanía tradicional a la era moderna, con una sensación familiar con grandes elementos de diseño innovadores. La NCX1 tiene una forma de cuerpo elegante, de un corte que extiende el acceso a los trastes altos, junto con una trastera de nogal de radio plano con un generoso espaciado de cuerdas de 11.8mm",
+        "precio": 180,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\24.jpg"
+    },
+    {
+        "id": 28,
+        "InstrumId": 28,
+        "img": "28.jpg",
+        "titulo": "Guitarra Eléctrica Stratocaster 22 Trastes Con Palanca ",
+        "descripcion": "Selectora: 1. Humbucker, 2. Humbucker y 1er simple, 3. 1er simple, 4. 1er y 2do simple, 5. 2do simple Controles: Volúmen Master, Tono 1. (Pastilla del mástil), Tono 2. (Pastilla central)",
+        "precio": 400,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\28.jpg"
+    },
+    {
+        "id": 32,
+        "InstrumId": 32,
+        "img": "32.jpg",
+        "titulo": "Micrófono SF 666 condensador omnidireccional",
+        "descripcion": "Al ser condensador, posibilitará un resultado claro y fino. Es ideal para percusiones, guitarras, pianos, entre otros. Por su respuesta tan definida ante la voz, es el más elegido por los profesionales.",
+        "precio": 253,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\32.jpg"
+    },
+    {
+        "id": 33,
+        "InstrumId": 33,
+        "img": "33.jpg",
+        "titulo": "Micrófono Fifine T730 condensador cardioide",
+        "descripcion": "Su patrón polar cardioide ofrece una mayor sensibilidad hacia los sonidos frontales, y así evita los ruidos provenientes de la parte posterior.",
+        "precio": 345,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\33.jpg"
+    },
+    {
+        "id": 36,
+        "InstrumId": 36,
+        "img": "36.jpg",
+        "titulo": "Micrófono Fifine K730 condensador cardioide",
+        "descripcion": "Ideal para varias actividades. Te brindará un sonido de calidad y conseguirás la nitidez de las voces.",
+        "precio": 100,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\36.jpg"
+    },
+    {
+        "id": 37,
+        "InstrumId": 37,
+        "img": "37.jpg",
+        "titulo": "Micrófono Blue Yeti condensador multipatrón blackout",
+        "descripcion": "La comunicación clara y poderosa es importante para todas las organizaciones. Los micrófonos de Blue te permiten capturar y transmitir con una calidad de sonido sorprendente. Blue combina audio de calidad profesional con la simplicidad plug-and-play para ofrecer un rendimiento que está a años luz de los micrófonos integrados para portátiles y cámaras.",
+        "precio": 243,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\37.jpg"
+    },
+    {
+        "id": 38,
+        "InstrumId": 38,
+        "img": "38.jpg",
+        "titulo": "Micrófono Sennheiser MK 4 condensador cardioide",
+        "descripcion": "Con este producto lograrás que la reproducción obtenida sea lo más parecida a la original. Excelente para grabar voces debido a su sensibilidad y amplio rango de frecuencia",
+        "precio": 211,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\38.jpg"
+    },
+    {
+        "id": 39,
+        "InstrumId": 39,
+        "img": "39.jpg",
+        "titulo": "Micrófono Fifine K780 condensador cardioide",
+        "descripcion": "Al ser condensador, posibilitará un resultado claro y fino. Es ideal para percusiones, guitarras, pianos, entre otros. Por su respuesta tan definida ante la voz, es el más elegido por los profesionales",
+        "precio": 432,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\39.jpg"
+    },
+    {
+        "id": 40,
+        "InstrumId": 40,
+        "img": "40.jpg",
+        "titulo": "Micrófono Fifine K028",
+        "descripcion": "Diseñado para amortiguar los golpes y ruidos de manipulación. Totalmente dinámico, solo debés conectarlo y empezar a grabar.",
+        "precio": 333,
+        "pathAbsolute img (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\40.jpg"
+    },
+    {
+        "InstrumId": 41,
+        "id": 43,
+        "img": "1634676383099_img_.jpg",
+        "titulo": "instrumento de prueba",
+        "precio": "1000",
+        "descripcion": "Descripcion de instrumento de pruebaaaaaaa"
+    }
 ]
-

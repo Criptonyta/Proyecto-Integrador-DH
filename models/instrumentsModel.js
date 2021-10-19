@@ -47,8 +47,9 @@ const instrumentModel = {
         this.rescribirDB(instrumentsDB)
     },
     borrarInstrumento: function (idinstrument) { //Te borra el instrumento
-        let instrumentos = this.getAll().filter(instrumento => instrumento.InstrumId != idinstrument)
-        this.rescribirDB(instrumentos)
+        let instrumentos = this.getAll()
+        let instrumentosDB = instrumentos.filter(instrumento => instrumento.InstrumId != idinstrument)
+        this.rescribirDB(instrumentosDB)
         return true
     },
     borrarNinstrumentos: function (instrumentos) { //Te borra todas los instrumentos que le pases el InstrumId en la lista de instrumentos

@@ -78,7 +78,7 @@
                         Podes ver, editar y crear tus anuncios desde aquí.<br>
                     </p>
                     <% if (songsUser.length > 0) { %>
-                    <form id="userProfile-tablaCancion" action="/user/mySongs/delete?_method=DELETE" method="POST">
+                    <form id="userProfile-tablaCancion" action="/user/mySongs/delete/<%= usuarioInfo.id %>?_method=DELETE" method="POST">
 
                         <table class="userprofile-tableanuncios user-productsTable">
                             <p>Mis Canciones</p>
@@ -105,7 +105,7 @@
                     <% } %>
 
                     <% if (instrumentUser.length > 0) { %>
-                    <form action="/user/myInstruments/delete?_method=DELETE" method="POST">
+                    <form action="/user/myInstruments/delete/<%= usuarioInfo.id %>?_method=DELETE" method="POST">
                         <table class="userprofile-tableanuncios  user-productsTable">
                             <p>Mis Instrumentos</p>
                             <tr>

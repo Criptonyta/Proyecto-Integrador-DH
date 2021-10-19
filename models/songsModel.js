@@ -55,8 +55,9 @@ const songsModel = {
         this.rescribirDB(songsDB)
     },
     borrarCancion: function (idsong) { //Te borra una cancion
-        let canciones = this.getAll().filter(cancion => cancion.songId != idsong)
-        this.rescribirDB(canciones)
+        let canciones = this.getAll()
+        let cancionesDB = canciones.filter(cancion => cancion.songId != idsong)
+        this.rescribirDB(cancionesDB)
         return true
     },
     borrarNcanciones: function (canciones) { //Te borra todas las canciones que le pases el songId en la lista canciones
@@ -67,7 +68,6 @@ const songsModel = {
         this.rescribirDB(songsDB)
         return true
     }
-
 }
 
 module.exports = songsModel

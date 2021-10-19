@@ -54,18 +54,8 @@ const controlador = {
                 bio: req.body.minibio,
                 skills: req.body.skills
             }
-
             usersModel.editarUsuario(profileOld, profileNew)
-
-            const usuarioInfo = usersModel.findUser(req.params.iduser)
-            const songsUser = songsModel.findArtistSongs(req.params.iduser)
-            const instrumentUser = instrumentsModel.findArtistInstruments(req.params.iduser)
-
-            res.render('userprofile.ejs', {
-                usuarioInfo,
-                songsUser,
-                instrumentUser
-            });
+            res.redirect("/user/userprofile/"+req.params.iduser);
         } else {
             const profileNew = {
                 email: req.body.email,
@@ -76,20 +66,8 @@ const controlador = {
                 bio: req.body.minibio,
                 skills: req.body.skills
             }
-
-            usersModel.editarUsuario(profileOld, profileNew)
-
-            const usuarioInfo = usersModel.findUser(req.params.iduser)
-            const songsUser = songsModel.findArtistSongs(req.params.iduser)
-            const instrumentUser = instrumentsModel.findArtistInstruments(req.params.iduser)
-
-            res.render('userprofile.ejs', {
-                usuarioInfo,
-                songsUser,
-                instrumentUser
-            });
-
-
+            usersModel.editarUsuario(profileOld, profileNew);
+            res.redirect("/user/userprofile/"+req.params.iduser);
         }
     },
     login: (req, res) => {
@@ -103,7 +81,7 @@ const controlador = {
 
                 if (req.body.checkboxLogin) {
                     res.cookie('recordame', userToLogin.id, {
-                        maxAge: 60000 * 1
+                        maxAge: 60000 * 30
                     })
                 }
                 delete userToLogin.password
@@ -119,12 +97,8 @@ const controlador = {
     },
 
     register: (req, res) => {
-        res.render('register.ejs', {
-            habilidades: skills
-        });
-
+        res.render('register.ejs', {habilidades: skills});
     },
-
     registerpost: (req, res) => {
         let usuarioBuscado = usersModel.findByField("email", req.body.email)
         if (usuarioBuscado != undefined) { //Si el mail ya esta registrado...
@@ -142,25 +116,28 @@ const controlador = {
                 bio: req.body.minibio,
             }
             usersModel.agregarUsuario(createNewUser)
-            const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
-            const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id", 3);
-            return res.render('home.ejs', {
-                datos: datos
-            });
+            res.redirect("/");//Te manda a la home
         }
     },
-
-
-
-
     deleteSongs: (req, res) => {
-        songsModel.borrarNcanciones(req.body.eliminarCancion)
-        res.send("productos borrados") //CUANDO ESTE SESSION SE PUEDE REDIRIGIR A LA MISMA DE USUARIO PAGINA USANDO SU ID
+        let elementos = req.body.eliminarInstrumento // o es una lista o es un numero
+        if (Array.isArray(elementos)){
+            songsModel.borrarNcanciones(elementos)
+        }
+        else {
+            songsModel.borrarCancion(req.body.elementos)
+        }
+        res.redirect("/user/userprofile/"+req.params.iduser);
     },
     deleteInstruments: (req, res) => {
-        console.log(req.body.eliminarInstrumento)
-        instrumentsModel.borrarNinstrumentos(req.body.eliminarInstrumento)
-        res.send("productos borrados") //CUANDO ESTE SESSION SE PUEDE REDIRIGIR A LA MISMA DE USUARIO PAGINA USANDO SU ID
+        let elementos = req.body.eliminarInstrumento // o es una lista o es un numero
+        if (Array.isArray(elementos)){
+            instrumentsModel.borrarNinstrumentos(elementos)
+        }
+        else {
+            instrumentsModel.borrarInstrumento(req.body.eliminarInstrumento)
+        }
+        res.redirect("/user/userprofile/"+req.params.iduser);
     }
 };
 
