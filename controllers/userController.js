@@ -22,15 +22,20 @@ const controlador = {
         });
     },
     viewuserprofile: (req, res) => {
-        const usuarioInfo = usersModel.findUser(req.params.iduser)
-        const songsUser = songsModel.findArtistSongs(req.params.iduser)
-        const instrumentUser = instrumentsModel.findArtistInstruments(req.params.iduser)
+        let id = req.params.iduser
+        if (id == req.session.userLogged){res.redirect("/user/userprofile/"+id)}
+        else if (id == req.cookies.recordame){res.redirect("/user/userprofile/"+id)}
+        else {
+            const usuarioInfo = usersModel.findUser(id)
+            const songsUser = songsModel.findArtistSongs(id)
+            const instrumentUser = instrumentsModel.findArtistInstruments(id)
 
-        res.render('viewUserProfile.ejs', {
-            usuarioInfo,
-            songsUser,
-            instrumentUser
-        });
+            res.render('viewUserProfile.ejs', {
+                usuarioInfo,
+                songsUser,
+                instrumentUser
+            });
+        }
     },
     userprofileEdit: (req, res) => {
         const usuarioInfo = usersModel.findUser(req.params.iduser)

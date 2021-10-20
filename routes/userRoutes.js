@@ -13,7 +13,7 @@ const path = require('path');
 
 
 router.get('/userprofile/:iduser', authMiddleware, authMiddlewareMe, userController.userprofile);
-router.get('/viewuserprofile/:iduser', userController.viewuserprofile);
+router.get('/viewuserprofile/:iduser',authMiddleware ,userController.viewuserprofile);
 
 router.get('/userprofile/:iduser/edit', authMiddleware, authMiddlewareMe, userController.userprofileEdit);
 router.put('/userprofile/:iduser/edit', authMiddleware, authMiddlewareMe, multerMid.uploaduserProfileStorage.single('userAvatarButton'), userController.userprofileEditNew);
