@@ -48,14 +48,14 @@
                     <button><i class="fas fa-edit"><span class="agregarTexto">Editar producto</span></i></button>
                 </div> -->
 
-
-
-                <div class="products-formButtons">
-                    <a href="/products/editinstrument/<%= producto[nombreId] %>"><button id="products-editarButton"
-                            type="submit">Editar</button></a>
-                    <form action="/products/<%= rutaDelete %>/<%= producto[nombreId] %>/<%= producto.id %>?_method=DELETE" method="POST">
-                        <button id="products-eliminarButton" type="submit">Eliminar</button></form>
-                </div>
+                <% if (locals && locals.idusuario == artista.id) { %>
+                    <div class="products-formButtons">
+                        <a href="/products/editinstrument/<%= producto[nombreId] %>"><button id="products-editarButton"
+                                type="submit">Editar</button></a>
+                        <form action="/products/<%= rutaDelete %>/<%= producto[nombreId] %>/<%= producto.id %>?_method=DELETE" method="POST">
+                            <button id="products-eliminarButton" type="submit">Eliminar</button></form>
+                    </div>
+                <% } %>
             </div>
         </div>
 

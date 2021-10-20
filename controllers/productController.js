@@ -24,6 +24,13 @@ const controlador = {
         const rutaDelete = "deleteinstrument" //Donde eliminamos los productos
         const artista = usersModel.findUser(instrumento.id)
 
+        //Creamos la variable locals para usar en la vista
+        if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id
+        }
+        else{
+            res.locals.idusuario = req.cookie.recordame.id
+        }
         res.render('productinstrument.ejs', {
             producto: instrumento,
             relacionados,
@@ -45,6 +52,14 @@ const controlador = {
         const nombreId = "songId" //Id de las canciones
         const rutaDelete = "deletesong" //Donde se borra la cancion
         const artista = usersModel.findUser(song.id)
+
+        //Creamos la variable locals para usar en la vista
+        if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id
+        }
+        else{
+            res.locals.idusuario = req.cookie.recordame.id
+        }
 
         res.render('productsong.ejs', {
             producto: song,

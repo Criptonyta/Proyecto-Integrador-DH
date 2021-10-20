@@ -116,7 +116,7 @@ const controlador = {
                 bio: req.body.minibio,
             }
             usersModel.agregarUsuario(createNewUser)
-            res.redirect("/");//Te manda a la home
+            res.redirect("/user/login");//Te manda a al login
         }
     },
     deleteSongs: (req, res) => {
