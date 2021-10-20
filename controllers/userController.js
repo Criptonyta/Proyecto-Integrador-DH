@@ -84,7 +84,6 @@ const controlador = {
                 }
                 delete userToLogin.password
                 req.session.userLogged = userToLogin
-                res.locals.id = userToLogin.id
                 res.redirect('/user/userprofile/' + userToLogin.id)
             } else {
                 res.redirect('/user/login')
@@ -136,6 +135,11 @@ const controlador = {
             instrumentsModel.borrarInstrumento(req.body.eliminarInstrumento)
         }
         res.redirect("/user/userprofile/"+req.params.iduser);
+    },
+    logout:function(req,res){
+        res.clearCookie("recordame");
+        req.session.destroy();
+        res.redirect("/user/login")
     }
 };
 
