@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require("path");
-const multer = require('multer');
 
 const {
     instrumentsModel,
@@ -14,62 +13,72 @@ const auxiliares = require(pathFuncionesAuxiliares);
 
 const controlador = {
     instrumentDetail: (req, res) => {
-        const usersDB = usersModel.getAll()
-        const instrumentos = instrumentsModel.getAll()
-        const instrumento = instrumentsModel.findInstrument(req.params.id)
-        const relacionados = auxiliares.buscarNelementosRelacionados(instrumentos, "id", instrumento.id, "InstrumId", req.params.id, 3) //Instrumentos relacionados
-        const pathFotos = "/images/instrumentsImg/resizedandcropped/" //Donde guardamos las fotos
-        const pathDetail = "/products/detailInstrument/" //Ruta al detalle del producto
-        const nombreId = "InstrumId" //Id de los instrumentos
-        const rutaDelete = "deleteinstrument" //Donde eliminamos los productos
-        const artista = usersModel.findUser(instrumento.id)
+        try{
+            const usersDB = usersModel.getAll()
+            const instrumentos = instrumentsModel.getAll()
+            const instrumento = instrumentsModel.findInstrument(req.params.id)
+            const relacionados = auxiliares.buscarNelementosRelacionados(instrumentos, "id", instrumento.id, "InstrumId", req.params.id, 3) //Instrumentos relacionados
+            const pathFotos = "/images/instrumentsImg/resizedandcropped/" //Donde guardamos las fotos
+            const pathDetail = "/products/detailInstrument/" //Ruta al detalle del producto
+            const nombreId = "InstrumId" //Id de los instrumentos
+            const rutaDelete = "deleteinstrument" //Donde eliminamos los productos
+            const artista = usersModel.findUser(instrumento.id)
 
-        //Creamos la variable locals para usar en la vista
-        if (req.session !=  undefined){
-            res.locals.idusuario = req.session.userLogged.id
+            //Creamos la variable locals para usar en la vista
+            if (req.session !=  undefined){
+                res.locals.idusuario = req.session.userLogged.id
+            }
+            else{
+                res.locals.idusuario = req.cookie.recordame.id
+            }
+            res.render('productinstrument.ejs', {
+                producto: instrumento,
+                relacionados,
+                pathFotos,
+                nombreId,
+                pathDetail,
+                nombreId,
+                artista,
+                rutaDelete
+            });
         }
-        else{
-            res.locals.idusuario = req.cookie.recordame.id
+        catch(error){
+            res.render("error404")
         }
-        res.render('productinstrument.ejs', {
-            producto: instrumento,
-            relacionados,
-            pathFotos,
-            nombreId,
-            pathDetail,
-            nombreId,
-            artista,
-            rutaDelete
-        });
     },
     songDetail: (req, res) => {
-        const usersDB = usersModel.getAll()
-        const songs = songsModel.getAll()
-        const song = songsModel.findSong(req.params.id)
-        const relacionados = auxiliares.buscarNelementosRelacionados(songs, "id", song.id, "songId", req.params.id, 3) //Instrumentos relacionados
-        const pathFotos = "/images/MusicFilesCoverImg/resized/" //Donde guardamos las fotos
-        const pathDetail = "/products/detailSong/" //Donde esta el detalle
-        const nombreId = "songId" //Id de las canciones
-        const rutaDelete = "deletesong" //Donde se borra la cancion
-        const artista = usersModel.findUser(song.id)
+        try{
+            const usersDB = usersModel.getAll()
+            const songs = songsModel.getAll()
+            const song = songsModel.findSong(req.params.id)
+            const relacionados = auxiliares.buscarNelementosRelacionados(songs, "id", song.id, "songId", req.params.id, 3) //Instrumentos relacionados
+            const pathFotos = "/images/MusicFilesCoverImg/resized/" //Donde guardamos las fotos
+            const pathDetail = "/products/detailSong/" //Donde esta el detalle
+            const nombreId = "songId" //Id de las canciones
+            const rutaDelete = "deletesong" //Donde se borra la cancion
+            const artista = usersModel.findUser(song.id)
 
-        //Creamos la variable locals para usar en la vista
-        if (req.session !=  undefined){
-            res.locals.idusuario = req.session.userLogged.id
-        }
-        else{
-            res.locals.idusuario = req.cookie.recordame.id
-        }
+            //Creamos la variable locals para usar en la vista
+            if (req.session !=  undefined){
+                res.locals.idusuario = req.session.userLogged.id
+            }
+            else{
+                res.locals.idusuario = req.cookie.recordame.id
+            }
 
-        res.render('productsong.ejs', {
-            producto: song,
-            relacionados,
-            pathFotos,
-            pathDetail,
-            nombreId,
-            artista,
-            rutaDelete
-        });
+            res.render('productsong.ejs', {
+                producto: song,
+                relacionados,
+                pathFotos,
+                pathDetail,
+                nombreId,
+                artista,
+                rutaDelete
+            });
+        }
+        catch(error){
+            res.render("error404")
+        }
     },
     productempty: (req, res) => {
         res.render('productempty.ejs');

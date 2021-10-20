@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require("path");
 const bcryptjs = require('bcryptjs');
-const pathFuncionesAuxiliares = path.join(__dirname, '../public/funcionesAuxiliares/mainControllerAux.js');
-const auxiliares = require(pathFuncionesAuxiliares);
 
 const {
     instrumentsModel,
