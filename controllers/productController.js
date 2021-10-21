@@ -25,7 +25,9 @@ const controlador = {
             const artista = usersModel.findUser(instrumento.id)
 
             //Creamos la variable locals para usar en la vista
-            if (req.session !=  undefined){
+            console.log(req.session)
+            if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+            else if (req.session !=  undefined){
                 res.locals.idusuario = req.session.userLogged.id
             }
             else{
@@ -59,7 +61,8 @@ const controlador = {
             const artista = usersModel.findUser(song.id)
 
             //Creamos la variable locals para usar en la vista
-            if (req.session !=  undefined){
+            if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+            else if (req.session !=  undefined){
                 res.locals.idusuario = req.session.userLogged.id
             }
             else{

@@ -8,9 +8,9 @@ const {
 } = require("../middlewares/index")
 
 
-router.get('/detailInstrument/:id',authMiddleware ,productController.instrumentDetail); //Te muestra el detalle de un instrumento  
+router.get('/detailInstrument/:id',productController.instrumentDetail); //Te muestra el detalle de un instrumento  
 
-router.get('/detailSong/:id',authMiddleware ,productController.songDetail); //Te muestra el detalle de una cancion
+router.get('/detailSong/:id',productController.songDetail); //Te muestra el detalle de una cancion
 
 router.get('/createproduct', authMiddleware, productController.productempty); //Hoja para cargar los productos
 router.post('/createproduct', authMiddleware, multerMid.upload.fields([{
