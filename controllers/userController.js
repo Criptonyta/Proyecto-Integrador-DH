@@ -108,17 +108,34 @@ const controlador = {
         } else { //Si el mail del usuario no esta en la base de datos...
             let createNewId = usersModel.crearId();
             let newPassword = bcryptjs.hashSync(req.body.password, 10);
-            let createNewUser = {
-                nombre: req.body.nombre,
-                apellido: req.body.apellido,
-                password: newPassword,
-                email: req.body.email,
-                userAvatar: req.file.filename,
-                skills: req.body.skills,
-                bio: req.body.minibio,
+            if (req.file){
+                let createNewUser = {//si se registra con foto
+                    id:createNewId,
+                    nombre: req.body.nombre,
+                    apellido: req.body.apellido,
+                    password: newPassword,
+                    email: req.body.email,
+                    userAvatar: req.file.filename,
+                    skills: req.body.skills,
+                    bio: req.body.minibio,
+                }
+                usersModel.agregarUsuario(createNewUser)
+                res.redirect("/user/login");//Te manda a al login
             }
-            usersModel.agregarUsuario(createNewUser)
-            res.redirect("/user/login");//Te manda a al login
+            else {
+                let createNewUser = {//Si se registra sin foto le ponemos la default
+                    id:createNewId,
+                    nombre: req.body.nombre,
+                    apellido: req.body.apellido,
+                    password: newPassword,
+                    email: req.body.email,
+                    userAvatar: "default.png",
+                    skills: req.body.skills,
+                    bio: req.body.minibio,
+                }
+                usersModel.agregarUsuario(createNewUser)
+                res.redirect("/user/login");//Te manda a al login
+            }
         }
     },
     deleteSongs: (req, res) => {
