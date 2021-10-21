@@ -615,6 +615,10 @@ i {
     overflow: hidden;
 }
 
+.home-card-artist {
+    padding-bottom: 5px;
+}
+
 .ultimosAdicionadosCard,
 .home-card-artist,
 .carrouselCard p {
