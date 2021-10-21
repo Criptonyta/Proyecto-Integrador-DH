@@ -25,7 +25,6 @@ const controlador = {
             const artista = usersModel.findUser(instrumento.id)
 
             //Creamos la variable locals para usar en la vista
-            console.log(req.session)
             if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
             else if (req.session !=  undefined){
                 res.locals.idusuario = req.session.userLogged.id
@@ -108,7 +107,6 @@ const controlador = {
     },
     addProduct: (req, res) => {
         const instrumentsDB = instrumentsModel.getAll()
-        console.log(req.files)
         instrumentcargar = {
             id: req.session.userLogged.id,
             img: req.files.productEmptyButton[0].filename,
