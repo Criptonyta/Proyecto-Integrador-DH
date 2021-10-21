@@ -65,7 +65,7 @@ const controlador = {
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
                 password: bcryptjs.hashSync(req.body.password, 10),
-                userAvatarButton: profileOld.img,
+                userAvatarButton: profileOld.userAvatar,
                 bio: req.body.minibio,
                 skills: req.body.skills
             }
