@@ -73,7 +73,7 @@ section {
 #products-eliminarButton,
 #products-editarButton,
 .agregar,
-.button,
+.navbar-button,
 .access-button-home,
 /* Estilizo los botones CTA */
 .access-button-home2,
@@ -97,7 +97,7 @@ section {
 #products-eliminarButton,
 #products-editarButton,
 .agregar:hover,
-.button:hover,
+.navbar-button:hover,
 .access-button-home:hover,
 .access-button-home2:hover,
 .SaleMusic-button-home:hover,
@@ -233,7 +233,9 @@ h5 {
 
 }
 
-
+.navbar-button {
+    display: none;
+}
 
 .button-profileuser {
     font-size: 20px;
@@ -500,7 +502,7 @@ footer {
     }
 
 
-    .button {
+    .navbar-button {
         /* Estilizo el boton de ingreso */
         display: inline-block;
         border-radius: 5px;

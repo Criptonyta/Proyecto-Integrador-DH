@@ -91,7 +91,7 @@ body {
     text-align: center;
 }
 
-.button:hover {
+.navbar-button:hover {
     color: #00f6ff;
     background-color: #004d61;
 }
@@ -127,7 +127,8 @@ section {
     text-align: center;
 }
 
-.button,
+.register-button,
+.navbar-button,
 .access-button-home,
 /* Estilizo los botones CTA */
 .access-button-home2,
@@ -147,7 +148,7 @@ section {
     cursor: pointer;
 }
 
-.button,
+.navbar-button,
 .access-button-home:hover,
 .access-button-home2:hover,
 .SaleMusic-button-home:hover,
@@ -250,7 +251,7 @@ h5 {
     display: none;
 }
 
-.button {
+.navbar-button {
     display: none;
 }
 
@@ -463,7 +464,7 @@ footer {
 
     }
 
-    .button {
+    .navbar-button {
         /* Estilizo el boton de ingreso */
         display: inline-block;
         border-radius: 5px;
