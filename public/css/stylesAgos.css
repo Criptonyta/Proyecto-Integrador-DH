@@ -55,7 +55,8 @@ body {
     box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
 }
 
-.form-register h4 {
+.form-register h4,
+.form-register h5 {
     font-family: 'Happy Monkey', cursive;
     font-size: 28px;
     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
@@ -63,11 +64,13 @@ body {
     border-bottom: solid 2px white;
 }
 
-.Registro-Texto-Descriptivo {
-    padding-bottom: 20px;
-    border-bottom: solid 2px white;
-    margin: 30px;
+.form-register h5 {
+    font-size: 22px;
+    border-bottom: none;
+}
 
+.Registro-Texto-Descriptivo {
+    margin: 30px;
 }
 
 .datos {
