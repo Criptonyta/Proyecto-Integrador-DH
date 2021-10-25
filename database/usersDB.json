@@ -502,15 +502,5 @@
         "bio": "Banda reggae de la zona oeste del gran Buenos Aires. 3 discos editados",
         "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\44",
         "FIELD10": ""
-    },
-    {
-        "id": 43,
-        "nombre": "Agos",
-        "apellido": "Pavese",
-        "password": "$2a$10$MoAMXikNfZHndcC1gy215ekk6thgBD3/Az3T0kG3t2AVXwwsjz81m",
-        "email": "agos@gmail.com",
-        "userAvatar": "1635197673384_img_.jpg",
-        "skills": "Baterista",
-        "bio": ""
-    }
+    }    
 ]
