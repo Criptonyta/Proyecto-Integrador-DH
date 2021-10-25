@@ -281,7 +281,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: white 1px solid;
+    /* border-bottom: white 1px solid; */
 }
 
 .productInformation input {
