@@ -100,11 +100,12 @@
     align-items:center;
     width:80%;
     margin:20px auto;
-    max-width: 600px;
+    max-width: 600px; 
+ 
 }
 
 #cart1Alex-botonesOpcionSeguir {
-    margin:0;
+    margin:0; 
 }
 
 .cart1Alex-botonesContainer {
@@ -147,16 +148,13 @@
     font-family: sans-serif;
     font-weight: none;
     font-style: "Roboto", sans-serif;   
-    color: #004d61;
-   
+    color: #004d61;   
 }
 
 .cart1Alex-form-total1 {
-    font-family: 'Happy Monkey', cursive;
-    font-size: 22px;
+    font-family: 'Happy Monkey', cursive; 
     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
-    padding-bottom: 15px;
-         
+    padding-bottom: 15px;         
 }
 
 /* Datos de envio */
@@ -216,15 +214,19 @@
     justify-content:center;
     align-items:center;
     margin-top: 10px;
-    padding:5px;
+    padding:5px; 
 }
 
 .cart1Alex-datosTotales p {
     margin:2px;
-    font-size: 12px;
+    font-size: 20px;
+}
+.cart1Alex-datosTotales .cart1Alex-datosTotales2  {
+    margin:2px;
+    font-size:16px;
 }
 .cart1Alex-datosTotales span {
-    font-size: 12px;
+    font-size: 16px;
     margin:0 5px;
 }
 
@@ -265,7 +267,7 @@
     .cart1Alex-datos article {
         margin:0 30px;
     }
-    
+     
 }
 @media (min-width:800px){
 }
