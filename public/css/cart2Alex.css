@@ -70,6 +70,14 @@
     justify-content: center;
     align-items: center;
 }
+.cart2Alex-detallesEnvio-titulo {    
+        margin:5px auto;
+        font-family: 'Happy Monkey', cursive;
+        font-size: 28px;
+        text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
+        padding-bottom: 20px;
+            
+}
 
 .cart2Alex-detallesEnvio p,.cart2Alex-detallesEnvio form {
     margin:5px 0 5px 5px;
