@@ -512,5 +512,15 @@
         "userAvatar": "default.png",
         "skills": "Baterista",
         "bio": ""
+    },
+    {
+        "id": 44,
+        "nombre": "test",
+        "apellido": "test",
+        "password": "$2a$10$4MQ8z7XIjRuLnkU3putVjOVUduKcXAdj6xyiuY9EsqOi8ajLPP4U6",
+        "email": "test@test.com",
+        "userAvatar": "default.png",
+        "skills": "Bajista",
+        "bio": "test"
     }
 ]
