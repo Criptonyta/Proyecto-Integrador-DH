@@ -1,17 +1,132 @@
+CREATE DATABASE musiqueiros;
+USE musiqueiros;
+
+CREATE TABLE IF NOT EXISTS InstrumentsDB (
+    `id` INT,
+    `InstrumId` INT AUTO_INCREMENT UNIQUE NOT NULL,
+    `img` VARCHAR(20) CHARACTER SET utf8 NOT NULL,
+    `titulo` VARCHAR(60) CHARACTER SET utf8,
+    `descripcion` VARCHAR(418) CHARACTER SET utf8 NOT NULL,
+    `precio` INT NOT NULL,
+    `pathAbsolute_img_native` VARCHAR(108) CHARACTER SET utf8,
+    FOREIGN KEY (id) REFERENCES usersDB(id)
+
+);
+
+
+CREATE TABLE IF NOT EXISTS usersDB (
+    `id` PRIMARY KEY INT AUTO_INCREMENT UNIQUE NOT NULL,
+    `nombre` VARCHAR(12)  CHARACTER SET utf8 NOT NULL,
+    `apellido` VARCHAR(10) CHARACTER SET utf8,
+    `password` VARCHAR(50) CHARACTER SET utf8 NOT NULL,
+    `email` VARCHAR(50) CHARACTER SET utf8 NOT NULL,
+    `userAvatar` VARCHAR(20) CHARACTER SET utf8,
+    `skills` VARCHAR(18) CHARACTER SET utf8 NOT NULL,
+    `bio` VARCHAR(141) CHARACTER SET utf8 NOT NULL ,
+    `pathAbsolute_userAvatar_native` VARCHAR(102) CHARACTER SET utf8,
+    `Column_10` VARCHAR(100) CHARACTER SET utf8
+);
+INSERT INTO usersDB VALUES
+    (1,'Aaron','Kenny','B0?;NV','Aaron.Kenny@gmail.com','07.jpg','Cantante','Vivo en Rosario. Tengo influencias del jazz de Miles Davis. 34 años','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\07','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\'),
+    (2,'Nate','Parrish','JF;XMH','Nate.Parrish@gmail.com','05.jpg','Guitarrista','Influencias de RHCP y de RATM. Vivo en Nueva York pero mantengo mis raices Argentinas ;-)','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\05',NULL),
+    (3,'Bad','Snacks','S0=ORD','Bad.Snacks@gmail.com','01.jpg','Guitarrista','Toco la guitarra y canto. Me gusta el rock y el trap','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\01',NULL),
+    (4,'Cheel',NULL,'?OFX3Y','Cheel@gmail.com','02.jpg','Multinstrumentista','Vivo en Chubut. Estoy disponible para crear bandas','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\02',NULL),
+    (5,'Chris','Haugen','=C3LBN','Chris.Haugen@gmail.com','06.jpg','Bajista','Nerd musical. Mis influencias son tan variadas que van desde la clasica hasta el rock fusion','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\06',NULL),
+    (6,'Corbyn','Kites','<>GW94','Corbyn.Kites@yahoo.com','03.jpg','Multinstrumentista','Somos una banda de Avellaneda. Nos influencia la musica urbana. Tocamos desde hace 10 años','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\03',NULL),
+    (7,'Jamelle','Monae','KSI6;1','Jamelle.Monae@gmail.com','08.jpg','Cantante','Me encanta Bork. Actualmente estoy sin banda por lo que estoy disponible para cantar en una','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\08',NULL),
+    (8,'Timothy','Hansen','ZHWDEX','Timothy.Hansen@gmail.com','09.jpg','Guitarrista','Mis influencias son Jamie Collum. Mi genero musical preferido es el jazz contemporaneo','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\09',NULL),
+    (9,'Delicate','Steve','5U3WBJ','Delicate.Steve@gmail.com','48.jpg','Cantante','Tengo una voz suave y armoniosa. Mi preferencia son las melodias y las baladas romanticas','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\',NULL),
+    (10,'Replacements',NULL,'UF6I0Y','Replacements@gmail.com','04.jpg','Bajista','Creamos Replacements porque somos amigos del barrio de Boedo. Hinchas de San Lorenzo y amantes del rock','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\04',NULL),
+    (11,'Outside In',NULL,':K4;WV','Outside In@gmail.com','11.jpg','Baterista','Outside in es una banda de Mar del Plata con influencias reggae. Estamos disponibles para shows','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\11',NULL),
+    (12,'Emmit','Fenn','V=6P>M','Emmit.Fenn@yahoo.com','10.jpg','Guitarrista','Soy Americano pero vivo en Buenos Aires desde los 14 años. Me influencia Radiohead y Pulp','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\10',NULL),
+    (13,'E''s','Jammy Jams','<SXSP@','E''s.Jammy Jams@gmail.com','13.jpg','Multinstrumentista','Amante de la musica electronica. Geek de sintetizadores y guitarras electricas','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\13',NULL),
+    (14,'Aillike','Leddy','UNY6UL','Aillike.Leddy@gmail.com','19.jpg','Bajista','Duo de musica electronica, versatiles en todos los generos musicales.','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\19',NULL),
+    (15,'Godmode',NULL,'JSFASP','Godmode@gmail.com','14.jpg','Bajista','Trio trio creado en La Plata. Hacemos rock hasta llegar a los cimientos de la tierra','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\14',NULL),
+    (16,'Jeremy','Korpas','4>=@O<','Jeremy.Korpas@yahoo.com','12.jpg','Guitarrista','Mis estilos preferidos son el Pop y el Rock, y logro combinaciones exquisitas con ellos','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\12',NULL),
+    (17,'JHS','Pedals','UKHP;G','JHS.Pedals@gmail.com','15.jpg','Baterista','Me especializo en ponerle ritmo a las melodias. Soy Baterista y percusionista','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\15',NULL),
+    (18,'Joel','Cummins','9P0?O@','Joel.Cummins@yahoo.com','16.jpg','Guitarrista','5 discos editados y 5 canciones en el Billboard chart. Toque en el Quilmes Rock','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\16',NULL),
+    (19,'Lauren','Duski','LSE?ZK','Lauren.Duski@gmail.com','21.jpg','Cantante','Me gusta conocer los misterios de la voz y desentranarlos. Soy cantante desde que tengo memoria','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\21',NULL),
+    (20,'Travis','Scott','TNBVG9','Travis.Scott@gmail.com','17.jpg','Guitarrista','Soy guitarrista, compositor y cantante. Me gustan bandas tipo Kings of Lions','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\17',NULL),
+    (21,'Glass','Animals','YSG3LA','Glass.Animals@gmail.com','18.jpg','Guitarrista','Hacemos power rock para despertar conciencias.','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\18',NULL),
+    (22,'Nathan','Moore','TRG?<Z','Nathan.Moore@yahoo.com','20.jpg','Guitarrista','Soy introvertido y me gusta crear mis composiciones en mi home studio. 30 años','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\20',NULL),
+    (23,'Ofshane',NULL,'DSHL<@','Ofshane@gmail.com','22.jpg','Bajista','Estamos disponibles para shows y eventos empresariales. 3 discos editados. Influencias Magic Numbers','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\22',NULL),
+    (24,'Patiño',NULL,'?=@BWR','Patiño@yahoo.com','23.jpg','Cantante','Soy Zenegales. Vivo en Argentina desde hace 5 años. Disponible para bandas','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\23',NULL),
+    (25,'Quincas','Moreira','27TGQ8','Quincas.Moreira@gmail.com','25.jpg','Cantante','Admiro a los cantantes de musica folk y country. Vivo en Arkansas','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\25',NULL),
+    (26,'RAGE',NULL,'TVBHXI','RAGE@gmail.com','26.jpg','Baterista','Somos una banda de Hurlingham. Nuestras influencias son bandas nacionales como Seru Giran y Pescado Rabioso. Tocamos juntos desde hace 5 años','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\26',NULL),
+    (27,'Reed','Mathis','XHD4TR','Reed.Mathis@yahoo.com','24.jpg','Guitarrista','Vivo en la ciduad de Sao Paulo. Soy brasileño y me influencia el funk clasico','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\24',NULL),
+    (28,'Robotanists',NULL,'FZN<YU','Robotanists@gmail.com','27.jpg','Baterista','Somos un duo de Drum and Bass. Nuestras influencias son claro, la mejor banda de todos los tiempos Morphine','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\27',NULL),
+    (29,'SefChol',NULL,'O41BWP','SefChol@gmail.com','29.jpg','Cantante','Banda de sonidos eclecticos y originales. Nos encanta la musica y poder fusionarla','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\29',NULL),
+    (30,'Kid','Head','Q;T<I:','Kid.Head@yahoo.com','30.jpg','Bajista','Tenemos influencias en el rock californiano. Combinamos la musica con el skate.','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\30',NULL),
+    (31,'Steve','Adams','8LHR2M','Steve.Adams@gmail.com','28.jpg','Guitarrista','Solista y multinstrumentista. Mi pasion es componer. La musica cambia al mundo','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\28',NULL),
+    (32,'Air','Review','ATWBFM','Air.Review@gmail.com','32.jpg','Cantante','Banda relajada de Rock and roll clasico, influenciados por Led Zeppellin y Black Sabbath','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\32',NULL),
+    (33,'Roosevelt','Sea','5IB6T@','Roosevelt.Sea@gmail.com','34.jpg','Cantante','Luego de haber pasado por varias bandas, inicie mi carrera solista y lance tres discos hasta el momento','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\34',NULL),
+    (34,'Dave','Fields','4UQ64Y','Dave.Fields@yahoo.com','36.jpg','Guitarrista','Observo el mundo desde mi estudio y escribo acerca de el, en tonos de rock sinfonico','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\36',NULL),
+    (35,'Chloe','Morondo','S0P10P','Chloe.Morondo@gmail.com','31.jpg','Cantante','Soy Mezzosoprano. Cantante de opera profesional','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\31',NULL),
+    (36,'TrackTribe',NULL,'XOJ192','TrackTribe@gmail.com','37.jpg','Cantante','Estamos disponibles para shows y eventos empresariales. 2 discos editados. Influencias de grupos rhythm and blues','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\37',NULL),
+    (37,'Trevor','Garrod','<22MC2','Trevor.Garrod@gmail.com','40.jpg','Cantante','Canto y compongo mis propias canciones, siendo influenciado por los clasicos del soul','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\40',NULL),
+    (38,'Back 2 zero',NULL,'<QEUQ>','Back 2 zero@yahoo.com','35.jpg','Cantante','Banda liderada por la cantante Julia Nono. Hacemos Jazz vocal y shows tributo','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\35',NULL),
+    (39,'Hallmarc',NULL,'CBR00D','Hallmarc@gmail.com','39.jpg','Cantante','Soy Morena Lopez. Nuestras influencias van desde el flamenco hasta la electronica','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\39',NULL),
+    (40,'Vans','in Japan','H6ADHO','Vans.in Japan@gmail.com','33.jpg','Cantante','Lidero la banda Vans in Japan. Nos gusta experimentar y crear nuevas variantes de los clasicos generos musicales','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\33',NULL),
+    (41,'Parks','Square','?AIVTU','Parks.Square@yahoo.com','38.jpg','Guitarrista','Trio que recrea los clasicos del rock nacional. Banda Tributo a los clasicos nacionales','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\38',NULL),
+    (42,'Zachariah','Hickman','BK8MU2','Zachariah.Hickman@gmail.com','44.jpg','Tecladista','Banda reggae de la zona oeste del gran Buenos Aires. 3 discos editados','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\44',NULL);
+
+
+INSERT INTO InstrumentsDB VALUES
+    (1,1,'01.jpg','Bajo Electrico Acustico Femmto Precision','CARACTERISTICAS - Formato de guitarra simil Jazz Bass, para diestros, pasivo - Madera cuerpo: Aliso - Madera mástil: Arce - Diapasón: Palisandro - Clavijas forma trébol, 4L, de fundición cromadas - Cuerdas de metal - microfono bobina partida (split coil, tipo Precision Bass) - 2 perillas (volumen y tono) - 21 trastes - Pick guard
+- Salida: Jack plug 6.5mm',42,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\01.jpg'),
+    (2,2,'02.jpg','Bajo Electrico Fender Jaguar Bass 4 Cuerdas','Producto: Bajo Electrico
+Marca: Fender
+Modelo: Jaguar Bass Caracteristicas: Bajo Electrico Fender Jaguar Bass 4 Cuerdas Perfecto Estado.',333,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\02.jpg'),
+    (3,3,'03.jpg','Bajo Electrico 4 Cuedras Con Ampli Y Afinador','Bajo usado en buen estado no se la marca',36,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\03.jpg'),
+    (4,4,'04.jpg','Bajo Eléctrico Guild - Década Del 90 Impecable - Gran Sonido','Como nuevo. Hecho en Argentina. Década de 1980 a 1990. Impecable',140,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\04.jpg'),
+    (5,5,'05.jpg','Bajo Electrico Texas','Bajo eléctrico de 4 cuerdas tipo Ibanez, de circuito Activo. Dos mics unos tipo jazz bass y el otro precision bass. Dos perillas de tonos, dos perillas de volumen. Color Tobacoo Burst. Solo de poco uso doméstico. Buen sonido. Calibrado con cuerdas nuevas Martin Blust de .40. Se entrega con funda de bajo acolchonada y una pua rigida. Zona Ezeiza para probarlo o entrega en todo el Conurbano Bonaerense previo acuerdo.',134,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\05.jpg'),
+    (6,6,'06.jpg','Bajo Electrico Tipo Fender Tyler','Exelente bajo tipo fender tyler vintage series jazz bass, exelente estado se lo compre a la persona q lo compro nuevo y no lo uso yo lo use muy copo, lindo sonido con funda',37,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\06.jpg'),
+    (7,7,'07.jpg','Bajo Eléctrico Corvette Rock Bass By Warwick 5 Cuerdas Local','SE RETIRA POR EL CENTRO DE LOMAS DE ZAMORA O ENVIO POR MERCADO ENVIO. LOCAL A LA CALLE',27,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\07.jpg'),
+    (8,8,'08.jpg','Bajo Electrico Ibanez Gio Gsr 200','Poco uso, solo para maquetear en casa y algún ensayo.
+Detalles que pueden verse en las fotos.
+La tapa de la batería engancha de un solo lado y del otro lo sostengo con cinta, no afecta al uso ni se cae la batería.
+Anda 10 puntos pero busco algún bajo PASIVO ya que soy guitarrista y me resulta más practico para maquetear, no preciso la ganancia de un bajo activo.',330,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\08.jpg'),
+    (9,9,'09.jpg','Bajo Eléctrico Dean Hillsboro Blue Activo Jazz Bass','Los bajos de Dean Hillsboro tienen un aspecto retro y un cabezal clásico. Diseñados para jazz, funk y rock, estos instrumentos son ideales para músicos con poco presupuesto que buscan algo un poco diferente.',181,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\09.jpg'),
+    (10,10,'10.jpg','Bajo Electrico 5 Cuerdas Ibanez Btb 775 Pb/indonesia','Ibanez BTB five string with Poplar Burl top, Maple neck and Mahogany body.  MK-2 Pickups . 35" scale. 1.85" at nut.  Neck through. Has been played but still in mint condition. Includes cool Hanewinckel padded Gigbag.  Really nice playing fiver with typical Ibanez quality.   Always wanted to try one of these and it didn''t disappoint but I just got an Alembic five string so I can let this go. Ver detalle de la foto.',329,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\10.jpg'),
+    (11,11,'11.jpg','Bateria Acústica 5 Cpos Platos Fierros','BATERIA STAR 5 CUERPOS CON FIERROS Y SIN PALILLOS -Tom 12" -Tom 13" -Redoblante 14" -Chancha 16" -Soportes y pedal para Hihat -Soporte recto para Crash.',151,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\11.jpg'),
+    (12,12,'12.jpg','Bateria De 5 Cuerpos + Banqueta Y Platillos Natal Dna Gris','La batería NATAL DNA viene completa, con hardware, platillos, pedal para el bombo, butaca e incluso baquetas; todo lo que necesitas para tocar la batería directamente de la caja.',331,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\12.jpg'),
+    (13,13,'13.jpg','Bateria Pearl 5 C Export Exx725 22/10/12/16/14x5 Blanco Mate','BATERÍA PEARL Export - 5 Cuerpos - B22"x18 | TT10"x7 | TT12"x8 | TF16"x16 | R14"x5 - Poplar-Mahogany- Jet Black - Sin Fierros',91,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\13.jpg'),
+    (14,14,'14.jpg','Batería Acústica Taurus Jazz Maple 4 Cpos Tambo 14 Bombo 18','Batería 4 cuerpos Maple Tom tom 12" x 10" Tom de pie 14" x 16" Bombo 18" x 18" Tambor 14 Rims Flotantes Bombo con 8 torres AROS DE MADERA
+Tom holder t/YAMAHA Patas telescópicas Fierros Dobles Soporte Recto Platillo pata doble Soporte HH con regulación pata doble Pedal de bombo cadena doble plataforma de acero
+Soporte de redoblante pata doble',14,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\14.jpg'),
+    (16,16,'16.jpg','Bateria Mapex Mars Fusion Bombo De 20 Bloodwood Cuotas','Bombo 20"x16" sin soporte para Tom. Tom Tom 10"x07" y 12"x08" Tom Base 14"x12" Caja 14"x6,5 Mars Incluye Soporte doble de tom TH676 No incluye herrajes ni platos ',265,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\16.jpg'),
+    (17,17,'17.jpg','Bateria Acustica Completa 5 Cuerpos Platos Fierros','Excelente batería MAPEX PRODIGY, con acabado recubierto, los tambores están equipados con Prodigy, el nuevo modelo que utiliza un solo punto de contacto.
+Incluye TODO lo que precisas para tocar',115,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\17.jpg'),
+    (20,20,'20.jpg','Bateria Mapex Prodigy Completa','Excelente batería MAPEX PRODIGY, con acabado recubierto, los tambores están equipados con Prodigy, el nuevo modelo que utiliza un solo punto de contacto.
+Incluye TODO lo que precisas para tocar',124,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\20.jpg'),
+    (21,21,'21.jpg','Bateria De 5 Cuerpos + Banqueta Y Platillos','-Bombo: 22"x 16" -Tom de piso: 16"x 16" -Tom 1: 13"x 10" -Tom 2: 12"x 9-Tambor: 14"x 5,5"',326,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\21.jpg'),
+    (23,23,'23.jpg','Guitarra Electrica Sx Les Paul Series Ee-3 Vintage','Body: Basswood Neck: Selected Canadian Maple Truss Rod: 2 Way Truss Rod Neck Joint: Set Neck Fingerboard: Engineered Rosewood or Rosewood',250,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\23.jpg'),
+    (24,24,'24.jpg','Guitarra Electroacústica Yamaha Ncx1 Natural','La guitara electroacústica con cuerdas de nylon Yamaha NCX1 trae la artesanía tradicional a la era moderna, con una sensación familiar con grandes elementos de diseño innovadores. La NCX1 tiene una forma de cuerpo elegante, de un corte que extiende el acceso a los trastes altos, junto con una trastera de nogal de radio plano con un generoso espaciado de cuerdas de 11.8mm',180,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\24.jpg'),
+    (28,28,'28.jpg','Guitarra Electrica Stratocaster 22 Trastes Con Palanca ','Selectora: 1. Humbucker, 2. Humbucker y 1er simple, 3. 1er simple, 4. 1er y 2do simple, 5. 2do simple Controles: Volumen Master, Tono 1. (Pastilla del mástil), Tono 2. (Pastilla central)',400,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\28.jpg'),
+    (32,32,'32.jpg','Micrófono SF 666 condensador omnidireccional','Al ser condensador, posibilitará un resultado claro y fino. Es ideal para percusiones, guitarras, pianos, entre otros. Por su respuesta tan definida ante la voz, es el más elegido por los profesionales.',253,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\32.jpg'),
+    (33,33,'33.jpg','Micrófono Fifine T730 condensador cardioide','Su patrón polar cardioide ofrece una mayor sensibilidad hacia los sonidos frontales, y así evita los ruidos provenientes de la parte posterior.',345,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\33.jpg'),
+    (36,36,'36.jpg','Micrófono Fifine K730 condensador cardioide','Ideal para varias actividades. Te brindará un sonido de calidad y conseguirás la nitidez de las voces.',100,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\36.jpg'),
+    (37,37,'37.jpg','Micrófono Blue Yeti condensador multipatrón blackout','La comunicación clara y poderosa es importante para todas las organizaciones. Los micrófonos de Blue te permiten capturar y transmitir con una calidad de sonido sorprendente. Blue combina audio de calidad profesional con la simplicidad plug-and-play para ofrecer un rendimiento que está a años luz de los micrófonos integrados para portátiles y cámaras.',243,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\37.jpg'),
+    (38,38,'38.jpg','Micrófono Sennheiser MK 4 condensador cardioide','Con este producto lograrás que la reproducción obtenida sea lo más parecida a la original. Excelente para grabar voces debido a su sensibilidad y amplio rango de frecuencia',211,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\38.jpg'),
+    (39,39,'39.jpg','Micrófono Fifine K780 condensador cardioide','Al ser condensador, posibilitará un resultado claro y fino. Es ideal para percusiones, guitarras, pianos, entre otros. Por su respuesta tan definida ante la voz, es el más elegido por los profesionales',432,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\39.jpg'),
+    (40,40,'40.jpg','Micrófono Fifine K028','Diseñado para amortiguar los golpes y ruidos de manipulación. Totalmente dinámico, solo debés conectarlo y empezar a grabar.',333,'C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\instrumentsImg\\resizedandcropped\\40.jpg');
+
+
 CREATE TABLE IF NOT EXISTS SongsBD (
     `id` INT,
-    `songId` INT,
-    `img` VARCHAR(6) CHARACTER SET utf8,
+    `songId` INT NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
+    `img` VARCHAR(20),
     `titulo` VARCHAR(25) CHARACTER SET utf8,
-    `precio` INT,
+    `precio` INT NOT NULL,
     `descripcion` VARCHAR(81) CHARACTER SET utf8,
     `nombre` VARCHAR(12) CHARACTER SET utf8,
     `apellido` VARCHAR(10) CHARACTER SET utf8,
-    `audioFileYTPlayer` VARCHAR(11) CHARACTER SET utf8,
+    `audioFileYTPlayer` VARCHAR(15) NOT NULL UNIQUE CHARACTER SET utf8,
     `audioFile` VARCHAR(70) CHARACTER SET utf8,
     `YT_URL` VARCHAR(28) CHARACTER SET utf8,
     `pathAbsolute_MP3_native` VARCHAR(143) CHARACTER SET utf8,
-    `pathAbsolute_img_native_cover` VARCHAR(102) CHARACTER SET utf8
+    `pathAbsolute_img_native_cover` VARCHAR(102) CHARACTER SET utf8,
+    FOREIGN KEY (id) REFERENCES usersDB(id)
 );
 INSERT INTO SongsBD VALUES
     (36,1,'36.jpg','1968',11,'Rock, con influencias de Vernon Reid/Living Colour','TrackTribe',NULL,'kNYx2C995fc','1968 - TrackTribe.mp3','https://youtu.be/kNYx2C995fc','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\1968 - TrackTribe.mp3','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\36.jpg'),
@@ -112,3 +227,5 @@ INSERT INTO SongsBD VALUES
     (29,98,'29.jpg','Two Sides ',3,'Reggae sintetizado full efectos','SefChol',NULL,'KzuXkIh0cVA','Two Sides - SefChol.mp3','https://youtu.be/KzuXkIh0cVA','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Two Sides - SefChol.mp3','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\29.jpg'),
     (32,99,'32.jpg','Warships ',1,'Fusion melody chorus guitar, synth y bateria marcante','Air','Review','WG6S1BerpJw','Warships - The 126ers.mp3','https://youtu.be/WG6S1BerpJw','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\Warships - The 126ers.mp3','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\32.jpg'),
     (27,100,'27.jpg','We Ride! ',1,'Rock and roll del clasico para bailar','Reed','Mathis','Cmzuaozboms','We Ride! - Reed Mathis.mp3','https://youtu.be/Cmzuaozboms','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\MusicFiles\\We Ride! - Reed Mathis.mp3','C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\MusicFilesCoverImg\\resized\\27.jpg');
+
+
