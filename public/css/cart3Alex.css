@@ -53,6 +53,15 @@
 }
 
 /* Metodos de pago */
+
+.cart3Alex-metodosDePago-titulo{
+    margin:5px auto;
+    font-family: 'Happy Monkey', cursive;
+    font-size: 28px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
+    padding-bottom: 20px;
+        
+}
 .cart3Alex-mainContainer {
     display:flex;
     flex-direction:column;
@@ -70,6 +79,7 @@
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    
 }
 
 .cart3Alex-tarjetaCredito p {
@@ -78,6 +88,7 @@
 
 .cart3Alex-tarjetaCredito p span {
     margin:0 5px;
+    font-family: "Roboto", sans-serif;
 }
 
 .cart3Alex-tarjetaCredito p i {
@@ -128,39 +139,31 @@
 
 
 /* Metodo de pago FIN */
-
+.cart3Alex-botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
 .cart3Alex-botonesOpcion {
-    width: 130px;
+    display: block;
+    width: 150px;
     border-radius: 5px;
-    padding: 2px 10px;
-    font-size: 12px;
+    padding: 10px 20px;
     text-decoration: none;
-    color: #fff;
-    background-color: var(--verdeClaro);
-    margin: 5px;
+    color: #004d61;
+    background-color: #00f6ff;
+    margin: auto;
     border: solid #00bacd;
     text-align: center;
     transition: all 0.5s;
     cursor: pointer;
-    font-family: sans-serif;
-    font-weight: bold;
+
 }
 
 .cart3Alex-botonesOpcion:hover {
     color: #00f6ff;
     background-color: #004d61;
-}
-
-.cart3Alex-botonesOpcion i {
-    font-size:12px;
-    font-weight: bold;
-}
-
-.cart3Alex-botonesOpcion span {
-    margin:0 3px;
-    font-size:12px;
-    font-family: sans-serif;
-    font-weight: bold;
 }
 
 .cart3Alex-resumenCarrito {
