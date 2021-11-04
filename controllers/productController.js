@@ -121,7 +121,13 @@ const controlador = {
         const instrumentos = auxiliares.buscarNelementosAleatorios(instrumentsDB, "InstrumId", 6);
         const musicos = auxiliares.buscarNelementosAleatorios(songsDB, "songId", 6);
         const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
-        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id", 3);;
+        const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id", 3);
+        
+        //Creamos la variable locals para usar en la vista
+        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+        else if (req.session !=  undefined){res.locals.idusuario = req.session.userLogged.id}
+        else{res.locals.idusuario = req.cookie.recordame.id}
+
 
         res.render('tienda.ejs', {
             datos: datos,
@@ -131,18 +137,36 @@ const controlador = {
     },
     songs: (req, res) => {
         const songsDB = songsModel.getAll()
+
+        //Creamos la variable locals para usar en la vista
+        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+        else if (req.session !=  undefined){res.locals.idusuario = req.session.userLogged.id}
+        else{res.locals.idusuario = req.cookie.recordame.id}
+        
         res.render("allSongs.ejs", {
             musicos: songsDB
         })
     },
     instruments: (req, res) => {
         const instrumentsDB = instrumentsModel.getAll()
+
+        //Creamos la variable locals para usar en la vista
+        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+        else if (req.session !=  undefined){res.locals.idusuario = req.session.userLogged.id}
+        else{res.locals.idusuario = req.cookie.recordame.id}
+
         res.render("allInstruments.ejs", {
             instrumentos: instrumentsDB
         })
     },
     artists: (req, res) => {
         const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
+
+        //Creamos la variable locals para usar en la vista
+        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+        else if (req.session !=  undefined){res.locals.idusuario = req.session.userLogged.id}
+        else{res.locals.idusuario = req.cookie.recordame.id}
+
         res.render("allArtists.ejs", {
             artistas: artistsDB
         })
@@ -157,6 +181,11 @@ const controlador = {
         const resultadosSongs = auxiliares.checkAtribute(songsDB, ["titulo", "descripcion", "nombre", "apellido"], palabras) //Canciones que coinciden
         const resultadosInstruments = auxiliares.checkAtribute(instrumentsDB, ["titulo", "descripcion"], palabras) //Instrumentos que coinciden
         const resultadosArtistas = auxiliares.checkAtribute(artistsDB, ["nombre", "apellido", "skills", "bio"], palabras) //Artistas que coinciden
+
+        //Creamos la variable locals para usar en la vista
+        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+        else if (req.session !=  undefined){res.locals.idusuario = req.session.userLogged.id}
+        else{res.locals.idusuario = req.cookie.recordame.id}
 
         res.render("allSearched.ejs", {
             musicos: resultadosSongs,
