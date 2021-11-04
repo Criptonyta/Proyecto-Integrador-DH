@@ -98,6 +98,7 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
+    flex-direction: column;
     width:80%;
     margin:20px auto;
     max-width: 600px; 
@@ -110,7 +111,7 @@
 
 .cart1Alex-botonesContainer {
     display:flex;
-
+    flex-direction: column;
 }
 
 .cart1Alex-botonesContainer button {
@@ -248,7 +249,11 @@
 }
 
 
-@media (min-width:480px){}
+@media (min-width:480px){
+    .cart1Alex-botonesContainer {
+        flex-direction: row;
+    }
+}
 @media (min-width:650px){
     .cart1Alex-menuOption a{
         font-size:18px;
@@ -267,6 +272,12 @@
     }
     .cart1Alex-datos article {
         margin:0 30px;
+    }
+    .cart1Alex-botones {
+        flex-direction: row;
+    }
+    .cart1Alex-botonesContainer {
+        flex-direction: row;
     }
      
 }
