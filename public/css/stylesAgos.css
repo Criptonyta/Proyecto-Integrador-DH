@@ -72,6 +72,9 @@ body {
 .Registro-Texto-Descriptivo {
     margin: 30px;
 }
+#tengoCuenta {
+    text-decoration: none;
+}
 
 .datos {
     background-color: Var(--azulOscuro);
