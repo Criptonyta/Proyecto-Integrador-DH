@@ -834,3 +834,85 @@ i {
 #userProfile-eliminarInstrumento {
     width: 20px;
 }
+
+/* NAVBAR DE TODAS LAS PAGINAS */
+.main-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--verdeOscuro);
+}
+
+.navbar-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    height:100%;
+}
+
+.navbar-right * {
+    margin-left: 5px;
+}
+
+.navbar-right p,.navbar-right span {
+    font-size: 14px;
+    font-family: var(--letraParrafos);
+}
+.navbar-right ul {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-right i {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+.navbar-right a {
+    margin-left: 5px;
+}
+
+#navbar-store {
+    position:relative;
+    top:-10px;
+}
+
+.navbar-accordion {
+    display:none;
+}
+
+.navbar-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-logo {
+    height:60px;
+}
+.desktop {
+    display:none;
+}
+
+.boton-navbar {
+    padding:5px;
+    background-color: var(--aguamarina);
+    border-radius: 5px;
+    color:black;
+    border: 1px solid white;
+}
+
+@media(min-width:700px){
+    .desktop {
+        display:block;
+    }
+    .mobile {
+        display:none;
+    }
+}
