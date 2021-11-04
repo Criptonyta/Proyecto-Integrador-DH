@@ -1,11 +1,10 @@
-window.addEventListener("load",function(){
+window.addEventListener("load", function () {
     let burgerButton = document.querySelector("#navbar-burgerButton")
     let desplegable = document.querySelector(".navbar-desplegable")
-    burgerButton.addEventListener("click",function(){
-        if (desplegable.style.width == "0%"){
+    burgerButton.addEventListener("click", function () {
+        if (desplegable.style.width == "0%") {
             desplegable.style.width = "50%"
-        }
-        else {
+        } else {
             desplegable.style.width = "0%"
         }
     })

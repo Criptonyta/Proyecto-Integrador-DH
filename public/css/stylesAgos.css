@@ -72,6 +72,7 @@ body {
 .Registro-Texto-Descriptivo {
     margin: 30px;
 }
+
 #tengoCuenta {
     text-decoration: none;
 }
@@ -242,6 +243,7 @@ h5 {
     height: 60px;
     width: auto;
 }
+
 
 .main-header-der,
 .main-header-izq {
