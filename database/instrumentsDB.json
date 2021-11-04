@@ -222,5 +222,21 @@
         "titulo": "instrumento de prueba",
         "precio": "1000",
         "descripcion": "Descripcion de instrumento de pruebaaaaaaa"
+    },
+    {
+        "InstrumId": 42,
+        "id": 45,
+        "img": "1635996966013_img_.jpg",
+        "titulo": "Guitarra 1",
+        "precio": "10",
+        "descripcion": "Descripcion de mi productooo"
+    },
+    {
+        "InstrumId": 43,
+        "id": 46,
+        "img": "1635997913317_img_.jpg",
+        "titulo": "Producto pruebaaaa2",
+        "precio": "15",
+        "descripcion": "fwefwEWESVSDVSBSBSBSB"
     }
 ]

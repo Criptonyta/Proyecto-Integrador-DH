@@ -532,5 +532,15 @@
         "userAvatar": "1635996027916_img_.jpg",
         "skills": "Bajista",
         "bio": ""
+    },
+    {
+        "id": 46,
+        "nombre": "Alex",
+        "apellido": "Langman",
+        "password": "$2a$10$wmdWROFJSDhQzdu945ObN.sRe742Y.x.fzCFzalqBQfdGPSrrvs22",
+        "email": "alex@hotmail.com",
+        "userAvatar": "1635997325098_img_.jpg",
+        "skills": "Bajista",
+        "bio": ""
     }
 ]
