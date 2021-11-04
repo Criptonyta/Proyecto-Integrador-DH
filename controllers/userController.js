@@ -46,32 +46,18 @@ const controlador = {
     },
     userprofileEditNew: (req, res) => { //editar usuario
         const profileOld = usersModel.findUser(req.params.iduser)
-        if (typeof req.file == "object" && req.file.filename) {
-
-            const profileNew = {
-                email: req.body.email,
-                nombre: req.body.nombre,
-                apellido: req.body.apellido,
-                password: bcryptjs.hashSync(req.body.password, 10),
-                userAvatarButton: req.file.filename,
-                bio: req.body.minibio,
-                skills: req.body.skills
-            }
-            usersModel.editarUsuario(profileOld, profileNew)
-            res.redirect("/user/userprofile/"+req.params.iduser);
-        } else {
-            const profileNew = {
-                email: req.body.email,
-                nombre: req.body.nombre,
-                apellido: req.body.apellido,
-                password: bcryptjs.hashSync(req.body.password, 10),
-                userAvatarButton: profileOld.userAvatar,
-                bio: req.body.minibio,
-                skills: req.body.skills
-            }
-            usersModel.editarUsuario(profileOld, profileNew);
-            res.redirect("/user/userprofile/"+req.params.iduser);
+        const profileNew = {
+            email: req.body.email,
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            bio: req.body.minibio,
+            skills: req.body.skills
         }
+        if (typeof req.file == "object" && req.file.filename) {profileNew.userAvatarButton = req.file.filename}//Tiene foto
+        else {profileNew.userAvatarButton = profileOld.userAvatar}//No tiene foto
+        usersModel.editarUsuario(profileOld, profileNew)
+        res.redirect("/user/userprofile/"+req.params.iduser);
     },
     login: (req, res) => {
         res.render('login.ejs');
