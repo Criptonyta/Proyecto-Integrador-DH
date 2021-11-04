@@ -52,7 +52,7 @@
                         <!-- <i class="fas fa-star"><span class="stars">4.5</span></i> -->
                     </div>
                     <p class="productDescription"><%= producto.descripcion %></p>
-                    <% if (locals && locals.idusuario != "noLogueado") { %>
+                    <% if (locals && locals.idusuario != "noLogueado" && locals.idusuario != producto.id) { %>
                         <button class="agregar">Agregar al carrito</button>
                     <% } %>
                 </div>
