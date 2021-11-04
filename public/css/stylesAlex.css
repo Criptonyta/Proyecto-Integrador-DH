@@ -918,6 +918,20 @@ i {
     transition: 0.6s;
     width:0%;
 }
+.navbar-desplegable a {
+    font-family:var(--letraParrafos);
+    padding: 5px;
+}
+.navbar-desplegable ul {
+    margin-top: 5px;
+}
+
+.navbar-desplegable li {
+    margin-bottom: 10px;
+}
+.navbar-desplegable i {
+    margin-right: 5px;
+}
 
 .hide {
     display:none;
