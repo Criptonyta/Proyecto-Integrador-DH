@@ -913,31 +913,20 @@ i {
 }
 
 .navbar-desplegable {
-<<<<<<< HEAD
     height: 100%;
-    background-color: gray;
+    width: 40%;
     right: 0px;
     position: absolute;
     z-index: 10;
     background-color: rgba(128, 128, 128, 0.8);
-    transition: 0.6s;
-    width: 0%;
-=======
-    height:100%;
-    width:40%;
-    right:0px;
-    position:absolute;
-    z-index: 10;
-    background-color: rgba(128, 128, 128,0.8);
     transition: 0.4s;
-    opacity:0;
->>>>>>> fc999b67b02f1d80f1df8092d3cecc44428d3446
+    opacity: 0;
 }
 
 .navbar-desplegable a {
     font-family: var(--letraParrafos);
     padding: 5px;
-    width:100%;
+    width: 100%;
 }
 
 .navbar-desplegable ul {
@@ -946,10 +935,11 @@ i {
 
 .navbar-desplegable li {
     margin-bottom: 10px;
-    width:100%;
+    width: 100%;
 }
+
 .navbar-desplegable li:hover {
-    background-color: rgba(128, 128, 128,0.8);
+    background-color: rgba(128, 128, 128, 0.8);
 }
 
 .navbar-desplegable i {
