@@ -99,8 +99,6 @@ const controlador = {
             titulo: req.body.titulo, //Titulo de la cancion
             precio: req.body.precio, //Precio de la cancion
             descripcion: req.body.descripcion, //Descripcion de la cancion
-            nombre: usersModel.findUser(req.session.userLogged.id)["nombre"],
-            apellido: usersModel.findUser(req.session.userLogged.id)["apellido"]
         }
         songsModel.agregarCancion(songcargar)
         res.redirect("/products/tienda/")
@@ -185,52 +183,17 @@ const controlador = {
     editSongPut: (req, res) => {
         const songsDB = songsModel.getAll()
         const oldProduct = songsModel.findSong(req.params.idSong)
-        if (req.files.songEmptyContentBtn1 && req.files.songEmptyContentBtn2) { //CASO SI TIENE FOTO Y VIDEO
-            const editSong = {
-                img: req.files.songEmptyContentBtn1[0].filename,
-                titulo: req.body.titulo,
-                precio: req.body.precio,
-                descripcion: req.body.descripcion,
-                audioFileYTPlayer: "Cmzuaozboms", //CAMBIAR!
-                audioFile: req.files.songEmptyContentBtn2[0].filename,
-                YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
-            }
-            songsModel.editarCancion(oldProduct, editSong)
-            res.redirect("/products/tienda/songs/")
-        } else if (req.files.songEmptyContentBtn1) { //CASO SI TIENE FOTO
-            const editSong = {
-                img: req.files.songEmptyContentBtn1[0].filename,
-                titulo: req.body.titulo,
-                precio: req.body.precio,
-                descripcion: req.body.descripcion,
-                audioFileYTPlayer: "Cmzuaozboms", //CAMBIAR!
-                YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
-            }
-            songsModel.editarCancion(oldProduct, editSong)
-            res.redirect("/products/tienda/songs/")
-        } else if (req.files.songEmptyContentBtn2) { //CASO SI TIENE VIDEO
-            const editSong = {
-                titulo: req.body.titulo,
-                precio: req.body.precio,
-                descripcion: req.body.descripcion,
-                audioFileYTPlayer: "Cmzuaozboms", //CAMBIAR!
-                audioFile: req.files.songEmptyContentBtn2[0].filename,
-                YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
-            }
-            songsModel.editarCancion(oldProduct, editSong)
-            res.redirect("/products/tienda/songs/")
-
-        } else {
-            const editSong = { //CASO NI FOTO NI VIDEO
-                titulo: req.body.titulo,
-                precio: req.body.precio,
-                descripcion: req.body.descripcion,
-                audioFileYTPlayer: "Cmzuaozboms", //CAMBIAR!
-                YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
-            }
-            songsModel.editarCancion(oldProduct, editSong)
-            res.redirect("/products/tienda/songs/")
+        const editSong = {
+            titulo: req.body.titulo,
+            precio: req.body.precio,
+            descripcion: req.body.descripcion,
+            audioFileYTPlayer: "Cmzuaozboms", //CAMBIAR!
+            YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
         }
+        if (req.files.songEmptyContentBtn1){editSong.img = req.files.songEmptyContentBtn1[0].filename}
+        if (req.files.songEmptyContentBtn2){editSong.audioFile = req.files.songEmptyContentBtn2[0].filename}
+        songsModel.editarCancion(oldProduct, editSong)
+        res.redirect("/products/tienda/songs/")
     },
     editInstrumentPut: (req, res) => {
         const instrumentsDB = instrumentsModel.getAll()
