@@ -16,11 +16,13 @@ window.addEventListener("load", function () {
         }
     })
     iconoTienda.addEventListener("click",function(){
-      if (acordion.style.height > "0px"){
-          acordion.style.height = "0px"
-      }
-      else {
-        acordion.style.height = "auto"
-      }
+        if (acordion.style.height > "0px"){
+            acordion.style.height = "0px"
+        }
+        else {
+            acordion.style.height = "auto"
+        }
     })
 })
+
+
