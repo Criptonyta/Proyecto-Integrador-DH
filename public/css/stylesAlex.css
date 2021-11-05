@@ -842,6 +842,7 @@ i {
     align-items: center;
     justify-content: space-between;
     background-color: var(--verdeOscuro);
+    overflow: hidden;
 }
 
 .navbar-right {
@@ -909,13 +910,14 @@ i {
 
 .navbar-desplegable {
     height: 100%;
-    width: 40%;
+    width: 0%;
     right: 0px;
     position: absolute;
     z-index: 10;
     background-color: rgba(128, 128, 128, 0.8);
     transition: 0.4s;
     opacity: 0;
+    overflow: hidden;
 }
 .navbar-desplegable li, .navbar-desplegable a {
     display:block;
@@ -927,9 +929,10 @@ i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:0;
     overflow: hidden; 
-    transition: 0.6s linear ease-in; 
+    display:none;
+    outline: none;
+    transition: 0.6s; 
 }
 
 
@@ -969,6 +972,7 @@ i {
 .navbar-desplegable li {
     margin-bottom: 10px;
     width: 100%;
+    transition: 0,4s;
 }
 
 .navbar-desplegable a:hover {

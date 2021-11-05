@@ -10,7 +10,9 @@
             </div>
 
             <div class="navbar-right">
-                <a href="#" id="navbar-saludoUsuario" style="text-decoration: none"><p>Hola,<span> Pedro!</span>!</p></a>
+                <% if (locals && locals.idusuario != "noLogueado") { %>
+                    <a href="/user/userprofile/<%= locals.idusuario %>" id="navbar-saludoUsuario" style="text-decoration: none"><p>Hola,<span> <%=locals.nombre%></span>!</p></a>
+                <% } %>
                 <a href="#" id="navbar-burgerButton"><i class="fas fa-bars mobile"></i></a>
                 <a href="/products/tienda"><i class="fas fa-store desktop" id="navbar-store"></i></a>
                 <ul class="desktop">
@@ -19,9 +21,15 @@
                 </ul>
 
                 <!-- Boton Ingreso responsivo | Exibido en NavBar en > 700px -->
-                <a href="/cart/cart1"><i class="fas fa-shopping-cart desktop"></i></a>
-                <a href="/user/login" class="boton-navbar desktop" style="text-decoration: none">Login</a>
-                <a href="/user/logout" class="boton-navbar desktop" style="text-decoration: none">Logout</a>
+                <% if (locals && locals.idusuario != "noLogueado") { %>
+                    <a href="/cart/cart1"><i class="fas fa-shopping-cart desktop"></i></a>
+                <% } %>
+                <% if (locals && locals.idusuario == "noLogueado") { %>
+                    <a href="/user/login" class="boton-navbar desktop" style="text-decoration: none">Login</a>
+                <% } %>
+                <% if (locals && locals.idusuario != "noLogueado") { %>
+                    <a href="/user/logout" class="boton-navbar desktop" style="text-decoration: none">Logout</a>
+                <% } %>
             </div>
         </div>
         <div class="navbar-desplegable">
@@ -34,9 +42,15 @@
                         <li><a href="/products/tienda/instruments" class="navbar-accordion">Instrumentos</a></li>
                     </ul>
                 </li>
-                <li><a href="/cart/cart1" style="text-decoration: none"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
-                <li><a href="/user/login" style="text-decoration: none"><i class="far fa-user-circle"></i>Login</a></li>
-                <li><a href="/user/logout" style="text-decoration: none"><i class="fas fa-sign-in-alt"></i>Logout</a></li>
+                <% if (locals && locals.idusuario != "noLogueado") { %>
+                    <li><a href="/cart/cart1" style="text-decoration: none"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
+                <% } %>
+                <% if (locals && locals.idusuario == "noLogueado") { %>
+                    <li><a href="/user/login" style="text-decoration: none"><i class="far fa-user-circle"></i>Login</a></li>
+                <% } %>
+                <% if (locals && locals.idusuario != "noLogueado") { %>
+                    <li><a href="/user/logout" style="text-decoration: none"><i class="fas fa-sign-in-alt"></i>Logout</a></li>
+                <% } %>
             </ul>
         </div>
     </nav>

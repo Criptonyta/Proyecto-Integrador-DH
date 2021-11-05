@@ -27,11 +27,11 @@ const controlador = {
             //Creamos la variable locals para usar en la vista
             if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
             else if (req.session !=  undefined){
-                res.locals.idusuario = req.session.userLogged.id
+                res.locals.idusuario = req.session.userLogged.id;
+                res.locals.nombre = req.session.userLogged.nombre;
             }
-            else{
-                res.locals.idusuario = req.cookie.recordame.id
-            }
+            else{res.locals.idusuario = req.cookie.recordame.id}
+
             res.render('productinstrument.ejs', {
                 producto: instrumento,
                 relacionados,
@@ -62,11 +62,10 @@ const controlador = {
             //Creamos la variable locals para usar en la vista
             if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
             else if (req.session !=  undefined){
-                res.locals.idusuario = req.session.userLogged.id
+                res.locals.idusuario = req.session.userLogged.id;
+                res.locals.nombre = req.session.userLogged.nombre;
             }
-            else{
-                res.locals.idusuario = req.cookie.recordame.id
-            }
+            else{res.locals.idusuario = req.cookie.recordame.id}
 
             res.render('productsong.ejs', {
                 producto: song,
@@ -83,9 +82,25 @@ const controlador = {
         }
     },
     productempty: (req, res) => {
+        //Creamos la variable locals para usar en la vista
+        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
+        else{res.locals.idusuario = req.cookie.recordame.id}
+
         res.render('productempty.ejs');
     },
     songempty: (req, res) => {
+        //Creamos la variable locals para usar en la vista
+        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
+        else{res.locals.idusuario = req.cookie.recordame.id}
+
         res.render('songempty.ejs');
     },
     addSong: (req, res) => {
@@ -125,7 +140,10 @@ const controlador = {
         
         //Creamos la variable locals para usar en la vista
         if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){res.locals.idusuario = req.session.userLogged.id}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
         else{res.locals.idusuario = req.cookie.recordame.id}
 
 
@@ -140,7 +158,10 @@ const controlador = {
 
         //Creamos la variable locals para usar en la vista
         if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){res.locals.idusuario = req.session.userLogged.id}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
         else{res.locals.idusuario = req.cookie.recordame.id}
         
         res.render("allSongs.ejs", {
@@ -152,7 +173,10 @@ const controlador = {
 
         //Creamos la variable locals para usar en la vista
         if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){res.locals.idusuario = req.session.userLogged.id}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
         else{res.locals.idusuario = req.cookie.recordame.id}
 
         res.render("allInstruments.ejs", {
@@ -164,7 +188,10 @@ const controlador = {
 
         //Creamos la variable locals para usar en la vista
         if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){res.locals.idusuario = req.session.userLogged.id}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
         else{res.locals.idusuario = req.cookie.recordame.id}
 
         res.render("allArtists.ejs", {
@@ -184,7 +211,10 @@ const controlador = {
 
         //Creamos la variable locals para usar en la vista
         if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){res.locals.idusuario = req.session.userLogged.id}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
         else{res.locals.idusuario = req.cookie.recordame.id}
 
         res.render("allSearched.ejs", {
@@ -203,10 +233,26 @@ const controlador = {
     },
     editSong: (req, res) => {
         let songOld = songsModel.findSong(req.params.idSong)
+
+        //Creamos la variable locals para usar en la vista
+        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
+        else{res.locals.idusuario = req.cookie.recordame.id}
         res.render('editSong.ejs', {songOld});
     },
     editInstrument: (req, res) => {
         let instrumentoOld = instrumentModel.findInstrument(req.params.idInstrum)
+        
+        //Creamos la variable locals para usar en la vista
+        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
+        else{res.locals.idusuario = req.cookie.recordame.id}
         res.render('editProduct.ejs', {instrumentoOld});
     },
     editSongPut: (req, res) => {

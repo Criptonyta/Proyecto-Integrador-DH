@@ -12,7 +12,10 @@ const controlador = {
 
         //Creamos la variable locals para usar en la vista
         if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){res.locals.idusuario = req.session.userLogged.id}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
         else{res.locals.idusuario = req.cookie.recordame.id}
 
         res.render('home.ejs',{datos:datos});

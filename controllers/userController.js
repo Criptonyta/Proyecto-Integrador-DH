@@ -15,6 +15,14 @@ const controlador = {
         const songsUser = songsModel.findArtistSongs(req.params.iduser)
         const instrumentUser = instrumentsModel.findArtistInstruments(req.params.iduser)
 
+        //Creamos la variable locals para usar en la vista
+        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
+        else{res.locals.idusuario = req.cookie.recordame.id}
+
         res.render('userprofile.ejs', {
             usuarioInfo,
             songsUser,
@@ -22,6 +30,14 @@ const controlador = {
         });
     },
     viewuserprofile: (req, res) => {
+        //Creamos la variable locals para usar en la vista
+        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
+        else{res.locals.idusuario = req.cookie.recordame.id}
+
         let id = req.params.iduser
         if (id == req.session.userLogged){res.redirect("/user/userprofile/"+id)}
         else if (id == req.cookies.recordame){res.redirect("/user/userprofile/"+id)}
@@ -39,6 +55,15 @@ const controlador = {
     },
     userprofileEdit: (req, res) => {
         const usuarioInfo = usersModel.findUser(req.params.iduser)
+
+        //Creamos la variable locals para usar en la vista
+        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
+        else{res.locals.idusuario = req.cookie.recordame.id}
+
         res.render('userprofileEdit.ejs', {
             usuarioInfo,
             habilidades: skills
@@ -94,34 +119,19 @@ const controlador = {
         } else { //Si el mail del usuario no esta en la base de datos...
             let createNewId = usersModel.crearId();
             let newPassword = bcryptjs.hashSync(req.body.password, 10);
-            if (req.file){
-                let createNewUser = {//si se registra con foto
-                    id:createNewId,
-                    nombre: req.body.nombre,
-                    apellido: req.body.apellido,
-                    password: newPassword,
-                    email: req.body.email,
-                    userAvatar: req.file.filename,
-                    skills: req.body.skills,
-                    bio: req.body.minibio,
-                }
-                usersModel.agregarUsuario(createNewUser)
-                res.redirect("/user/login");//Te manda a al login
+            let createNewUser = {
+                id:createNewId,
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                password: newPassword,
+                email: req.body.email,
+                skills: req.body.skills,
+                bio: req.body.minibio,
             }
-            else {
-                let createNewUser = {//Si se registra sin foto le ponemos la default
-                    id:createNewId,
-                    nombre: req.body.nombre,
-                    apellido: req.body.apellido,
-                    password: newPassword,
-                    email: req.body.email,
-                    userAvatar: "default.png",
-                    skills: req.body.skills,
-                    bio: req.body.minibio,
-                }
-                usersModel.agregarUsuario(createNewUser)
-                res.redirect("/user/login");//Te manda a al login
-            }
+            if (req.file){createNewUser.userAvatar = req.file.filename}
+            else {createNewUser.userAvatar = "default.png"}
+            usersModel.agregarUsuario(createNewUser)
+            res.redirect("/user/login");//Te manda a al login
         }
     },
     deleteSongs: (req, res) => {

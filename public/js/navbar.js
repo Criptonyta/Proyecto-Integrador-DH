@@ -5,9 +5,11 @@ window.addEventListener("load", function () {
     let acordion = document.querySelector(".acordion-vertical")
     burgerButton.addEventListener("click", function () {
         if (desplegable.style.opacity == "0") {
+            desplegable.style.width = "40%"
             desplegable.style.opacity = "100%"
         } else {
-            desplegable.style.opacity = "0%"
+            desplegable.style.opacity = "0%";
+            desplegable.style.width = "0%"
         }
     })
     window.addEventListener("resize", function () {
@@ -16,13 +18,19 @@ window.addEventListener("load", function () {
         }
     })
     iconoTienda.addEventListener("click",function(){
-        if (acordion.style.height > "0px"){
-            acordion.style.height = "0px"
+        if (acordion.style.display === "block"){
+            acordion.style.display = "none"
         }
         else {
-            acordion.style.height = "auto"
+            acordion.style.display = "block"
         }
     })
 })
 
+/*if (acordion.style.height > "0px"){
+    acordion.style.height = "0px"
+}
+else {
+    acordion.style.height = "auto"
+}*/
 
