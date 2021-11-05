@@ -14,8 +14,8 @@
                 <a href="#" id="navbar-burgerButton"><i class="fas fa-bars mobile"></i></a>
                 <a href="/products/tienda"><i class="fas fa-store desktop" id="navbar-store"></i></a>
                 <ul class="desktop">
-                    <li><a href="/products/tienda/songs" class="navbar-accordion">Música</a></li>
-                    <li><a href="/products/tienda/instruments" class="navbar-accordion">Instrumentos</a></li>
+                    <li><a href="/products/tienda/songs" class="hide">Música</a></li>
+                    <li><a href="/products/tienda/instruments" class="hide">Instrumentos</a></li>
                 </ul>
 
                 <!-- Boton Ingreso responsivo | Exibido en NavBar en > 700px -->
@@ -26,7 +26,14 @@
         </div>
         <div class="navbar-desplegable">
             <ul>
-                <li><a href="/products/tienda" style="text-decoration: none"><i class="fas fa-store" id="navbar-store"></i>Tienda</a></li>
+                <li>
+                    <a style="text-decoration: none" id="navbar-desplegable-tienda"><i class="fas fa-store" id="navbar-store"></i>Tienda</a>
+                    <ul class="acordion-vertical">
+                        <li><a href="/products/tienda" class="navbar-accordion">Home</a></li>
+                        <li><a href="/products/tienda/songs" class="navbar-accordion">Música</a></li>
+                        <li><a href="/products/tienda/instruments" class="navbar-accordion">Instrumentos</a></li>
+                    </ul>
+                </li>
                 <li><a href="/cart/cart1" style="text-decoration: none"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
                 <li><a href="/user/login" style="text-decoration: none"><i class="far fa-user-circle"></i>Login</a></li>
                 <li><a href="/user/logout" style="text-decoration: none"><i class="fas fa-sign-in-alt"></i>Logout</a></li>

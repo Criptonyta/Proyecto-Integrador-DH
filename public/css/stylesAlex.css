@@ -882,9 +882,27 @@ i {
 }
 
 
+.acordion-vertical {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:0;
+    overflow: hidden;
+    
+}
+.acordion-vertical a {
+    margin-left: 5vw;
+}
+
+#navbar-store {
+    transition: 0.5s linear ease-in;
+}
 
 .navbar-accordion {
-    display: none;
+    font-size: 14px;
+    left:50px;
 }
 
 .navbar-left {
@@ -923,6 +941,10 @@ i {
     opacity: 0;
 }
 
+.navbar-desplegable li {
+    cursor: pointer;
+    width:100%;
+}
 .navbar-desplegable a {
     font-family: var(--letraParrafos);
     padding: 5px;
