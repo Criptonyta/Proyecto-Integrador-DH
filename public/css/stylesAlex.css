@@ -1027,10 +1027,15 @@ i {
 }
 
 .validator-errors {
-    color:red;
+    color:rgba(255,0,0,0.8);
     font-family: var(--letraParrafos);
     text-align: center;
     font-size: 15px;
     background-color: rgba(0,0,0,0);
     outline: none;
+}
+
+.validator-errors i {
+    color:rgba(255,0,0,0.7);
+    padding-right: 5px;
 }

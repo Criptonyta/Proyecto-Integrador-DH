@@ -39,7 +39,7 @@
                 <% if (locals.errors) { %>
                     <div class="validator-errors">
                         <% errors.forEach(function(error){ %>
-                            <p><%= error.msg %></p>
+                            <p><i class="fas fa-exclamation"></i><%= error.msg %></p>
                         <% }); %>
                     </div>
                 <% } %>
