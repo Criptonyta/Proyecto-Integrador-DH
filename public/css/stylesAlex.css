@@ -24,6 +24,7 @@
 
 .mainContainer {
     height: 100vh;
+    min-height: 650px;
     max-width: 500px;
     display: flex;
     flex-direction: column;
@@ -73,6 +74,7 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
+    min-height: 600px;
     max-width: 500px;
 }
 
@@ -1023,4 +1025,11 @@ i {
     #navbar-saludoUsuario {
         margin-right: 0;
     }
+}
+
+.validator-errors {
+    color:red;
+    font-family: var(--letraParrafos);
+    text-align: center;
+    font-size: 15px;
 }

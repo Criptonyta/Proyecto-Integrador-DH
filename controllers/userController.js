@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require("path");
 const bcryptjs = require('bcryptjs');
+const {validationResult} = require("express-validator")
 
 const {
     instrumentsModel,
@@ -85,9 +86,13 @@ const controlador = {
         res.redirect("/user/userprofile/"+req.params.iduser);
     },
     login: (req, res) => {
-        res.render('login.ejs');
+        res.render('login.ejs')
     },
+
     loginpost: (req, res) => {
+        const errores = validationResult(req)
+        console.log(req.body.email)
+        if (!errores.isEmpty()){return res.render('login.ejs',{errors: errores.array(),oldData:req.body})}
         let userToLogin = usersModel.findByField('email', req.body.email) // Busca el usuario x email
         if (userToLogin) {
             let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password) // compara contrasena del form con la de la BD

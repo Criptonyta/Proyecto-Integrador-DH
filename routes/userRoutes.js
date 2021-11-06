@@ -6,7 +6,8 @@ const {
 const {
     multerMid,
     authMiddleware,
-    authMiddlewareMe, // TODO PENSAR LA FORMA EN LA QUE PODEMOS IMPLEMENTAR EL ID PARA DEL PRODUCTOS SIENDO YO
+    authMiddlewareMe, 
+    expressValidatorMid
 } = require("../middlewares/index");
 const path = require('path');
 
@@ -19,8 +20,8 @@ router.get('/userprofile/:iduser/edit', authMiddleware, authMiddlewareMe, userCo
 router.put('/userprofile/:iduser/edit', authMiddleware, authMiddlewareMe, multerMid.uploaduserProfileStorage.single('userAvatarButton'), userController.userprofileEditNew);
 
 
-router.get('/login', userController.login);
-router.post('/login', userController.loginpost);
+router.get('/login',userController.login);
+router.post('/login',expressValidatorMid.validacionesLogin ,userController.loginpost);
 
 router.get('/register', userController.register);
 router.post('/register', multerMid.uploadRegister.single('userAvatarRegisterButton'), userController.registerpost); // Para crear un nuevo usuario en register 
