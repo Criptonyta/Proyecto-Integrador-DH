@@ -91,7 +91,6 @@ const controlador = {
 
     loginpost: (req, res) => {
         const errores = validationResult(req)
-        console.log(req.body.email)
         if (!errores.isEmpty()){return res.render('login.ejs',{errors: errores.array(),oldData:req.body})}
         let userToLogin = usersModel.findByField('email', req.body.email) // Busca el usuario x email
         if (userToLogin) {
@@ -115,9 +114,18 @@ const controlador = {
     },
 
     register: (req, res) => {
+        //Creamos la variable locals para usar en la vista
+        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+        else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+        }
+        else{res.locals.idusuario = req.cookie.recordame.id}
         res.render('register.ejs', {habilidades: skills});
     },
     registerpost: (req, res) => {
+        const errores = validationResult(req)
+        if (!errores.isEmpty()){return res.render('register.ejs',{errors: errores.array(),oldData:req.body,habilidades: skills})}
         let usuarioBuscado = usersModel.findByField("email", req.body.email)
         if (usuarioBuscado != undefined) { //Si el mail ya esta registrado...
             res.send("el mail ya esta registrado")

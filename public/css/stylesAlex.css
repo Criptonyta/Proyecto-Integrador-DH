@@ -1027,7 +1027,7 @@ i {
 }
 
 .validator-errors {
-    color:rgba(255,0,0,0.8);
+    color:rgba(255,0,0,0.8) !important;
     font-family: var(--letraParrafos);
     text-align: center;
     font-size: 15px;

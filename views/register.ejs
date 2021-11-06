@@ -33,22 +33,32 @@
             </div>
 
             <div class="items">
+                <% if (locals.errors) { %>
+                    <div class="validator-errors">
+                        <% errors.forEach(function(error){ %>
+                            <p><i class="fas fa-exclamation" style="color:rgba(255,0,0,0.8)"></i><%= error.msg %></p>
+                        <% }); %>
+                    </div>
+                <% } %>
                 <p>
                     <i class="fas fa-id-badge"><label> Cómo te llamas?</label></i><br>
-                    <input class="datos" type="text" name="nombre" id="nombre" placeholder="Ingresá tu nombre">
+                    <input class="datos" type="text" name="nombre" id="nombre" placeholder="Ingresá tu nombre"
+                    value="<% if (locals.errors && oldData && oldData.nombre){%><%= oldData.nombre %> <% } %>">
                     <!--required -->
                 </p>
 
                 <p>
                     <i class="fas fa-id-badge"><label> Y tu apellido es...</label></i><br>
-                    <input class="datos" type="text" name="apellido" id="apellido" placeholder="Ingresá tu apellido">
+                    <input class="datos" type="text" name="apellido" id="apellido" placeholder="Ingresá tu apellido"
+                    value="<% if (locals.errors && oldData && oldData.apellido){%><%= oldData.apellido %> <% } %>">
                     <!--required -->
                 </p>
 
                 <p>
                     <i class="fas fa-at"><label> Cuál es tu Email?</label></i><br>
                     <input class="datos" type="email" name="email" id="email"
-                        placeholder="Te enviaremos un email para confirmarlo ;-)">
+                        placeholder="Te enviaremos un email para confirmarlo ;-)"
+                        value="<% if (locals.errors && oldData && oldData.email){%><%= oldData.email %> <% } %>">
                     <!--required -->
                     </label>
                 </p>
@@ -74,7 +84,8 @@
                     <i class="fas fa-camera"><label> Foto de perfil:</label></i><br>
                     <label for='userAvatarRegisterButton' class="userAvatarRegisterButton">Cargá una imagen</label>
                     <input class="userAvatarRegisterButton" id=userAvatarRegisterButton type="file"
-                        name="userAvatarRegisterButton">
+                        name="userAvatarRegisterButton"
+                        value="<% if (locals.errors && oldData && oldData.userAvatarRegisterButton){%><%= oldData.userAvatarRegisterButton %> <% } %>">
                     <!--required -->
                 </p>
 
@@ -84,7 +95,8 @@
                     <i class="fas fa-music"><label> Si sos músico, escribí­ tu minibio aquí para destacar entre la
                             multitud</label></i><br>
                     <textarea class="datos" name="minibio" id="minibio" rows="3" maxlength="120"
-                        placeholder="Por Ejemplo: Soy guitarrista profesional hace 15 meses. Tengo 4 trabajos publicados y estoy disponible para trabajar en conjunto con otros y crear una banda"></textarea>
+                        placeholder="Por Ejemplo: Soy guitarrista profesional hace 15 meses. Tengo 4 trabajos publicados y estoy disponible para trabajar en conjunto con otros y crear una banda"
+                        value="<% if (locals.errors && oldData && oldData.minibio){%><%= oldData.minibio %> <% } %>"></textarea>
                 </p>
 
                 <input class="register-button" button type="submit" value="Registrar"></button>

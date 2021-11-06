@@ -24,7 +24,7 @@ router.get('/login',userController.login);
 router.post('/login',expressValidatorMid.validacionesLogin ,userController.loginpost);
 
 router.get('/register', userController.register);
-router.post('/register', multerMid.uploadRegister.single('userAvatarRegisterButton'), userController.registerpost); // Para crear un nuevo usuario en register 
+router.post('/register', multerMid.uploadRegister.single('userAvatarRegisterButton'),expressValidatorMid.validacionesRegister ,userController.registerpost); // Para crear un nuevo usuario en register 
 router.get("/logout/",userController.logout)//Hay que agregar el logout a la barra y pasarle el ID con session
 
 router.delete('/mySongs/delete/:iduser?', authMiddleware,authMiddlewareMe ,userController.deleteSongs) //Para eliminar varias canciones a la vez
