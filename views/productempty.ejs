@@ -27,19 +27,29 @@
 
             <div class="create-productInformation-container">
                 <form method='POST' action="/products/createproduct" enctype="multipart/form-data">
+                    <% if (locals.errors) { %>
+                        <div class="validator-errors">
+                            <% errors.forEach(function(error){ %>
+                                <p><i class="fas fa-exclamation"></i><%= error.msg %></p>
+                            <% }); %>
+                        </div>
+                    <% } %>
                     <div class="productImages">
                         <label for='productEmptyButton' class='productEmptyButton'>Cargá una imagen</label>
                         <input class='productEmptyButton' name='productEmptyButton' id='productEmptyButton' type='file'
                             placeholder="Cargá tu foto aquí">
                     </div>
                     <div class="productInformation">
-                        <h2><input type='text' name='titulo' placeholder="Cargá tu título aquí"></h2>
-                        <p class='create-productprice'><input type='number' name='precio' placeholder="Precio"><span
-                                class="currency">U$D</span></p>
+                        <h2><input type='text' name='titulo' placeholder="Cargá tu título aquí"
+                            value="<% if (locals.errors && oldData && oldData.titulo){%><%= oldData.titulo %> <% } %>"></h2>
+                        <p class='create-productprice'><input type='text' name='precio' placeholder="Precio" 
+                            value="<% if (locals.errors && oldData && oldData.precio && !isNaN(oldData.precio)){%><%= Number(oldData.precio) %> <% } %>">
+                            <span class="currency">U$D</span></p>
                         <!-- <i class="fas fa-star"><span class="stars">4.5</span></i> -->
                     </div>
                     <p class="create-productDescription"><input name='descripcion' type='textarea'
-                            placeholder="Cargá una breve descripción de tu producto"></p>
+                            placeholder="Cargá una breve descripción de tu producto"
+                            value="<% if (locals.errors && oldData && oldData.descripcion){%><%= oldData.descripcion %> <% } %>"></p>
                     <!-- <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button> -->
 
                     <div class="editar">

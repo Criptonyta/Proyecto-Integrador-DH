@@ -4,7 +4,8 @@ const {productController} = require('../controllers/index');
 const {
     multerMid,
     authMiddleware,
-    authMiddlewareMe // TODO PENSAR LA FORMA EN LA QUE PODEMOS IMPLEMENTAR EL ID PARA EDITAR PRODUCTOS SIENDO YO
+    authMiddlewareMe,
+    expressValidatorMid
 } = require("../middlewares/index")
 
 
@@ -16,7 +17,7 @@ router.get('/createproduct', authMiddleware, productController.productempty); //
 router.post('/createproduct', authMiddleware, multerMid.upload.fields([{
     name: "productEmptyButton",
     maxCount: 1
-}]), productController.addProduct); //Hoja para crear productos 
+}]),expressValidatorMid.validacionesCargarInstrum ,productController.addProduct); //Hoja para crear productos 
 
 router.get('/createsong', authMiddleware, productController.songempty); //Hoja para cargar la cancion
 router.post('/createsong', authMiddleware, multerMid.upload.fields([{

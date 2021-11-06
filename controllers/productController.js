@@ -9,6 +9,7 @@ const {
 const instrumentModel = require('../models/instrumentsModel');
 const pathFuncionesAuxiliares = path.join(__dirname, '../public/funcionesAuxiliares/productControllerAux.js');
 const auxiliares = require(pathFuncionesAuxiliares);
+const {validationResult} = require("express-validator")
 
 
 const controlador = {
@@ -119,6 +120,16 @@ const controlador = {
         res.redirect("/products/tienda/")
     },
     addProduct: (req, res) => {
+        const errores = validationResult(req)
+        if (!errores.isEmpty()){
+            //Creamos la variable locals para usar en la vista
+            if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+            else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+            }
+            else{res.locals.idusuario = req.cookie.recordame.id}
+            return res.render('productempty.ejs',{errors: errores.array(),oldData:req.body})}
         const instrumentsDB = instrumentsModel.getAll()
         instrumentcargar = {
             id: req.session.userLogged.id,

@@ -125,7 +125,15 @@ const controlador = {
     },
     registerpost: (req, res) => {
         const errores = validationResult(req)
-        if (!errores.isEmpty()){return res.render('register.ejs',{errors: errores.array(),oldData:req.body,habilidades: skills})}
+        if (!errores.isEmpty()){
+            //Creamos la variable locals para usar en la vista
+            if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
+            else if (req.session !=  undefined){
+            res.locals.idusuario = req.session.userLogged.id;
+            res.locals.nombre = req.session.userLogged.nombre;
+            }
+            else{res.locals.idusuario = req.cookie.recordame.id}
+            return res.render('register.ejs',{errors: errores.array(),oldData:req.body,habilidades: skills})}
         let usuarioBuscado = usersModel.findByField("email", req.body.email)
         if (usuarioBuscado != undefined) { //Si el mail ya esta registrado...
             res.send("el mail ya esta registrado")
