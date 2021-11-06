@@ -22,7 +22,7 @@
 
                 <!-- Boton Ingreso responsivo | Exibido en NavBar en > 700px -->
                 <% if (locals && locals.idusuario != "noLogueado") { %>
-                    <a href="/cart/cart1"><i class="fas fa-shopping-cart desktop"></i></a>
+                    <a href="/cart/cart1" style="text-decoration: none"><i class="fas fa-shopping-cart desktop"></i></a>
                 <% } %>
                 <% if (locals && locals.idusuario == "noLogueado") { %>
                     <a href="/user/login" class="boton-navbar desktop" style="text-decoration: none">Login</a>
