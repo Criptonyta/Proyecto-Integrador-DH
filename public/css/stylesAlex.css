@@ -101,7 +101,6 @@
 
 
 #login form {
-    background-color: Var(--azulOscuro);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1032,4 +1031,6 @@ i {
     font-family: var(--letraParrafos);
     text-align: center;
     font-size: 15px;
+    background-color: rgba(0,0,0,0);
+    outline: none;
 }
