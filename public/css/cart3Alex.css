@@ -70,7 +70,7 @@
 }
 
 .cart3Alex-tarjetaCredito {
-    background-color:var(--verdeIntermedio);
+    border: solid 1px white;
     margin:10px auto;
     padding: 5px;
     width:90%;
@@ -103,7 +103,7 @@
 }
 
 .cart3Alex-formaPago {
-    background-color:var(--verdeIntermedio);
+    border: solid 1px white;
     margin:10px auto;
     padding: 5px;
     width:90%;
