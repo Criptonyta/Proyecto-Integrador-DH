@@ -85,12 +85,19 @@
     font-size: 12px;
 }
 
-#cart1Alex-tablaDatos th {
-    background-color:var(--verdeIntermedio)
+#cart1Alex-tablaDatos th  {
+    background-color:var(--verdeClaro);
+    border: solid 1px white;
+    color: #004d61;
 }
 
-#cart1Alex-tablaDatos tr {
-    background-color:var(--verdeClaro)
+#cart1Alex-tablaDatos td {
+    border: solid 1px white;
+}
+
+.cart1Alex-input {
+   background-color:#001f2c;
+   width: 40px;
 }
 
 /* Botones */
@@ -249,10 +256,12 @@
 }
 
 
-@media (min-width:480px){
+@media (min-width:380px){
     .cart1Alex-botonesContainer {
         flex-direction: row;
+        margin-top: 20px;    
     }
+    
 }
 @media (min-width:650px){
     .cart1Alex-menuOption a{
