@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Criptonyta/Proyecto-Integrador-DH#readme",
   "dependencies": {
+    "auto": "^10.32.2",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.1.0",
     "cookie-parser": "^1.4.5",
@@ -33,6 +34,7 @@
     "nodemon": "^2.0.13",
     "path": "^0.12.7",
     "sequelize": "^6.9.0",
+    "sequelize-auto": "^0.8.5",
     "sequelize-cli": "^6.3.0"
   }
 }
