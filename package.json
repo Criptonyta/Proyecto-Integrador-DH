@@ -32,6 +32,7 @@
     "mysql2": "^2.3.3-rc.0",
     "nodemon": "^2.0.13",
     "path": "^0.12.7",
-    "sequelize": "^6.9.0"
+    "sequelize": "^6.9.0",
+    "sequelize-cli": "^6.3.0"
   }
 }
