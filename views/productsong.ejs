@@ -25,22 +25,24 @@
     <main class="principal">
         <!--productos-->
         <div class="product-container">
-            <div class="productImages">
-                <img src="<%= pathFotos %>/<%= producto.img %>" alt="productPhoto">
-                <div class="productImagesButtons">
-                    <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button>
-                    <button><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
+            <div class="productSong-imageButtonContainer">
+                <div class="productImages">
+                    <img src="<%= pathFotos %>/<%= producto.img %>" alt="productPhoto">
+                    <div class="productImagesButtons">
+                        <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button>
+                        <button><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
+                    </div>
                 </div>
-            </div>
 
-            <!-- YT Player // TODO  introducir en data-video la identificacion dinamica de cada cancion-->
-            <!-- <%= producto.audioFileYTPlayer %> kNYx2C995fc -->
-            <span class="Player-button">
-                <div data-video="<%= producto.audioFileYTPlayer %>" data-autoplay="0" data-loop="1" id="youtube-audio">
-                </div>
-                <script src="https://www.youtube.com/iframe_api"></script>
-                <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
-            </span>
+                <!-- YT Player // TODO  introducir en data-video la identificacion dinamica de cada cancion-->
+                <!-- <%= producto.audioFileYTPlayer %> kNYx2C995fc -->
+                <span class="Player-button">
+                    <div data-video="<%= producto.audioFileYTPlayer %>" data-autoplay="0" data-loop="1" id="youtube-audio">
+                    </div>
+                    <script src="https://www.youtube.com/iframe_api"></script>
+                    <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+                </span>
+            </div>
 
             <div class="productInformation-container">
                 <div class="productInformation">
@@ -87,6 +89,7 @@
     <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
     <%- include ('partials/footer.ejs', {}) %>
+    <script src="/js/productsong.js"></script>
 
 </body>
 
