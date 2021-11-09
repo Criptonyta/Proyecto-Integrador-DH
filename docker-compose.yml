@@ -1,0 +1,18 @@
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'musiqueirosdb'
+      MYSQL_USER: 'musiqueiros'
+      MYSQL_PASSWORD: '1234'
+      MYSQL_ROOT_PASSWORD: '1234'
+      MYSQL_ROOT_PASSWORD: '1234'
+    volumes:
+      # Montamos un volumen para MySQL para no perder los datos de bd
+      - ./volumenes/mysql:/var/lib/mysql
+    expose:
+      - 3307
+    ports:
+      - 3307:3306
+
+
