@@ -917,6 +917,14 @@ input[type='file'] {
     background-color: #004d61;
 }
 
+.edit-editarButton {
+    margin-top:0;
+    margin-bottom: 0;
+}
+.edit-editarButton i, .edit-editarButton span {
+    color:#004d61;
+}
+
 .userAvatarButton {
     display: inline-block;
     align-self: center;

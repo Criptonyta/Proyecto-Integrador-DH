@@ -1067,7 +1067,7 @@ i {
     outline: none;
 }
 
-.validator-errors i {
+.validator-errors i,.validator-errors p {
     color:rgba(255,0,0,0.7);
     padding-right: 5px;
 }
