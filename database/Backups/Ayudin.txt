@@ -1,0 +1,16 @@
+TO DO REVISAR LOS METODOS QUE FALTAN SEGUN EL EJEMPLO QUE YA HICIMOS DE INSTRUMENT ALL (DESDE LA TIENDA)
+
+
+----------------------------------------------
+SCRIPT PARA CAMBIAR NOMBRE DE CAMPOS
+----------------------------------------------
+
+ALTER TABLE `musiqueirosdb4`.`instrumentsdb` 
+CHANGE COLUMN `instrumId` `InstrumId` INT(11) NOT NULL AUTO_INCREMENT ;
+
+
+----------------------------------------------
+
+TRASH
+
+fila 8 instrumensModel.js //JSON.parse(fs.readFileSync(pathInstruments, "utf-8"))

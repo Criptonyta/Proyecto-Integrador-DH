@@ -4,6 +4,7 @@ const {
 const fs = require("fs")
 const path = require("path")
 const pathUsers = path.join(__dirname, "../database/usersDB.json")
+const db = require("../database/models")
 
 
 const usersModel = {
@@ -18,7 +19,7 @@ const usersModel = {
         let usuario = this.getAll().find(usuario => usuario.id == iduser)
         return usuario
     },
-    findByField: function(field,value){//te busca el value en el field que pedi
+    findByField: function (field, value) { //te busca el value en el field que pedi
         let usuarios = this.getAll()
         let usuarioBuscado = usuarios.find(usuario => usuario[field] == value)
         return usuarioBuscado

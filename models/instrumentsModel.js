@@ -1,11 +1,19 @@
 const fs = require("fs")
 const path = require("path")
 const pathInstruments = path.join(__dirname, "../database/instrumentsDB.json")
+const db = require("../database/models")
 
 const instrumentModel = {
-    getAll: function () { //Te devuelve todos los instrumentos
-        const instrumentsDB = JSON.parse(fs.readFileSync(pathInstruments, "utf-8"))
-        return instrumentsDB
+    getAll: async function () { //Te devuelve todos los instrumentos
+        try {
+            const instrumentsDB = await db.instrumentsdb.findAll({
+                raw: true
+            })
+            return instrumentsDB
+        } catch (e) {
+            console.log('error: tratando de mostrar los instrumentos')
+            return []
+        }
     },
     rescribirDB: function (DB) { //Te resccribe la DB
         fs.writeFileSync(pathInstruments, JSON.stringify(DB, null, 4))
@@ -41,7 +49,9 @@ const instrumentModel = {
                 instrumentsDB[i].titulo = newData.titulo;
                 instrumentsDB[i].descripcion = newData.descripcion;
                 instrumentsDB[i].precio = newData.precio;
-                if (newData.img) {instrumentsDB[i].img = newData.img}
+                if (newData.img) {
+                    instrumentsDB[i].img = newData.img
+                }
             }
         }
         this.rescribirDB(instrumentsDB)

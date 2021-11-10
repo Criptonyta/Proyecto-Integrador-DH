@@ -9,19 +9,19 @@ module.exports = function(sequelize, DataTypes) {
     },
     nombre: {
       type: DataTypes.STRING(12),
-      allowNull: false
+      allowNull: true
     },
     apellido: {
       type: DataTypes.STRING(10),
-      allowNull: false
+      allowNull: true
     },
     password: {
       type: DataTypes.STRING(50),
-      allowNull: false
+      allowNull: true
     },
     email: {
       type: DataTypes.STRING(20),
-      allowNull: false
+      allowNull: true
     },
     userAvatar: {
       type: DataTypes.STRING(20),
@@ -33,7 +33,11 @@ module.exports = function(sequelize, DataTypes) {
     },
     usersDBcol: {
       type: DataTypes.STRING(141),
-      allowNull: false
+      allowNull: true
+    },
+    skills: {
+      type: DataTypes.STRING(40),
+      allowNull: true
     }
   }, {
     sequelize,
@@ -42,14 +46,6 @@ module.exports = function(sequelize, DataTypes) {
     indexes: [
       {
         name: "PRIMARY",
-        unique: true,
-        using: "BTREE",
-        fields: [
-          { name: "id" },
-        ]
-      },
-      {
-        name: "id_UNIQUE",
         unique: true,
         using: "BTREE",
         fields: [

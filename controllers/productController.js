@@ -9,12 +9,14 @@ const {
 const instrumentModel = require('../models/instrumentsModel');
 const pathFuncionesAuxiliares = path.join(__dirname, '../public/funcionesAuxiliares/productControllerAux.js');
 const auxiliares = require(pathFuncionesAuxiliares);
-const {validationResult} = require("express-validator")
+const {
+    validationResult
+} = require("express-validator")
 
 
 const controlador = {
     instrumentDetail: (req, res) => {
-        try{
+        try {
             const usersDB = usersModel.getAll()
             const instrumentos = instrumentsModel.getAll()
             const instrumento = instrumentsModel.findInstrument(req.params.id)
@@ -26,12 +28,14 @@ const controlador = {
             const artista = usersModel.findUser(instrumento.id)
 
             //Creamos la variable locals para usar en la vista
-            if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-            else if (req.session !=  undefined){
+            if (req.session.userLogged == undefined) {
+                res.locals.idusuario = "noLogueado"
+            } else if (req.session != undefined) {
                 res.locals.idusuario = req.session.userLogged.id;
                 res.locals.nombre = req.session.userLogged.nombre;
+            } else {
+                res.locals.idusuario = req.cookie.recordame.id
             }
-            else{res.locals.idusuario = req.cookie.recordame.id}
 
             res.render('productinstrument.ejs', {
                 producto: instrumento,
@@ -43,13 +47,12 @@ const controlador = {
                 artista,
                 rutaDelete
             });
-        }
-        catch(error){
+        } catch (error) {
             res.render("error404")
         }
     },
     songDetail: (req, res) => {
-        try{
+        try {
             const usersDB = usersModel.getAll()
             const songs = songsModel.getAll()
             const song = songsModel.findSong(req.params.id)
@@ -61,12 +64,14 @@ const controlador = {
             const artista = usersModel.findUser(song.id)
 
             //Creamos la variable locals para usar en la vista
-            if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-            else if (req.session !=  undefined){
+            if (req.session.userLogged == undefined) {
+                res.locals.idusuario = "noLogueado"
+            } else if (req.session != undefined) {
                 res.locals.idusuario = req.session.userLogged.id;
                 res.locals.nombre = req.session.userLogged.nombre;
+            } else {
+                res.locals.idusuario = req.cookie.recordame.id
             }
-            else{res.locals.idusuario = req.cookie.recordame.id}
 
             res.render('productsong.ejs', {
                 producto: song,
@@ -77,30 +82,33 @@ const controlador = {
                 artista,
                 rutaDelete
             });
-        }
-        catch(error){
+        } catch (error) {
             res.render("error404")
         }
     },
     productempty: (req, res) => {
         //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){
+        if (req.session.userLogged == undefined) {
+            res.locals.idusuario = "noLogueado"
+        } else if (req.session != undefined) {
             res.locals.idusuario = req.session.userLogged.id;
             res.locals.nombre = req.session.userLogged.nombre;
+        } else {
+            res.locals.idusuario = req.cookie.recordame.id
         }
-        else{res.locals.idusuario = req.cookie.recordame.id}
 
         res.render('productempty.ejs');
     },
     songempty: (req, res) => {
         //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){
+        if (req.session.userLogged == undefined) {
+            res.locals.idusuario = "noLogueado"
+        } else if (req.session != undefined) {
             res.locals.idusuario = req.session.userLogged.id;
             res.locals.nombre = req.session.userLogged.nombre;
+        } else {
+            res.locals.idusuario = req.cookie.recordame.id
         }
-        else{res.locals.idusuario = req.cookie.recordame.id}
 
         res.render('songempty.ejs');
     },
@@ -121,15 +129,21 @@ const controlador = {
     },
     addProduct: (req, res) => {
         const errores = validationResult(req)
-        if (!errores.isEmpty()){
+        if (!errores.isEmpty()) {
             //Creamos la variable locals para usar en la vista
-            if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-            else if (req.session !=  undefined){
-            res.locals.idusuario = req.session.userLogged.id;
-            res.locals.nombre = req.session.userLogged.nombre;
+            if (req.session.userLogged == undefined) {
+                res.locals.idusuario = "noLogueado"
+            } else if (req.session != undefined) {
+                res.locals.idusuario = req.session.userLogged.id;
+                res.locals.nombre = req.session.userLogged.nombre;
+            } else {
+                res.locals.idusuario = req.cookie.recordame.id
             }
-            else{res.locals.idusuario = req.cookie.recordame.id}
-            return res.render('productempty.ejs',{errors: errores.array(),oldData:req.body})}
+            return res.render('productempty.ejs', {
+                errors: errores.array(),
+                oldData: req.body
+            })
+        }
         const instrumentsDB = instrumentsModel.getAll()
         instrumentcargar = {
             id: req.session.userLogged.id,
@@ -148,14 +162,16 @@ const controlador = {
         const musicos = auxiliares.buscarNelementosAleatorios(songsDB, "songId", 6);
         const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
         const datos = auxiliares.buscarNelementosAleatorios(artistsDB, "id", 3);
-        
+
         //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){
+        if (req.session.userLogged == undefined) {
+            res.locals.idusuario = "noLogueado"
+        } else if (req.session != undefined) {
             res.locals.idusuario = req.session.userLogged.id;
             res.locals.nombre = req.session.userLogged.nombre;
+        } else {
+            res.locals.idusuario = req.cookie.recordame.id
         }
-        else{res.locals.idusuario = req.cookie.recordame.id}
 
 
         res.render('tienda.ejs', {
@@ -168,42 +184,52 @@ const controlador = {
         const songsDB = songsModel.getAll()
 
         //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){
+        if (req.session.userLogged == undefined) {
+            res.locals.idusuario = "noLogueado"
+        } else if (req.session != undefined) {
             res.locals.idusuario = req.session.userLogged.id;
             res.locals.nombre = req.session.userLogged.nombre;
+        } else {
+            res.locals.idusuario = req.cookie.recordame.id
         }
-        else{res.locals.idusuario = req.cookie.recordame.id}
-        
+
         res.render("allSongs.ejs", {
             musicos: songsDB
         })
     },
-    instruments: (req, res) => {
-        const instrumentsDB = instrumentsModel.getAll()
+    instruments: async (req, res) => {
+        try {
+            const instrumentsDB = await instrumentsModel.getAll()
 
-        //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){
-            res.locals.idusuario = req.session.userLogged.id;
-            res.locals.nombre = req.session.userLogged.nombre;
+            //Creamos la variable locals para usar en la vista
+            if (req.session.userLogged == undefined) {
+                res.locals.idusuario = "noLogueado"
+            } else if (req.session != undefined) {
+                res.locals.idusuario = req.session.userLogged.id;
+                res.locals.nombre = req.session.userLogged.nombre;
+            } else {
+                res.locals.idusuario = req.cookie.recordame.id
+            }
+
+            res.render("allInstruments.ejs", {
+                instrumentos: instrumentsDB
+            })
+        } catch (e) {
+            console.log('error renderizando los productos')
         }
-        else{res.locals.idusuario = req.cookie.recordame.id}
-
-        res.render("allInstruments.ejs", {
-            instrumentos: instrumentsDB
-        })
     },
     artists: (req, res) => {
         const artistsDB = usersModel.findArtists() //Los artistas son los que tienen bio
 
         //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){
+        if (req.session.userLogged == undefined) {
+            res.locals.idusuario = "noLogueado"
+        } else if (req.session != undefined) {
             res.locals.idusuario = req.session.userLogged.id;
             res.locals.nombre = req.session.userLogged.nombre;
+        } else {
+            res.locals.idusuario = req.cookie.recordame.id
         }
-        else{res.locals.idusuario = req.cookie.recordame.id}
 
         res.render("allArtists.ejs", {
             artistas: artistsDB
@@ -221,12 +247,14 @@ const controlador = {
         const resultadosArtistas = auxiliares.checkAtribute(artistsDB, ["nombre", "apellido", "skills", "bio"], palabras) //Artistas que coinciden
 
         //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){
+        if (req.session.userLogged == undefined) {
+            res.locals.idusuario = "noLogueado"
+        } else if (req.session != undefined) {
             res.locals.idusuario = req.session.userLogged.id;
             res.locals.nombre = req.session.userLogged.nombre;
+        } else {
+            res.locals.idusuario = req.cookie.recordame.id
         }
-        else{res.locals.idusuario = req.cookie.recordame.id}
 
         res.render("allSearched.ejs", {
             musicos: resultadosSongs,
@@ -246,25 +274,33 @@ const controlador = {
         let songOld = songsModel.findSong(req.params.idSong)
 
         //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){
+        if (req.session.userLogged == undefined) {
+            res.locals.idusuario = "noLogueado"
+        } else if (req.session != undefined) {
             res.locals.idusuario = req.session.userLogged.id;
             res.locals.nombre = req.session.userLogged.nombre;
+        } else {
+            res.locals.idusuario = req.cookie.recordame.id
         }
-        else{res.locals.idusuario = req.cookie.recordame.id}
-        res.render('editSong.ejs', {songOld});
+        res.render('editSong.ejs', {
+            songOld
+        });
     },
     editInstrument: (req, res) => {
         let instrumentoOld = instrumentModel.findInstrument(req.params.idInstrum)
-        
+
         //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){
+        if (req.session.userLogged == undefined) {
+            res.locals.idusuario = "noLogueado"
+        } else if (req.session != undefined) {
             res.locals.idusuario = req.session.userLogged.id;
             res.locals.nombre = req.session.userLogged.nombre;
+        } else {
+            res.locals.idusuario = req.cookie.recordame.id
         }
-        else{res.locals.idusuario = req.cookie.recordame.id}
-        res.render('editProduct.ejs', {instrumentoOld});
+        res.render('editProduct.ejs', {
+            instrumentoOld
+        });
     },
     editSongPut: (req, res) => {
         const songsDB = songsModel.getAll()
@@ -276,8 +312,12 @@ const controlador = {
             audioFileYTPlayer: "Cmzuaozboms", //CAMBIAR!
             YT_URL: "https://youtu.be/Cmzuaozboms", //CAMBIAR
         }
-        if (req.files.songEmptyContentBtn1){editSong.img = req.files.songEmptyContentBtn1[0].filename}
-        if (req.files.songEmptyContentBtn2){editSong.audioFile = req.files.songEmptyContentBtn2[0].filename}
+        if (req.files.songEmptyContentBtn1) {
+            editSong.img = req.files.songEmptyContentBtn1[0].filename
+        }
+        if (req.files.songEmptyContentBtn2) {
+            editSong.audioFile = req.files.songEmptyContentBtn2[0].filename
+        }
         songsModel.editarCancion(oldProduct, editSong)
         res.redirect("/products/tienda/songs/")
     },
@@ -289,7 +329,9 @@ const controlador = {
             descripcion: req.body.descripcion,
             precio: req.body.precio,
         }
-        if (typeof req.files == "object" && req.files.productEmptyButton){editInstrument.img = req.files.productEmptyButton[0].filename}
+        if (typeof req.files == "object" && req.files.productEmptyButton) {
+            editInstrument.img = req.files.productEmptyButton[0].filename
+        }
         instrumentsModel.editarInstrumento(oldProduct, editInstrument)
         res.redirect("/products/tienda/instruments/")
     },

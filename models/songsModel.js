@@ -1,7 +1,7 @@
 const fs = require("fs")
 const path = require("path")
 const pathSongs = path.join(__dirname, "../database/songsDB.json")
-
+const db = require("../database/models")
 
 
 const songsModel = {
