@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require("path");
 const bcryptjs = require('bcryptjs');
-const {validationResult} = require("express-validator")
+const {
+    validationResult
+} = require("express-validator")
 
 const {
     instrumentsModel,
@@ -17,12 +19,14 @@ const controlador = {
         const instrumentUser = instrumentsModel.findArtistInstruments(req.params.iduser)
 
         //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){
+        if (req.session.userLogged == undefined) {
+            res.locals.idusuario = "noLogueado"
+        } else if (req.session != undefined) {
             res.locals.idusuario = req.session.userLogged.id;
             res.locals.nombre = req.session.userLogged.nombre;
+        } else {
+            res.locals.idusuario = req.cookie.recordame.id
         }
-        else{res.locals.idusuario = req.cookie.recordame.id}
 
         res.render('userprofile.ejs', {
             usuarioInfo,
@@ -32,17 +36,21 @@ const controlador = {
     },
     viewuserprofile: (req, res) => {
         //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){
+        if (req.session.userLogged == undefined) {
+            res.locals.idusuario = "noLogueado"
+        } else if (req.session != undefined) {
             res.locals.idusuario = req.session.userLogged.id;
             res.locals.nombre = req.session.userLogged.nombre;
+        } else {
+            res.locals.idusuario = req.cookie.recordame.id
         }
-        else{res.locals.idusuario = req.cookie.recordame.id}
 
         let id = req.params.iduser
-        if (id == req.session.userLogged){res.redirect("/user/userprofile/"+id)}
-        else if (id == req.cookies.recordame){res.redirect("/user/userprofile/"+id)}
-        else {
+        if (id == req.session.userLogged) {
+            res.redirect("/user/userprofile/" + id)
+        } else if (id == req.cookies.recordame) {
+            res.redirect("/user/userprofile/" + id)
+        } else {
             const usuarioInfo = usersModel.findUser(id)
             const songsUser = songsModel.findArtistSongs(id)
             const instrumentUser = instrumentsModel.findArtistInstruments(id)
@@ -58,12 +66,14 @@ const controlador = {
         const usuarioInfo = usersModel.findUser(req.params.iduser)
 
         //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){
+        if (req.session.userLogged == undefined) {
+            res.locals.idusuario = "noLogueado"
+        } else if (req.session != undefined) {
             res.locals.idusuario = req.session.userLogged.id;
             res.locals.nombre = req.session.userLogged.nombre;
+        } else {
+            res.locals.idusuario = req.cookie.recordame.id
         }
-        else{res.locals.idusuario = req.cookie.recordame.id}
 
         res.render('userprofileEdit.ejs', {
             usuarioInfo,
@@ -80,10 +90,14 @@ const controlador = {
             bio: req.body.minibio,
             skills: req.body.skills
         }
-        if (typeof req.file == "object" && req.file.filename) {profileNew.userAvatarButton = req.file.filename}//Tiene foto
-        else {profileNew.userAvatarButton = profileOld.userAvatar}//No tiene foto
+        if (typeof req.file == "object" && req.file.filename) {
+            profileNew.userAvatarButton = req.file.filename
+        } //Tiene foto
+        else {
+            profileNew.userAvatarButton = profileOld.userAvatar
+        } //No tiene foto
         usersModel.editarUsuario(profileOld, profileNew)
-        res.redirect("/user/userprofile/"+req.params.iduser);
+        res.redirect("/user/userprofile/" + req.params.iduser);
     },
     login: (req, res) => {
         res.render('login.ejs')
@@ -91,7 +105,12 @@ const controlador = {
 
     loginpost: (req, res) => {
         const errores = validationResult(req)
-        if (!errores.isEmpty()){return res.render('login.ejs',{errors: errores.array(),oldData:req.body})}
+        if (!errores.isEmpty()) {
+            return res.render('login.ejs', {
+                errors: errores.array(),
+                oldData: req.body
+            })
+        }
         let userToLogin = usersModel.findByField('email', req.body.email) // Busca el usuario x email
         if (userToLogin) {
             let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password) // compara contrasena del form con la de la BD
@@ -115,25 +134,36 @@ const controlador = {
 
     register: (req, res) => {
         //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-        else if (req.session !=  undefined){
+        if (req.session.userLogged == undefined) {
+            res.locals.idusuario = "noLogueado"
+        } else if (req.session != undefined) {
             res.locals.idusuario = req.session.userLogged.id;
             res.locals.nombre = req.session.userLogged.nombre;
+        } else {
+            res.locals.idusuario = req.cookie.recordame.id
         }
-        else{res.locals.idusuario = req.cookie.recordame.id}
-        res.render('register.ejs', {habilidades: skills});
+        res.render('register.ejs', {
+            habilidades: skills
+        });
     },
     registerpost: (req, res) => {
         const errores = validationResult(req)
-        if (!errores.isEmpty()){
+        if (!errores.isEmpty()) {
             //Creamos la variable locals para usar en la vista
-            if (req.session.userLogged ==  undefined){res.locals.idusuario = "noLogueado"}
-            else if (req.session !=  undefined){
-            res.locals.idusuario = req.session.userLogged.id;
-            res.locals.nombre = req.session.userLogged.nombre;
+            if (req.session.userLogged == undefined) {
+                res.locals.idusuario = "noLogueado"
+            } else if (req.session != undefined) {
+                res.locals.idusuario = req.session.userLogged.id;
+                res.locals.nombre = req.session.userLogged.nombre;
+            } else {
+                res.locals.idusuario = req.cookie.recordame.id
             }
-            else{res.locals.idusuario = req.cookie.recordame.id}
-            return res.render('register.ejs',{errors: errores.array(),oldData:req.body,habilidades: skills})}
+            return res.render('register.ejs', {
+                errors: errores.array(),
+                oldData: req.body,
+                habilidades: skills
+            })
+        }
         let usuarioBuscado = usersModel.findByField("email", req.body.email)
         if (usuarioBuscado != undefined) { //Si el mail ya esta registrado...
             res.send("el mail ya esta registrado")
@@ -141,7 +171,7 @@ const controlador = {
             let createNewId = usersModel.crearId();
             let newPassword = bcryptjs.hashSync(req.body.password, 10);
             let createNewUser = {
-                id:createNewId,
+                id: createNewId,
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
                 password: newPassword,
@@ -149,33 +179,34 @@ const controlador = {
                 skills: req.body.skills,
                 bio: req.body.minibio,
             }
-            if (req.file){createNewUser.userAvatar = req.file.filename}
-            else {createNewUser.userAvatar = "default.png"}
+            if (req.file) {
+                createNewUser.userAvatar = req.file.filename
+            } else {
+                createNewUser.userAvatar = "default.jpg" || "default2.jpg" || "default3.jpg" || "default4.jpg" || "default5.jpg" || "default6.jpg" || "default7.jpg" || "default8.jpg" || "default9.jpg"
+            } // TO DO - ver si funciona, si no funciona usar math.round
             usersModel.agregarUsuario(createNewUser)
-            res.redirect("/user/login");//Te manda a al login
+            res.redirect("/user/login"); //Te manda a al login
         }
     },
     deleteSongs: (req, res) => {
         let elementos = req.body.eliminarInstrumento // o es una lista o es un numero
-        if (Array.isArray(elementos)){
+        if (Array.isArray(elementos)) {
             songsModel.borrarNcanciones(elementos)
-        }
-        else {
+        } else {
             songsModel.borrarCancion(req.body.elementos)
         }
-        res.redirect("/user/userprofile/"+req.params.iduser);
+        res.redirect("/user/userprofile/" + req.params.iduser);
     },
     deleteInstruments: (req, res) => {
         let elementos = req.body.eliminarInstrumento // o es una lista o es un numero
-        if (Array.isArray(elementos)){
+        if (Array.isArray(elementos)) {
             instrumentsModel.borrarNinstrumentos(elementos)
-        }
-        else {
+        } else {
             instrumentsModel.borrarInstrumento(req.body.eliminarInstrumento)
         }
-        res.redirect("/user/userprofile/"+req.params.iduser);
+        res.redirect("/user/userprofile/" + req.params.iduser);
     },
-    logout:function(req,res){
+    logout: function (req, res) {
         res.clearCookie("recordame");
         req.session.destroy();
         res.redirect("/user/login")
