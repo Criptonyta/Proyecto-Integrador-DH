@@ -13,28 +13,32 @@ const {
 const skills = ["Bajista", "Baterista", "Cantante", "Guitarrista", "Multiinstrumentalista", "Productor", "Otros"] //Skills
 
 const controlador = {
-    userprofile: (req, res) => {
-        const usuarioInfo = usersModel.findUser(req.params.iduser)
-        const songsUser = songsModel.findArtistSongs(req.params.iduser)
-        const instrumentUser = instrumentsModel.findArtistInstruments(req.params.iduser)
+    userprofile: async (req, res) => {
+        try {
+            const usuarioInfo = await usersModel.findUser(req.params.iduser)
+            const songsUser = await songsModel.findArtistSongs(req.params.iduser)
+            const instrumentUser = await instrumentsModel.findArtistInstruments(req.params.iduser)
 
-        //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged == undefined) {
-            res.locals.idusuario = "noLogueado"
-        } else if (req.session != undefined) {
-            res.locals.idusuario = req.session.userLogged.id;
-            res.locals.nombre = req.session.userLogged.nombre;
-        } else {
-            res.locals.idusuario = req.cookie.recordame.id
+            //Creamos la variable locals para usar en la vista
+            if (req.session.userLogged == undefined) {
+                res.locals.idusuario = "noLogueado"
+            } else if (req.session != undefined) {
+                res.locals.idusuario = req.session.userLogged.id;
+                res.locals.nombre = req.session.userLogged.nombre;
+            } else {
+                res.locals.idusuario = req.cookie.recordame.id
+            }
+
+            res.render('userprofile.ejs', {
+                usuarioInfo,
+                songsUser,
+                instrumentUser
+            });
+        } catch (e) {
+            console.log('error renderizando usuario')
         }
-
-        res.render('userprofile.ejs', {
-            usuarioInfo,
-            songsUser,
-            instrumentUser
-        });
     },
-    viewuserprofile: (req, res) => {
+    viewuserprofile: async (req, res) => {
         //Creamos la variable locals para usar en la vista
         if (req.session.userLogged == undefined) {
             res.locals.idusuario = "noLogueado"
@@ -51,84 +55,100 @@ const controlador = {
         } else if (id == req.cookies.recordame) {
             res.redirect("/user/userprofile/" + id)
         } else {
-            const usuarioInfo = usersModel.findUser(id)
-            const songsUser = songsModel.findArtistSongs(id)
-            const instrumentUser = instrumentsModel.findArtistInstruments(id)
+            try {
+                const usuarioInfo = await usersModel.findUser(id)
+                const songsUser = await songsModel.findArtistSongs(id)
+                const instrumentUser = await instrumentsModel.findArtistInstruments(id)
 
-            res.render('viewUserProfile.ejs', {
+                res.render('viewUserProfile.ejs', {
+                    usuarioInfo,
+                    songsUser,
+                    instrumentUser
+                });
+            } catch (e) {
+                console.log('error mostrando el perfil del usuario')
+            }
+        }
+    },
+    userprofileEdit: async (req, res) => {
+        try {
+            const usuarioInfo = await usersModel.findUser(req.params.iduser)
+
+            //Creamos la variable locals para usar en la vista
+            if (req.session.userLogged == undefined) {
+                res.locals.idusuario = "noLogueado"
+            } else if (req.session != undefined) {
+                res.locals.idusuario = req.session.userLogged.id;
+                res.locals.nombre = req.session.userLogged.nombre;
+            } else {
+                res.locals.idusuario = req.cookie.recordame.id
+            }
+
+            res.render('userprofileEdit.ejs', {
                 usuarioInfo,
-                songsUser,
-                instrumentUser
+                habilidades: skills
             });
+        } catch (e) {
+            console.log('error editando perfil del usuario')
         }
     },
-    userprofileEdit: (req, res) => {
-        const usuarioInfo = usersModel.findUser(req.params.iduser)
-
-        //Creamos la variable locals para usar en la vista
-        if (req.session.userLogged == undefined) {
-            res.locals.idusuario = "noLogueado"
-        } else if (req.session != undefined) {
-            res.locals.idusuario = req.session.userLogged.id;
-            res.locals.nombre = req.session.userLogged.nombre;
-        } else {
-            res.locals.idusuario = req.cookie.recordame.id
+    userprofileEditNew: async (req, res) => { //editar usuario
+        try {
+            const profileOld = await usersModel.findUser(req.params.iduser)
+            const profileNew = {
+                email: req.body.email,
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                bio: req.body.minibio,
+                skills: req.body.skills
+            }
+            if (typeof req.file == "object" && req.file.filename) {
+                profileNew.userAvatarButton = req.file.filename
+            } //Tiene foto
+            else {
+                profileNew.userAvatarButton = profileOld.userAvatar
+            } //No tiene foto
+            await usersModel.editarUsuario(profileOld, profileNew)
+            res.redirect("/user/userprofile/" + req.params.iduser);
+        } catch (e) {
+            console.log('error editando el nuevo usuario')
         }
-
-        res.render('userprofileEdit.ejs', {
-            usuarioInfo,
-            habilidades: skills
-        });
-    },
-    userprofileEditNew: (req, res) => { //editar usuario
-        const profileOld = usersModel.findUser(req.params.iduser)
-        const profileNew = {
-            email: req.body.email,
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            bio: req.body.minibio,
-            skills: req.body.skills
-        }
-        if (typeof req.file == "object" && req.file.filename) {
-            profileNew.userAvatarButton = req.file.filename
-        } //Tiene foto
-        else {
-            profileNew.userAvatarButton = profileOld.userAvatar
-        } //No tiene foto
-        usersModel.editarUsuario(profileOld, profileNew)
-        res.redirect("/user/userprofile/" + req.params.iduser);
     },
     login: (req, res) => {
         res.render('login.ejs')
     },
 
-    loginpost: (req, res) => {
-        const errores = validationResult(req)
-        if (!errores.isEmpty()) {
-            return res.render('login.ejs', {
-                errors: errores.array(),
-                oldData: req.body
-            })
-        }
-        let userToLogin = usersModel.findByField('email', req.body.email) // Busca el usuario x email
-        if (userToLogin) {
-            let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password) // compara contrasena del form con la de la BD
-            if (isOkPassword) {
+    loginpost: async (req, res) => {
+        try {
+            const errores = validationResult(req)
+            if (!errores.isEmpty()) {
+                return res.render('login.ejs', {
+                    errors: errores.array(),
+                    oldData: req.body
+                })
+            }
+            let userToLogin = await usersModel.findByField('email', req.body.email) // Busca el usuario x email
+            if (userToLogin) {
+                let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password) // compara contrasena del form con la de la BD
+                if (isOkPassword) {
 
-                if (req.body.checkboxLogin) {
-                    res.cookie('recordame', userToLogin.id, {
-                        maxAge: 60000 * 30
-                    })
+                    if (req.body.checkboxLogin) {
+                        res.cookie('recordame', userToLogin.id, {
+                            maxAge: 60000 * 30
+                        })
+                    }
+                    delete userToLogin.password
+                    req.session.userLogged = userToLogin
+                    res.redirect('/user/userprofile/' + userToLogin.id)
+                } else {
+                    res.redirect('/user/login')
                 }
-                delete userToLogin.password
-                req.session.userLogged = userToLogin
-                res.redirect('/user/userprofile/' + userToLogin.id)
             } else {
                 res.redirect('/user/login')
             }
-        } else {
-            res.redirect('/user/login')
+        } catch (e) {
+            console.log('error al loguear')
         }
     },
 
@@ -143,10 +163,10 @@ const controlador = {
             res.locals.idusuario = req.cookie.recordame.id
         }
         res.render('register.ejs', {
-            habilidades: skills
+            habilidades: skills // TO DO CHECK WHY HERE?
         });
     },
-    registerpost: (req, res) => {
+    registerpost: async (req, res) => {
         const errores = validationResult(req)
         if (!errores.isEmpty()) {
             //Creamos la variable locals para usar en la vista
@@ -164,47 +184,59 @@ const controlador = {
                 habilidades: skills
             })
         }
-        let usuarioBuscado = usersModel.findByField("email", req.body.email)
-        if (usuarioBuscado != undefined) { //Si el mail ya esta registrado...
-            res.send("el mail ya esta registrado")
-        } else { //Si el mail del usuario no esta en la base de datos...
-            let createNewId = usersModel.crearId();
-            let newPassword = bcryptjs.hashSync(req.body.password, 10);
-            let createNewUser = {
-                id: createNewId,
-                nombre: req.body.nombre,
-                apellido: req.body.apellido,
-                password: newPassword,
-                email: req.body.email,
-                skills: req.body.skills,
-                bio: req.body.minibio,
+        try {
+            let usuarioBuscado = await usersModel.findByField("email", req.body.email)
+            if (usuarioBuscado != undefined) { //Si el mail ya esta registrado...
+                res.send("el mail ya esta registrado")
+            } else { //Si el mail del usuario no esta en la base de datos...
+                let createNewId = await usersModel.crearId();
+                let newPassword = bcryptjs.hashSync(req.body.password, 10);
+                let createNewUser = {
+                    id: createNewId,
+                    nombre: req.body.nombre,
+                    apellido: req.body.apellido,
+                    password: newPassword,
+                    email: req.body.email,
+                    skills: req.body.skills,
+                    bio: req.body.minibio,
+                }
+                if (req.file) {
+                    createNewUser.userAvatar = req.file.filename
+                } else {
+                    createNewUser.userAvatar = "default.jpg" || "default2.jpg" || "default3.jpg" || "default4.jpg" || "default5.jpg" || "default6.jpg" || "default7.jpg" || "default8.jpg" || "default9.jpg"
+                } // TO DO - ver si funciona, si no funciona usar math.round
+                await usersModel.agregarUsuario(createNewUser)
+                res.redirect("/user/login"); //Te manda a al login
             }
-            if (req.file) {
-                createNewUser.userAvatar = req.file.filename
+        } catch (e) {
+            console.log('error al registrar al usuario')
+        }
+    },
+    deleteSongs: async (req, res) => {
+        try {
+            let elementos = req.body.eliminarInstrumento // o es una lista o es un numero
+            if (Array.isArray(elementos)) {
+                await songsModel.borrarNcanciones(elementos)
             } else {
-                createNewUser.userAvatar = "default.jpg" || "default2.jpg" || "default3.jpg" || "default4.jpg" || "default5.jpg" || "default6.jpg" || "default7.jpg" || "default8.jpg" || "default9.jpg"
-            } // TO DO - ver si funciona, si no funciona usar math.round
-            usersModel.agregarUsuario(createNewUser)
-            res.redirect("/user/login"); //Te manda a al login
+                await songsModel.borrarCancion(req.body.elementos)
+            }
+            res.redirect("/user/userprofile/" + req.params.iduser);
+        } catch (e) {
+            console.log('error eliminando las canciones')
         }
     },
-    deleteSongs: (req, res) => {
-        let elementos = req.body.eliminarInstrumento // o es una lista o es un numero
-        if (Array.isArray(elementos)) {
-            songsModel.borrarNcanciones(elementos)
-        } else {
-            songsModel.borrarCancion(req.body.elementos)
+    deleteInstruments: async (req, res) => {
+        try {
+            let elementos = req.body.eliminarInstrumento // o es una lista o es un numero
+            if (Array.isArray(elementos)) {
+                await instrumentsModel.borrarNinstrumentos(elementos)
+            } else {
+                await instrumentsModel.borrarInstrumento(req.body.eliminarInstrumento)
+            }
+            res.redirect("/user/userprofile/" + req.params.iduser);
+        } catch (e) {
+            console.log('error eliminando el producto')
         }
-        res.redirect("/user/userprofile/" + req.params.iduser);
-    },
-    deleteInstruments: (req, res) => {
-        let elementos = req.body.eliminarInstrumento // o es una lista o es un numero
-        if (Array.isArray(elementos)) {
-            instrumentsModel.borrarNinstrumentos(elementos)
-        } else {
-            instrumentsModel.borrarInstrumento(req.body.eliminarInstrumento)
-        }
-        res.redirect("/user/userprofile/" + req.params.iduser);
     },
     logout: function (req, res) {
         res.clearCookie("recordame");
