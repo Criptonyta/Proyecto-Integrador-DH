@@ -10,10 +10,12 @@ const db = require("../database/models")
 const usersModel = {
     getAll: async function () { //Te devuelve todos los usuarios
         try {
-            const usersDB = await db.usersdb.findAll({raw: true})
-            return usersDB    
+            const usersDB = await db.usersdb.findAll({
+                raw: true
+            })
+            return usersDB
         } catch (error) {
-            console.log('Error tratando de mostrar los usuarios: '+ error)
+            console.log('Error tratando de mostrar los usuarios: ' + error)
             return []
         }
     },
@@ -22,8 +24,8 @@ const usersModel = {
     },
     findUser: async function (iduser) { //Busca usuario por ID
         try {
-            let usuario = this.getAll().find(usuario => usuario.id == iduser)
-            return usuario    
+            let usuario = await this.getAll().find(usuario => usuario.id == iduser)
+            return usuario
         } catch (error) {
             console.log("Error tratando de encontrar el usuario: " + error)
             return {}
@@ -41,7 +43,8 @@ const usersModel = {
     },
     findArtists: async function () { //Te busca todos los artistas (los que tienen bio)
         try {
-            let artistas = await this.getAll().filter(item => item.bio != "")
+            let usuarios = await this.getAll()
+            let artistas = usuarios.filter(item => item.bio != "")
             return artistas
         } catch (error) {
             console.log("Error tratando de encontrar los artistas: " + error)
@@ -64,14 +67,14 @@ const usersModel = {
             let nuevoUsuario = {
                 id,
                 ...usuario
-        }
-            let usuarios = this.getAll()
+            }
+            let usuarios = await this.getAll()
             usuarios.push(nuevoUsuario)
             this.rescribirDB(usuarios)
             return true
         } catch (error) {
-           console.log("Error al agregar usuario: " + error)
-           return false 
+            console.log("Error al agregar usuario: " + error)
+            return false
         }
     },
     editarUsuario: async function (profileOld, profileNew) { //Le pasas los datos viejos y los nuevos y te edita la info del usuario
@@ -94,7 +97,7 @@ const usersModel = {
             })
             this.rescribirDB(userDB)
             return true
-    
+
         } catch (error) {
             console.log("Error tratando de editar usuario: " + error)
             return false

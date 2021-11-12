@@ -163,7 +163,7 @@ const controlador = {
             res.locals.idusuario = req.cookie.recordame.id
         }
         res.render('register.ejs', {
-            habilidades: skills // TO DO CHECK WHY HERE?
+            habilidades: skills // esta es la dinamica de la lista desplegable del formulario
         });
     },
     registerpost: async (req, res) => {
@@ -205,19 +205,10 @@ const controlador = {
                 } else { // Si el usuario no elige un avatar, lo asignamos randomicamente entre nuestras opciones
 
                     let imgArray = ["default1.jpg", "default2.jpg", "default3.jpg", "default4.jpg", "default5.jpg", "default6.jpg", "default7.jpg", "default8.jpg", "default9.jpg"];
-                    let basePath = "../public/images/usersAvatars/resizedandcropped/";
+                    let rand = imgArray[Math.floor(Math.random() * imgArray.length)];
+                    createNewUser.userAvatar = rand
 
-                    function imgRandom() {
-                        for (let i = 0; i < 10; i++) {
-                            let rand = imgArray[Math.floor(Math.random() * imgArray.length)];
-                            let image = new Image();
-                            image.src = basePath + "default." + rand;
-                            document.body.appendChild(image);
-                        }
-                    }
-                    createNewUser.userAvatar = imgRandom
-
-                    // createNewUser.userAvatar = "default.jpg" || "default2.jpg" || "default3.jpg" || "default4.jpg" || "default5.jpg" || "default6.jpg" || "default7.jpg" || "default8.jpg" || "default9.jpg" TO DO - ver si funciona, si no funciona usar math.round
+                    // createNewUser.userAvatar = "default.jpg" || "default2.jpg" || "default3.jpg" || "default4.jpg" || "default5.jpg" || "default6.jpg" || "default7.jpg" || "default8.jpg" || "default9.jpg" // TO DO - ver si funciona, si no funciona usar math.round
                 }
                 await usersModel.agregarUsuario(createNewUser)
                 res.redirect("/user/login"); //Te manda a al login

@@ -4,24 +4,22 @@
         "nombre": "Aaron",
         "apellido": "Kenny",
         "password": "B0?;NV",
-        "email": "Aaron.Kenny@gmail.com",
+        "email": "Aaron.Kenny@gmail.co",
         "userAvatar": "07.jpg",
-        "skills": "Cantante",
-        "bio": "Vivo en Rosario. Tengo influencias del jazz de Miles Davis. 34 años",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\07",
-        "FIELD10": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\"
+        "bio": "Vivo en Rosario. Tengo influencias del jazz d",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 2,
         "nombre": "Nate",
         "apellido": "Parrish",
         "password": "JF;XMH",
-        "email": "Nate.Parrish@gmail.com",
+        "email": "Nate.Parrish@gmail.c",
         "userAvatar": "05.jpg",
-        "skills": "Guitarrista",
-        "bio": "Influencias de RHCP y de RATM. Vivo en Nueva York pero mantengo mis raíces Argentinas ;-)",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\05",
-        "FIELD10": ""
+        "bio": "Influencias de RHCP y de RATM. Vivo en Nueva ",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 3,
@@ -30,10 +28,9 @@
         "password": "S0=ORD",
         "email": "Bad.Snacks@gmail.com",
         "userAvatar": "01.jpg",
-        "skills": "Guitarrista",
-        "bio": "Toco la guitarra y canto. Me gusta el rock y el trap",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\01",
-        "FIELD10": ""
+        "bio": "Toco la guitarra y canto. Me gusta el rock y ",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 4,
@@ -42,82 +39,75 @@
         "password": "?OFX3Y",
         "email": "Cheel@gmail.com",
         "userAvatar": "02.jpg",
-        "skills": "Multinstrumentista",
-        "bio": "Vivo en Chubut. Estoy disponible para crear bandas",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\02",
-        "FIELD10": ""
+        "bio": "Vivo en Chubut. Estoy disponible para crear b",
+        "usersDBcol": null,
+        "skills": "Multinstrumentista"
     },
     {
         "id": 5,
         "nombre": "Chris",
         "apellido": "Haugen",
         "password": "=C3LBN",
-        "email": "Chris.Haugen@gmail.com",
+        "email": "Chris.Haugen@gmail.c",
         "userAvatar": "06.jpg",
-        "skills": "Bajista",
-        "bio": "Nerd musical. Mis influencias son tan variadas que van desde la clásica hasta el rock fusión",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\06",
-        "FIELD10": ""
+        "bio": "Nerd musical. Mis influencias son tan variada",
+        "usersDBcol": null,
+        "skills": "Bajista"
     },
     {
         "id": 6,
         "nombre": "Corbyn",
         "apellido": "Kites",
         "password": "<>GW94",
-        "email": "Corbyn.Kites@yahoo.com",
+        "email": "Corbyn.Kites@yahoo.c",
         "userAvatar": "03.jpg",
-        "skills": "Multinstrumentista",
-        "bio": "Somos una banda de Avellaneda. Nos influencia la música urbana. Tocamos desde hace 10 años",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\03",
-        "FIELD10": ""
+        "bio": "Somos una banda de Avellaneda. Nos influencia",
+        "usersDBcol": null,
+        "skills": "Multinstrumentista"
     },
     {
         "id": 7,
         "nombre": "Jamelle",
         "apellido": "Monae",
         "password": "KSI6;1",
-        "email": "Jamelle.Monae@gmail.com",
+        "email": "Jamelle.Monae@gmail.",
         "userAvatar": "08.jpg",
-        "skills": "Cantante",
-        "bio": "Me encanta Bork. Actualmente estoy sin banda por lo que estoy disponible para cantar en una",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\08",
-        "FIELD10": ""
+        "bio": "Me encanta Bork. Actualmente estoy sin banda ",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 8,
         "nombre": "Timothy",
         "apellido": "Hansen",
         "password": "ZHWDEX",
-        "email": "Timothy.Hansen@gmail.com",
+        "email": "Timothy.Hansen@gmail",
         "userAvatar": "09.jpg",
-        "skills": "Guitarrista",
-        "bio": "Mis influencias son Jamie Collum. Mi género musical preferido es el jazz contemporáneo",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\09",
-        "FIELD10": ""
+        "bio": "Mis influencias son Jamie Collum. Mi genero m",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 9,
         "nombre": "Delicate",
         "apellido": "Steve",
         "password": "5U3WBJ",
-        "email": "Delicate.Steve@gmail.com",
+        "email": "Delicate.Steve@gmail",
         "userAvatar": "48.jpg",
-        "skills": "Cantante",
-        "bio": "Tengo una voz suave y armoniosa. Mi preferencia son las melodías y las baladas románticas",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\",
-        "FIELD10": ""
+        "bio": "Tengo una voz suave y armoniosa. Mi preferenc",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 10,
         "nombre": "Replacements",
         "apellido": "",
         "password": "UF6I0Y",
-        "email": "Replacements@gmail.com",
+        "email": "Replacements@gmail.c",
         "userAvatar": "04.jpg",
-        "skills": "Bajista",
-        "bio": "Creamos Replacements porque somos amigos del barrio de Boedo. Hinchas de San Lorenzo y amantes del rock",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\04",
-        "FIELD10": ""
+        "bio": "Creamos Replacements porque somos amigos del ",
+        "usersDBcol": null,
+        "skills": "Bajista"
     },
     {
         "id": 11,
@@ -126,10 +116,9 @@
         "password": ":K4;WV",
         "email": "Outside In@gmail.com",
         "userAvatar": "11.jpg",
-        "skills": "Baterista",
-        "bio": "Outside in es una banda de Mar del Plata con influencias reggae. Estamos disponibles para shows",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\11",
-        "FIELD10": ""
+        "bio": "Outside in es una banda de Mar del Plata con ",
+        "usersDBcol": null,
+        "skills": "Baterista"
     },
     {
         "id": 12,
@@ -138,34 +127,31 @@
         "password": "V=6P>M",
         "email": "Emmit.Fenn@yahoo.com",
         "userAvatar": "10.jpg",
-        "skills": "Guitarrista",
-        "bio": "Soy Americano pero vivo en Buenos Aires desde los 14 años. Me influencia Radiohead y Pulp",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\10",
-        "FIELD10": ""
+        "bio": "Soy Americano pero vivo en Buenos Aires desde",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 13,
         "nombre": "E's",
         "apellido": "Jammy Jams",
         "password": "<SXSP@",
-        "email": "E's.Jammy Jams@gmail.com",
+        "email": "E's.Jammy Jams@gmail",
         "userAvatar": "13.jpg",
-        "skills": "Multinstrumentista",
-        "bio": "Amante de la música electrónica. Geek de sintetizadores y guitarras eléctricas",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\13",
-        "FIELD10": ""
+        "bio": "Amante de la musica electronica. Geek de sint",
+        "usersDBcol": null,
+        "skills": "Multinstrumentista"
     },
     {
         "id": 14,
         "nombre": "Aillike",
         "apellido": "Leddy",
         "password": "UNY6UL",
-        "email": "Aillike.Leddy@gmail.com",
+        "email": "Aillike.Leddy@gmail.",
         "userAvatar": "19.jpg",
-        "skills": "Bajista",
-        "bio": "Dúo de música electrónica, versátiles en todos los géneros musicales.",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\19",
-        "FIELD10": ""
+        "bio": "Duo de musica electronica, versatiles en todo",
+        "usersDBcol": null,
+        "skills": "Bajista"
     },
     {
         "id": 15,
@@ -174,22 +160,20 @@
         "password": "JSFASP",
         "email": "Godmode@gmail.com",
         "userAvatar": "14.jpg",
-        "skills": "Bajista",
-        "bio": "Trío trío creado en La Plata. Hacemos rock hasta llegar a los cimientos de la tierra",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\14",
-        "FIELD10": ""
+        "bio": "Trio trio creado en La Plata. Hacemos rock ha",
+        "usersDBcol": null,
+        "skills": "Bajista"
     },
     {
         "id": 16,
         "nombre": "Jeremy",
         "apellido": "Korpas",
         "password": "4>=@O<",
-        "email": "Jeremy.Korpas@yahoo.com",
+        "email": "Jeremy.Korpas@yahoo.",
         "userAvatar": "12.jpg",
-        "skills": "Guitarrista",
-        "bio": "Mis estilos preferidos son el Pop y el Rock, y logro combinaciones exquisitas con ellos",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\12",
-        "FIELD10": ""
+        "bio": "Mis estilos preferidos son el Pop y el Rock, ",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 17,
@@ -198,70 +182,64 @@
         "password": "UKHP;G",
         "email": "JHS.Pedals@gmail.com",
         "userAvatar": "15.jpg",
-        "skills": "Baterista",
-        "bio": "Me especializo en ponerle ritmo a las melodias. Soy Baterista y percusionista",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\15",
-        "FIELD10": ""
+        "bio": "Me especializo en ponerle ritmo a las melodia",
+        "usersDBcol": null,
+        "skills": "Baterista"
     },
     {
         "id": 18,
         "nombre": "Joel",
         "apellido": "Cummins",
         "password": "9P0?O@",
-        "email": "Joel.Cummins@yahoo.com",
+        "email": "Joel.Cummins@yahoo.c",
         "userAvatar": "16.jpg",
-        "skills": "Guitarrista",
-        "bio": "5 discos editados y 5 canciones en el Billboard chart. Toqué en el Quilmes Rock",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\16",
-        "FIELD10": ""
+        "bio": "5 discos editados y 5 canciones en el Billboa",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 19,
         "nombre": "Lauren",
         "apellido": "Duski",
         "password": "LSE?ZK",
-        "email": "Lauren.Duski@gmail.com",
+        "email": "Lauren.Duski@gmail.c",
         "userAvatar": "21.jpg",
-        "skills": "Cantante",
-        "bio": "Me gusta conocer los misterios de la voz y desentranarlos. Soy cantante desde que tengo memoria",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\21",
-        "FIELD10": ""
+        "bio": "Me gusta conocer los misterios de la voz y de",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 20,
         "nombre": "Travis",
         "apellido": "Scott",
         "password": "TNBVG9",
-        "email": "Travis.Scott@gmail.com",
+        "email": "Travis.Scott@gmail.c",
         "userAvatar": "17.jpg",
-        "skills": "Guitarrista",
-        "bio": "Soy guitarrista, compositor y cantante. Me gustan bandas tipo Kings of Lions",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\17",
-        "FIELD10": ""
+        "bio": "Soy guitarrista, compositor y cantante. Me gu",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 21,
         "nombre": "Glass",
         "apellido": "Animals",
         "password": "YSG3LA",
-        "email": "Glass.Animals@gmail.com",
+        "email": "Glass.Animals@gmail.",
         "userAvatar": "18.jpg",
-        "skills": "Guitarrista",
-        "bio": "Hacemos power rock para despertar conciencias.",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\18",
-        "FIELD10": ""
+        "bio": "Hacemos power rock para despertar conciencias",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 22,
         "nombre": "Nathan",
         "apellido": "Moore",
         "password": "TRG?<Z",
-        "email": "Nathan.Moore@yahoo.com",
+        "email": "Nathan.Moore@yahoo.c",
         "userAvatar": "20.jpg",
-        "skills": "Guitarrista",
-        "bio": "Soy introvertido y me gusta crear mis composiciones en mi home studio. 30 años",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\20",
-        "FIELD10": ""
+        "bio": "Soy introvertido y me gusta crear mis composi",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 23,
@@ -270,34 +248,31 @@
         "password": "DSHL<@",
         "email": "Ofshane@gmail.com",
         "userAvatar": "22.jpg",
-        "skills": "Bajista",
-        "bio": "Estamos disponibles para shows y eventos empresariales. 3 discos editados. Influencias Magic Numbers",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\22",
-        "FIELD10": ""
+        "bio": "Estamos disponibles para shows y eventos empr",
+        "usersDBcol": null,
+        "skills": "Bajista"
     },
     {
         "id": 24,
-        "nombre": "Patiño",
+        "nombre": "PatinÌƒo",
         "apellido": "",
         "password": "?=@BWR",
-        "email": "Patiño@yahoo.com",
+        "email": "PatinÌƒo@yahoo.com",
         "userAvatar": "23.jpg",
-        "skills": "Cantante",
-        "bio": "Soy Zenegales. Vivo en Argentina desde hace 5 años. Disponible para bandas",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\23",
-        "FIELD10": ""
+        "bio": "Soy Zenegales. Vivo en Argentina desde hace 5",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 25,
         "nombre": "Quincas",
         "apellido": "Moreira",
         "password": "27TGQ8",
-        "email": "Quincas.Moreira@gmail.com",
+        "email": "Quincas.Moreira@gmai",
         "userAvatar": "25.jpg",
-        "skills": "Cantante",
-        "bio": "Admiro a los cantantes de música folk y country. Vivo en Arkansas",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\25",
-        "FIELD10": ""
+        "bio": "Admiro a los cantantes de musica folk y count",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 26,
@@ -306,34 +281,31 @@
         "password": "TVBHXI",
         "email": "RAGE@gmail.com",
         "userAvatar": "26.jpg",
-        "skills": "Baterista",
-        "bio": "Somos una banda de Hurlingham. Nuestras influencias son bandas nacionales como Serú Girán y Pescado Rabioso. Tocamos juntos desde hace 5 años",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\26",
-        "FIELD10": ""
+        "bio": "Somos una banda de Hurlingham. Nuestras influ",
+        "usersDBcol": null,
+        "skills": "Baterista"
     },
     {
         "id": 27,
         "nombre": "Reed",
         "apellido": "Mathis",
         "password": "XHD4TR",
-        "email": "Reed.Mathis@yahoo.com",
+        "email": "Reed.Mathis@yahoo.co",
         "userAvatar": "24.jpg",
-        "skills": "Guitarrista",
-        "bio": "Vivo en la ciudad de Sao Paulo. Soy brasileño y me influencia el funk clásico",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\24",
-        "FIELD10": ""
+        "bio": "Vivo en la ciduad de Sao Paulo. Soy brasileÃ±",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 28,
         "nombre": "Robotanists",
         "apellido": "",
         "password": "FZN<YU",
-        "email": "Robotanists@gmail.com",
+        "email": "Robotanists@gmail.co",
         "userAvatar": "27.jpg",
-        "skills": "Baterista",
-        "bio": "Somos un dúo de Drum and Bass. Nuestras influencias son claro, la mejor banda de todos los tiempos Morphine",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\27",
-        "FIELD10": ""
+        "bio": "Somos un duo de Drum and Bass. Nuestras influ",
+        "usersDBcol": null,
+        "skills": "Baterista"
     },
     {
         "id": 29,
@@ -342,10 +314,9 @@
         "password": "O41BWP",
         "email": "SefChol@gmail.com",
         "userAvatar": "29.jpg",
-        "skills": "Cantante",
-        "bio": "Banda de sonidos eclécticos y originales. Nos encanta la música y poder fusionarla",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\29",
-        "FIELD10": ""
+        "bio": "Banda de sonidos eclecticos y originales. Nos",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 30,
@@ -354,22 +325,20 @@
         "password": "Q;T<I:",
         "email": "Kid.Head@yahoo.com",
         "userAvatar": "30.jpg",
-        "skills": "Bajista",
-        "bio": "Tenemos influencias en el rock californiano. Combinamos la música con el skate.",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\30",
-        "FIELD10": ""
+        "bio": "Tenemos influencias en el rock californiano. ",
+        "usersDBcol": null,
+        "skills": "Bajista"
     },
     {
         "id": 31,
         "nombre": "Steve",
         "apellido": "Adams",
         "password": "8LHR2M",
-        "email": "Steve.Adams@gmail.com",
+        "email": "Steve.Adams@gmail.co",
         "userAvatar": "28.jpg",
-        "skills": "Guitarrista",
-        "bio": "Solista y multinstrumentista. Mi pasión es componer. La música cambia al mundo",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\28",
-        "FIELD10": ""
+        "bio": "Solista y 5. Mi pasion es componer. La musica",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 32,
@@ -378,46 +347,42 @@
         "password": "ATWBFM",
         "email": "Air.Review@gmail.com",
         "userAvatar": "32.jpg",
-        "skills": "Cantante",
-        "bio": "Banda relajada de Rock and roll clásico, influenciados por Led Zeppellin y Black Sabbath",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\32",
-        "FIELD10": ""
+        "bio": "Banda relajada de Rock and roll clasico, infl",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 33,
         "nombre": "Roosevelt",
         "apellido": "Sea",
         "password": "5IB6T@",
-        "email": "Roosevelt.Sea@gmail.com",
+        "email": "Roosevelt.Sea@gmail.",
         "userAvatar": "34.jpg",
-        "skills": "Cantante",
-        "bio": "Luego de haber pasado por varias bandas, inicié mi carrera solista y lancé tres discos hasta el momento",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\34",
-        "FIELD10": ""
+        "bio": "Luego de haber pasado por varias bandas, inic",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 34,
         "nombre": "Dave",
         "apellido": "Fields",
         "password": "4UQ64Y",
-        "email": "Dave.Fields@yahoo.com",
+        "email": "Dave.Fields@yahoo.co",
         "userAvatar": "36.jpg",
-        "skills": "Guitarrista",
-        "bio": "Observo el mundo desde mi estudio y escribo acerca de el, en tonos de rock sinfónico",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\36",
-        "FIELD10": ""
+        "bio": "Observo el mundo desde mi estudio y escribo a",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 35,
         "nombre": "Chloe",
         "apellido": "Morondo",
         "password": "S0P10P",
-        "email": "Chloe.Morondo@gmail.com",
+        "email": "Chloe.Morondo@gmail.",
         "userAvatar": "31.jpg",
-        "skills": "Cantante",
-        "bio": "Soy Mezzosoprano. Cantante de ópera profesional",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\31",
-        "FIELD10": ""
+        "bio": "Soy Mezzosoprano. Cantante de opera profesion",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 36,
@@ -426,34 +391,31 @@
         "password": "XOJ192",
         "email": "TrackTribe@gmail.com",
         "userAvatar": "37.jpg",
-        "skills": "Cantante",
-        "bio": "Estamos disponibles para shows y eventos empresariales. 2 discos editados. Influencias de grupos rhythm and blues",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\37",
-        "FIELD10": ""
+        "bio": "Estamos disponibles para shows y eventos empr",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 37,
         "nombre": "Trevor",
         "apellido": "Garrod",
         "password": "<22MC2",
-        "email": "Trevor.Garrod@gmail.com",
+        "email": "Trevor.Garrod@gmail.",
         "userAvatar": "40.jpg",
-        "skills": "Cantante",
-        "bio": "Canto y compongo mis propias canciones, siendo influenciado por los clásicos del soul",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\40",
-        "FIELD10": ""
+        "bio": "Canto y compongo mis propias canciones, siend",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 38,
         "nombre": "Back 2 zero",
         "apellido": "",
         "password": "<QEUQ>",
-        "email": "Back 2 zero@yahoo.com",
+        "email": "Back 2 zero@yahoo.co",
         "userAvatar": "35.jpg",
-        "skills": "Cantante",
-        "bio": "Banda liderada por la cantante Julia Nono. Hacemos Jazz vocal y shows tributo",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\35",
-        "FIELD10": ""
+        "bio": "Banda liderada por la cantante Julia Nono. Ha",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 39,
@@ -462,85 +424,51 @@
         "password": "CBR00D",
         "email": "Hallmarc@gmail.com",
         "userAvatar": "39.jpg",
-        "skills": "Cantante",
-        "bio": "Soy Morena Lopez. Nuestras influencias van desde el flamenco hasta la electrónica",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\39",
-        "FIELD10": ""
+        "bio": "Soy Morena Lopez. Nuestras influencias van de",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 40,
         "nombre": "Vans",
         "apellido": "in Japan",
         "password": "H6ADHO",
-        "email": "Vans.in Japan@gmail.com",
+        "email": "Vans.in Japan@gmail.",
         "userAvatar": "33.jpg",
-        "skills": "Cantante",
-        "bio": "Lidero la banda Vans in Japan. Nos gusta experimentar y crear nuevas variantes de los clásicos géneros musicales",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\33",
-        "FIELD10": ""
+        "bio": "Lidero la banda Vans in Japan. Nos gusta expe",
+        "usersDBcol": null,
+        "skills": "Cantante"
     },
     {
         "id": 41,
         "nombre": "Parks",
         "apellido": "Square",
         "password": "?AIVTU",
-        "email": "Parks.Square@yahoo.com",
+        "email": "Parks.Square@yahoo.c",
         "userAvatar": "38.jpg",
-        "skills": "Guitarrista",
-        "bio": "Trío que recrea los clásicos del rock nacional. Banda Tributo a los clásicos nacionales",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\38",
-        "FIELD10": ""
+        "bio": "Trio que recrea los clasicos del rock naciona",
+        "usersDBcol": null,
+        "skills": "Guitarrista"
     },
     {
         "id": 42,
         "nombre": "Zachariah",
         "apellido": "Hickman",
         "password": "BK8MU2",
-        "email": "Zachariah.Hickman@gmail.com",
+        "email": "Zachariah.Hickman@gm",
         "userAvatar": "44.jpg",
-        "skills": "Tecladista",
-        "bio": "Banda reggae de la zona oeste del gran Buenos Aires. 3 discos editados",
-        "pathAbsolute userAvatar (native)": "C:\\Users\\danin\\Downloads\\VSC-DH\\Proyecto-Integrador-DH\\public\\images\\usersAvatars\\resizedandcropped\\44",
-        "FIELD10": ""
+        "bio": "Banda reggae de la zona oeste del gran Buenos",
+        "usersDBcol": null,
+        "skills": "Tecladista"
     },
     {
         "id": 43,
-        "nombre": "Agos",
-        "apellido": "Pavese",
-        "password": "$2a$10$8LOuw3awZtXRvdmMTLLzKuLfvN7kmE2uGhF7FwZ8ibdrvJmtKmo62",
-        "email": "agos@test.com",
-        "userAvatar": "default.png",
-        "skills": "Baterista",
-        "bio": ""
-    },
-    {
-        "id": 44,
-        "nombre": "test",
-        "apellido": "test",
-        "password": "$2a$10$4MQ8z7XIjRuLnkU3putVjOVUduKcXAdj6xyiuY9EsqOi8ajLPP4U6",
-        "email": "test@test.com",
-        "userAvatar": "default.png",
+        "nombre": "test2",
+        "apellido": "test2",
+        "password": "$2a$10$APKrZAUvGv6pnEAkElHux.Gu1ulpB/fod81CzjvJ4/eGDfofc2MdW",
+        "email": "test2@test.com",
         "skills": "Bajista",
-        "bio": "test"
-    },
-    {
-        "id": 45,
-        "nombre": "ALEXXXX",
-        "apellido": "Langman",
-        "password": "$2a$10$4n6zygIsgOoA7axPMRxsJelaZrBrZxoI6uz4rOaxKsrdKoaNepHC2",
-        "email": "alulang@hotmail.com",
-        "userAvatar": "1635996027916_img_.jpg",
-        "skills": "Bajista",
-        "bio": ""
-    },
-    {
-        "id": 46,
-        "nombre": "Alex",
-        "apellido": "Langman",
-        "password": "$2a$10$wmdWROFJSDhQzdu945ObN.sRe742Y.x.fzCFzalqBQfdGPSrrvs22",
-        "email": "alex@hotmail.com",
-        "userAvatar": "1635997325098_img_.jpg",
-        "skills": "Bajista",
-        "bio": ""
+        "bio": "test2",
+        "userAvatar": "default.jpg"
     }
 ]
