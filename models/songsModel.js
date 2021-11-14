@@ -21,7 +21,8 @@ const songsModel = {
     },
     findSong: async function (idsong) { //Busca cancion por ID
         try {
-            let song = await this.getAll().find(cancion => cancion.songId == idsong)
+            let songs = await this.getAll()
+            let song = songs.find(item => item.songId == idsong)
             return song
         } catch (error) {
             console.log("Error tratando de encontrar la cancion: " + error)

@@ -20,7 +20,8 @@ const instrumentModel = {
     },
     findInstrument: async function (idinstrument) { //Busca instrumento por ID
         try {
-            let instrument = await this.getAll().find(instrumento => instrumento.InstrumId == idinstrument)
+            let instruments = await this.getAll()
+            let instrument = instruments.find(instrumento => instrumento.InstrumId == idinstrument)
             return instrument
         } catch (error) {
             console.log("Error tratando de encontrar el instrumento: " + error)

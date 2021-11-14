@@ -27,7 +27,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING(20),
       allowNull: true
     },
-    usersDBid: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
@@ -51,7 +51,7 @@ module.exports = function (sequelize, DataTypes) {
         name: "fkInstrumentsDBUsersDB1_idx",
         using: "BTREE",
         fields: [{
-          name: "usersDBid"
+          name: "id"
         }, ]
       },
     ]

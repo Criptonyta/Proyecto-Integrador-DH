@@ -26,6 +26,7 @@ const controlador = {
             const nombreId = "InstrumId" //Id de los instrumentos
             const rutaDelete = "deleteinstrument" //Donde eliminamos los productos
             const artista = await usersModel.findUser(instrumento.id)
+            console.log(artista)
 
             //Creamos la variable locals para usar en la vista
             if (req.session.userLogged == undefined) {
@@ -174,7 +175,7 @@ const controlador = {
             const musicos = await auxiliares.buscarNelementosAleatorios(songsDB, "songId", 6);
             const artistsDB = await usersModel.findArtists() //Los artistas son los que tienen bio
             const datos = await auxiliares.buscarNelementosAleatorios(artistsDB, "id", 3);
-
+            console.log(songsDB[0].id)
             //Creamos la variable locals para usar en la vista
             if (req.session.userLogged == undefined) {
                 res.locals.idusuario = "noLogueado"

@@ -43,11 +43,11 @@ CREATE TABLE IF NOT EXISTS `musiqueirosdb`.`songsDB` (
   `audioFileYTPlayer` VARCHAR(15) NULL,
   `audioFile` VARCHAR(70) NULL,
   `tipoProducto` VARCHAR(20) NULL,
-  `usersDB_id` INT NOT NULL,
+  `id` INT NOT NULL,
   PRIMARY KEY (`songId`),
-  INDEX `fkSongsDBUsersDB1idx` (`usersDB_id` ASC) VISIBLE,
+  INDEX `fkSongsDBUsersDB1idx` (`id` ASC) VISIBLE,
   CONSTRAINT `fkSongsDBUsersDB1`
-    FOREIGN KEY (`usersDB_id`)
+    FOREIGN KEY (`id`)
     REFERENCES `musiqueirosdb`.`usersDB` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -64,11 +64,11 @@ CREATE TABLE IF NOT EXISTS `musiqueirosdb`.`instrumentsDB` (
   `descripcion` VARCHAR(420) NULL,
   `precioUnitario` INT NULL,
   `tipoProducto` VARCHAR(20) NULL,
-  `usersDBid` INT NULL,
+  `id` INT NULL,
   PRIMARY KEY (`instrumId`),
-  INDEX `fkInstrumentsDBUsersDB1_idx` (`usersDBid` ASC) VISIBLE,
+  INDEX `fkInstrumentsDBUsersDB1_idx` (`id` ASC) VISIBLE,
   CONSTRAINT `fkInstrumentsDBUsersDB1`
-    FOREIGN KEY (`usersDBid`)
+    FOREIGN KEY (`id`)
     REFERENCES `musiqueirosdb`.`usersDB` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)

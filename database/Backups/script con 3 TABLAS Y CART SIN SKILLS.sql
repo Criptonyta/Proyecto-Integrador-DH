@@ -77,15 +77,15 @@ CREATE TABLE IF NOT EXISTS `musiqueirosdb`.`songsDB` (
   `audioFileYTPlayer` VARCHAR(15) NULL,
   `audioFile` VARCHAR(70) NULL,
   `tipoProducto` VARCHAR(20) NULL,
-  `usersDBId` INT NULL,
+  `id` INT NULL,
   `ventasDBCartId` INT NULL,
-  `usersDB_id` INT NOT NULL,
+  `id` INT NOT NULL,
   `ventasDB_cartId` INT NOT NULL,
   PRIMARY KEY (`songId`),
-  INDEX `fkSongsDBUsersDB1idx` (`usersDBid` ASC) ,
+  INDEX `fkSongsDBUsersDB1idx` (`id` ASC) ,
   INDEX `fkSongsDBVentasDB1idx` (`ventasDBCartId` ASC) ,
   CONSTRAINT `fkSongsDBUsersDB1`
-    FOREIGN KEY (`usersDBid`)
+    FOREIGN KEY (`id`)
     REFERENCES `musiqueirosdb`.`usersDB` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
@@ -107,13 +107,13 @@ CREATE TABLE IF NOT EXISTS `musiqueirosdb`.`instrumentsDB` (
   `descripcion` VARCHAR(420) NULL,
   `precioUnitario` INT NULL,
   `tipoProducto` VARCHAR(20) NULL,
-  `usersDBid` INT NULL,
+  `id` INT NULL,
   `ventasDBCartId` INT NULL,
   PRIMARY KEY (`instrumId`),
-  INDEX `fkInstrumentsDBUsersDB1idx` (`usersDBid` ASC) ,
+  INDEX `fkInstrumentsDBUsersDB1idx` (`id` ASC) ,
   INDEX `fkInstrumentsDBVentasDB1idx` (`ventasDBCartId` ASC) ,
   CONSTRAINT `fkInstrumentsDBUsersDB1`
-    FOREIGN KEY (`usersDBid`)
+    FOREIGN KEY (`id`)
     REFERENCES `musiqueirosdb`.`usersDB` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
@@ -191,15 +191,15 @@ CREATE TABLE IF NOT EXISTS `musiqueirosdb`.`songsDB` (
   `audioFileYTPlayer` VARCHAR(15) NULL,
   `audioFile` VARCHAR(70) NULL,
   `tipoProducto` VARCHAR(20) NULL,
-  `usersDBId` INT NULL,
+  `id` INT NULL,
   `ventasDBCartId` INT NULL,
-  `usersDB_id` INT NOT NULL,
+  `id` INT NOT NULL,
   `ventasDB_cartId` INT NOT NULL,
   PRIMARY KEY (`songId`),
-  INDEX `fkSongsDBUsersDB1idx` (`usersDBid` ASC) ,
+  INDEX `fkSongsDBUsersDB1idx` (`id` ASC) ,
   INDEX `fkSongsDBVentasDB1idx` (`ventasDBCartId` ASC) ,
   CONSTRAINT `fkSongsDBUsersDB1`
-    FOREIGN KEY (`usersDBid`)
+    FOREIGN KEY (`id`)
     REFERENCES `musiqueirosdb`.`usersDB` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
@@ -221,13 +221,13 @@ CREATE TABLE IF NOT EXISTS `musiqueirosdb`.`instrumentsDB` (
   `descripcion` VARCHAR(420) NULL,
   `precioUnitario` INT NULL,
   `tipoProducto` VARCHAR(20) NULL,
-  `usersDBid` INT NULL,
+  `id` INT NULL,
   `ventasDBCartId` INT NULL,
   PRIMARY KEY (`instrumId`),
-  INDEX `fkInstrumentsDBUsersDB1idx` (`usersDBid` ASC) ,
+  INDEX `fkInstrumentsDBUsersDB1idx` (`id` ASC) ,
   INDEX `fkInstrumentsDBVentasDB1idx` (`ventasDBCartId` ASC) ,
   CONSTRAINT `fkInstrumentsDBUsersDB1`
-    FOREIGN KEY (`usersDBid`)
+    FOREIGN KEY (`id`)
     REFERENCES `musiqueirosdb`.`usersDB` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
@@ -299,11 +299,11 @@ CREATE TABLE IF NOT EXISTS `musiqueirosdb`.`songsDB` (
   `audioFileYTPlayer` VARCHAR(15) NULL,
   `audioFile` VARCHAR(70) NULL,
   `tipoProducto` VARCHAR(20) NULL,
-  `usersDB_id` INT NOT NULL,
+  `id` INT NOT NULL,
   PRIMARY KEY (`songId`),
-  INDEX `fkSongsDBUsersDB1idx` (`usersDB_id` ASC) ,
+  INDEX `fkSongsDBUsersDB1idx` (`id` ASC) ,
   CONSTRAINT `fkSongsDBUsersDB1`
-    FOREIGN KEY (`usersDB_id`)
+    FOREIGN KEY (`id`)
     REFERENCES `musiqueirosdb`.`usersDB` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -320,11 +320,11 @@ CREATE TABLE IF NOT EXISTS `musiqueirosdb`.`instrumentsDB` (
   `descripcion` VARCHAR(420) NULL,
   `precioUnitario` INT NULL,
   `tipoProducto` VARCHAR(20) NULL,
-  `usersDBid` INT NULL,
+  `id` INT NULL,
   PRIMARY KEY (`instrumId`),
-  INDEX `fkInstrumentsDBUsersDB1_idx` (`usersDBid` ASC) ,
+  INDEX `fkInstrumentsDBUsersDB1_idx` (`id` ASC) ,
   CONSTRAINT `fkInstrumentsDBUsersDB1`
-    FOREIGN KEY (`usersDBid`)
+    FOREIGN KEY (`id`)
     REFERENCES `musiqueirosdb`.`usersDB` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
