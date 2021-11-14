@@ -11,6 +11,4 @@ CHANGE COLUMN `instrumId` `InstrumId` INT(11) NOT NULL AUTO_INCREMENT ;
 
 ----------------------------------------------
 
-TRASH
-
-fila 8 instrumensModel.js //JSON.parse(fs.readFileSync(pathInstruments, "utf-8"))
+sequelize-auto -h localhost -d musiqueirosdb4 -u root -p 3306  --dialect mysql

@@ -8,22 +8,10 @@ function initModels(sequelize) {
   var songsdb = _songsdb(sequelize, DataTypes);
   var usersdb = _usersdb(sequelize, DataTypes);
 
-  instrumentsdb.belongsTo(usersdb, {
-    as: "usersDB",
-    foreignKey: "id"
-  });
-  usersdb.hasMany(instrumentsdb, {
-    as: "instrumentsdbs",
-    foreignKey: "id"
-  });
-  songsdb.belongsTo(usersdb, {
-    as: "usersDB",
-    foreignKey: "id"
-  });
-  usersdb.hasMany(songsdb, {
-    as: "songsdbs",
-    foreignKey: "id"
-  });
+  instrumentsdb.belongsTo(usersdb, { as: "id_usersdb", foreignKey: "id"});
+  usersdb.hasMany(instrumentsdb, { as: "instrumentsdbs", foreignKey: "id"});
+  songsdb.belongsTo(usersdb, { as: "id_usersdb", foreignKey: "id"});
+  usersdb.hasMany(songsdb, { as: "songsdbs", foreignKey: "id"});
 
   return {
     instrumentsdb,

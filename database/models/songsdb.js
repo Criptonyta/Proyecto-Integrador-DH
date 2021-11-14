@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   return sequelize.define('songsdb', {
     songId: {
       autoIncrement: true,
@@ -37,7 +37,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
         model: 'usersdb',
         key: 'id'
@@ -47,20 +47,21 @@ module.exports = function (sequelize, DataTypes) {
     sequelize,
     tableName: 'songsdb',
     timestamps: false,
-    indexes: [{
+    indexes: [
+      {
         name: "PRIMARY",
         unique: true,
         using: "BTREE",
-        fields: [{
-          name: "songId"
-        }, ]
+        fields: [
+          { name: "songId" },
+        ]
       },
       {
         name: "fkSongsDBUsersDB1idx",
         using: "BTREE",
-        fields: [{
-          name: "id"
-        }, ]
+        fields: [
+          { name: "id" },
+        ]
       },
     ]
   });
