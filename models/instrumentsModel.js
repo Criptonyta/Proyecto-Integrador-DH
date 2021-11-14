@@ -6,10 +6,12 @@ const db = require("../database/models")
 const instrumentModel = {
     getAll: async function () { //Te devuelve todos los instrumentos
         try {
-            const instrumentsDB = await db.instrumentsdb.findAll({raw: true})
+            const instrumentsDB = await db.instrumentsdb.findAll({
+                raw: true
+            })
             return instrumentsDB
         } catch (error) {
-            console.log('Error tratando de mostrar los instrumentos: '+ error)
+            console.log('Error tratando de mostrar los instrumentos: ' + error)
             return []
         }
     },
@@ -27,7 +29,8 @@ const instrumentModel = {
     },
     findArtistInstruments: async function (iduser) { //Devuelve todas las canciones de un artista
         try {
-            let instrumentos = await this.getAll().filter(instrumento => instrumento.id == iduser)
+            let instrumento = await this.getAll()
+            let instrumentos = instrumento.filter(item => item.id == iduser)
             return instrumentos
         } catch (error) {
             console.log("Error tratando de encontrar los instrumentos del artista: " + error)
@@ -46,15 +49,18 @@ const instrumentModel = {
     },
     agregarInstrumento: async function (instrumento) { //Te agrega un instrumento
         try {
-            let InstrumId = await this.crearId()
-            let nuevoInstrumento = {
-            InstrumId,
-            ...instrumento
-        }
-            let instrumentos = await this.getAll()
-            instrumentos.push(nuevoInstrumento)
-            this.rescribirDB(instrumentos)
+            db.instrumentsdb.create(instrumento)
             return true
+
+            // let InstrumId = await this.crearId()
+            // let nuevoInstrumento = { 
+            //     InstrumId, 
+            //     ...instrumento 
+            // }
+            // let instrumentos = await this.getAll() 
+            // instrumentos.push(nuevoInstrumento) 
+            // this.rescribirDB(instrumentos) 
+
         } catch (error) {
             console.log("Error tratando de agregar instrumento: " + error)
             return false

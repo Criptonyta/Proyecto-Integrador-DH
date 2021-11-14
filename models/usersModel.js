@@ -24,7 +24,8 @@ const usersModel = {
     },
     findUser: async function (iduser) { //Busca usuario por ID
         try {
-            let usuario = await this.getAll().find(usuario => usuario.id == iduser)
+            let usuarios = await this.getAll()
+            let usuario = usuarios.find(item => item.id == iduser)
             return usuario
         } catch (error) {
             console.log("Error tratando de encontrar el usuario: " + error)
@@ -63,39 +64,21 @@ const usersModel = {
     },
     agregarUsuario: async function (usuario) { //Te agrega un usuario
         try {
-            let id = await this.crearId()
-            let nuevoUsuario = {
-                id,
-                ...usuario
-            }
-            let usuarios = await this.getAll()
-            usuarios.push(nuevoUsuario)
-            this.rescribirDB(usuarios)
+            db.usersdb.create(usuario)
             return true
         } catch (error) {
             console.log("Error al agregar usuario: " + error)
             return false
         }
     },
-    editarUsuario: async function (profileOld, profileNew) { //Le pasas los datos viejos y los nuevos y te edita la info del usuario
+    editarUsuario: async function (profileNew, iduser) { //Le pasas los datos viejos y los nuevos y te edita la info del usuario
         try {
             let userDB = await this.getAll()
-            userDB.forEach(function (usuario) {
-                if (usuario.id == profileOld.id) {
-                    usuario.email = profileNew.email;
-                    usuario.nombre = profileNew.nombre;
-                    usuario.apellido = profileNew.apellido;
-                    usuario.password = profileNew.password;
-                    usuario.minibio = profileNew.minibio;
-                    usuario.skills = profileNew.skills;
-                    if (profileNew.userAvatarButton == "") {
-                        usuario.userAvatar = profileOld.userAvatar
-                    } else {
-                        usuario.userAvatar = profileNew.userAvatarButton
-                    }
+            db.usersdb.update(profileNew, {
+                where: {
+                    id: iduser
                 }
             })
-            this.rescribirDB(userDB)
             return true
 
         } catch (error) {
@@ -105,8 +88,11 @@ const usersModel = {
     },
     borrarUsuario: async function (iduser) { //Te borra un usuario
         try {
-            let usuarios = await this.getAll().filter(usuario => usuario.id != iduser)
-            this.rescribirDB(usuarios)
+            db.usersdb.destroy({
+                where: {
+                    id: iduser
+                }
+            })
             return true
         } catch (error) {
             console.log("Error tratando de borrar el usuario: " + error)

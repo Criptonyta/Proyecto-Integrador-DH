@@ -7,10 +7,12 @@ const db = require("../database/models")
 const songsModel = {
     getAll: async function () { //Te devuelve todas las canciones
         try {
-            const songsDB = await db.songsdb.findAll({raw: true})
+            const songsDB = await db.songsdb.findAll({
+                raw: true
+            })
             return songsDB
         } catch (error) {
-            console.log('Error tratando de mostrar las canciones: '+ error)
+            console.log('Error tratando de mostrar las canciones: ' + error)
             return []
         }
     },
@@ -28,7 +30,8 @@ const songsModel = {
     },
     findArtistSongs: async function (iduser) { //Devuelve todas las canciones de un artista
         try {
-            let canciones = await this.getAll().filter(song => song.id == iduser)
+            let cancion = await this.getAll()
+            let canciones = cancion.filter(item => item.id == iduser)
             return canciones
         } catch (error) {
             console.log("Error tratando de encontrar las canciones del artista: " + error)
@@ -42,16 +45,16 @@ const songsModel = {
             return id
         } catch (error) {
             console.log("Error tratando de crear id: " + error)
-            return false 
+            return false
         }
     },
     agregarCancion: async function (cancion) { //Te agrega una cancion
         try {
             let songId = await this.crearId()
             let nuevaCancion = {
-            songId,
-            ...cancion
-        }
+                songId,
+                ...cancion
+            }
             let canciones = await this.getAll()
             canciones.push(nuevaCancion)
             this.rescribirDB(canciones)
@@ -78,7 +81,7 @@ const songsModel = {
                 }
             }
             this.rescribirDB(songsDB)
-    
+
         } catch (error) {
             console.log("Error tratando de editar cancion: " + error)
             return false

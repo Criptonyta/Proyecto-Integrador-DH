@@ -156,6 +156,7 @@ const controlador = {
                 titulo: req.body.titulo,
                 precio: req.body.precio,
                 descripcion: req.body.descripcion,
+                tipoProducto: 'instrum',
             }
             await instrumentsModel.agregarInstrumento(instrumentcargar)
             res.redirect("/products/tienda/")

@@ -104,12 +104,23 @@ const controlador = {
                 skills: req.body.skills
             }
             if (typeof req.file == "object" && req.file.filename) {
-                profileNew.userAvatarButton = req.file.filename
-            } //Tiene foto
+                profileNew.userAvatar = req.file.filename
+                console.log("Nueva foto");
+            } //El usuario cargo una nueva foto
             else {
-                profileNew.userAvatarButton = profileOld.userAvatar
-            } //No tiene foto
-            await usersModel.editarUsuario(profileOld, profileNew)
+                profileNew.userAvatar = profileOld.userAvatar
+            } //El usuario no cargo una nueva foto
+
+            if (req.file.password) {
+                profileNew.password = req.file.password
+            } //Cargo nueva password
+            else {
+                profileNew.password = profileOld.password
+            } //No cargo nueva password
+
+
+
+            await usersModel.editarUsuario(profileNew, profileOld.id)
             res.redirect("/user/userprofile/" + req.params.iduser);
         } catch (e) {
             console.log('error editando el nuevo usuario')
@@ -129,8 +140,12 @@ const controlador = {
                 })
             }
             let userToLogin = await usersModel.findByField('email', req.body.email) // Busca el usuario x email
+
             if (userToLogin) {
+                console.log(userToLogin.password)
                 let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password) // compara contrasena del form con la de la BD
+                console.log("contrasena:" + isOkPassword)
+
                 if (isOkPassword) {
 
                     if (req.body.checkboxLogin) {
@@ -210,6 +225,7 @@ const controlador = {
 
                     // createNewUser.userAvatar = "default.jpg" || "default2.jpg" || "default3.jpg" || "default4.jpg" || "default5.jpg" || "default6.jpg" || "default7.jpg" || "default8.jpg" || "default9.jpg" // TO DO - ver si funciona, si no funciona usar math.round
                 }
+                console.log(createNewUser)
                 await usersModel.agregarUsuario(createNewUser)
                 res.redirect("/user/login"); //Te manda a al login
             }
