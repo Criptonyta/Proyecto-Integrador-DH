@@ -39,49 +39,23 @@ const songsModel = {
             return []
         }
     },
-    crearId: async function () { //Te genera el ID para agregar canciones
-        try {
-            let all = await this.getAll()
-            let id = all[all.length - 1].songId + 1
-            return id
-        } catch (error) {
-            console.log("Error tratando de crear id: " + error)
-            return false
-        }
-    },
+
     agregarCancion: async function (cancion) { //Te agrega una cancion
         try {
-            let songId = await this.crearId()
-            let nuevaCancion = {
-                songId,
-                ...cancion
-            }
-            let canciones = await this.getAll()
-            canciones.push(nuevaCancion)
-            this.rescribirDB(canciones)
+            db.songsdb.create(cancion)
             return true
         } catch (error) {
             console.log("Error tratando de agregar la cancion: " + error)
             return false
         }
     },
-    editarCancion: async function (oldSong, newData) { //Edita cancion
+    editarCancion: async function (newData, idsong) { //Edita cancion
         try {
-            let songsDB = await this.getAll()
-            for (let i = 0; i < songsDB.length; i++) {
-                if (songsDB[i].songId == oldSong["songId"]) {
-                    songsDB[i].titulo = newData.titulo;
-                    songsDB[i].descripcion = newData.descripcion;
-                    songsDB[i].precio = newData.precio;
-                    if (newData.img) {
-                        songsDB[i].img = newData.img
-                    }
-                    if (newData.audioFile) {
-                        songsDB[i].audioFile = newData.audioFile
-                    }
+            db.songsdb.update(newData, {
+                where: {
+                    songId: idsong
                 }
-            }
-            this.rescribirDB(songsDB)
+            })
 
         } catch (error) {
             console.log("Error tratando de editar cancion: " + error)
@@ -90,9 +64,11 @@ const songsModel = {
     },
     borrarCancion: async function (idsong) { //Te borra una cancion
         try {
-            let canciones = await this.getAll()
-            let cancionesDB = canciones.filter(cancion => cancion.songId != idsong)
-            this.rescribirDB(cancionesDB)
+            db.songsdb.destroy({
+                where: {
+                    songId: idsong
+                }
+            })
             return true
         } catch (error) {
             console.log("Error tratando de borrar la cancion: " + error)
@@ -100,15 +76,18 @@ const songsModel = {
         }
     },
     borrarNcanciones: async function (canciones) { //Te borra todas las canciones que le pases el songId en la lista canciones
+        console.log(canciones)
         try {
-            let songsDB = await this.getAll();
             for (let i = 0; i < canciones.length; i++) { //Borramos las canciones de songsDB
-                songsDB = songsDB.filter(elementos => elementos["songId"] != canciones[i])
+                await db.songsdb.destroy({
+                    where: {
+                        songId: canciones[i]
+                    }
+                })
             }
-            this.rescribirDB(songsDB)
             return true
         } catch (error) {
-            console.log("Error borrando N instrumentos: " + error)
+            console.log("Error borrando N canciones: " + error)
             return false
         }
     }

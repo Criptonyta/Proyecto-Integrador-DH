@@ -235,11 +235,11 @@ const controlador = {
     },
     deleteSongs: async (req, res) => {
         try {
-            let elementos = req.body.eliminarInstrumento // o es una lista o es un numero
+            let elementos = req.body.eliminarCancion // o es una lista o es un numero
             if (Array.isArray(elementos)) {
                 await songsModel.borrarNcanciones(elementos)
             } else {
-                await songsModel.borrarCancion(req.body.elementos)
+                await songsModel.borrarCancion(elementos)
             }
             res.redirect("/user/userprofile/" + req.params.iduser);
         } catch (e) {

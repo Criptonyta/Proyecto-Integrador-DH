@@ -26,7 +26,7 @@ const controlador = {
             const nombreId = "InstrumId" //Id de los instrumentos
             const rutaDelete = "deleteinstrument" //Donde eliminamos los productos
             const artista = await usersModel.findUser(instrumento.id)
-            console.log(artista)
+
 
             //Creamos la variable locals para usar en la vista
             if (req.session.userLogged == undefined) {
@@ -115,7 +115,7 @@ const controlador = {
     },
     addSong: async (req, res) => {
         try {
-            const songsDB = await songsModel.getAll()
+
             songcargar = {
                 id: req.session.userLogged.id,
                 img: req.files.songEmptyContentBtn1[0].filename, //Imagen de la cancion
@@ -125,6 +125,7 @@ const controlador = {
                 titulo: req.body.titulo, //Titulo de la cancion
                 precio: req.body.precio, //Precio de la cancion
                 descripcion: req.body.descripcion, //Descripcion de la cancion
+                tipoProducto: 'cancion'
             }
             await songsModel.agregarCancion(songcargar)
             res.redirect("/products/tienda/")
@@ -175,7 +176,7 @@ const controlador = {
             const musicos = await auxiliares.buscarNelementosAleatorios(songsDB, "songId", 6);
             const artistsDB = await usersModel.findArtists() //Los artistas son los que tienen bio
             const datos = await auxiliares.buscarNelementosAleatorios(artistsDB, "id", 3);
-            console.log(songsDB[0].id)
+
             //Creamos la variable locals para usar en la vista
             if (req.session.userLogged == undefined) {
                 res.locals.idusuario = "noLogueado"
@@ -359,11 +360,15 @@ const controlador = {
             }
             if (req.files.songEmptyContentBtn1) {
                 editSong.img = req.files.songEmptyContentBtn1[0].filename
+            } else {
+                editSong.img = oldProduct.img
             }
             if (req.files.songEmptyContentBtn2) {
                 editSong.audioFile = req.files.songEmptyContentBtn2[0].filename
+            } else {
+                editSong.audioFile = oldProduct.audioFile
             }
-            songsModel.editarCancion(oldProduct, editSong)
+            songsModel.editarCancion(editSong, oldProduct.songId)
             res.redirect("/products/tienda/songs/")
         } catch (e) {
             console.log('error editando las canciones')
@@ -380,8 +385,14 @@ const controlador = {
             }
             if (typeof req.files == "object" && req.files.productEmptyButton) {
                 editInstrument.img = req.files.productEmptyButton[0].filename
+            } else {
+                editInstrument.img = oldProduct.img
             }
-            await instrumentsModel.editarInstrumento(oldProduct, editInstrument)
+            // if (newData.img) {
+            //     instrumentsDB[i].img = newData.img
+            // }
+
+            await instrumentsModel.editarInstrumento(editInstrument, oldProduct.id)
             res.redirect("/products/tienda/instruments/")
         } catch (e) {
             console.log('error editando productos')

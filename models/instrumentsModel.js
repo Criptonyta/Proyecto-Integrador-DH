@@ -1,3 +1,6 @@
+const {
+    deepStrictEqual
+} = require("assert")
 const fs = require("fs")
 const path = require("path")
 const pathInstruments = path.join(__dirname, "../database/instrumentsDB.json")
@@ -15,9 +18,9 @@ const instrumentModel = {
             return []
         }
     },
-    rescribirDB: function (DB) { //Te resccribe la DB
-        fs.writeFileSync(pathInstruments, JSON.stringify(DB, null, 4))
-    },
+    // rescribirDB: function (DB) { //Te resccribe la DB
+    //     fs.writeFileSync(pathInstruments, JSON.stringify(DB, null, 4))
+    // },
     findInstrument: async function (idinstrument) { //Busca instrumento por ID
         try {
             let instruments = await this.getAll()
@@ -38,49 +41,23 @@ const instrumentModel = {
             return []
         }
     },
-    crearId: async function () { //Te genera el ID para agregar usuarios
-        try {
-            let all = await this.getAll()
-            let id = all[all.length - 1].InstrumId + 1
-            return id
-        } catch (error) {
-            console.log("Error tratando de crear id: " + error)
-            return false
-        }
-    },
+
     agregarInstrumento: async function (instrumento) { //Te agrega un instrumento
         try {
-            db.instrumentsdb.create(instrumento)
+            await db.instrumentsdb.create(instrumento)
             return true
-
-            // let InstrumId = await this.crearId()
-            // let nuevoInstrumento = { 
-            //     InstrumId, 
-            //     ...instrumento 
-            // }
-            // let instrumentos = await this.getAll() 
-            // instrumentos.push(nuevoInstrumento) 
-            // this.rescribirDB(instrumentos) 
-
         } catch (error) {
             console.log("Error tratando de agregar instrumento: " + error)
             return false
         }
     },
-    editarInstrumento: async function (oldInstrument, newData) { //Edita un instrumento
+    editarInstrumento: async function (newData, iduser) { //Edita un instrumento
         try {
-            let instrumentsDB = await this.getAll()
-            for (let i = 0; i < instrumentsDB.length; i++) {
-                if (instrumentsDB[i].InstrumId == oldInstrument["InstrumId"]) {
-                    instrumentsDB[i].titulo = newData.titulo;
-                    instrumentsDB[i].descripcion = newData.descripcion;
-                    instrumentsDB[i].precio = newData.precio;
-                    if (newData.img) {
-                        instrumentsDB[i].img = newData.img
-                    }
+            await db.instrumentsdb.update(newData, {
+                where: {
+                    id: iduser
                 }
-            }
-            this.rescribirDB(instrumentsDB)
+            })
             return true
         } catch (error) {
             console.log("Error tratando de editar instrumento: " + error)
@@ -89,9 +66,11 @@ const instrumentModel = {
     },
     borrarInstrumento: async function (idinstrument) { //Te borra el instrumento
         try {
-            let instrumentos = await this.getAll()
-            let instrumentosDB = instrumentos.filter(instrumento => instrumento.InstrumId != idinstrument)
-            this.rescribirDB(instrumentosDB)
+            await db.instrumentsdb.destroy({
+                where: {
+                    InstrumId: idinstrument
+                }
+            })
             return true
         } catch (error) {
             console.log("Error tratando de borrar el instrumento: " + error)
@@ -100,11 +79,13 @@ const instrumentModel = {
     },
     borrarNinstrumentos: async function (instrumentos) { //Te borra todas los instrumentos que le pases el InstrumId en la lista de instrumentos
         try {
-            let instrumentsDB = await this.getAll();
             for (let i = 0; i < instrumentos.length; i++) { //Borramos los instrumentos de instrumentsDB
-                instrumentsDB = instrumentsDB.filter(elementos => elementos["InstrumId"] != instrumentos[i])
+                await db.instrumentsdb.destroy({
+                    where: {
+                        InstrumId: instrumentos[i]
+                    }
+                })
             }
-            this.rescribirDB(instrumentsDB)
             return true
         } catch (error) {
             console.log("Error borrando N instrumentos: " + error)
