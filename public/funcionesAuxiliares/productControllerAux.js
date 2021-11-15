@@ -15,7 +15,7 @@ function checkAtribute(DB, atributos, palabrasBuscadas) {
                 contador += 1
             }
         }
-        if (contador == palabrasBuscadas.length) {
+        if (contador/palabrasBuscadas.length >= 0.5) {
             return item
         }
     })
