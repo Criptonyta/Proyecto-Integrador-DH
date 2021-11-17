@@ -36,7 +36,7 @@
                         <i class="fas fa-id-badge"><label> Nombre:</label></i>
                         <%= usuarioInfo.nombre %> <%= usuarioInfo.apellido %>
                     </p>
-                    
+
                     <!--<p>
                         <i class="fas fa-id-badge"><label> Apellido:</label></i>
                         <%= usuarioInfo.apellido %>
@@ -74,11 +74,14 @@
                 </section>
 
                 <div>
+                    <% if (songsUser.length > 0 || instrumentUser.length > 0) { %>
                     <p class="userprofile-Registro-Texto-Descriptivo">
                         Podes ver, editar y crear tus anuncios desde aquí.<br>
                     </p>
+                    <% } %>
                     <% if (songsUser.length > 0) { %>
-                    <form id="userProfile-tablaCancion" action="/user/mySongs/delete/<%= usuarioInfo.id %>?_method=DELETE" method="POST">
+                    <form id="userProfile-tablaCancion"
+                        action="/user/mySongs/delete/<%= usuarioInfo.id %>?_method=DELETE" method="POST">
 
                         <table class="userprofile-tableanuncios user-productsTable">
                             <p>Mis Canciones</p>

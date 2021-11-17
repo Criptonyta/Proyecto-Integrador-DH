@@ -122,7 +122,7 @@ CREATE TABLE IF NOT EXISTS SongsBD (
     `descripcion` VARCHAR(81) CHARACTER SET utf8,
     `nombre` VARCHAR(12) CHARACTER SET utf8,
     `apellido` VARCHAR(10) CHARACTER SET utf8,
-    `audioFileYTPlayer` VARCHAR(15) NOT NULL UNIQUE CHARACTER SET utf8,
+    `audioFileYTPlayer` VARCHAR(15)  CHARACTER SET utf8 NOT NULL UNIQUE,
     `audioFile` VARCHAR(70) CHARACTER SET utf8,
     `YT_URL` VARCHAR(28) CHARACTER SET utf8,
     `pathAbsolute_MP3_native` VARCHAR(143) CHARACTER SET utf8,
