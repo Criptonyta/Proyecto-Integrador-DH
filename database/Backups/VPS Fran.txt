@@ -1,0 +1,12 @@
+"production": {
+    "username": "franAdmin",
+    "password": "Adrian12234..",
+    "database": "dbTaw",
+    "host": "45.79.201.214",
+    "dialect": "mysql"
+  }
+
+
+1) Crear la conexion en Workbench
+
+2) 
