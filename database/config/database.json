@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "",
-    "database": "musiqueirosdb4",
-    "host": "127.0.0.1",
+    "username": "sql10452375",
+    "password": "5882z5CSVK",
+    "database": "sql10452375",
+    "host": "sql10.freemysqlhosting.net",
     "port": "3306",
     "dialect": "mysql"
   },
@@ -15,10 +15,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "sql10452375",
+    "password": "5882z5CSVK",
+    "database": "sql10452375",
+    "host": "sql10.freemysqlhosting.net",
+    "port": "3306",
     "dialect": "mysql"
   }
 }
