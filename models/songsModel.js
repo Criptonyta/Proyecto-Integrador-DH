@@ -8,7 +8,10 @@ const songsModel = {
     getAll: async function () { //Te devuelve todas las canciones
         try {
             const songsDB = await db.songsdb.findAll({
-                raw: true
+                raw: true,
+                include: [
+                    "id_usersdb"
+                ]
             })
             return songsDB
         } catch (error) {

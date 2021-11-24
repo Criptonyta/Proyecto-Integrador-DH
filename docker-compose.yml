@@ -2,11 +2,11 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_DATABASE: 'musiqueirosdb'
-      MYSQL_USER: 'musiqueiros'
-      MYSQL_PASSWORD: '1234'
-      MYSQL_ROOT_PASSWORD: '1234'
-      MYSQL_ROOT_PASSWORD: '1234'
+      MYSQL_DATABASE: "sql10452375"
+      MYSQL_USER: "sql10452375"
+      MYSQL_PASSWORD: "5882z5CSVK"
+      MYSQL_ROOT_PASSWORD: "5882z5CSVK"
+
     volumes:
       # Montamos un volumen para MySQL para no perder los datos de bd
       - ./volumenes/mysql:/var/lib/mysql
@@ -14,5 +14,3 @@ services:
       - 3307
     ports:
       - 3307:3306
-
-
