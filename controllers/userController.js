@@ -111,8 +111,8 @@ const controlador = {
                 profileNew.userAvatar = profileOld.userAvatar
             } //El usuario no cargo una nueva foto
 
-            if (req.file.password) {
-                profileNew.password = req.file.password
+            if (req.body.password) {
+                profileNew.password = req.body.password
             } //Cargo nueva password
             else {
                 profileNew.password = profileOld.password

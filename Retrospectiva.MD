@@ -5,6 +5,39 @@ conclusiones de la retro del primer sprint.
 
 ---
 
+Comentarios de los integrantes - Post sprint 5:
+
+1. Comenzar a hacer:
+
+   > Daniel: Profundizar sobre el entendimeinto de Docker y sus ventajas/aplicabilidad para el proyecto en concreto.
+   > Agos:
+   > Alex: entender mejor el funcionamiento de hoisteo de base de datos
+
+2. Hacer más.
+
+   > Daniel: Busqueda de soluciones que beneficien al equipo y al proyecto, mas alla de lo que indica el curso o sugieren los profesores, como por ejemplo, la aplicacion de un hosting abierto para hospedar la BD.
+   > Agos: formar nuestras propias experiencias respecto a ciertos "pasos a seguir", para poder extendernos un poco más en nuestros conocimientos
+   > Alex: no quedarnos unicamente con lo que vemos en clase, sino que tambien buscar soluciones en otros lados
+
+3. Continuar haciendo.
+
+   > Daniel: Ritmo de trabajo en equipo, debate de ideas y soluciones que aportan las mejores soluciones para el proyecto. Continuar con las entregas en los plazos que fueron determinados, vamos por el 6 sprint y hasta ahora, todas nuestras entregas fueron presentadas antes o dentro de los plazos solicitados por el cliente
+   > Agos: trabajando y aportando ideas con respeto y abiertos a escucharnos. Seguir así, cumpliendo los objetivos y plazos.
+   > Alex: seguir cumpliendo los objetivos y plazos establecidos
+
+4. Hacer menos.
+
+   > Daniel: Seguir trabajando en la main de Github. Usar menos Discord y mas Trello para los avances de las tareas
+   > Agos: Utilizar la misma branch de Github
+   > Alex: -
+
+5. Dejar de hacer.
+   > Daniel: Nada critico que pueda estar visualizando.
+   > Agos: tener más coraje en la realización de alguna actividad del proyecto, sin miedo a equivocarme
+   > Alex: -
+
+---
+
 Comentarios de los integrantes - Post sprint 4:
 
 1. Comenzar a hacer:

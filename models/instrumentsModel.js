@@ -1,6 +1,3 @@
-const {
-    deepStrictEqual
-} = require("assert")
 const fs = require("fs")
 const path = require("path")
 const pathInstruments = path.join(__dirname, "../database/instrumentsDB.json")
@@ -18,13 +15,11 @@ const instrumentModel = {
             return []
         }
     },
-    // rescribirDB: function (DB) { //Te resccribe la DB
-    //     fs.writeFileSync(pathInstruments, JSON.stringify(DB, null, 4))
-    // },
     findInstrument: async function (idinstrument) { //Busca instrumento por ID
         try {
-            let instruments = await this.getAll()
-            let instrument = instruments.find(instrumento => instrumento.InstrumId == idinstrument)
+            let instrument = await db.instrumentsdb.findByPk(idinstrument)
+            // let instruments = await this.getAll()
+            // let instrument = instruments.find(instrumento => instrumento.InstrumId == idinstrument)
             return instrument
         } catch (error) {
             console.log("Error tratando de encontrar el instrumento: " + error)
@@ -33,8 +28,13 @@ const instrumentModel = {
     },
     findArtistInstruments: async function (iduser) { //Devuelve todas las canciones de un artista
         try {
-            let instrumento = await this.getAll()
-            let instrumentos = instrumento.filter(item => item.id == iduser)
+            let instrumentos = await db.instrumentsdb.findAll({
+                where: {
+                    id: iduser
+                }
+            })
+            // let instrumento = await this.getAll()
+            // let instrumentos = instrumento.filter(item => item.id == iduser)
             return instrumentos
         } catch (error) {
             console.log("Error tratando de encontrar los instrumentos del artista: " + error)

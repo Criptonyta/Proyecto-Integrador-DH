@@ -3,7 +3,8 @@
 <STYLE>
     button a {
         text-decoration: none;
-        color:#004d61;;
+        color: #004d61;
+        ;
     }
 </STYLE>
 
@@ -67,13 +68,13 @@
                             placeholder="Editá tu contraseña"><i class="fas fa-user-edit"></i>
                     </p>
 
-                    <% if (usuarioInfo.bio.length>0) { %>
-                        <p>
-                            <i class="fas fa-music"><label> Editá tu minibio en menos de 120 caracteres</label><br></i>
-                            <textarea class="userprofile-datos" name="minibio" rows="3"
-                                maxlength="120"><%= usuarioInfo.bio %></textarea><i class="fas fa-user-edit"></i>
-                        </p>
-                    <% } %>
+
+                    <p>
+                        <i class="fas fa-music"><label> Editá tu minibio en menos de 120 caracteres</label><br></i>
+                        <textarea class="userprofile-datos" name="minibio" rows="3"
+                            maxlength="120"><%= usuarioInfo.bio %></textarea><i class="fas fa-user-edit"></i>
+                    </p>
+
 
                     <p>
                         <i class="fas fa-microphone-alt"><label> Cuáles son tus habilidades musicales?</label></i>

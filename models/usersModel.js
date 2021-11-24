@@ -1,6 +1,3 @@
-const {
-    Console
-} = require("console")
 const fs = require("fs")
 const path = require("path")
 const pathUsers = path.join(__dirname, "../database/usersDB.json")
@@ -19,13 +16,11 @@ const usersModel = {
             return []
         }
     },
-    rescribirDB: function (DB) { //Te resccribe la DB
-        fs.writeFileSync(pathUsers, JSON.stringify(DB, null, 4))
-    },
     findUser: async function (iduser) { //Busca usuario por ID
         try {
-            let usuarios = await this.getAll()
-            let usuario = usuarios.find(item => item.id == iduser)
+            let usuario = await db.usersdb.findByPk(iduser)
+            // let usuarios = await this.getAll()
+            // let usuario = usuarios.find(item => item.id == iduser)
             return usuario
         } catch (error) {
             console.log("Error tratando de encontrar el usuario: " + error)
@@ -44,8 +39,15 @@ const usersModel = {
     },
     findArtists: async function () { //Te busca todos los artistas (los que tienen bio)
         try {
-            let usuarios = await this.getAll()
-            let artistas = usuarios.filter(item => item.bio != "")
+            let artistas = await db.usersdb.findAll({
+                where: {
+                    bio: {
+                        [db.Sequelize.Op.ne]: ''
+                    }
+                }
+            })
+            // let usuarios = await this.getAll()
+            // let artistas = usuarios.filter(item => item.bio != "")
             return artistas
         } catch (error) {
             console.log("Error tratando de encontrar los artistas: " + error)
@@ -73,7 +75,7 @@ const usersModel = {
     },
     editarUsuario: async function (profileNew, iduser) { //Le pasas los datos viejos y los nuevos y te edita la info del usuario
         try {
-            let userDB = await this.getAll()
+            // let userDB = await this.getAll()
             db.usersdb.update(profileNew, {
                 where: {
                     id: iduser

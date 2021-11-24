@@ -19,15 +19,9 @@ const songsModel = {
             return []
         }
     },
-    rescribirDB: function (DB) { //Te resccribe la DB
-        fs.writeFileSync(pathSongs, JSON.stringify(DB, null, 4))
-    },
     findSong: async function (idsong) { //Busca cancion por ID
         try {
             let song = await db.songsdb.findByPk(idsong)
-
-            // let songs = await this.getAll()
-            // let song = songs.find(item => item.songId == idsong)
             return song
         } catch (error) {
             console.log("Error tratando de encontrar la cancion: " + error)
@@ -36,8 +30,13 @@ const songsModel = {
     },
     findArtistSongs: async function (iduser) { //Devuelve todas las canciones de un artista
         try {
-            let cancion = await this.getAll()
-            let canciones = cancion.filter(item => item.id == iduser)
+            let canciones = await db.songsdb.findAll({
+                where: {
+                    id: iduser
+                }
+            })
+            // let cancion = await this.getAll()  
+            // let canciones = cancion.filter(item => item.id == iduser)
             return canciones
         } catch (error) {
             console.log("Error tratando de encontrar las canciones del artista: " + error)
