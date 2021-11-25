@@ -37,23 +37,24 @@ window.addEventListener("load",function(){
         if (sessionStorage.getItem("productoCarrito")){//Si ya tengo un carrito
             let productosCarrito = JSON.parse(sessionStorage.getItem("productoCarrito"))
             for (let i = 0; i < productosCarrito.length; i++) {
-                if (productosCarrito[i].id == idProducto){//Si el producto ya esta, le sumo 1 a cantidad
+                if (productosCarrito[i].id == idProducto && productosCarrito[i].tipoProducto == tipoProducto){//Si el producto ya esta, le sumo 1 a cantidad
                     productosCarrito[i].cantidad++;
                     sessionStorage.setItem("productoCarrito",JSON.stringify(productosCarrito))
-                    alert("Cancion agregada al carrito! 1")
+                    alert("Cancion agregada al carrito!")
                     return
                 }
             }
-            productosCarrito.push(JSON.stringify(item))
+            item.cantidad = 1
+            productosCarrito.push(item)
             sessionStorage.setItem("productoCarrito",JSON.stringify(productosCarrito))
-            alert("Cancion agregada al carrito! 2")
+            alert("Cancion agregada al carrito!")
         }
         else {
             let productos = []
             item.cantidad = 1
             productos.push(item)
             sessionStorage.setItem("productoCarrito",JSON.stringify(productos))
-            alert("Cancion agregada al carrito! 3")
+            alert("Cancion agregada al carrito!")
         }
     })
 })

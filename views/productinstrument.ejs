@@ -43,7 +43,7 @@
                     </div>
                     <p class="productDescription"><%= producto.descripcion %></p>
                     <% if (locals && locals.idusuario != "noLogueado" && locals.idusuario != producto.id) { %>
-                        <button class="agregar">Agregar al carrito</button>
+                        <button id="product-agregarCarritoButton" class="agregar" idProducto="<%= producto.InstrumId %>" tipoProducto="<%= producto.tipoProducto %>">Agregar al carrito</button>
                     <% } %>
                 </div>
                 <!-- <div class="editar">
@@ -77,6 +77,7 @@
     <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
     <%- include ('partials/footer.ejs', {}) %>
+    <script src="/js/productinstrument.js"></script>
 
 </body>
 
