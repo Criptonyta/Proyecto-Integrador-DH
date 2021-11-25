@@ -95,6 +95,18 @@
     border: solid 1px white;
 }
 
+#cart1Alex-tablaDatos td i{
+    margin-left:0.5vw;
+    font-size: 13px;
+    color:rgba(255,255,255,0.9);
+    font-size: 12px;
+}
+#cart1Alex-tablaDatos td div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .cart1Alex-input {
    background-color:#001f2c;
    width: 40px;
