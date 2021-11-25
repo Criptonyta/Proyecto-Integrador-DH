@@ -1,26 +1,36 @@
 function Sumar(id,tipoProducto){//Funcion para sumar 1 a cantidad (id y tipoProducto)
     let productosCarro = JSON.parse(sessionStorage.getItem("productoCarrito"))
-    for (let i = 0; i < productosCarrito.length; i++) {
-        if (productosCarro[i].id == id && productosCarro[i].tipoProducto == tipoProducto.toString()){
-            productosCarro.cantidad++
-        }
-        sessionStorage.setItem("productoCarrito",JSON.stringify(productosCarro))
-        location.reload()
-    }
-}
-function Restar(id,tipoProducto){//Funcion para restar 1 a cantidad
-    let productosCarro = JSON.parse(sessionStorage.getItem("productoCarrito"))
-    for (let i = 0; i < productosCarrito.length; i++) {
+    for (let i = 0; i < productosCarro.length; i++) {
         if (productosCarro[i].id == id && productosCarro[i].tipoProducto == tipoProducto){
-            productosCarro.cantidad--
+            productosCarro[i].cantidad++
+            sessionStorage.setItem("productoCarrito",JSON.stringify(productosCarro))
+            location.reload()
         }
-        sessionStorage.setItem("productoCarrito",JSON.stringify(productosCarro))
-        location.reload()
+        
+        
     }
 }
-function Saludar(param1,param2){
-    console.log("hola")
+function Restar(id,tipoProducto){//Funcion para sumar 1 a cantidad (id y tipoProducto)
+    let productosCarro = JSON.parse(sessionStorage.getItem("productoCarrito"))
+    for (let i = 0; i < productosCarro.length; i++) {
+        if (productosCarro[i].id == id && productosCarro[i].tipoProducto == tipoProducto){
+            if (productosCarro[i].cantidad == 1){//Si solo queda uno...
+                if (confirm("Estas seguro que deseas sacar este producto del carrito?")){
+                    productosCarro[i].cantidad--
+                    productosCarro.splice(i,1)
+                    sessionStorage.setItem("productoCarrito",JSON.stringify(productosCarro))
+                    location.reload()
+                }
+            }
+            else {
+                productosCarro[i].cantidad--
+                sessionStorage.setItem("productoCarrito",JSON.stringify(productosCarro))
+                location.reload()
+            } 
+        }
+    }
 }
+
 
 window.addEventListener("load",function(){
     let tableContainer = document.getElementById("cart1Alex-tablaDatos")
@@ -31,7 +41,7 @@ window.addEventListener("load",function(){
     let botonSumar = document.querySelector(".fa-plus")
     let botonRestar = document.querySelector(".fa-minus")
     //FALTA PRECIO Y DESCRIPCION QUE HAY QUE TRAERLOS CON API
-    if (!productosCarrito){
+    if (!productosCarrito || productosCarrito.length==0){
         tableContainer.style.display = "none"
         actualizarDatos.style.display = "none"
         borrarTodo.style.display = "none"
@@ -53,7 +63,7 @@ window.addEventListener("load",function(){
         </table>`
         tableContainer.innerHTML += rtaColumna
         for (let i = 0; i < productosCarrito.length; i++) {
-            if (productosCarrito[i].tipoProducto == "instrum"){//Si es intrummento
+            if (productosCarrito[i].tipoProducto == "instrum" && productosCarrito[i].cantidad > 0){//Si es intrummento
                 //let producto = fetch(apiURL)
                 let rtaFila = 
                 `<tr>
@@ -63,8 +73,8 @@ window.addEventListener("load",function(){
                     <td>
                         <div>
                             <span>${productosCarrito[i].cantidad}</span>
-                            <span onclick="Sumar(1,'instrum')"><i class="fas fa-plus"></i></span>
-                            <span><i class="fas fa-minus"></i></span>
+                            <span onclick='Sumar(${productosCarrito[i].id},"instrum")'><i class="fas fa-plus"></i></span>
+                            <span onclick='Restar(${productosCarrito[i].id},"instrum")'><i class="fas fa-minus"></i></span>
                         </div>
                     </td>
                     <td>FALTA API (cuenta)</td>
@@ -78,7 +88,13 @@ window.addEventListener("load",function(){
                     <td><a href="/products/detailSong/${productosCarrito[i].id}">FALTA API</a></td>
                     <td>FALTA API</td>
                     <td>FALTA API</td>
-                    <td>${productosCarrito[i].cantidad}<i class="fas fa-plus"><i class="fas fa-minus"></td>
+                    <td>
+                        <div>
+                            <span>${productosCarrito[i].cantidad}</span>
+                            <span onclick='Sumar(${productosCarrito[i].id},"cancion")'><i class="fas fa-plus"></i></span>
+                            <span onclick='Restar(${productosCarrito[i].id},"cancion")'><i class="fas fa-minus"></i></span>
+                        </div>
+                    </td>
                     <td>FALTA API (cuenta)</td>
                 </tr>`
                 tableContainer.innerHTML+=rtaFila
