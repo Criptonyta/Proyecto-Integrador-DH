@@ -55,7 +55,7 @@
                     </div>
                     <p class="productDescription"><%= producto.descripcion %></p>
                     <% if (locals && locals.idusuario != "noLogueado" && locals.idusuario != producto.id) { %>
-                        <button class="agregar">Agregar al carrito</button>
+                        <button id="productSong-agregarCarritoButton" class="agregar" idProducto="<%= producto.songId %>" tipoProducto="<%= producto.tipoProducto %>">Agregar al carrito</button>
                     <% } %>
                 </div>
                 <!-- <div class="editar">
