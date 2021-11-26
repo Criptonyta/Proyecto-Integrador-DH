@@ -38,20 +38,18 @@ window.addEventListener("load",function(){
     let borrarTodo = document.getElementById("carrito-BorrarTodo")
     let actualizarDatos = document.getElementById("carrito-actualizarDatos")
     let irATienda = document.getElementById("cart1Alex-botonesOpcionSeguir")
-    let botonSumar = document.querySelector(".fa-plus")
-    let botonRestar = document.querySelector(".fa-minus")
     //FALTA PRECIO Y DESCRIPCION QUE HAY QUE TRAERLOS CON API
-    if (!productosCarrito || productosCarrito.length==0){
+    if (!productosCarrito || productosCarrito.length==0){//Si no hay nada, no me muestres nada...
         tableContainer.style.display = "none"
         actualizarDatos.style.display = "none"
         borrarTodo.style.display = "none"
         irATienda.style.display = "none"
     }
-    else {
+    else {//Si hay algo, mostrame las cosas
         actualizarDatos.style.display = "block"
         borrarTodo.style.display = "block"
         irATienda.style.display = "block"
-        let rtaColumna = 
+        let rtaColumna = //Headers
         `<table id="cart1Alex-tablaDatos">
             <tr>
                 <th>Producto</th>
@@ -61,44 +59,48 @@ window.addEventListener("load",function(){
                 <th>Total</th>
             </tr>
         </table>`
-        tableContainer.innerHTML += rtaColumna
-        for (let i = 0; i < productosCarrito.length; i++) {
-            if (productosCarrito[i].tipoProducto == "instrum" && productosCarrito[i].cantidad > 0){//Si es intrummento
-                //let producto = fetch(apiURL)
-                let rtaFila = 
-                `<tr>
-                    <td><a href="/products/detailInstrument/${productosCarrito[i].id}">FALTA API</a></td>
-                    <td>FALTA API</td>
-                    <td>FALTA API</td>
-                    <td>
-                        <div>
-                            <span>${productosCarrito[i].cantidad}</span>
-                            <span onclick='Sumar(${productosCarrito[i].id},"instrum")'><i class="fas fa-plus"></i></span>
-                            <span onclick='Restar(${productosCarrito[i].id},"instrum")'><i class="fas fa-minus"></i></span>
-                        </div>
-                    </td>
-                    <td>FALTA API (cuenta)</td>
-                </tr>`
-                tableContainer.innerHTML+=rtaFila
+        tableContainer.innerHTML += rtaColumna //Agregamos los headers
+        try {//Trata de agregarme las filas de los productos del carrito a la tabla
+            for (let i = 0; i < productosCarrito.length; i++) {
+                if (productosCarrito[i].tipoProducto == "instrum" && productosCarrito[i].cantidad > 0){//Si es intrummento
+                    //let producto = fetch(apiURL)
+                    let rtaFila = 
+                    `<tr>
+                        <td><a href="/products/detailInstrument/${productosCarrito[i].id}">FALTA API</a></td>
+                        <td>FALTA API</td>
+                        <td>FALTA API</td>
+                        <td>
+                            <div>
+                                <span>${productosCarrito[i].cantidad}</span>
+                                <span onclick='Sumar(${productosCarrito[i].id},"instrum")'><i class="fas fa-plus"></i></span>
+                                <span onclick='Restar(${productosCarrito[i].id},"instrum")'><i class="fas fa-minus"></i></span>
+                            </div>
+                        </td>
+                        <td>FALTA API (cuenta)</td>
+                    </tr>`
+                    tableContainer.innerHTML+=rtaFila
+                }
+                else if (productosCarrito[i].tipoProducto == "cancion"){//Si es cancion
+                    //let producto = fetch(apiURL)
+                    let rtaFila = 
+                    `<tr>
+                        <td><a href="/products/detailSong/${productosCarrito[i].id}">FALTA API</a></td>
+                        <td>FALTA API</td>
+                        <td>FALTA API</td>
+                        <td>
+                            <div>
+                                <span>${productosCarrito[i].cantidad}</span>
+                                <span onclick='Sumar(${productosCarrito[i].id},"cancion")'><i class="fas fa-plus"></i></span>
+                                <span onclick='Restar(${productosCarrito[i].id},"cancion")'><i class="fas fa-minus"></i></span>
+                            </div>
+                        </td>
+                        <td>FALTA API (cuenta)</td>
+                    </tr>`
+                    tableContainer.innerHTML+=rtaFila
+                }
             }
-            else if (productosCarrito[i].tipoProducto == "cancion"){//Si es cancion
-                //let producto = fetch(apiURL)
-                let rtaFila = 
-                `<tr>
-                    <td><a href="/products/detailSong/${productosCarrito[i].id}">FALTA API</a></td>
-                    <td>FALTA API</td>
-                    <td>FALTA API</td>
-                    <td>
-                        <div>
-                            <span>${productosCarrito[i].cantidad}</span>
-                            <span onclick='Sumar(${productosCarrito[i].id},"cancion")'><i class="fas fa-plus"></i></span>
-                            <span onclick='Restar(${productosCarrito[i].id},"cancion")'><i class="fas fa-minus"></i></span>
-                        </div>
-                    </td>
-                    <td>FALTA API (cuenta)</td>
-                </tr>`
-                tableContainer.innerHTML+=rtaFila
-            }
+        } catch (error) {
+            console.log(error)
         }
     }
     borrarTodo.addEventListener("click",function(){
