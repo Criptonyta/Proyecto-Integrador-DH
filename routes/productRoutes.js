@@ -20,13 +20,13 @@ router.post('/createproduct', authMiddleware, multerMid.upload.fields([{
 }]),expressValidatorMid.validacionesCargarInstrum ,productController.addProduct); //Hoja para crear productos 
 
 router.get('/createsong', authMiddleware, productController.songempty); //Hoja para cargar la cancion
-router.post('/createsong', authMiddleware, multerMid.upload.fields([{
+router.post('/createsong', authMiddleware,multerMid.upload.fields([{
     name: 'songEmptyContentBtn1',
     maxCount: 1
 }, {
     name: 'songEmptyContentBtn2',
     maxCount: 1
-}]), productController.addSong); //Hoja para subir imagenes y mp3s de canciones con Multer 'songEmptyContentBtn'
+}]), expressValidatorMid.validacionesCargarCancion,productController.addSong); //Hoja para subir imagenes y mp3s de canciones con Multer 'songEmptyContentBtn'
 
 router.get('/tienda', productController.tienda); //Tienda
 

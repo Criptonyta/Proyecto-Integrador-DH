@@ -54,7 +54,44 @@ const validacionesCargarInstrum = [
             return true
         }
     })
+]
+
+//songEmptyContentBtn1 (foto), songEmptyContentBtn2 (audio), titulo, precio, descripcion
+const validacionesCargarCancion = [
+    check("titulo").notEmpty().withMessage("Debe tener un titulo").bail()
+    .isLength({min:1,max:25}).withMessage("El titulo no puede tener mas de 25 caracteres").bail(),
+    check("precio").notEmpty().withMessage("Debe tener un precio").bail()
+    .isNumeric().withMessage("El precio debe ser un numero").bail()
+    .isLength({min:1,max:12}).withMessage("El precio no puede exceder los 12 digitos").bail(),
+    check("descripcion").notEmpty().withMessage("Debe tener una descripcion").bail()
+    .isLength({min:1,max:50}).withMessage("La descripcion no puede tener mas de 50 caracteres").bail(),
+    check("songEmptyContentBtn1").custom((value,{req})=>{
+        let file = req.files.songEmptyContentBtn1
+        if (!file){
+            throw new Error("Debes cargar una foto")
+        }
+        else if (file){
+            let foto = file[0]
+            if (foto.mimetype !="image/png" && foto.mimetype !="image/jpg" && foto.mimetype !="image/jpeg" ){
+                throw new Error("Los formatos de archivos validos son .jpg,.jpeg y .png")
+            }
+            return true
+        }
+    }),
+    check("songEmptyContentBtn2").custom((value,{req})=>{
+        let file = req.files.songEmptyContentBtn2
+        if (!file){
+            throw new Error("Debes cargar un archivo de audio")
+        }
+        else if (file){
+            let audio = file[0]
+            if (audio.mimetype !="audio/mpeg"){
+                throw new Error("Los formatos de archivos validos son .mp3")
+            }
+            return true
+        }
+    })
 ] 
 
 
-module.exports = {validacionesLogin,validacionesRegister,validacionesCargarInstrum}
+module.exports = {validacionesLogin,validacionesRegister,validacionesCargarInstrum,validacionesCargarCancion}

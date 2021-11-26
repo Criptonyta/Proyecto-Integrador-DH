@@ -18,6 +18,13 @@
 
     <!--CONTENIDO-->
     <main class="principal">
+        <% if (locals.errors) { %>
+            <div class="validator-errors">
+                <% errors.forEach(function(error){ %>
+                    <p><i class="fas fa-exclamation"></i><%= error.msg %></p>
+                <% }); %>
+            </div>
+        <% } %>
         <!--productos-->
         <form class="product-container" method='POST' action="/products/createsong" enctype="multipart/form-data">
             <div class="productImages">
@@ -35,13 +42,16 @@
             <div class="productInformation-container">
                 <div class="productInformation">
                     <h2><input type='text' class="productInformation-name" name="titulo"
+                        value="<% if (locals.errors && oldData && oldData.titulo){%><%= oldData.titulo %> <% } %>"
                             placeholder="Cargá tu título aquí"></h2>
                     <div class="priceStars">
                         <p><input type='number' class="productInformation-precio" name="precio"
+                            value="<% if (locals.errors && oldData && oldData.precio){%><%= oldData.precio %> <% } %>"
                                 placeholder="Cargá tu precio aquí"><span class="currency">U$S</span></p>
                         <!-- <i class="fas fa-star"><span class="stars">4.5</span></i> -->
                     </div>
                     <p class="productInformation-description"><input type='textarea' name="descripcion"
+                        value="<% if (locals.errors && oldData && oldData.descripcion){%><%= oldData.descripcion %> <% } %>"
                             placeholder="Cargá una breve descripción de tu canción"></p>
                     <!-- <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button> -->
                 </div>

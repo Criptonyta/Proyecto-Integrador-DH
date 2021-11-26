@@ -115,7 +115,22 @@ const controlador = {
     },
     addSong: async (req, res) => {
         try {
-
+            const errores = validationResult(req)
+            if (!errores.isEmpty()) {
+                //Creamos la variable locals para usar en la vista
+                if (req.session.userLogged == undefined) {
+                    res.locals.idusuario = "noLogueado"
+                } else if (req.session != undefined) {
+                    res.locals.idusuario = req.session.userLogged.id;
+                    res.locals.nombre = req.session.userLogged.nombre;
+                } else {
+                    res.locals.idusuario = req.cookie.recordame.id
+                }
+                return res.render('songempty.ejs', {
+                    errors: errores.array(),
+                    oldData: req.body
+                })
+            }
             songcargar = {
                 id: req.session.userLogged.id,
                 img: req.files.songEmptyContentBtn1[0].filename, //Imagen de la cancion
