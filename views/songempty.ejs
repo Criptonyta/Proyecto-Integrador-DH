@@ -28,6 +28,7 @@
         <!--productos-->
         <form class="product-container" method='POST' action="/products/createsong" enctype="multipart/form-data">
             <div class="productImages">
+                <img id="songempty-songPhoto" style="display: none;">
                 <label for='songEmptyImgBtn' class='songEmptyImgBtn'>Cargá una imagen</label>
                 <input class='songEmptyImgBtn' name='songEmptyContentBtn1' id='songEmptyImgBtn' type='file'
                     placeholder="Cargá tu foto aquí">
@@ -71,6 +72,7 @@
     <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
     <%- include ('partials/footer.ejs', {}) %>
+    <script src="/js/songempty.js"></script>
 
 </body>
 

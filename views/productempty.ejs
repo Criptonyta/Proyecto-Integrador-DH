@@ -35,6 +35,7 @@
                         </div>
                     <% } %>
                     <div class="productImages">
+                        <img id="productempty-instrumentPhoto" style="display: none;">
                         <label for='productEmptyButton' class='productEmptyButton'>Cargá una imagen</label>
                         <input class='productEmptyButton' name='productEmptyButton' id='productEmptyButton' type='file'
                             placeholder="Cargá tu foto aquí">
@@ -64,6 +65,7 @@
     <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
     <%- include ('partials/footer.ejs', {}) %>
+    <script src="/js/productempty.js"></script>
 
 </body>
 
