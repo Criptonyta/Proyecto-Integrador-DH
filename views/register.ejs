@@ -80,10 +80,11 @@
                     <i class="fas fa-user-edit"></i>
                 </p>
 
-                <p>
+                <p id="register-photoContainer">
                     <i class="fas fa-camera"><label> Foto de perfil:</label></i><br>
+                    <img id="register-instrumentPhoto" style="width: 20vw;height:20vh;margin-top: 1vh;display: none;">
                     <label for='userAvatarRegisterButton' class="userAvatarRegisterButton">Cargá una imagen</label>
-                    <input class="userAvatarRegisterButton" id=userAvatarRegisterButton type="file"
+                    <input class="userAvatarRegisterButton" id="userAvatarRegisterButton" type="file"
                         name="userAvatarRegisterButton"
                         value="<% if (locals.errors && oldData && oldData.userAvatarRegisterButton){%><%= oldData.userAvatarRegisterButton %> <% } %>">
                     <!--required -->
@@ -107,6 +108,7 @@
     <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
     <%- include ('partials/footer.ejs', {}) %>
+    <script src="/js/register.js"></script>
 
 </body>
 
