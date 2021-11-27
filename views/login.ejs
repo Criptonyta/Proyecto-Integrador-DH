@@ -44,9 +44,9 @@
                     </div>
                 <% } %>
                 <div class="information">
-                    <i class="fas fa-envelope"><input type="email" name="email" placeholder="Email" 
+                    <i class="fas fa-envelope"><input id="emailLogin" type="email" name="email" placeholder="Email" 
                     value="<% if (locals.errors && oldData && oldData.email){%><%= oldData.email %> <% } %>"></i>
-                    <i class="fas fa-key"><input type="password" name="password" placeholder="Password"></i>
+                    <i class="fas fa-key"><input id="passwordLogin" type="password" name="password" placeholder="Password"></i>
                 </div>
                 <div class="options">
                     <div class="loggedIn">
