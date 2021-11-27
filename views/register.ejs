@@ -99,6 +99,11 @@
                         placeholder="Por Ejemplo: Soy guitarrista profesional hace 15 meses. Tengo 4 trabajos publicados y estoy disponible para trabajar en conjunto con otros y crear una banda"
                         value="<% if (locals.errors && oldData && oldData.minibio){%><%= oldData.minibio %> <% } %>"></textarea>
                 </p>
+                
+                <section class="errores">
+                    <ul></ul><!--FALTA RENDERIZAR LA VARIABLE ERRORES DEL FRONT-->
+                </section>
+                
 
                 <input class="register-button" button type="submit" value="Registrar"></button>
             </div>
@@ -109,6 +114,7 @@
 
     <%- include ('partials/footer.ejs', {}) %>
     <script src="/js/register.js"></script>
+    <script src="../public/funcionesAuxiliares/validaciones.js"></script>
 
 </body>
 
