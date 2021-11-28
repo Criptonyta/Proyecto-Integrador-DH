@@ -34,13 +34,13 @@
             </div>
             <div class="productInformation-container">
                 <div class="productInformation">
-                    <h2><input type='text' name="titulo" placeholder="Cargá tu título aquí" value="<%= songOld.titulo %>" ></h2>
+                    <h2><input type='text' id="titulo" name="titulo" placeholder="Cargá tu título aquí" value="<%= songOld.titulo %>" ></h2>
                     <div class="priceStars">
                         <p><input type='number' name="precio" placeholder="Cargá tu precio aquí" value="<%= songOld.precio %>"><span
                                 class="currency">U$S</span></p>
                         <!-- <i class="fas fa-star"><span class="stars">4.5</span></i> -->
                     </div>
-                    <p class="productDescription"><input type='textarea' name="descripcion"
+                    <p class="productDescription"><input type='textarea' id="descripcion" name="descripcion"
                             placeholder="Cargá una breve descripción de tu canción" value="<%= songOld.descripcion %>"></p>
                     <!-- <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button> -->
                 </div>

@@ -26,7 +26,7 @@
             </div>
         <% } %>
         <!--productos-->
-        <form class="product-container" method='POST' action="/products/createsong" enctype="multipart/form-data">
+        <form class="product-container" id="song-container" method='POST' action="/products/createsong" enctype="multipart/form-data">
             <div class="productImages">
                 <img id="songempty-songPhoto" style="display: none;">
                 <label for='songEmptyImgBtn' class='songEmptyImgBtn'>Cargá una imagen</label>
@@ -73,6 +73,7 @@
 
     <%- include ('partials/footer.ejs', {}) %>
     <script src="/js/songempty.js"></script>
+    <script src="../public/funcionesAuxiliares/validaciones.js"></script>
 
 </body>
 
