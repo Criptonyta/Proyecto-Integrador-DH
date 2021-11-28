@@ -21,6 +21,7 @@
         <!--productos-->
         <form class="product-container" method='POST' action="/products/editsong/<%= songOld.songId %>/<%= songOld.id %>?_method=PUT" enctype="multipart/form-data">
             <div class="productImages">
+                <img id="editSong-coverPhoto" style="display: none;">
                 <label for='songEmptyImgBtn' class='songEmptyImgBtn'>Cargá una imagen</label>
                 <input class='songEmptyImgBtn' name='songEmptyContentBtn1' id='songEmptyImgBtn' type='file'
                     placeholder="Cargá tu foto aquí">
@@ -36,7 +37,7 @@
                 <div class="productInformation">
                     <h2><input type='text' id="titulo" name="titulo" placeholder="Cargá tu título aquí" value="<%= songOld.titulo %>" ></h2>
                     <div class="priceStars">
-                        <p><input type='number' name="precio" placeholder="Cargá tu precio aquí" value="<%= songOld.precio %>"><span
+                        <p><input type='text' name="precio" placeholder="Cargá tu precio aquí" value="<%= songOld.precio %>"><span
                                 class="currency">U$S</span></p>
                         <!-- <i class="fas fa-star"><span class="stars">4.5</span></i> -->
                     </div>
@@ -57,6 +58,7 @@
     <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
     <%- include ('partials/footer.ejs', {}) %>
+    <script src="/js/editSong.js"></script>
 
 </body>
 
