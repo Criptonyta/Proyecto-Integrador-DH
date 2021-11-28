@@ -37,7 +37,7 @@
 
                 <p class="userprofile-editAvatar-section">
                     <!-- <i class="fas fa-camera"><label> Foto de perfil:</label></i> -->
-                    <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" alt="fotoPerfil">
+                    <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" id="userprofileedit-photo" alt="fotoPerfil">
                     <label for='userAvatarButton' class="userAvatarButton">Cargá una imagen</label>
                     <input class="userAvatarButton" type="file" name="userAvatarButton" id="userAvatarButton"
                         value="<%= usuarioInfo.userAvatar %>">
@@ -100,6 +100,7 @@
     <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
     <%- include ('partials/footer.ejs', {}) %>
+    <script src="/js/userprofileedit.js"></script>
 </body>
 
 </html>
