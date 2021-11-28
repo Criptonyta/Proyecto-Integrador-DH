@@ -21,7 +21,7 @@
         <!--productos-->
         <form class="product-container" method='POST' action="/products/editsong/<%= songOld.songId %>/<%= songOld.id %>?_method=PUT" enctype="multipart/form-data">
             <div class="productImages">
-                <img id="editSong-coverPhoto" src="<%= songOld.img %>">
+                <img id="editSong-coverPhoto" src="/images/MusicFilesCoverImg/resized/<%= songOld.img %>">
                 <label for='songEmptyImgBtn' class='songEmptyImgBtn'>Cargá una imagen</label>
                 <input class='songEmptyImgBtn' name='songEmptyContentBtn1' id='songEmptyImgBtn' type='file'
                     placeholder="Cargá tu foto aquí">
