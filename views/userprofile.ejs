@@ -103,7 +103,7 @@
                             </tr>
                             <% }) %>
                         </table>
-                        <button type="submit" class="userprofile-eliminar-button">Eliminar selección</button>
+                        <button type="submit" id="userprofile-eliminarcancion" class="userprofile-eliminar-button">Eliminar selección</button>
                     </form>
                     <% } %>
 
@@ -131,7 +131,7 @@
                             <% }) %>
 
                         </table>
-                        <button type="submit" class='userprofile-eliminar-button'>Eliminar selección</button>
+                        <button type="submit" id="userprofile-eliminarInstrumento" class='userprofile-eliminar-button'>Eliminar selección</button>
                     </form>
                     <% } %>
 
@@ -146,6 +146,7 @@
     <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
     <%- include ('partials/footer.ejs', {}) %>
+    <script src="/js/userprofile.js"></script>
 </body>
 
 </html>
