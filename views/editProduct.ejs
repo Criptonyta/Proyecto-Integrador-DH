@@ -20,6 +20,7 @@
         <!--productos-->
         <form class="product-container" method='POST' action="/products/editinstrument/<%= instrumentoOld.InstrumId %>/<%= instrumentoOld.id %>?_method=PUT" enctype="multipart/form-data">
             <div class="productImages">
+                <img id="editProduct-instrumentPhoto" src="/images/instrumentsImg/resizedandcropped/<%= instrumentoOld.img %>">
                 <label for='productEmptyButton' class='productEmptyButton'>Cargá una imagen</label>
                 <input class='productEmptyButton' name='productEmptyButton' id='productEmptyButton' type='file'
                     placeholder="Cargá tu foto aqui">
@@ -52,6 +53,7 @@
     <!-- ======= FOOTER | PIE DE PAGINA ========= -->
 
     <%- include ('partials/footer.ejs', {}) %>
+    <script src="/js/editproduct.js"></script>
 
 </body>
 
