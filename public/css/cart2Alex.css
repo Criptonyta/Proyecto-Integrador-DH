@@ -133,9 +133,8 @@
     text-align: center;
     transition: all 0.5s;
     cursor: pointer;
-    margin-top: 20px;  
-    margin-bottom: 20px;
-}
+    margin: 20px 10px 30px;  
+   }
 
 .cart2Alex-botonesOpcion:hover {
     color: #00f6ff;
