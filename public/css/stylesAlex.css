@@ -1054,9 +1054,9 @@ i {
 
 @media(min-width:1000px) {
     .navbar-right {
-        margin-right: 30px;
+        /* margin-right: 30px; */
         width: 40%;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     #navbar-saludoUsuario {

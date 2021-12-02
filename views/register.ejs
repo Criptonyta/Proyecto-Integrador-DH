@@ -27,30 +27,32 @@
                 <p class="Registro-Texto-Descriptivo">
                     Para poder publicar y vender tus canciones o instrumentos, debes realizar tu registro en nuestra
                     plataforma. <br>
-                    <a href="/user/login" id="tengoCuenta"><h5>Ya tengo cuenta!</h5></a>
+                    <a href="/user/login" id="tengoCuenta">
+                        <h5>Ya tengo cuenta!</h5>
+                    </a>
                     Una vez que tu registro sea validado, podrás cargar tus anuncios desde tu perfil de usuario.
                 </p>
             </div>
 
             <div class="items">
                 <% if (locals.errors) { %>
-                    <div class="validator-errors">
-                        <% errors.forEach(function(error){ %>
-                            <p><i class="fas fa-exclamation" style="color:rgba(255,0,0,0.8)"></i><%= error.msg %></p>
-                        <% }); %>
-                    </div>
+                <div class="validator-errors">
+                    <% errors.forEach(function(error){ %>
+                    <p><i class="fas fa-exclamation" style="color:rgba(255,0,0,0.8)"></i><%= error.msg %></p>
+                    <% }); %>
+                </div>
                 <% } %>
                 <p>
                     <i class="fas fa-id-badge"><label> Cómo te llamas?</label></i><br>
                     <input class="datos" type="text" name="nombre" id="nombre" placeholder="Ingresá tu nombre"
-                    value="<% if (locals.errors && oldData && oldData.nombre){%><%= oldData.nombre %> <% } %>">
+                        value="<% if (locals.errors && oldData && oldData.nombre){%><%= oldData.nombre %> <% } %>">
                     <!--required -->
                 </p>
 
                 <p>
                     <i class="fas fa-id-badge"><label> Y tu apellido es...</label></i><br>
                     <input class="datos" type="text" name="apellido" id="apellido" placeholder="Ingresá tu apellido"
-                    value="<% if (locals.errors && oldData && oldData.apellido){%><%= oldData.apellido %> <% } %>">
+                        value="<% if (locals.errors && oldData && oldData.apellido){%><%= oldData.apellido %> <% } %>">
                     <!--required -->
                 </p>
 
@@ -95,15 +97,16 @@
                 <p>
                     <i class="fas fa-music"><label> Si sos músico, escribí­ tu minibio aquí para destacar entre la
                             multitud</label></i><br>
-                    <textarea class="datos" name="minibio" id="minibio" rows="3" maxlength="120"
+                    <textarea class="datos" name="minibio" id="minibio" rows="3" maxlength="140"
                         placeholder="Por Ejemplo: Soy guitarrista profesional hace 15 meses. Tengo 4 trabajos publicados y estoy disponible para trabajar en conjunto con otros y crear una banda"
                         value="<% if (locals.errors && oldData && oldData.minibio){%><%= oldData.minibio %> <% } %>"></textarea>
                 </p>
-                
+
                 <section class="errores">
-                    <ul></ul><!--FALTA RENDERIZAR LA VARIABLE ERRORES DEL FRONT-->
+                    <ul></ul>
+                    <!--FALTA RENDERIZAR LA VARIABLE ERRORES DEL FRONT-->
                 </section>
-                
+
 
                 <input class="register-button" button type="submit" value="Registrar"></button>
             </div>

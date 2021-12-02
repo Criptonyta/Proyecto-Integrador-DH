@@ -37,7 +37,8 @@
 
                 <p class="userprofile-editAvatar-section">
                     <!-- <i class="fas fa-camera"><label> Foto de perfil:</label></i> -->
-                    <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>" id="userprofileedit-photo" alt="fotoPerfil">
+                    <img src="/images/usersAvatars/resizedandcropped/<%= usuarioInfo.userAvatar %>"
+                        id="userprofileedit-photo" alt="fotoPerfil">
                     <label for='userAvatarButton' class="userAvatarButton">Cargá una imagen</label>
                     <input class="userAvatarButton" type="file" name="userAvatarButton" id="userAvatarButton"
                         value="<%= usuarioInfo.userAvatar %>">
@@ -70,9 +71,9 @@
 
 
                     <p>
-                        <i class="fas fa-music"><label> Editá tu minibio en menos de 120 caracteres</label><br></i>
+                        <i class="fas fa-music"><label> Editá tu minibio en menos de 140 caracteres</label><br></i>
                         <textarea class="userprofile-datos" name="minibio" rows="3"
-                            maxlength="120"><%= usuarioInfo.bio %></textarea><i class="fas fa-user-edit"></i>
+                            maxlength="140"><%= usuarioInfo.bio %></textarea><i class="fas fa-user-edit"></i>
                     </p>
 
 
