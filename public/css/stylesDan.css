@@ -77,6 +77,7 @@ section {
 .access-button-home,
 /* Estilizo los botones CTA */
 .access-button-home2,
+.boton-navbar,
 .SaleMusic-button-home,
 .SaleInstruments-button-home {
     display: block;
@@ -94,8 +95,9 @@ section {
 }
 
 #youtube-icon:hover,
-#products-eliminarButton,
-#products-editarButton,
+#products-eliminarButton:hover,
+#products-editarButton:hover,
+.boton-navbar:hover,
 .agregar:hover,
 .navbar-button:hover,
 .access-button-home:hover,
@@ -234,7 +236,7 @@ h5 {
 
 }
 
-.navbar-button {
+.boton-navbar {
     display: none;
 }
 
@@ -503,7 +505,7 @@ footer {
     }
 
 
-    .navbar-button {
+    .boton-navbar {
         /* Estilizo el boton de ingreso */
         display: inline-block;
         border-radius: 5px;
@@ -918,11 +920,13 @@ input[type='file'] {
 }
 
 .edit-editarButton {
-    margin-top:0;
+    margin-top: 0;
     margin-bottom: 0;
 }
-.edit-editarButton i, .edit-editarButton span {
-    color:#004d61;
+
+.edit-editarButton i,
+.edit-editarButton span {
+    color: #004d61;
 }
 
 .userAvatarButton {

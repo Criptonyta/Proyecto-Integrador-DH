@@ -237,7 +237,7 @@
 }
 
 .productSong-imageButtonContainer {
-    position:relative;
+    position: relative;
 }
 
 .productSong-imageButtonContainer:hover .productImages {
@@ -486,7 +486,7 @@
     .productImages {
         height: 100%;
         max-width: 40vw;
-        
+
     }
 
     .productInformation-container {
@@ -884,9 +884,9 @@ i {
 .navbar-right {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     height: 100%;
     width: 50%;
 }
@@ -928,14 +928,14 @@ i {
 }
 
 .navbar-logo {
-    height: 60px;
+    height: 45px;
 }
 
 .desktop {
     display: none;
 }
 
-.boton-navbar {
+/* .boton-navbar {
     padding: 5px;
     background-color: var(--aguamarina);
     border-radius: 5px;
@@ -943,7 +943,7 @@ i {
     border: 1px solid white;
     font-size: 17px;
 
-}
+} */
 
 .navbar-desplegable {
     height: 100%;
@@ -956,25 +956,27 @@ i {
     opacity: 0;
     overflow: hidden;
 }
-.navbar-desplegable li, .navbar-desplegable a {
-    display:block;
+
+.navbar-desplegable li,
+.navbar-desplegable a {
+    display: block;
 }
 
 .acordion-vertical {
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden; 
-    display:none;
+    overflow: hidden;
+    display: none;
     outline: none;
-    transition: 0.6s; 
+    transition: 0.6s;
 }
 
 
 .acordion-vertical li a {
-    width:100%;
+    width: 100%;
     display: block;
 }
 
@@ -984,13 +986,14 @@ i {
 
 .navbar-accordion {
     font-size: 14px;
-    left:50px;
+    left: 50px;
 }
 
 .navbar-desplegable li {
     cursor: pointer;
-    width:100%;
+    width: 100%;
 }
+
 .navbar-desplegable a {
     font-family: var(--letraParrafos);
     padding: 15px;
@@ -999,7 +1002,7 @@ i {
 
 .acordion-vertical a {
     padding-left: 5vw;
-    width:10vw;
+    width: 10vw;
 }
 
 .navbar-desplegable ul {
@@ -1009,11 +1012,11 @@ i {
 .navbar-desplegable li {
     margin-bottom: 10px;
     width: 100%;
-    transition: 0,4s;
+    transition: 0, 4s;
 }
 
 .navbar-desplegable a:hover {
-    background-color: rgba(0,0,0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .navbar-desplegable i {
@@ -1052,7 +1055,7 @@ i {
 @media(min-width:1000px) {
     .navbar-right {
         margin-right: 30px;
-        width: 20%;
+        width: 40%;
         justify-content: space-around;
     }
 
@@ -1062,15 +1065,16 @@ i {
 }
 
 .validator-errors {
-    color:rgba(255,0,0,0.8) !important;
+    color: rgba(255, 0, 0, 0.8) !important;
     font-family: var(--letraParrafos);
     text-align: center;
     font-size: 15px;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     outline: none;
 }
 
-.validator-errors i,.validator-errors p {
-    color:rgba(255,0,0,0.7);
+.validator-errors i,
+.validator-errors p {
+    color: rgba(255, 0, 0, 0.7);
     padding-right: 5px;
 }
