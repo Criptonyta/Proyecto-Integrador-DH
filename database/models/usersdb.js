@@ -28,7 +28,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: true
     },
     bio: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING(140),
       allowNull: true
     },
     usersDBcol: {
