@@ -35,13 +35,7 @@
             </div>
 
             <div class="items">
-                <% if (locals.errors) { %>
-                <div class="validator-errors">
-                    <% errors.forEach(function(error){ %>
-                    <p><i class="fas fa-exclamation" style="color:rgba(255,0,0,0.8)"></i><%= error.msg %></p>
-                    <% }); %>
-                </div>
-                <% } %>
+
                 <p>
                     <i class="fas fa-id-badge"><label> Cómo te llamas?</label></i><br>
                     <input class="datos" type="text" name="nombre" id="nombre" placeholder="Ingresá tu nombre"
@@ -103,8 +97,16 @@
                 </p>
 
                 <section class="errores">
-                    <ul></ul>
-                    <!--FALTA RENDERIZAR LA VARIABLE ERRORES DEL FRONT-->
+                    <div id="register-validator-front" class="validator-errors"></div>
+
+                    <% if (locals.errors) { %>
+                    <div class="validator-errors">
+                        <% errors.forEach(function(error){ %>
+                        <p><i class="fas fa-exclamation" style="color:rgba(255,0,0,0.8)"></i><%= error.msg %></p>
+                        <% }); %>
+                    </div>
+                    <% } %>
+
                 </section>
 
 
