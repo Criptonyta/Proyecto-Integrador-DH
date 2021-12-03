@@ -19,7 +19,9 @@
     <!--CONTENIDO-->
     <main class="principal">
         <!--productos-->
-        <form class="product-container" method='POST' action="/products/editsong/<%= songOld.songId %>/<%= songOld.id %>?_method=PUT" enctype="multipart/form-data">
+        <form class="product-container" method='POST'
+            action="/products/editsong/<%= songOld.songId %>/<%= songOld.id %>?_method=PUT"
+            enctype="multipart/form-data">
             <div class="productImages">
                 <img id="editSong-coverPhoto" src="/images/MusicFilesCoverImg/resized/<%= songOld.img %>">
                 <label for='songEmptyImgBtn' class='songEmptyImgBtn'>Cargá una imagen</label>
@@ -35,19 +37,30 @@
             </div>
             <div class="productInformation-container">
                 <div class="productInformation">
-                    <h2><input type='text' id="titulo" name="titulo" placeholder="Cargá tu título aquí" value="<%= songOld.titulo %>" ></h2>
+                    <h2><input type='text' id="titulo" name="titulo" placeholder="Cargá tu título aquí"
+                            value="<%= songOld.titulo %>"></h2>
                     <div class="priceStars">
-                        <p><input type='text' name="precio" placeholder="Cargá tu precio aquí" value="<%= songOld.precio %>"><span
-                                class="currency">U$S</span></p>
+                        <p><input type='text' name="precio" placeholder="Cargá tu precio aquí"
+                                value="<%= songOld.precio %>"><span class="currency">U$S</span></p>
                         <!-- <i class="fas fa-star"><span class="stars">4.5</span></i> -->
                     </div>
                     <p class="productDescription"><input type='textarea' id="descripcion" name="descripcion"
-                            placeholder="Cargá una breve descripción de tu canción" value="<%= songOld.descripcion %>"></p>
+                            placeholder="Cargá una breve descripción de tu canción" value="<%= songOld.descripcion %>">
+                    </p>
                     <!-- <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button> -->
                 </div>
+                <div id="editsong-validator-front" class="validator-errors"></div>
+                <% if (locals.errors) { %>
+                <div class="validator-errors">
+                    <% errors.forEach(function(error){ %>
+                    <p><i class="fas fa-exclamation"></i><%= error.msg %></p>
+                    <% }); %>
+                </div>
+                <% } %>
+
                 <div class="editar">
-                    <button type="submit"><i class="fas fa-edit"><span class="agregarTexto">Salvar
-                                anuncio</span></i></button>
+                    <button type="submit" class="editSong-submit-btn">Salvar
+                        anuncio</button>
                 </div>
             </div>
 

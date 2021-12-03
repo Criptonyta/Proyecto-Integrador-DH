@@ -72,6 +72,7 @@ section {
 
 #products-eliminarButton,
 #products-editarButton,
+.editSong-submit-btn,
 .agregar,
 .navbar-button,
 .access-button-home,
@@ -97,6 +98,7 @@ section {
 #youtube-icon:hover,
 #products-eliminarButton:hover,
 #products-editarButton:hover,
+.editSong-submit-btn:hover,
 .boton-navbar:hover,
 .agregar:hover,
 .navbar-button:hover,

@@ -28,7 +28,7 @@ window.addEventListener("load", function () {
 
 
 
-    // CREACION Y MODIFICACION DE CANCIONES / TRABAJA SOBRE SONGEMPTY.EJS
+    // CREACION DE CANCIONES / TRABAJA SOBRE SONGEMPTY.EJS
     // (Nombre Obligatorio. Deberá tener al menos 5 caracteres)
     // Descripción (Deberá tener al menos 20 caracteres)
     //Imagen(Deberá ser un archivo válido (JPG, JPEG, PNG, GIF))
