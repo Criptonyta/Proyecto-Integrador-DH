@@ -60,11 +60,11 @@ window.addEventListener("load", function () {
 
         let campoImagen = document.querySelector("#productEmptyButton"); // <--FALTA COMPLETAR!
 
-        if (campoImagen.value == "") { // Si el valor de campoImagen es vacio, entonces...
+        /*if (campoImagen.value == "") { // Si el valor de campoImagen es vacio, entonces...
             erroresProducts.push("El campo imagen debe estar completo") // Que mande el error a la variable
         } else if (campoImagen.value.length < 2) { // Si ingreso menos de 2 caracteres, entonces....
             erroresProducts.push("El campo imagen debe tener al menos 2 caracteres")
-        }
+        }*/
 
         if (erroresProducts.length > 0) {
             e.preventDefault(); //Prevengo el comportamiento por default del evento submit solo si hay error

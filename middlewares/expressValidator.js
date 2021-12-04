@@ -162,6 +162,42 @@ const validacionesUserEdit = [
         return true
     })
 ]
+//productEmptyButton,titulo,precio,descripcion
+const validacionesEditarInstrum = [
+    check("titulo").notEmpty().withMessage("Debe tener un titulo").bail()
+    .isLength({
+        min: 1,
+        max: 25
+    }).withMessage("El titulo no puede tener mas de 25 caracteres").bail(),
+
+    check("precio").notEmpty().withMessage("Debe tener un precio").bail()
+    .isNumeric().withMessage("El precio debe ser un numero").bail()
+    .isLength({
+        min: 1,
+        max: 12
+    }).withMessage("El precio no puede exceder los 12 digitos").bail(),
+
+
+    check("descripcion").notEmpty().withMessage("Debe tener una descripcion").bail()
+    .isLength({
+        min: 1,
+        max: 50
+    }).withMessage("La descripcion no puede tener mas de 50 caracteres").bail(),
+
+    check("productEmptyButton").custom((value, {req}) => {
+        if(typeof req.files == "object" && req.files.productEmptyButton){
+            let file = req.files.productEmptyButton
+            if (file) {
+                let foto = file[0]
+                if (foto.mimetype != "image/png" && foto.mimetype != "image/jpg" && foto.mimetype != "image/jpeg") {
+                    throw new Error("Los formatos de archivos validos son .jpg,.jpeg y .png")
+                }
+                return true
+            }
+        }
+        return true
+        })
+]
 
 
 module.exports = {
@@ -169,5 +205,6 @@ module.exports = {
     validacionesRegister,
     validacionesCargarInstrum,
     validacionesCargarCancion,
-    validacionesUserEdit
+    validacionesUserEdit,
+    validacionesEditarInstrum
 }

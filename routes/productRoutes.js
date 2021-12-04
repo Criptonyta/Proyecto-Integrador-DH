@@ -51,7 +51,7 @@ router.put("/editsong/:idSong/:iduser?", authMiddleware,authMiddlewareMe ,multer
 router.put("/editinstrument/:idInstrum/:iduser?", authMiddleware,authMiddlewareMe ,multerMid.upload.fields([{
     name: "productEmptyButton",
     maxCount: 1
-}]), productController.editInstrumentPut)
+}]),expressValidatorMid.validacionesEditarInstrum ,productController.editInstrumentPut)
 
 
 

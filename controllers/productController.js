@@ -391,8 +391,25 @@ const controlador = {
     },
     editInstrumentPut: async (req, res) => {
         try {
-            const instrumentsDB = await instrumentsModel.getAll()
+            const errores = validationResult(req)
+            if (!errores.isEmpty()) {
+                //Creamos la variable locals para usar en la vista
+                if (req.session.userLogged == undefined) {
+                    res.locals.idusuario = "noLogueado"
+                } else if (req.session != undefined) {
+                    res.locals.idusuario = req.session.userLogged.id;
+                    res.locals.nombre = req.session.userLogged.nombre;
+                } else {
+                    res.locals.idusuario = req.cookie.recordame.id
+                }
+                let instrumentoold = await instrumentModel.findInstrument(req.params.idInstrum)
+                return res.render('editProduct.ejs', {
+                    errors: errores.array(),
+                    instrumentoOld: instrumentoold
+                })
+            }
             const oldProduct = await instrumentsModel.findInstrument(req.params.idInstrum)
+            const instrumentsDB = await instrumentsModel.getAll()
             const editInstrument = {
                 titulo: req.body.titulo,
                 descripcion: req.body.descripcion,
