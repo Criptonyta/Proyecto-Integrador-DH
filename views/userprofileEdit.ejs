@@ -26,7 +26,7 @@
         <!--FORMULARIO-->
         <section class="userprofile-formulario">
             <form action="/user/userprofile/<%= usuarioInfo.id %>/edit?_method=PUT" method="POST"
-                class="userprofile-formulario" enctype="multipart/form-data">
+                id="edituserprofile-formulario" class="userprofile-formulario" enctype="multipart/form-data">
                 <!--Adicionado soporte para multer -->
                 <h4>Editá tu perfil de usuario</h4>
                 <div>
@@ -88,6 +88,19 @@
                         <i class="fas fa-user-edit"></i>
                     </p>
                 </div>
+
+                <section class="errores">
+                    <div id="registeredit-validator-front" class="validator-errors"></div>
+
+                    <% if (locals.errors) { %>
+                    <div class="validator-errors">
+                        <% errors.forEach(function(error){ %>
+                        <p><i class="fas fa-exclamation" style="color:rgba(255,0,0,0.8)"></i><%= error.msg %></p>
+                        <% }); %>
+                    </div>
+                    <% } %>
+                </section>
+
                 <section class="userprofile-edit-button-container">
                     <button type="submit" class="userprofile-edit-button">Salvar</button>
                     <button type="submit" class="userprofile-edit-button"><a
