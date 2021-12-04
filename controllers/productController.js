@@ -364,6 +364,23 @@ const controlador = {
     },
     editSongPut: async (req, res) => {
         try {
+            const errores = validationResult(req)
+            if (!errores.isEmpty()) {
+                //Creamos la variable locals para usar en la vista
+                if (req.session.userLogged == undefined) {
+                    res.locals.idusuario = "noLogueado"
+                } else if (req.session != undefined) {
+                    res.locals.idusuario = req.session.userLogged.id;
+                    res.locals.nombre = req.session.userLogged.nombre;
+                } else {
+                    res.locals.idusuario = req.cookie.recordame.id
+                }
+                let songold = await songsModel.findSong(req.params.idSong)
+                return res.render('editSong.ejs', {
+                    errors: errores.array(),
+                    songOld: songold
+                })
+            }
             const songsDB = await songsModel.getAll()
             const oldProduct = await songsModel.findSong(req.params.idSong)
             const editSong = {

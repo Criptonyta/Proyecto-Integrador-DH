@@ -47,7 +47,7 @@ router.put("/editsong/:idSong/:iduser?", authMiddleware,authMiddlewareMe ,multer
 }, {
     name: 'songEmptyContentBtn2',
     maxCount: 1
-}]), productController.editSongPut) // upload.single('songEmptyImgBtn'),
+}]),expressValidatorMid.validacionesEditarCancion ,productController.editSongPut) // upload.single('songEmptyImgBtn'),
 router.put("/editinstrument/:idInstrum/:iduser?", authMiddleware,authMiddlewareMe ,multerMid.upload.fields([{
     name: "productEmptyButton",
     maxCount: 1
