@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
 
 
 
-    // CREACION Y MODIFICACION DE PRODUCTOS / TRABAJA SOBRE PRODUCTEMPTY.EJS
+    // CREACION DE PRODUCTOS / TRABAJA SOBRE PRODUCTEMPTY.EJS
     // (Nombre Obligatorio. Deberá tener al menos 5 caracteres)
     // Descripción (Deberá tener al menos 20 caracteres)
     //Imagen(Deberá ser un archivo válido (JPG, JPEG, PNG, GIF))

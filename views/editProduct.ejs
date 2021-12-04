@@ -18,9 +18,12 @@
     <!--CONTENIDO-->
     <main class="principal">
         <!--productos-->
-        <form class="product-container" method='POST' action="/products/editinstrument/<%= instrumentoOld.InstrumId %>/<%= instrumentoOld.id %>?_method=PUT" enctype="multipart/form-data">
+        <form class="product-container" method='POST'
+            action="/products/editinstrument/<%= instrumentoOld.InstrumId %>/<%= instrumentoOld.id %>?_method=PUT"
+            enctype="multipart/form-data">
             <div class="productImages">
-                <img id="editProduct-instrumentPhoto" src="/images/instrumentsImg/resizedandcropped/<%= instrumentoOld.img %>">
+                <img id="editProduct-instrumentPhoto"
+                    src="/images/instrumentsImg/resizedandcropped/<%= instrumentoOld.img %>">
                 <label for='productEmptyButton' class='productEmptyButton'>Cargá una imagen</label>
                 <input class='productEmptyButton' name='productEmptyButton' id='productEmptyButton' type='file'
                     placeholder="Cargá tu foto aqui">
@@ -31,18 +34,30 @@
             </div>
             <div class="productInformation-container">
                 <div class="productInformation">
-                    <h2><input type='text' id="titulo" name='titulo' placeholder="Cargá tu título aquí" value="<%= instrumentoOld.titulo %>"></h2>
+                    <h2><input type='text' id="titulo" name='titulo' placeholder="Cargá tu título aquí"
+                            value="<%= instrumentoOld.titulo %>"></h2>
                     <div class="priceStars">
-                        <p><input type='number' name='precio' placeholder="Cargá tu precio aquí" value="<%= instrumentoOld.precio %>"><span
-                                class="currency">U$D</span></p>
+                        <p><input type='number' name='precio' placeholder="Cargá tu precio aquí"
+                                value="<%= instrumentoOld.precio %>"><span class="currency">U$D</span></p>
                         <!-- <i class="fas fa-star"><span class="stars">4.5</span></i> -->
                     </div>
                     <p class="productDescription"><input name='descripcion' id="descripcion" type='textarea'
-                            placeholder="Cargá una breve descripción de tu producto" value="<%= instrumentoOld.descripcion %>"></p>
+                            placeholder="Cargá una breve descripción de tu producto"
+                            value="<%= instrumentoOld.descripcion %>"></p>
                     <!-- <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button> -->
                 </div>
+
+                <div id="editproduct-validator-front" class="validator-errors"></div>
+                <% if (locals.errors) { %>
+                <div class="validator-errors">
+                    <% errors.forEach(function(error){ %>
+                    <p><i class="fas fa-exclamation"></i><%= error.msg %></p>
+                    <% }); %>
+                </div>
+                <% } %>
+
                 <div class="editar">
-                    <button type="submit" class="productEmptyButton edit-editarButton"><i class="fas fa-edit"><span class="agregarTexto">Salvar anuncio</span></i></button>
+                    <button type="submit" class="productEmptyButton edit-editarButton">Salvar anuncio</button>
                 </div>
             </div>
         </form>
