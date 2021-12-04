@@ -93,6 +93,25 @@ const controlador = {
         }
     },
     userprofileEditNew: async (req, res) => { //editar usuario
+        const usuarioInfo = await usersModel.findUser(req.params.iduser)
+        const errores = validationResult(req)
+        if (!errores.isEmpty()) {
+            //Creamos la variable locals para usar en la vista
+            if (req.session.userLogged == undefined) {
+                res.locals.idusuario = "noLogueado"
+            } else if (req.session != undefined) {
+                res.locals.idusuario = req.session.userLogged.id;
+                res.locals.nombre = req.session.userLogged.nombre;
+            } else {
+                res.locals.idusuario = req.cookie.recordame.id
+            }
+            return res.render('userprofileEdit.ejs', {
+                errors: errores.array(),
+                oldData: req.body,
+                habilidades: skills,
+                usuarioInfo
+            })
+        }
         try {
             const profileOld = await usersModel.findUser(req.params.iduser)
             const profileNew = {

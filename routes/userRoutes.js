@@ -17,7 +17,7 @@ router.get('/userprofile/:iduser', authMiddleware, authMiddlewareMe, userControl
 router.get('/viewuserprofile/:iduser', authMiddleware, userController.viewuserprofile);
 
 router.get('/userprofile/:iduser/edit', authMiddleware, authMiddlewareMe, userController.userprofileEdit);
-router.put('/userprofile/:iduser/edit', authMiddleware, authMiddlewareMe, multerMid.uploaduserProfileStorage.single('userAvatarButton'), userController.userprofileEditNew);
+router.put('/userprofile/:iduser/edit', authMiddleware, authMiddlewareMe, multerMid.uploaduserProfileStorage.single('userAvatarButton'),expressValidatorMid.validacionesUserEdit ,userController.userprofileEditNew);
 
 
 router.get('/login', userController.login);

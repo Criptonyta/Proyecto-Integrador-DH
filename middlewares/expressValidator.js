@@ -6,7 +6,8 @@ const {
 const validacionesLogin = [
     check("email").notEmpty().withMessage("El mail no puede estar en blanco").bail()
     .isEmail().withMessage("Formato de mail invalido"),
-    check("password").notEmpty().withMessage("La contraseña no puede estar en blanco")
+    check("password").notEmpty().withMessage("La contraseña no puede estar en blanco").bail()
+    .isLength({min: 8}).withMessage("La contraseña debe tenes al menos 8 digitos").bail()
 ]
 //nombre,apellido,email,password,minibio,userAvatarRegisterButton
 const validacionesRegister = [
@@ -128,10 +129,45 @@ const validacionesCargarCancion = [
     })
 ]
 
+//nombre,apellido,email,password,minibio,userAvatarButton
+const validacionesUserEdit = [
+    check("nombre").notEmpty().withMessage("Debe escribir un nombre").bail()
+    .isLength({
+        min: 1,
+        max: 15
+    }).withMessage("Su nombre no puede tener mas de 15 caracteres").bail(),
+    check("apellido").isLength({
+        min: 0,
+        max: 15
+    }).withMessage("Su apellido no puede tener mas de 15 caracteres").bail(),
+    check("email").notEmpty().withMessage("Debe escribir un email").bail()
+    .isEmail().withMessage("Debe escribir un email valido").bail(),
+    check("password").notEmpty().withMessage("Debe escribir una contraseña").bail()
+    .isLength({
+        min: 8
+    }).withMessage("La contraseña debe tener al menos 8 caracteres").bail(),
+    check("minibio").isLength({
+        max: 140
+    }).withMessage("La bio no puede tener mas de 140 caracteres"),
+    check("userAvatarButton").custom((value, {
+        req
+    }) => {
+        let file = req.file
+        if (file) {
+            if (file.mimetype != "image/png" && file.mimetype != "image/jpg" && file.mimetype != "image/jpeg") {
+                throw new Error("Los formatos de archivos validos son .jpg,.jpeg y .png")
+            }
+            return true
+        }
+        return true
+    })
+]
+
 
 module.exports = {
     validacionesLogin,
     validacionesRegister,
     validacionesCargarInstrum,
-    validacionesCargarCancion
+    validacionesCargarCancion,
+    validacionesUserEdit
 }
