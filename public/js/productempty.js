@@ -1,5 +1,5 @@
 function showPreview(event, id) {
-    if (event.target.files.length > 0 && event.target.files[0].type == "image/jpeg") {
+    if (event.target.files.length > 0 && (event.target.files[0].type == "image/jpeg" || event.target.files[0].type == "image/jpg" || event.target.files[0].type == "image/gif" || event.target.files[0].type == "image/png")) {
         let src = URL.createObjectURL(event.target.files[0])
         let preview = document.getElementById(id)
         preview.src = src

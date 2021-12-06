@@ -1,17 +1,3 @@
-function showPreview(event, id) {
-    if (event.target.files.length > 0 && event.target.files[0].type == "image/jpeg") {
-        let src = URL.createObjectURL(event.target.files[0])
-        let preview = document.getElementById(id)
-        preview.src = src
-    } else {
-        let foto = document.getElementById("songempty-songPhoto")
-        let inputFoto = document.getElementById("songEmptyImgBtn")
-        foto.style.display = "none"
-        inputFoto.value = null
-        alert("Solo se pueden cargar fotos!")
-    }
-}
-
 window.addEventListener("load", function () {
     let foto = document.getElementById("songempty-songPhoto")
     let inputFoto = document.getElementById("songEmptyImgBtn")
@@ -58,13 +44,19 @@ window.addEventListener("load", function () {
             erroresSongs.push("El campo descripción debe tener al menos 20 caracteres")
         }
 
-        // let campoImagen = document.querySelector("#productEmptyButton"); // <--FALTA COMPLETAR!
+        // Validacion de extension de archivo de img
 
-        // if (campoImagen.value == "") { // Si el valor de campoImagen es vacio, entonces...
-        //     erroresSongs.push("El campo imagen debe estar completo") // Que mande el error a la variable
-        // } else if (campoImagen.value.length < 2) { // Si ingreso menos de 2 caracteres, entonces....
-        //     erroresSongs.push("El campo imagen debe tener al menos 2 caracteres")
-        // }
+        let fileInput = document.getElementById("songEmptyImgBtn");
+        let filePath = fileInput.value;
+        console.log(filePath)
+        let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+        if (!allowedExtensions.exec(filePath)) {
+            erroresSongs.push("Debes subir un archivo con formato de imagen");
+            fileInput.value = '';
+            return false;
+        }
+
+
 
         if (erroresSongs.length > 0) {
             e.preventDefault(); //Prevengo el comportamiento por default del evento submit solo si hay error
@@ -77,3 +69,18 @@ window.addEventListener("load", function () {
         }
     })
 })
+
+
+function showPreview(event, id) {
+    if (event.target.files.length > 0 && (event.target.files[0].type == "image/jpeg" || event.target.files[0].type == "image/jpg" || event.target.files[0].type == "image/gif" || event.target.files[0].type == "image/png")) {
+        let src = URL.createObjectURL(event.target.files[0])
+        let preview = document.getElementById(id)
+        preview.src = src
+    } else {
+        let foto = document.getElementById("songempty-songPhoto")
+        let inputFoto = document.getElementById("songEmptyImgBtn")
+        foto.style.display = "none"
+        inputFoto.value = null
+        alert("Solo se pueden cargar fotos!")
+    }
+}
