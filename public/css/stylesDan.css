@@ -95,6 +95,10 @@ section {
     cursor: pointer;
 }
 
+.agregar {
+    margin: 30px;
+}
+
 #youtube-icon:hover,
 #products-eliminarButton:hover,
 #products-editarButton:hover,
@@ -717,19 +721,19 @@ footer {
 } */
 
 .create-product-container h2 input {
-    background-color: Var(--azulOscuro);
+    /* background-color: Var(--azulOscuro);
     padding: 15px;
-    font-family: var(--letraTitulos);
+    font-family: var(--letraTitulos); */
     color: white;
     font-family: var(--letraTitulos);
-    width: 300px;
-    border: none;
+    /* width: 300px;
+    border: none; */
     text-align: center;
 }
 
 .create-productprice {
     background-color: Var(--azulOscuro);
-    padding: 15px;
+    /* padding: 15px; */
     font-family: var(--letraParrafos);
     color: white;
     width: 300px;
@@ -832,7 +836,7 @@ footer {
 
 
 /* .productInformation-description:hover, */
-.productInformation-name:hover,
+/* .productInformation-name:hover, */
 .productInformation-precio:hover,
 .userprofile-form input:hover {
     border: 2px solid white;
@@ -988,6 +992,21 @@ td {
     margin-right: 20px;
     margin-left: 20px;
 }
+
+
+/* @media(min-width:768px) {
+
+    .product-container {
+        display: flex;
+
+    } 
+}
+*/
+
+
+
+
+
 
 
 /* ========= USER PROFILE  min-width:570px =========  */

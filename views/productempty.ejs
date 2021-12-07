@@ -19,14 +19,13 @@
     <main class="principal">
         <!--productos-->
         <div class="create-product-container">
-
             <!-- <div class="productImagesButtons"> -->
             <!-- <button><i class="fas fa-upload"><span class="agregarTexto special">Subir cancion</span></i></button> -->
             <!-- <button><input type='file' placeholder="Carga tu foto aqui" style="display: none"><i class="fas fa-image"><span class="agregarTexto special">Cambiar imagen</span></i></button> -->
             <!-- </div> -->
 
             <div class="create-productInformation-container">
-                <form method='POST' id="product-container" action="/products/createproduct"
+                <form method='POST' id="product-container" class="product-container" action="/products/createproduct"
                     enctype="multipart/form-data">
 
                     <div class="productImages">
@@ -36,31 +35,33 @@
                             placeholder="Cargá tu foto aquí">
                     </div>
                     <div class="productInformation">
-                        <h2><input type='text' id="titulo" name='titulo' placeholder="Cargá tu título aquí"
+                        <h2><input type='text' id="titulo" name='titulo' class="productInformation-name"
+                                placeholder="Cargá tu título aquí"
                                 value="<% if (locals.errors && oldData && oldData.titulo){%><%= oldData.titulo %> <% } %>">
                         </h2>
                         <p class='create-productprice'><input type='text' name='precio' placeholder="Precio"
                                 value="<% if (locals.errors && oldData && oldData.precio && !isNaN(oldData.precio)){%><%= Number(oldData.precio) %> <% } %>">
                             <span class="currency">U$D</span></p>
                         <!-- <i class="fas fa-star"><span class="stars">4.5</span></i> -->
-                    </div>
-                    <p class="create-productDescription"><input name='descripcion' id="descripcion" type='textarea'
-                            placeholder="Cargá una breve descripción de tu producto"
-                            value="<% if (locals.errors && oldData && oldData.descripcion){%><%= oldData.descripcion %> <% } %>">
-                    </p>
-                    <!-- <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button> -->
 
-                    <div id="productempty-validator-front" class="validator-errors"></div>
-                    <% if (locals.errors) { %>
-                    <div class="validator-errors">
-                        <% errors.forEach(function(error){ %>
-                        <p><i class="fas fa-exclamation"></i><%= error.msg %></p>
-                        <% }); %>
-                    </div>
-                    <% } %>
+                        <p class="create-productDescription"><input name='descripcion' id="descripcion" type='textarea'
+                                placeholder="Cargá una breve descripción de tu producto"
+                                value="<% if (locals.errors && oldData && oldData.descripcion){%><%= oldData.descripcion %> <% } %>">
+                        </p>
+                        <!-- <button class="agregar"><i class="fas fa-cart-plus"><span class="agregarTexto">Agregar al carrito</span></i></button> -->
 
-                    <div class="editar">
-                        <button class='Salvar-anuncio-button'>Salvar anuncio</button>
+                        <div id="productempty-validator-front" class="validator-errors"></div>
+                        <% if (locals.errors) { %>
+                        <div class="validator-errors">
+                            <% errors.forEach(function(error){ %>
+                            <p><i class="fas fa-exclamation"></i><%= error.msg %></p>
+                            <% }); %>
+                        </div>
+                        <% } %>
+
+                        <div class="editar">
+                            <button class='Salvar-anuncio-button'>Salvar anuncio</button>
+                        </div>
                     </div>
             </div>
             </form>

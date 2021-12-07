@@ -59,13 +59,6 @@ window.addEventListener("load", function () {
             erroresSongs.push("El campo descripción debe tener al menos 20 caracteres")
         }
 
-        // let campoImagen = document.querySelector("#productEmptyButton"); // <--FALTA COMPLETAR!
-
-        // if (campoImagen.value == "") { // Si el valor de campoImagen es vacio, entonces...
-        //     erroresSongs.push("El campo imagen debe estar completo") // Que mande el error a la variable
-        // } else if (campoImagen.value.length < 2) { // Si ingreso menos de 2 caracteres, entonces....
-        //     erroresSongs.push("El campo imagen debe tener al menos 2 caracteres")
-        // }
 
         if (erroresSongs.length > 0) {
             e.preventDefault(); //Prevengo el comportamiento por default del evento submit solo si hay error
