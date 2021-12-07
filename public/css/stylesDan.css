@@ -99,6 +99,11 @@ section {
     margin: 30px;
 }
 
+.SaleMusic-button-home,
+.SaleInstruments-button-home {
+    margin-top: 30px;
+}
+
 #youtube-icon:hover,
 #products-eliminarButton:hover,
 #products-editarButton:hover,
@@ -964,6 +969,10 @@ input[type='file'] {
     box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
     max-width: 200px;
 
+}
+
+.items p {
+    margin: 15px 0px 15px;
 }
 
 /* .productEmptyButton {
