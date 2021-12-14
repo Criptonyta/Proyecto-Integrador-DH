@@ -282,7 +282,48 @@ const controlador = {
         res.clearCookie("recordame");
         req.session.destroy();
         res.redirect("/user/login")
-    }
+    },
+
+    apiUserList: async (req, res) => { // API PARA TODOS LOS USUARIOS
+        try {
+            await usersModel.getAll()
+                .then(resultApiUsers => {
+                    return res.status(200).json({
+                        total: resultApiUsers.length,
+                        // url: 'users/userdetail/' +: id, TODO PRESENTAR URL DETALLE
+                        data: resultApiUsers,
+                        status: 200
+                    })
+                })
+        } catch (error) {
+            return res.status(500).json({
+                total: 0,
+                data: [],
+                status: 500
+            })
+        }
+    },
+    apiUserItem: async (req, res) => { // API PARA 1 USUARIO
+        try {
+            await usersModel.findUser(req.params.id)
+                .then(resultApiUserItem => {
+                    delete resultApiUserItem.dataValues.password // Evita que se exiba la pass via API
+                    return res.status(200).json({
+                        // TODO  un array por cada relación de uno a muchos (categories, colors, etc).
+                        // url: 'user/detailInstrument/' +: InstrumId, TODO PRESENTAR URL CON IMG
+                        data: resultApiUserItem.dataValues,
+                        status: 200
+                    })
+                })
+        } catch (error) {
+            return res.status(500).json({
+                total: 0,
+                data: [],
+                status: 500
+            })
+        }
+    },
+
 };
 
 module.exports = controlador

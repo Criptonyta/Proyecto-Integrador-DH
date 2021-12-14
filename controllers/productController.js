@@ -447,6 +447,85 @@ const controlador = {
             console.log('error editando productos')
         }
     },
+    apiProdList: async (req, res) => { // API PARA TODOS LOS PRODUCTOS
+        try {
+            await instrumentsModel.getAll()
+                .then(resultApiProduct => {
+                    return res.status(200).json({
+                        total: resultApiProduct.length,
+                        totalxcategoria: resultApiProduct.length,
+                        // url: 'products/detailInstrument/' +: InstrumId, TODO PRESENTAR URL DETALLE
+                        data: resultApiProduct,
+                        status: 200
+                    })
+                })
+        } catch (error) {
+            return res.status(500).json({
+                total: 0,
+                data: [],
+                status: 500
+            })
+        }
+    },
+    apiProdItem: async (req, res) => { // API PARA 1 PRODUCTO
+        try {
+            await instrumentsModel.findInstrument(req.params.id)
+                .then(resultApiProdItem => {
+                    return res.status(200).json({
+                        // TODO  un array por cada relación de uno a muchos (categories, colors, etc).
+                        // url: 'products/detailInstrument/' +: InstrumId, TODO PRESENTAR URL CON IMG
+                        data: resultApiProdItem,
+                        status: 200
+                    })
+                })
+        } catch (error) {
+            return res.status(500).json({
+                total: 0,
+                data: [],
+                status: 500
+            })
+        }
+    },
+
+    apiSongList: async (req, res) => { // API PARA TODAS LAS CANCIONES
+        try {
+            await songsModel.getAll()
+                .then(resultApiSongs => {
+                    return res.status(200).json({
+                        total: resultApiSongs.length,
+                        totalxcategoria: resultApiSongs.length,
+                        // url: 'products/detailInstrument/' +: InstrumId, TODO PRESENTAR URL DETALLE
+                        data: resultApiSongs,
+                        status: 200
+                    })
+                })
+        } catch (error) {
+            return res.status(500).json({
+                total: 0,
+                data: [],
+                status: 500
+            })
+        }
+    },
+    apiSongItem: async (req, res) => { // API PARA 1 CANCION
+        try {
+            await songsModel.findSong(req.params.id)
+                .then(resultApiSongItem => {
+                    return res.status(200).json({
+                        // TODO  un array por cada relación de uno a muchos (categories, colors, etc).
+                        // url: 'products/detailInstrument/' +: InstrumId, TODO PRESENTAR URL CON IMG
+                        data: resultApiSongItem,
+                        status: 200
+                    })
+                })
+        } catch (error) {
+            return res.status(500).json({
+                total: 0,
+                data: [],
+                status: 500
+            })
+        }
+    }
 };
 
 module.exports = controlador;

@@ -17,7 +17,7 @@ router.get('/userprofile/:iduser', authMiddleware, authMiddlewareMe, userControl
 router.get('/viewuserprofile/:iduser', authMiddleware, userController.viewuserprofile);
 
 router.get('/userprofile/:iduser/edit', authMiddleware, authMiddlewareMe, userController.userprofileEdit);
-router.put('/userprofile/:iduser/edit', authMiddleware, authMiddlewareMe, multerMid.uploaduserProfileStorage.single('userAvatarButton'),expressValidatorMid.validacionesUserEdit ,userController.userprofileEditNew);
+router.put('/userprofile/:iduser/edit', authMiddleware, authMiddlewareMe, multerMid.uploaduserProfileStorage.single('userAvatarButton'), expressValidatorMid.validacionesUserEdit, userController.userprofileEditNew);
 
 
 router.get('/login', userController.login);
@@ -30,6 +30,8 @@ router.get("/logout/", userController.logout) //Hay que agregar el logout a la b
 router.delete('/mySongs/delete/:iduser?', authMiddleware, authMiddlewareMe, userController.deleteSongs) //Para eliminar varias canciones a la vez
 router.delete('/myInstruments/delete/:iduser?', authMiddleware, authMiddlewareMe, userController.deleteInstruments) //Para eliminar varios instrumentos a la vez
 
+router.get('/api/users/', userController.apiUserList) //Ruta de API de usuarios
 
+router.get('/api/users/:id', userController.apiUserItem) //Ruta de API para 1 usuario
 
 module.exports = router
