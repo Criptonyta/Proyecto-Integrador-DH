@@ -1,0 +1,22 @@
+.suprow {
+    width: 96%;
+    margin: auto;
+    margin-bottom: 40px;
+
+}
+
+.suprow table {
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.suprow table tr {
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.suprow table tr th {
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.suprow table tr td {
+    border: 1px solid rgb(214, 214, 214);
+}
