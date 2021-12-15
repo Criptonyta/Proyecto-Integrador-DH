@@ -93,7 +93,7 @@ CREATE TABLE `usersdb` (
   `password` varchar(1000) DEFAULT NULL,
   `email` varchar(20) DEFAULT NULL,
   `userAvatar` varchar(100) DEFAULT NULL,
-  `bio` varchar(140) DEFAULT NULL,
+  `bio` varchar(45) DEFAULT NULL,
   `usersDBcol` varchar(141) DEFAULT NULL,
   `skills` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`id`)
