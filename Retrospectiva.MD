@@ -5,6 +5,41 @@ conclusiones de la retro del primer sprint.
 
 ---
 
+---
+
+Comentarios de los integrantes - Post sprint 6:
+
+1. Comenzar a hacer:
+
+   > Daniel:
+   > Agos: Ver los detalles que nos hayan quedado pendientes para llegar a tiempo con la entrega final
+   > Alex: empezar a ver como implementar las nuevas herramientas de react
+
+2. Hacer más.
+
+   > Daniel: Usar Trello + los checklist de cada card para comunicar los avances de las tareas del proyecto
+   > Agos: Utilizar más Trello por temas estrictos del proyecto y para lo demás discord.
+   > Alex: corregir detalles de las paginas con css para que queden mas bonitas
+
+3. Continuar haciendo.
+
+   > Daniel: Entregas en tiempo, respetando los plazos
+   > Agos: Como hasta el momento, respetar tiempo y forma del proyecto
+   > Alex: seguir esforzandonos que ya queda poco para el ultimo sprint
+
+4. Hacer menos.
+
+   > Daniel:
+   > Agos: comunicar cambios siempre, para que no se generen confusiones
+   > Alex: -
+
+5. Dejar de hacer.
+   > Daniel: Para los CSS, usar las medidas de display standart (para los @media)
+   > Agos:
+   > Alex: -
+
+---
+
 Comentarios de los integrantes - Post sprint 5:
 
 1. Comenzar a hacer:
