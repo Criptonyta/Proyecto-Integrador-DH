@@ -1,17 +1,18 @@
 import "./Users.css";
 import Home from "../Home/Home";
 import { Component } from "react";
+import Totales from "../totales/totales"
 
 class UsersLista extends Component {
   constructor(props) {
     super(props);
     this.state = {
       listadoUsuarios: [],
-      url: "https://musiqueiro.herokuapp.com/user/api/users",
+      url: "http://localhost:5000/user/api/users",
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     fetch(this.state.url)
       .then((response) => response.json())
       .then((data) => {
@@ -25,20 +26,14 @@ class UsersLista extends Component {
     let usuarios = this.state.listadoUsuarios;
     let contenido;
     if (usuarios.lenght === 0) {
-      contenido = <h3>Espere mientras procesamos el resultado...</h3>;
+     // contenido = <h3>Espere mientras procesamos el resultado...</h3>;
     } else {
-      contenido = (
-        <div className="containerUsuarios">
-          {usuarios.map((usuario, i) => (
-            <Home item={usuario} indice={i} />
-          ))}
-        </div>
-      );
+      contenido = usuarios.total
     }
+     
     return (
       <div>
-        <h1>Todos los usuarios </h1>
-        {contenido}
+       <Totales titulo = {"usuarios"} total = {contenido}/>
       </div>
     );
   }

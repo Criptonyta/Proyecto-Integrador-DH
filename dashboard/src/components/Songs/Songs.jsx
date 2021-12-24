@@ -1,13 +1,14 @@
 import "./Songs.css";
 import Home from "../Home/Home";
 import { Component } from "react";
+import Totales from "../totales/totales"
 
 class SongsLista extends Component {
   constructor(props) {
     super(props);
     this.state = {
       listadoCanciones: [],
-      url: "https://musiqueiro.herokuapp.com/products/api/products/songs",
+      url: "http://localhost:5000/products/api/products/songs",
     };
   }
 
@@ -27,18 +28,11 @@ class SongsLista extends Component {
     if (canciones.lenght === 0) {
       contenido = <h3>Espere mientras procesamos el resultado...</h3>;
     } else {
-      contenido = (
-        <div className="containerCanciones">
-          {canciones.map((cancion, i) => (
-            <Home item={cancion} indice={i} />
-          ))}
-        </div>
-      );
+      contenido = canciones.total
     }
     return (
       <div>
-        <h1>Todas las canciones</h1>
-        {contenido}
+      <Totales titulo = {"canciones"} total = {contenido}/>
       </div>
     );
   }

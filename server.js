@@ -6,6 +6,7 @@ const path = require('path');
 const {
     authMiddleware
 } = require('./middlewares/index')
+const cors = require ("cors")
 
 //ROUTES
 const mainRoutes = require('./routes/mainRoutes')
@@ -15,7 +16,7 @@ const userRoutes = require('./routes/userRoutes')
 const methodOverride = require('method-override')
 const expressSession = require('express-session')
 
-
+server.use(cors())
 server.set('view engine', 'ejs');
 
 const port = process.env.PORT || '5000';

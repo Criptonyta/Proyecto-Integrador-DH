@@ -1,21 +1,23 @@
 import "./Instruments.css";
 import Home from "../Home/Home";
 import { Component } from "react";
+import Totales from "../totales/totales";
 
 class InstrumentsLista extends Component {
   constructor(props) {
     super(props);
     this.state = {
       listadoInstrumentos: [],
-      url: "https://musiqueiro.herokuapp.com/products/api/products/instruments",
+      url: "http://localhost:5000/products/api/products/instruments",
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     fetch(this.state.url)
       .then((response) => response.json())
       .then((data) => {
         this.setState({ listadoInstrumentos: data });
+        console.log(data)
       })
       .catch((error) => {
         console.log(error);
@@ -27,19 +29,13 @@ class InstrumentsLista extends Component {
     if (instrumentos.lenght === 0) {
       contenido = <h3>Espere mientras procesamos el resultado...</h3>;
     } else {
-      contenido = (
-        <div className="containerInstrumentos">
-          {instrumentos.map((instrumento, i) => (
-            <Home item={instrumento} indice={i} />
-          ))}
-        </div>
-      );
+      contenido = instrumentos.total
+     
     }
     return (
       <div>
-        <h1>Todos los instrumentos </h1>
-        {contenido}
-      </div>
+      <Totales titulo = {"instrumentos"} total = {contenido}/>
+     </div>
     );
   }
 }

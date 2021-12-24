@@ -1,0 +1,37 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #001f2c;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.app-container-titulo {
+    color: white;
+    font-family: 'Happy Monkey', 'sans-serif';
+    margin: 30px 20px 30px 20px;
+    font-size: 34px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
+}
+.app-container a {
+    color: white;
+    font-family: 'Happy Monkey', 'sans-serif';
+    margin: 30px 20px 30px 20px;
+    font-size: 20px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -8px 15px rgba(255, 255, 255, 0.46);
+}
+
+.app-container-components {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 600px ){
+    .app-container-components{
+        flex-direction: row;
+    }
+}

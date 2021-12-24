@@ -1,0 +1,36 @@
+.totales-container {
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 30vh;
+    box-shadow:  0px 0px 8px 5px rgb(255 255 255 / 41%);
+}
+
+.totales-container h2 {
+    border-bottom: 1px solid white;
+    text-align: center;
+    color: white;
+    font-family: 'Happy Monkey', 'sans-serif';
+    margin: 30px 20px 30px 20px;
+    font-size: 24px;
+    
+}
+
+.totales-container h3 {
+    font-size: 30px;
+    color: white;
+    font-family: 'Happy Monkey', 'sans-serif';
+}
+
+
+@media (min-width: 600px) {
+    .totales-container{
+        width: 25vw;
+    }
+}
