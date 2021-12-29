@@ -8,7 +8,7 @@ class UsersLista extends Component {
     super(props);
     this.state = {
       listadoUsuarios: [],
-      url: "http://localhost:5000/user/api/users",
+      url: "https://musiqueiro.herokuapp.com/user/api/users",
     };
   }
 

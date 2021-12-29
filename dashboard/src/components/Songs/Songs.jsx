@@ -8,7 +8,7 @@ class SongsLista extends Component {
     super(props);
     this.state = {
       listadoCanciones: [],
-      url: "http://localhost:5000/products/api/products/songs",
+      url: "https://musiqueiro.herokuapp.com/products/api/products/songs",
     };
   }
 

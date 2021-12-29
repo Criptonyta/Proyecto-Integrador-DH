@@ -8,7 +8,7 @@ class InstrumentsLista extends Component {
     super(props);
     this.state = {
       listadoInstrumentos: [],
-      url: "http://localhost:5000/products/api/products/instruments",
+      url: "https://musiqueiro.herokuapp.com/products/api/products/instruments",
     };
   }
 
