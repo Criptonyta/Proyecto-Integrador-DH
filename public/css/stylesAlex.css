@@ -676,6 +676,12 @@ i {
 
 }
 
+.ultimosAdicionadosCard {
+    height: 400px;
+}
+
+
+
 .carrouselCard img,
 .ultimosAdicionados img {
     margin: 20px 20px 20px 20px;
@@ -739,7 +745,14 @@ i {
     display: none;
 }
 
-
+.ultimosAdicionadosContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
 
 
 
