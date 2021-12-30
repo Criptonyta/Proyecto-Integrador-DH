@@ -1,7 +1,8 @@
 import "./Songs.css";
 import Home from "../Home/Home";
 import { Component } from "react";
-import Totales from "../totales/totales"
+import Totales from "../totales/totales";
+import ListadoDeProductos from "../listadoDeProductos/listadoDeProductos";
 
 class SongsLista extends Component {
   constructor(props) {
@@ -25,14 +26,17 @@ class SongsLista extends Component {
   render() {
     let canciones = this.state.listadoCanciones;
     let contenido;
+    let listado = this.state.listadoCanciones.SongId;
+
     if (canciones.lenght === 0) {
       contenido = <h3>Espere mientras procesamos el resultado...</h3>;
     } else {
-      contenido = canciones.total
+      contenido = canciones.total;
     }
+
     return (
       <div>
-      <Totales titulo = {"canciones"} total = {contenido}/>
+        <Totales titulo={"canciones"} total={contenido} />
       </div>
     );
   }

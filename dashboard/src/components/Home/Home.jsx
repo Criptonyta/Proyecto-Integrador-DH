@@ -33,24 +33,6 @@ function Home(props) {
         <span className="apellido">Apellido Usuario:</span>
         {props.item.apellido}
       </p>
-
-      {/* TOTALES => 3 a 6 paneles simples con los siguientes totales:  Total de productos, Total de usuarios, Total de categorías */}
-      <p>
-        <span className="UsersTotal">Total de Usuarios:</span>
-        {props.item.total}
-      </p>
-
-      <p>
-        <span className="InstrumentsTotal">
-          Total de instrumentos publicados:
-        </span>
-        {props.item.total}
-      </p>
-
-      <p>
-        <span className="SongsTotal">Total de canciones publicadas:</span>
-        {props.item.totalxcategoria}
-      </p>
     </div>
   );
 }
