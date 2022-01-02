@@ -1,3 +1,4 @@
+.Ultimos-container,
 .totales-container {
     border: 2px solid white;
     border-radius: 8px;
@@ -9,9 +10,21 @@
     align-items: center;
     width: 50vw;
     height: 30vh;
-    box-shadow:  0px 0px 8px 5px rgb(255 255 255 / 41%);
+    box-shadow: 0px 0px 8px 5px rgb(255 255 255 / 41%);
 }
 
+.Ultimos-container {
+    box-shadow: 0px 0px 8px 5px rgba(250, 3, 3, 0.41);
+    border: 2px solid rgba(250, 3, 3, 0.41);
+}
+
+.Ultimos-container h6 {
+    color: white;
+    font-size: 18px;
+    font-family: 'Happy Monkey', 'sans-serif';
+}
+
+.Ultimos-container h2,
 .totales-container h2 {
     border-bottom: 1px solid white;
     text-align: center;
@@ -19,9 +32,10 @@
     font-family: 'Happy Monkey', 'sans-serif';
     margin: 30px 20px 30px 20px;
     font-size: 24px;
-    
+
 }
 
+.Ultimos-container h4,
 .totales-container h3 {
     font-size: 30px;
     color: white;
@@ -29,8 +43,11 @@
 }
 
 
+
 @media (min-width: 600px) {
-    .totales-container{
+
+    .Ultimos-container,
+    .totales-container {
         width: 25vw;
     }
 }

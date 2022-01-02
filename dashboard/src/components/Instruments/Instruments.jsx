@@ -8,6 +8,7 @@ class InstrumentsLista extends Component {
     super(props);
     this.state = {
       listadoInstrumentos: [],
+      ultimoElemento: [],
       url: "https://musiqueiro.herokuapp.com/products/api/products/instruments",
     };
   }
@@ -17,7 +18,9 @@ class InstrumentsLista extends Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({ listadoInstrumentos: data });
-        console.log(data)
+        this.setState({
+          ultimoElemento: data.data[data.data.length - 1].titulo,
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -26,16 +29,22 @@ class InstrumentsLista extends Component {
   render() {
     let instrumentos = this.state.listadoInstrumentos;
     let contenido;
-    if (instrumentos.lenght === 0) {
-      contenido = <h3>Espere mientras procesamos el resultado...</h3>;
+    let ultimoElemento;
+    if (instrumentos.length == 0) {
+      contenido = "Cargando...";
+      ultimoElemento = "Cargando...";
     } else {
-      contenido = instrumentos.total
-     
+      contenido = instrumentos.total;
+      ultimoElemento = this.state.ultimoElemento;
     }
     return (
       <div>
-      <Totales titulo = {"instrumentos"} total = {contenido}/>
-     </div>
+        <Totales
+          titulo={"instrumentos"}
+          total={contenido}
+          ultimo={ultimoElemento}
+        />
+      </div>
     );
   }
 }

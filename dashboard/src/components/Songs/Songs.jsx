@@ -9,6 +9,7 @@ class SongsLista extends Component {
     super(props);
     this.state = {
       listadoCanciones: [],
+      ultimoElemento: [],
       url: "https://musiqueiro.herokuapp.com/products/api/products/songs",
     };
   }
@@ -18,6 +19,9 @@ class SongsLista extends Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({ listadoCanciones: data });
+        this.setState({
+          ultimoElemento: data.data[data.data.length - 1].titulo,
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -26,17 +30,23 @@ class SongsLista extends Component {
   render() {
     let canciones = this.state.listadoCanciones;
     let contenido;
-    let listado = this.state.listadoCanciones.SongId;
+    let ultimoElemento;
 
-    if (canciones.lenght === 0) {
-      contenido = <h3>Espere mientras procesamos el resultado...</h3>;
+    if (canciones.length === 0) {
+      contenido = "Cargando...";
+      ultimoElemento = "Cargando...";
     } else {
       contenido = canciones.total;
+      ultimoElemento = this.state.ultimoElemento;
     }
 
     return (
       <div>
-        <Totales titulo={"canciones"} total={contenido} />
+        <Totales
+          titulo={"canciones"}
+          total={contenido}
+          ultimo={ultimoElemento}
+        />
       </div>
     );
   }

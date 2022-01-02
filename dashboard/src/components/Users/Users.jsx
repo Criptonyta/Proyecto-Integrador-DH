@@ -1,13 +1,14 @@
 import "./Users.css";
 import Home from "../Home/Home";
 import { Component } from "react";
-import Totales from "../totales/totales"
+import Totales from "../totales/totales";
 
 class UsersLista extends Component {
   constructor(props) {
     super(props);
     this.state = {
       listadoUsuarios: [],
+      ultimoElemento: [],
       url: "https://musiqueiro.herokuapp.com/user/api/users",
     };
   }
@@ -17,6 +18,12 @@ class UsersLista extends Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({ listadoUsuarios: data });
+        this.setState({
+          ultimoElemento:
+            data.data[data.data.length - 1].nombre +
+            " " +
+            data.data[data.data.length - 1].apellido,
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -25,15 +32,22 @@ class UsersLista extends Component {
   render() {
     let usuarios = this.state.listadoUsuarios;
     let contenido;
-    if (usuarios.lenght === 0) {
-     // contenido = <h3>Espere mientras procesamos el resultado...</h3>;
+    let ultimoElemento;
+    if (usuarios.length === 0) {
+      contenido = "Cargando...";
+      ultimoElemento = "Cargando...";
     } else {
-      contenido = usuarios.total
+      contenido = usuarios.total;
+      ultimoElemento = this.state.ultimoElemento;
     }
-     
+
     return (
       <div>
-       <Totales titulo = {"usuarios"} total = {contenido}/>
+        <Totales
+          titulo={"usuarios"}
+          total={contenido}
+          ultimo={ultimoElemento}
+        />
       </div>
     );
   }
