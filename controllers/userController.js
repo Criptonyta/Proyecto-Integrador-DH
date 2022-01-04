@@ -131,7 +131,7 @@ const controlador = {
             } //El usuario no cargo una nueva foto
 
             if (req.body.password) {
-                profileNew.password = req.body.password
+                profileNew.password = bcryptjs.hashSync(req.body.password, 10)
             } //Cargo nueva password
             else {
                 profileNew.password = profileOld.password
