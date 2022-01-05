@@ -38,17 +38,21 @@ window.addEventListener("load",function(){
     let borrarTodo = document.getElementById("carrito-BorrarTodo")
     let actualizarDatos = document.getElementById("carrito-actualizarDatos")
     let irATienda = document.getElementById("cart1Alex-botonesOpcionSeguir")
+    let datosTotales = document.querySelector(".cart1Alex-datosTotales")
+    let total = document.querySelector(".cart1Alex-datosTotales2 span")
     //FALTA PRECIO Y DESCRIPCION QUE HAY QUE TRAERLOS CON API
     if (!productosCarrito || productosCarrito.length==0){//Si no hay nada, no me muestres nada...
         tableContainer.style.display = "none"
         actualizarDatos.style.display = "none"
         borrarTodo.style.display = "none"
         irATienda.style.display = "none"
+        datosTotales.style.display = "none"
     }
     else {//Si hay algo, mostrame las cosas
         actualizarDatos.style.display = "block"
         borrarTodo.style.display = "block"
         irATienda.style.display = "block"
+        datosTotales.style.display = "block"
         let rtaColumna = //Headers
         `<table id="cart1Alex-tablaDatos">
             <tr>
@@ -61,32 +65,61 @@ window.addEventListener("load",function(){
         </table>`
         tableContainer.innerHTML += rtaColumna //Agregamos los headers
         try {//Trata de agregarme las filas de los productos del carrito a la tabla
+            let totalValor = sessionStorage.setItem("totalCarrito",JSON.stringify(0))
             for (let i = 0; i < productosCarrito.length; i++) {
                 if (productosCarrito[i].tipoProducto == "instrum" && productosCarrito[i].cantidad > 0){//Si es intrummento
                     //let producto = fetch(apiURL)
-                    let rtaFila = 
-                    `<tr>
-                        <td><a href="/products/detailInstrument/${productosCarrito[i].id}">FALTA API</a></td>
-                        <td>FALTA API</td>
-                        <td>FALTA API</td>
-                        <td>
-                            <div>
-                                <span>${productosCarrito[i].cantidad}</span>
-                                <span onclick='Sumar(${productosCarrito[i].id},"instrum")'><i class="fas fa-plus"></i></span>
-                                <span onclick='Restar(${productosCarrito[i].id},"instrum")'><i class="fas fa-minus"></i></span>
-                            </div>
-                        </td>
-                        <td>FALTA API (cuenta)</td>
-                    </tr>`
-                    tableContainer.innerHTML+=rtaFila
+                    fetch(`https://musiqueiro.herokuapp.com/products/api/products/instruments/${productosCarrito[i].id}`)
+                        .then(response => response.json())
+                        .then(result => {
+                            let titulo,descripcion;
+                            if (result.data.titulo.length > 20){titulo = result.data.titulo.slice(0,19) + "..."}
+                            else {titulo = result.data.titulo.slice(0,19)} 
+
+                            if (result.data.descripcion.length > 25){descripcion = result.data.descripcion.slice(0,24) + "..."}
+                            else {descripcion = result.data.descripcion.slice(0,24)}
+
+                            let rtaFila = 
+                            `<tr>
+                                <td><a href="/products/detailInstrument/${productosCarrito[i].id}">${titulo}</a></td>
+                                <td>${descripcion}</td>
+                                <td>${result.data.precio}$</td>
+                                <td>
+                                    <div>
+                                        <span>${productosCarrito[i].cantidad}</span>
+                                        <span onclick='Sumar(${productosCarrito[i].id},"instrum")'><i class="fas fa-plus"></i></span>
+                                        <span onclick='Restar(${productosCarrito[i].id},"instrum")'><i class="fas fa-minus"></i></span>
+                                    </div>
+                                </td>
+                                <td>${productosCarrito[i].cantidad * result.data.precio}$</td>
+                            </tr>`
+                            tableContainer.innerHTML+=rtaFila
+                            if (sessionStorage.getItem("totalCarrito")){
+                                let totalPrice = JSON.parse(sessionStorage.getItem("totalCarrito")) + productosCarrito[i].cantidad * result.data.precio
+                                sessionStorage.setItem("totalCarrito",JSON.stringify(totalPrice))
+                            } else {sessionStorage.setItem("totalCarrito",JSON.stringify(productosCarrito[i].cantidad * result.data.precio))}
+
+                            totalValor = sessionStorage.getItem("totalCarrito") //Ajustamos el precio total
+                            total.innerText = totalValor+ "$"
+                
+                    })
+                    .catch(e => console.log(e))
                 }
                 else if (productosCarrito[i].tipoProducto == "cancion"){//Si es cancion
-                    //let producto = fetch(apiURL)
+                    fetch(`https://musiqueiro.herokuapp.com/products/api/products/songs/${productosCarrito[i].id}`)
+                        .then(response => response.json())
+                        .then(result => {
+                            let titulo,descripcion;
+                            if (result.data.titulo.length > 20){titulo = result.data.titulo.slice(0,19) + "..."}
+                            else {titulo = result.data.titulo.slice(0,19)} 
+
+                            if (result.data.descripcion.length > 25){descripcion = result.data.descripcion.slice(0,24) + "..."}
+                            else {descripcion = result.data.descripcion.slice(0,24)}
                     let rtaFila = 
                     `<tr>
-                        <td><a href="/products/detailSong/${productosCarrito[i].id}">FALTA API</a></td>
-                        <td>FALTA API</td>
-                        <td>FALTA API</td>
+                        <td><a href="/products/detailSong/${productosCarrito[i].id}">${titulo}</a></td>
+                        <td>${descripcion}</td>
+                        <td>${result.data.precio}$</td>
                         <td>
                             <div>
                                 <span>${productosCarrito[i].cantidad}</span>
@@ -94,9 +127,20 @@ window.addEventListener("load",function(){
                                 <span onclick='Restar(${productosCarrito[i].id},"cancion")'><i class="fas fa-minus"></i></span>
                             </div>
                         </td>
-                        <td>FALTA API (cuenta)</td>
+                        <td>${productosCarrito[i].cantidad * result.data.precio}$</td>
                     </tr>`
                     tableContainer.innerHTML+=rtaFila
+                    if (sessionStorage.getItem("totalCarrito")){
+                        let totalPrice = JSON.parse(sessionStorage.getItem("totalCarrito")) + productosCarrito[i].cantidad * result.data.precio
+                        sessionStorage.setItem("totalCarrito",JSON.stringify(totalPrice))
+                    } else {sessionStorage.setItem("totalCarrito",JSON.stringify(productosCarrito[i].cantidad * result.data.precio))}
+
+                    totalValor = sessionStorage.getItem("totalCarrito") //Ajustamos el precio total
+                    total.innerText = totalValor + "$"
+
+
+                    })
+                    .catch(e => console.log(e))
                 }
             }
         } catch (error) {
